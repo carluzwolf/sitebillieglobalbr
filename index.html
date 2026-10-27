@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Billie Global BR — Notícias da Billie Eilish</title>
+<style>
+:root{--bg:#fff;--ink:#16090b;--mut:#625659;--red:#d4101f;--line:#ececec;--soft:#fafafa;box-sizing:border-box;padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111;--ink:#f5f5f5;--mut:#a8a0a1;--line:#2a2a2a;--soft:#181818}}
+html{scroll-padding-top:70px}*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:inherit}button{font-family:inherit}
+#nav{position:sticky;top:0;z-index:30;background:var(--bg);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.nb{max-width:880px;margin:0 auto;height:54px;padding:0 8px;display:flex;align-items:center;gap:4px}
+.ib{width:44px;height:44px;border:0;background:none;color:var(--ink);display:grid;place-items:center;border-radius:8px;cursor:pointer}.ib:hover{background:var(--soft)}
+.ib svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+.logo{flex:1;text-align:center;font-weight:800;font-size:18px;letter-spacing:-.02em;text-decoration:none}.logo b{color:var(--red)}
+#sp{display:none;border-top:1px solid var(--line)}#sp.on{display:block}
+#sp div{max-width:880px;margin:0 auto;padding:10px 16px}
+#q{width:100%;padding:12px 14px;font-size:16px;border:1px solid var(--line);border-radius:8px;background:var(--soft);color:var(--ink);outline:none}#q:focus{border-color:var(--red)}
+#ov{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s}
+#ov.on{opacity:1;pointer-events:auto}
+#dr{position:fixed;top:0;left:0;bottom:0;width:min(310px,86vw);z-index:50;background:var(--bg);transform:translateX(-102%);transition:transform .3s cubic-bezier(.2,.8,.2,1);overflow:auto;padding:env(safe-area-inset-top,0px) 0 20px;border-right:1px solid var(--line)}
+#dr.on{transform:none}
+.dh{display:flex;align-items:center;justify-content:space-between;padding:8px 8px 8px 18px;border-bottom:3px solid var(--red)}
+.dh span{font-weight:800;font-size:17px}.dh b{color:var(--red)}
+#dr a.m{display:block;padding:14px 20px;text-decoration:none;font-weight:600;font-size:15px;border-bottom:1px solid var(--line)}#dr a.m:hover{color:var(--red);background:var(--soft)}
+#dr .sub{padding:6px 0;background:var(--soft);border-bottom:1px solid var(--line)}
+#dr .sub a{display:block;padding:9px 20px 9px 34px;text-decoration:none;font-size:14px;color:var(--mut)}#dr .sub a:hover{color:var(--red)}
+#dr .wa{margin:16px 18px 0;display:block}
+.btn{display:inline-block;padding:11px 16px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;background:var(--red);color:#fff;border:1px solid var(--red);text-align:center;cursor:pointer}.btn:hover{opacity:.88}
+.btn.o{background:transparent;color:var(--red)}
+main{max-width:880px;margin:0 auto;padding:0 16px}
+.banner{display:block;width:100%;height:auto}
+.cta{display:flex;gap:10px;padding:14px 0}.cta .btn{flex:1;padding:13px 8px}
+@media(max-width:480px){.cta .btn{font-size:12.5px;padding:12px 6px}}
+.top{padding:20px 0 8px;border-bottom:3px solid var(--red);display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.top h1{margin:0;font-size:22px;letter-spacing:-.01em}.top small{color:var(--mut);font-size:12px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:14px 0 4px;scrollbar-width:none}.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:7px 14px;border:1px solid var(--line);border-radius:99px;font-size:13px;font-weight:600;text-decoration:none;color:var(--ink);background:var(--bg)}
+.chip.on,.chip:hover{background:var(--red);border-color:var(--red);color:#fff}
+.card{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.card.in{opacity:1;transform:none}.card:hover h2{color:var(--red)}
+.cover{flex:0 0 220px;height:140px;border-radius:6px;background:var(--red);color:#fff;display:flex;align-items:flex-end;padding:10px;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;position:relative;overflow:hidden}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.cover span{position:relative}
+.cover.k1{background:#16090b}.cover.k2{background:#8f0b16}
+.txt{flex:1;min-width:0}.meta{font-size:12px;color:var(--mut);margin-bottom:6px}.meta b{color:var(--red)}
+.txt h2{margin:0 0 6px;font-size:19px;line-height:1.28;letter-spacing:-.01em;transition:color .2s}.txt p{margin:0;color:var(--mut);font-size:14px;line-height:1.5}
+@media(max-width:600px){.card{flex-direction:column;gap:10px}.cover{flex:none;width:100%;height:150px}}
+.more{display:block;margin:28px auto;padding:12px 28px;border:1px solid var(--red);background:transparent;color:var(--red);font:600 14px inherit;border-radius:8px;cursor:pointer}.more:hover{background:var(--red);color:#fff}
+.pg{padding:22px 0 10px}.pg h1{margin:8px 0 12px;font-size:clamp(24px,5vw,32px);line-height:1.2;letter-spacing:-.02em}
+.pg p{font-size:16px;line-height:1.7;margin:0 0 16px}.pg .k{font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.06em}
+.pg .m{color:var(--mut);font-size:13px;margin-bottom:16px}.pg .hero{width:100%;max-height:460px;object-fit:cover;border-radius:8px;display:block;margin-bottom:18px;background:var(--soft)}
+.pg p.p{font-size:17px;line-height:1.75;margin:0 0 20px}
+.fig{margin:0 0 22px}.fig img{width:100%;max-height:460px;object-fit:cover;border-radius:8px;display:block;background:var(--soft)}
+.fig figcaption{font-size:12px;color:var(--mut);margin-top:6px}.fig figcaption a{color:var(--red);text-decoration:none;font-weight:600}
+.back{display:inline-block;margin-bottom:10px;color:var(--red);font-weight:600;font-size:14px;text-decoration:none}
+.srcbox{border:1px solid var(--line);border-left:4px solid var(--red);padding:14px 16px;border-radius:6px;font-size:13px;color:var(--mut);background:var(--soft);margin:24px 0}
+.srcbox a{display:inline-block;margin-top:8px;color:var(--red);font-weight:600}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+.empty{padding:40px 0;color:var(--mut);text-align:center}
+footer{border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:12px;padding:20px 16px 40px;background:var(--soft);margin-top:30px}
+footer a{color:var(--red);text-decoration:none;font-weight:600;margin:0 6px}
+</style></head><body>
+<div id="nav"><div class="nb">
+<button class="ib" id="bm" aria-label="Menu"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+<a class="logo" href="#/">Billie Global <b>BR</b></a>
+<button class="ib" id="bs" aria-label="Pesquisar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+</div><div id="sp"><div><input id="q" type="search" placeholder="Pesquisar notícias da Billie Eilish..." autocomplete="off"></div></div></div>
+<div id="ov"></div>
+<aside id="dr" aria-label="Menu"><div class="dh"><span>Billie Global <b>BR</b></span><button class="ib" id="bx" aria-label="Fechar"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>
+<a class="m" href="#/">Início</a>
+<a class="m" href="#/noticias">Todas as notícias</a>
+<div class="sub" id="dcat"></div>
+<a class="m" href="#/sobre">Sobre</a>
+<a class="m" href="#/canal">Canal de WhatsApp</a>
+<a class="m" href="#/grupo">Grupo de WhatsApp</a>
+<a class="btn wa" id="dg" target="_blank" rel="noopener">Entrar no grupo de fãs</a>
+<a class="btn o wa" id="dc" target="_blank" rel="noopener">Seguir o canal</a>
+</aside>
+<main id="v"></main>
+<footer><div><a href="#/">Início</a><a href="#/noticias">Notícias</a><a href="#/sobre">Sobre</a><a href="#/canal">Canal</a><a href="#/grupo">Grupo</a></div><p>© Billie Global BR · Portal de fãs não oficial, sem ligação com Billie Eilish ou sua equipe. Textos produzidos com apoio de inteligência artificial a partir de informações publicadas pelas fontes citadas.</p></footer>
+<script>
+// ===== LINKS DO WHATSAPP =====
+var LINK_GRUPO="https://chat.whatsapp.com/FFtSaPi4UYn7l4jrKQGXzd?s=cl&p=a&mlu=4&ilr=4", LINK_CANAL="https://whatsapp.com/channel/0029VavaVBp5kg77PEh3Bq2g";
+// =============================
+var SEED=[
+{t:"Finneas celebra a reeleição de Lula e comemora nas redes",d:"O irmão e parceiro de Billie Eilish repercutiu o resultado do segundo turno brasileiro e compartilhou uma mensagem ligando a vitória ao cenário político dos EUA.",s:"Vagalume",date:"26 out 2026",u:"https://vagalume.com.br/news/2026/10/26/finneas-celebra-vitoria-de-lula-e-dispara-se-o-brasil-conseguiu-a-america-tambem-pode.html",g:"Destaque"},
+{t:"Billie Eilish pode ser atração do Glastonbury 2027, diz imprensa britânica",d:"Segundo o Daily Mail, citado pelo Mega Hits, a cantora deve se apresentar no palco Pyramid em junho. Há rumores de nova turnê mundial e álbum inédito, ainda sem confirmação oficial.",s:"Mega Hits",date:"26 out 2026",u:"https://megahits.fm/mega-news/18566/billie-eilish-confirmada-num-dos-maiores-festivais-do-mundo",g:"Shows"},
+{t:"Billie será protagonista de “A Redoma de Vidro”, de Sarah Polley",d:"A cantora se prepara para seu primeiro grande papel no cinema, como Esther Greenwood, na nova adaptação do romance de Sylvia Plath.",s:"Fakti.bg",date:"24 out 2026",u:"https://fakti.bg/en/amp/life/1093434-billie-eilish-had-a-breast-reduction-photos",g:"Cinema"},
+{t:"Novo visual da Billie viraliza e divide opiniões entre os fãs",d:"Fotos recentes com cabelo mais claro e corte novo geraram debate nas redes. O BuzzFeed reuniu as reações dos internautas.",s:"BuzzFeed",date:"22 out 2026",u:"https://www.buzzfeed.com/ellendurney/billie-eilish-unrecognizable-in-new-photos",g:"Redes"},
+{t:"Billie volta às redes sociais e mostra novo cabelo",d:"A cantora publicou um retorno ao Instagram com o novo visual, um bob ondulado em tom acobreado claro, que rendeu comparações com o irmão Finneas.",s:"Billboard",date:"6 out 2026",u:"https://www.billboard.com/music/music-news/billie-eilish-new-hair-color-length-transformation-1236355039/",g:"Redes"},
+{t:"Billie Eilish celebra o casamento do irmão Finneas como celebrante",d:"Finneas se casou com Claudia Sulewski em cerimônia em Montecito, na Califórnia, conduzida por Billie, que também se apresentou na festa.",s:"HELLO!",date:"out 2026",u:"https://www.hellomagazine.com/tags/billie-eilish/",g:"Família"},
+{t:"Hit Me Hard and Soft: The Tour (Live in 3D) chegou aos cinemas",d:"O filme de show dirigido por James Cameron e Billie estreou em maio de 2026 e registra a turnê nas apresentações de Manchester.",s:"Wikipedia",date:"mai 2026",u:"https://en.wikipedia.org/wiki/Billie_Eilish_%E2%80%93_Hit_Me_Hard_and_Soft:_The_Tour_(Live_in_3D)",g:"Cinema"},
+{t:"Emoção de Billie em show em Brisbane faz fãs chorarem",d:"Momento durante a passagem pela Austrália virou assunto entre fãs e veículos de entretenimento.",s:"HELLO!",date:"2026",u:"https://www.hellomagazine.com/tags/billie-eilish/",g:"Shows"}
+];
+var items=SEED.slice(),PER=6,lim=PER,cur=null,upd="Atualizado em 26 out 2026";
+var CATS=[["musica","Música",/álbum|album|single|música|musica|song|lançamento|clipe|faixa|canção|streaming|new music/i],["shows","Shows e turnê",/tour|turnê|turne|show|concert|festival|glastonbury|coachella|ingresso|palco/i],["cinema","Cinema e TV",/filme|cinema|movie|film|série|serie|atriz|papel|netflix|redoma|bell jar/i],["premios","Premiações",/grammy|oscar|vmas|prêmio|premio|award|indicad|billboard music/i],["ativismo","Ativismo e política",/ativis|clima|ambient|política|politica|lula|eleiç|imigra|protest|climate/i],["familia","Família e vida pessoal",/finneas|irmão|casamento|namor|família|familia|wedding|boyfriend/i],["visual","Visual e moda",/cabelo|visual|look|moda|fashion|hair|vestido|outfit|estilo/i],["redes","Redes sociais",/instagram|tiktok|redes sociais|viral|fãs reag/i]];
+var ORDER=["premios","shows","cinema","musica","ativismo","familia","visual","redes"];
+function $(i){return document.getElementById(i)}
+function esc(x){var e=document.createElement("div");e.textContent=x==null?"":x;return e.innerHTML}
+function nid(n){var h=0,x=n.t||"";for(var i=0;i<x.length;i++){h=(h*31+x.charCodeAt(i))|0}return Math.abs(h).toString(36)}
+function cat(n){var tx=(n.t+" "+n.d+" "+(n.orig||"")),c;
+for(var o=0;o<ORDER.length;o++){c=CATS.filter(function(x){return x[0]===ORDER[o]})[0];if(c[2].test(tx))return c}
+return ["geral","Geral"]}
+function byCat(s){return items.filter(function(n){return cat(n)[0]===s})}
+function matches(q){q=q.toLowerCase();return items.filter(function(n){return (n.t+" "+n.d+" "+(n.body||[]).join(" ")+" "+n.s).toLowerCase().indexOf(q)>-1})}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08});
+function cardH(n,i){var ci=coverImg(n);return '<a class="card" href="#/n/'+nid(n)+'">'+(ci?'<div class="cover k'+(i%3)+'">'+ci+'<span>'+esc(cat(n)[1])+'</span></div>':'')+'<div class="txt"><div class="meta"><b>'+esc(n.s)+'</b> · '+esc(cat(n)[1])+' · '+esc(n.date||"")+'</div><h2>'+esc(n.t)+'</h2><p>'+esc(n.d)+'</p></div></a>'}
+function listH(a){if(!a.length)return '<div class="empty">Nenhuma notícia encontrada.</div>';
+var h=a.slice(0,lim).map(cardH).join("");if(a.length>lim)h+='<button class="more" onclick="more()">Ver mais notícias</button>';return h}
+function chipsH(act){var h='<div class="chips"><a class="chip'+(act==="all"?" on":"")+'" href="#/noticias">Todas</a>';
+CATS.concat([["geral","Geral"]]).forEach(function(c){var k=byCat(c[0]).length;if(k)h+='<a class="chip'+(act===c[0]?" on":"")+'" href="#/c/'+c[0]+'">'+c[1]+' ('+k+')</a>'});return h+'</div>'}
+function paint(h,keep){$("v").innerHTML=h;document.querySelectorAll(".card").forEach(function(c){io.observe(c)});if(!keep)scrollTo(0,0)}
+function more(){lim+=PER;if(cur)paint(cur(),true)}
+function waPage(t,txt,u,b){return '<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a><h1>'+t+'</h1><p>'+txt+'</p><div class="row"><a class="btn" href="'+u+'" target="_blank" rel="noopener">'+b+'</a><a class="btn o" href="#/">Ver as notícias</a></div></div>'}
+var PHOTOS=[];
+function coverImg(n){var a=imgsFor(n).map(function(x){return x.u});if(!a.length)return "";return '<img loading="lazy" referrerpolicy="no-referrer" alt="" src="'+esc(a[0])+'" data-n="'+encodeURIComponent(JSON.stringify(a.slice(1)))+'" onerror="nx(this)">'}
+function nx(el){var r=[];try{r=JSON.parse(decodeURIComponent(el.dataset.n||"[]"))}catch(e){}var u=r.shift();if(u){el.dataset.n=encodeURIComponent(JSON.stringify(r));el.src=u}else{var c=el.closest('.cover');if(c)c.remove();else el.remove()}}
+function figH(p){return '<figure class="fig"><img loading="lazy" referrerpolicy="no-referrer" alt="" src="'+esc(p.u)+'" onerror="this.closest(\'figure\').remove()"><figcaption>Foto: <a href="'+esc(p.l)+'" target="_blank" rel="noopener">'+esc(p.c)+'</a></figcaption></figure>'}
+function imgsFor(n){var a=[],seen={},seed=parseInt(nid(n),36)||0,i,p,o;
+function add(u,c,l){if(u&&!seen[u]&&a.length<3){seen[u]=1;a.push({u:u,c:c,l:l||n.u})}}
+add(n.img,n.s,n.u);(n.imgs||[]).forEach(function(q){add(q.u,q.s,q.l)});
+(n.pics||[]).forEach(function(q){add(q.u,q.c,q.l)});
+return a}
+function artBody(n){var a=imgsFor(n),ps=(n.body&&n.body.length?n.body:[n.d]),h=a[0]?figH(a[0]):"",u1=a[1],u2=a[2];
+ps.forEach(function(x,i){h+='<p class="p">'+esc(x)+'</p>';
+if(i===1&&u1&&ps.length>=3){h+=figH(u1);u1=null}
+if(i===3&&u2&&ps.length>=6){h+=figH(u2);u2=null}});
+if(u1)h+=figH(u1);if(u2)h+=figH(u2);return h}
+function route(){var h=location.hash||"#/",m;lim=PER;cur=null;closeAll();$("q").value="";
+document.title="Billie Global BR — Notícias da Billie Eilish";
+if(m=h.match(/^#\/n\/(\w+)/)){var n=items.filter(function(x){return nid(x)===m[1]})[0];
+if(!n){location.hash="#/";return}
+document.title=n.t+" — Billie Global BR";var c=cat(n);
+paint('<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a> · <a class="back" href="#/c/'+c[0]+'">Mais em '+esc(c[1])+'</a><div class="k">'+esc(c[1])+'</div><h1>'+esc(n.t)+'</h1><div class="m">'+esc(n.s)+(n.date?' · '+esc(n.date):'')+'</div>'+artBody(n)+'<div class="srcbox">Texto produzido pela equipe do Billie Global BR com base em informações publicadas por <b>'+esc(n.s)+'</b>'+'<br><a href="'+esc(n.u)+'" target="_blank" rel="noopener">Fonte: ver matéria original ↗</a></div><div class="row"><a class="btn" href="#/">← Voltar ao início</a><a class="btn o" href="#/noticias">Todas as notícias</a></div></div>');return}
+if(h==="#/sobre"){paint('<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a><h1>Sobre o Billie Global BR</h1><p>O Billie Global BR é a comunidade brasileira de fãs da Billie Eilish e este é o nosso portal de notícias: reunimos, em português, o que acontece com a cantora no mundo todo.</p><p>O portal é atualizado automaticamente a cada 30 minutos. Os textos são produzidos com apoio de inteligência artificial a partir de informações publicadas por outros veículos, que são sempre citados no fim de cada notícia, com link para a matéria original.</p><p>Somos um site de fãs, não oficial, sem ligação com Billie Eilish, sua equipe ou gravadoras. Para falar com a gente e acompanhar tudo em tempo real, entre no canal e no grupo do WhatsApp.</p><div class="row"><a class="btn" href="#/canal">Canal de WhatsApp</a><a class="btn" href="#/grupo">Grupo de WhatsApp</a><a class="btn o" href="#/">← Início</a></div></div>');return}
+if(h==="#/canal"){paint(waPage("Canal de WhatsApp","Receba as principais notícias da Billie Eilish direto no seu WhatsApp, sem precisar abrir o site.",LINK_CANAL,"Seguir o canal"));return}
+if(h==="#/grupo"){paint(waPage("Grupo de WhatsApp","Converse com outros fãs brasileiros da Billie Eilish. Respeito sempre, e sem spam.",LINK_GRUPO,"Entrar no grupo"));return}
+if(h==="#/noticias"){cur=function(){return '<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a><h1>Todas as notícias</h1>'+chipsH("all")+listH(items)+'</div>'};paint(cur());return}
+if(m=h.match(/^#\/c\/(\w+)/)){var cc=CATS.filter(function(x){return x[0]===m[1]})[0]||["geral","Geral"];
+cur=function(){return '<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a><h1>'+esc(cc[1])+'</h1>'+chipsH(cc[0])+listH(byCat(cc[0]))+'</div>'};paint(cur());return}
+cur=function(){return '<img class="banner" src="banner.png" alt="Billie Global BR — Seu site de notícias sobre a Billie Eilish"><div class="cta"><a class="btn" href="'+esc(LINK_GRUPO)+'" target="_blank" rel="noopener">Grupo de fãs no WhatsApp</a><a class="btn" href="'+esc(LINK_CANAL)+'" target="_blank" rel="noopener">Canal no WhatsApp</a></div><div class="top"><h1>Últimas notícias</h1><small>'+upd+'</small></div>'+chipsH("")+listH(items)};
+paint(cur())}
+function closeAll(){$("dr").classList.remove("on");$("ov").classList.remove("on");$("sp").classList.remove("on")}
+$("bm").onclick=function(){$("dr").classList.add("on");$("ov").classList.add("on")};
+$("bx").onclick=$("ov").onclick=closeAll;
+$("bs").onclick=function(){var s=$("sp");if(s.classList.contains("on")){s.classList.remove("on")}else{s.classList.add("on");$("q").focus()}};
+$("q").oninput=function(){var q=this.value.trim();if(q.length<2){route2();return}
+lim=PER;cur=function(){return '<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a><h1>Resultados para “'+esc(q)+'”</h1>'+listH(matches(q))+'</div>'};paint(cur(),true)};
+function route2(){var k=$("q").value;route();$("q").value=k;$("sp").classList.add("on")}
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeAll()});
+$("dg").href=LINK_GRUPO;$("dc").href=LINK_CANAL;
+$("dcat").innerHTML=CATS.map(function(c){return '<a href="#/c/'+c[0]+'">'+c[1]+'</a>'}).join("");
+addEventListener("hashchange",route);
+fetch("photos.json?"+Date.now()).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(j){if(j&&j.length){PHOTOS=j;if(/^#\/n\//.test(location.hash))route()}}).catch(function(){});
+route();
+fetch("news.json?"+Date.now()).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(j){
+j=(Array.isArray(j)?j:[]).filter(function(x){return x&&x.t&&x.u&&!x.hide});if(j.length){var bk=items;items=j;upd="Atualizado há instantes";try{if(!$("q").value)route()}catch(e){items=bk;route()}}}).catch(function(){});
+</script></body></html>

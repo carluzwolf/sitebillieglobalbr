@@ -15,8 +15,8 @@ VERSION = 2              # aumente para forçar reescrever tudo de novo
 FALLBACK_IMAGE = ""
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
 OPENAI_KEY = os.environ.get("OPENAI_API_KEY", "")
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash-lite")
-GEMINI_FALLBACKS = [m for m in os.environ.get("GEMINI_FALLBACKS", "gemini-2.5-flash").split(",") if m]
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
+GEMINI_FALLBACKS = [m for m in os.environ.get("GEMINI_FALLBACKS", "gemini-3.5-flash,gemini-2.5-flash").split(",") if m]
 OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-4o-mini")
 FEEDS = [
     "https://www.bing.com/news/search?q=%22Billie+Eilish%22&format=rss&setlang=pt-BR&mkt=pt-BR",
@@ -234,6 +234,9 @@ def article_text(url):
 class Quota(Exception):
     pass
 
+class Missing(Exception):
+    pass
+
 def post_json(url, payload, headers):
     req = urllib.request.Request(url, json.dumps(payload).encode(), {**headers, "Content-Type": "application/json"})
     try:
@@ -243,6 +246,8 @@ def post_json(url, payload, headers):
         body = e.read()[:400].decode("utf-8", "ignore")
         if e.code == 429:
             raise Quota(body)
+        if e.code == 404:
+            raise Missing(body)
         raise RuntimeError("HTTP %s: %s" % (e.code, body))
 
 def gem_call(model, body):
@@ -267,9 +272,9 @@ def call_ai(prompt):
         for model in [GEMINI_MODEL] + GEMINI_FALLBACKS:
             try:
                 return gem_call(model, body)
-            except Quota as e:
+            except (Quota, Missing) as e:
                 last = e
-                print("  cota esgotada no modelo", model)
+                print("  modelo indisponível ou sem cota:", model)
         raise last
     if OPENAI_KEY:
         r = post_json("https://api.openai.com/v1/chat/completions",
@@ -396,8 +401,8 @@ def main():
         res = None
         try:
             res = parse_ai(call_ai(PROMPT % (orig, n.get("date", ""), text)))
-        except Quota as e:
-            print("  LIMITE DA IA ATINGIDO, parando por agora:", str(e)[:300].replace("\n", " "))
+        except (Quota, Missing) as e:
+            print("  IA INDISPONÍVEL (limite ou modelo), parando por agora:", str(e)[:300].replace("\n", " "))
             n["tries3"] -= 1
             break
         except Exception as e:
@@ -414,4 +419,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-              
+        

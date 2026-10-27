@@ -9,14 +9,14 @@ from pathlib import Path
 OUT = Path(__file__).resolve().parent.parent / "news.json"
 PHOTOS_OUT = Path(__file__).resolve().parent.parent / "photos.json"
 MAX_ITEMS = 200
-IMGV = 3                 # versão da regra de imagens (aumente para refazer todas)
-MAX_REWRITE = 20         # notícias reescritas por rodada (controla custo/tempo)
+IMGV = 4                 # versão da regra de imagens (aumente para refazer todas)
+MAX_REWRITE = 10         # notícias reescritas por rodada (controla custo/tempo)
 VERSION = 2              # aumente para forçar reescrever tudo de novo
 FALLBACK_IMAGE = ""
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
 OPENAI_KEY = os.environ.get("OPENAI_API_KEY", "")
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
-GEMINI_FALLBACKS = [m for m in os.environ.get("GEMINI_FALLBACKS", "gemini-2.5-flash-lite").split(",") if m]
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash-lite")
+GEMINI_FALLBACKS = [m for m in os.environ.get("GEMINI_FALLBACKS", "gemini-2.5-flash").split(",") if m]
 OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-4o-mini")
 FEEDS = [
     "https://www.bing.com/news/search?q=%22Billie+Eilish%22&format=rss&setlang=pt-BR&mkt=pt-BR",
@@ -100,6 +100,17 @@ def page_images(url):
         if u.startswith("http") and re.search(r"\.(jpe?g|webp|png)(\?|$)", u, re.I) and not BAD.search(u) and u not in out:
             out.append(u)
     return out[:4]
+
+def og_only(url):
+    page = get_page(url)
+    for pat in (r'<meta[^>]+(?:property|name)=["\'](?:og:image(?::secure_url)?|twitter:image)["\'][^>]+content=["\']([^"\']+)',
+                r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\'](?:og:image|twitter:image)["\']'):
+        m = re.search(pat, page)
+        if m:
+            u = urljoin(url, html.unescape(m.group(1).strip()))
+            if u.startswith("http") and not re.search(r"logo|favicon|icon|placeholder|default", u, re.I):
+                return u
+    return ""
 
 def parse_commons(data, only_relevant=False):
     out = []
@@ -243,7 +254,13 @@ def gem_call(model, body):
     parts = r["candidates"][0]["content"]["parts"]
     return "".join(p.get("text", "") for p in parts)
 
+LAST_AI = [0.0]
+
 def call_ai(prompt):
+    wait = 7 - (time.time() - LAST_AI[0])
+    if wait > 0:
+        time.sleep(wait)
+    LAST_AI[0] = time.time()
     if GEMINI_KEY:
         body = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"temperature": 0.7, "maxOutputTokens": 8000}}
         last = None
@@ -283,8 +300,9 @@ def parse(feed):
         if "billie" not in (title + " " + desc).lower():
             continue
         link = real_url(it.findtext("link") or "")
-        src = clean(it.findtext("News:Source", namespaces=ns)) or urllib.parse.urlparse(link).netloc.replace("www.", "")
-        img = (it.findtext("News:Image", namespaces=ns) or "").strip()
+        tags = {c.tag.split("}")[-1]: (c.text or "").strip() for c in it}
+        src = clean(tags.get("Source", "")) or urllib.parse.urlparse(link).netloc.replace("www.", "")
+        img = tags.get("Image", "")
         try:
             dt = parsedate_to_datetime(it.findtext("pubDate")).astimezone(timezone.utc)
         except Exception:
@@ -312,18 +330,19 @@ def main():
     merged.sort(key=lambda n: n.get("ts", ""), reverse=True)
     merged = merged[:MAX_ITEMS]
 
-    # Só usamos imagem da matéria quando o título é sobre a Billie; imagens "soltas" da página foram removidas
+    # Imagem de capa = a imagem ORIGINAL da própria notícia (Bing ou og:image da matéria)
     for n in merged:
-        rel = bool(re.search(r"billie", (n.get("orig") or n["t"]) + " " + n.get("orig_d", ""), re.I))
         if n.get("imgv") != IMGV:
-            n["imgs"], n["pics"], n["imgv"] = [], [], IMGV
-        if not rel:
-            n["img"] = ""
+            n["imgs"], n["pics"], n["imgv"], n["ogt"] = [], [], IMGV, 0
         n["imgs"] = []
-        n["_rel"] = rel
-    for n in merged[:20]:
-        if n["_rel"] and not n.get("img"):
-            n["img"] = og_image(n["u"]) or ""
+    fetched = 0
+    for n in merged:
+        if n.get("img") or n.get("ogt", 0) >= 3 or fetched >= 60:
+            continue
+        fetched += 1
+        n["ogt"] = n.get("ogt", 0) + 1
+        n["img"] = og_only(n["u"])
+    print("capas originais:", sum(1 for n in merged if n.get("img")), "de", len(merged))
 
     lists = []
     for fn in (commons_deep, commons_photos, openverse_photos, local_photos):
@@ -389,11 +408,10 @@ def main():
         done += 1
         time.sleep(8)
     print(f"{done} notícias reescritas")
-    for n in merged:
-        n.pop("_rel", None)
     if merged:
         OUT.write_text(json.dumps(merged, ensure_ascii=False, indent=1), "utf-8")
         print(f"{len(merged)} notícias salvas")
 
 if __name__ == "__main__":
     main()
+              

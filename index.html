@@ -35,11 +35,19 @@ main{max-width:880px;margin:0 auto;padding:0 16px}
 #art .p{font-size:17px;line-height:1.7;margin:0 0 20px}
 #art .srcbox{border:1px solid var(--line);border-left:4px solid var(--red);padding:14px 16px;border-radius:6px;font-size:13px;color:var(--mut);background:var(--soft)}
 #art .srcbox a{display:inline-block;margin-top:8px;color:var(--red);font-weight:600}
+header.top-banner{position:static;border-bottom:1px solid var(--line);background:var(--bg)}
+.banner{display:block;width:100%;height:auto}
+.cta{max-width:880px;margin:0 auto;padding:14px 16px;display:flex;gap:10px}
+.btn.big{flex:1;text-align:center;padding:13px 10px;font-size:14px;border-radius:8px}
+@media(max-width:480px){.btn.big{font-size:12.5px;padding:12px 6px}}
 footer{border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:12px;padding:20px 16px 40px;background:var(--soft)}
 </style></head><body>
-<header><div class="bar"><div class="logo">Billie Global <b>BR</b></div>
-<a class="btn" id="lg" href="#" target="_blank" rel="noopener">Grupo de fãs</a>
-<a class="btn o" id="lc" href="#" target="_blank" rel="noopener">Canal</a></div></header>
+<header class="top-banner">
+<img class="banner" src="banner.png" alt="Billie Global BR — Seu site de notícias sobre a Billie Eilish">
+<div class="cta">
+<a class="btn big" id="lg" href="#" target="_blank" rel="noopener">Grupo de fãs no WhatsApp</a>
+<a class="btn big" id="lc" href="#" target="_blank" rel="noopener">Canal no WhatsApp</a>
+</div></header>
 <main>
 <div id="art" hidden></div>
 <div id="list"><div class="top"><h1>Últimas notícias da Billie Eilish</h1><small id="upd"></small></div>

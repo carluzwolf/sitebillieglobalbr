@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Billie Global BR — Notícias da Billie Eilish</title>
+<style>
+:root{--bg:#fff;--ink:#16090b;--mut:#625659;--red:#d4101f;--line:#ececec;--soft:#fafafa;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111;--ink:#f5f5f5;--mut:#a8a0a1;--line:#2a2a2a;--soft:#181818}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{max-width:880px;margin:0 auto;padding:10px 16px;display:flex;align-items:center;gap:8px}
+.logo{flex:1;font-weight:800;font-size:18px;letter-spacing:-.02em}.logo b{color:var(--red)}
+.btn{display:inline-block;padding:8px 14px;border-radius:6px;font-size:13px;font-weight:600;text-decoration:none;background:var(--red);color:#fff;border:1px solid var(--red)}
+.btn.o{background:transparent;color:var(--red)}.btn:hover{opacity:.88}
+@media(max-width:480px){.btn{padding:8px 10px;font-size:12px}.logo{font-size:16px}}
+main{max-width:880px;margin:0 auto;padding:0 16px}
+.top{padding:24px 0 8px;border-bottom:3px solid var(--red);display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.top h1{margin:0;font-size:22px;letter-spacing:-.01em}.top small{color:var(--mut);font-size:12px}
+.card{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit;opacity:0;transform:translateY(16px);transition:opacity .6s,transform .6s}
+.card.in{opacity:1;transform:none}.card:hover h2{color:var(--red)}
+.cover{flex:0 0 220px;height:140px;border-radius:6px;background:var(--red);color:#fff;display:flex;align-items:flex-end;padding:10px;font-weight:800;font-size:13px;letter-spacing:.06em;text-transform:uppercase;position:relative;overflow:hidden}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.cover span{position:relative}
+.cover.k1{background:#16090b}.cover.k2{background:#8f0b16}
+.txt{flex:1;min-width:0}.meta{font-size:12px;color:var(--mut);margin-bottom:6px}.meta b{color:var(--red)}
+.txt h2{margin:0 0 6px;font-size:19px;line-height:1.28;letter-spacing:-.01em;transition:color .2s}.txt p{margin:0;color:var(--mut);font-size:14px;line-height:1.5}
+@media(max-width:600px){.card{flex-direction:column;gap:10px}.cover{flex:none;width:100%;height:150px}}
+.more{display:block;margin:28px auto;padding:12px 28px;border:1px solid var(--red);background:transparent;color:var(--red);font:600 14px inherit;font-family:inherit;border-radius:6px;cursor:pointer}
+.more:hover{background:var(--red);color:#fff}.more[hidden]{display:none}
+footer{border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:12px;padding:20px 16px 40px;background:var(--soft)}
+</style></head><body>
+<header><div class="bar"><div class="logo">Billie Global <b>BR</b></div>
+<a class="btn" id="lg" href="#" target="_blank" rel="noopener">Grupo de fãs</a>
+<a class="btn o" id="lc" href="#" target="_blank" rel="noopener">Canal</a></div></header>
+<main>
+<div class="top"><h1>Últimas notícias da Billie Eilish</h1><small id="upd"></small></div>
+<div id="feed"></div>
+<button class="more" id="more">Ver mais notícias</button>
+</main>
+<footer>© Billie Global BR · Portal de fãs não oficial. Os textos são resumos; o conteúdo original pertence às fontes citadas.</footer>
+<script>
+// ===== COLOQUE AQUI OS LINKS DO WHATSAPP =====
+var LINK_GRUPO="https://chat.whatsapp.com/FFtSaPi4UYn7l4jrKQGXzd?s=cl&p=a&mlu=4&ilr=4", LINK_CANAL="https://whatsapp.com/channel/0029VavaVBp5kg77PEh3Bq2g";
+// =============================================
+var SEED=[
+{t:"Finneas celebra a reeleição de Lula e comemora nas redes",d:"O irmão e parceiro de Billie Eilish repercutiu o resultado do segundo turno brasileiro e compartilhou uma mensagem ligando a vitória ao cenário político dos EUA.",s:"Vagalume",date:"26 out 2026",u:"https://vagalume.com.br/news/2026/10/26/finneas-celebra-vitoria-de-lula-e-dispara-se-o-brasil-conseguiu-a-america-tambem-pode.html",g:"Destaque"},
+{t:"Billie Eilish pode ser atração do Glastonbury 2027, diz imprensa britânica",d:"Segundo o Daily Mail, citado pelo Mega Hits, a cantora deve se apresentar no palco Pyramid em junho. Há rumores de nova turnê mundial e álbum inédito, ainda sem confirmação oficial.",s:"Mega Hits",date:"26 out 2026",u:"https://megahits.fm/mega-news/18566/billie-eilish-confirmada-num-dos-maiores-festivais-do-mundo",g:"Shows"},
+{t:"Billie será protagonista de “A Redoma de Vidro”, de Sarah Polley",d:"A cantora se prepara para seu primeiro grande papel no cinema, como Esther Greenwood, na nova adaptação do romance de Sylvia Plath.",s:"Fakti.bg",date:"24 out 2026",u:"https://fakti.bg/en/amp/life/1093434-billie-eilish-had-a-breast-reduction-photos",g:"Cinema"},
+{t:"Novo visual da Billie viraliza e divide opiniões entre os fãs",d:"Fotos recentes com cabelo mais claro e corte novo geraram debate nas redes. O BuzzFeed reuniu as reações dos internautas.",s:"BuzzFeed",date:"22 out 2026",u:"https://www.buzzfeed.com/ellendurney/billie-eilish-unrecognizable-in-new-photos",g:"Redes"},
+{t:"Billie volta às redes sociais e mostra novo cabelo",d:"A cantora publicou um retorno ao Instagram com o novo visual, um bob ondulado em tom acobreado claro, que rendeu comparações com o irmão Finneas.",s:"Billboard",date:"6 out 2026",u:"https://www.billboard.com/music/music-news/billie-eilish-new-hair-color-length-transformation-1236355039/",g:"Redes"},
+{t:"Billie Eilish celebra o casamento do irmão Finneas como celebrante",d:"Finneas se casou com Claudia Sulewski em cerimônia em Montecito, na Califórnia, conduzida por Billie, que também se apresentou na festa.",s:"HELLO!",date:"out 2026",u:"https://www.hellomagazine.com/tags/billie-eilish/",g:"Família"},
+{t:"Hit Me Hard and Soft: The Tour (Live in 3D) chegou aos cinemas",d:"O filme de show dirigido por James Cameron e Billie estreou em maio de 2026 e registra a turnê nas apresentações de Manchester.",s:"Wikipedia",date:"mai 2026",u:"https://en.wikipedia.org/wiki/Billie_Eilish_%E2%80%93_Hit_Me_Hard_and_Soft:_The_Tour_(Live_in_3D)",g:"Cinema"},
+{t:"Emoção de Billie em show em Brisbane faz fãs chorarem",d:"Momento durante a passagem pela Austrália virou assunto entre fãs e veículos de entretenimento.",s:"HELLO!",date:"2026",u:"https://www.hellomagazine.com/tags/billie-eilish/",g:"Shows"}
+];
+var items=SEED.slice(),shown=0,PER=6;
+document.getElementById("lg").href=LINK_GRUPO;document.getElementById("lc").href=LINK_CANAL;
+function esc(x){var e=document.createElement("div");e.textContent=x||"";return e.innerHTML}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1});
+function render(){var f=document.getElementById("feed"),end=Math.min(shown+PER,items.length);
+for(var i=shown;i<end;i++){var n=items[i],a=document.createElement("a");a.className="card";a.href=n.u;a.target="_blank";a.rel="noopener";
+a.innerHTML='<div class="cover k'+(i%3)+'">'+(n.img?'<img loading="lazy" alt="" src="'+esc(n.img)+'" onerror="this.remove()">':'')+'<span>'+esc(n.g||"Notícia")+'</span></div><div class="txt"><div class="meta"><b>'+esc(n.s)+'</b> · '+esc(n.date||"")+'</div><h2>'+esc(n.t)+'</h2><p>'+esc(n.d)+'</p></div>';
+f.appendChild(a);io.observe(a)}
+shown=end;document.getElementById("more").hidden=shown>=items.length}
+document.getElementById("more").onclick=render;
+document.getElementById("upd").textContent="Atualizado em 26 out 2026";
+render();
+// Atualização automática: se existir news.json no mesmo endereço (gerado a cada 30 min), ele substitui a lista acima.
+fetch("news.json?"+Date.now()).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(j){
+if(j&&j.length){items=j;shown=0;document.getElementById("feed").innerHTML="";render();document.getElementById("upd").textContent="Atualizado há instantes"}}).catch(function(){});
+</script></body></html>

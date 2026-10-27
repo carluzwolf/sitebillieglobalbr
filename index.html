@@ -50,6 +50,8 @@ main{max-width:880px;margin:0 auto;padding:0 16px}
 .pg p{font-size:16px;line-height:1.7;margin:0 0 16px}.pg .k{font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.06em}
 .pg .m{color:var(--mut);font-size:13px;margin-bottom:16px}.pg .hero{width:100%;max-height:460px;object-fit:cover;border-radius:8px;display:block;margin-bottom:18px;background:var(--soft)}
 .pg p.p{font-size:17px;line-height:1.75;margin:0 0 20px}
+.fig{margin:0 0 22px}.fig img{width:100%;max-height:460px;object-fit:cover;border-radius:8px;display:block;background:var(--soft)}
+.fig figcaption{font-size:12px;color:var(--mut);margin-top:6px}.fig figcaption a{color:var(--red);text-decoration:none;font-weight:600}
 .back{display:inline-block;margin-bottom:10px;color:var(--red);font-weight:600;font-size:14px;text-decoration:none}
 .srcbox{border:1px solid var(--line);border-left:4px solid var(--red);padding:14px 16px;border-radius:6px;font-size:13px;color:var(--mut);background:var(--soft);margin:24px 0}
 .srcbox a{display:inline-block;margin-top:8px;color:var(--red);font-weight:600}
@@ -110,13 +112,26 @@ CATS.concat([["geral","Geral"]]).forEach(function(c){var k=byCat(c[0]).length;if
 function paint(h,keep){$("v").innerHTML=h;document.querySelectorAll(".card").forEach(function(c){io.observe(c)});if(!keep)scrollTo(0,0)}
 function more(){lim+=PER;if(cur)paint(cur(),true)}
 function waPage(t,txt,u,b){return '<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a><h1>'+t+'</h1><p>'+txt+'</p><div class="row"><a class="btn" href="'+u+'" target="_blank" rel="noopener">'+b+'</a><a class="btn o" href="#/">Ver as notícias</a></div></div>'}
+var PHOTOS=[];
+function figH(p){return '<figure class="fig"><img loading="lazy" alt="" src="'+esc(p.u)+'" onerror="this.closest(\'figure\').remove()"><figcaption>Foto: <a href="'+esc(p.l)+'" target="_blank" rel="noopener">'+esc(p.c)+'</a></figcaption></figure>'}
+function imgsFor(n){var a=[],seen={},seed=parseInt(nid(n),36)||0,i,p,o;
+function add(u,c,l){if(u&&!seen[u]&&a.length<3){seen[u]=1;a.push({u:u,c:c,l:l||n.u})}}
+add(n.img,n.s,n.u);(n.imgs||[]).forEach(function(q){add(q.u,q.s,q.l)});
+for(i=0;i<PHOTOS.length&&a.length<3;i++){p=PHOTOS[(seed+i*7)%PHOTOS.length];add(p.u,p.c,p.l)}
+for(i=0;i<items.length&&a.length<3;i++){o=items[(seed+i)%items.length];if(o!==n)add(o.img,o.s,o.u)}
+return a}
+function artBody(n){var a=imgsFor(n),ps=(n.body&&n.body.length?n.body:[n.d]),h=a[0]?figH(a[0]):"",u1=a[1],u2=a[2];
+ps.forEach(function(x,i){h+='<p class="p">'+esc(x)+'</p>';
+if(i===1&&u1&&ps.length>=3){h+=figH(u1);u1=null}
+if(i===3&&u2&&ps.length>=6){h+=figH(u2);u2=null}});
+if(u1)h+=figH(u1);if(u2)h+=figH(u2);return h}
 function route(){var h=location.hash||"#/",m;lim=PER;cur=null;closeAll();$("q").value="";
 document.title="Billie Global BR — Notícias da Billie Eilish";
 if(m=h.match(/^#\/n\/(\w+)/)){var n=items.filter(function(x){return nid(x)===m[1]})[0];
 if(!n){location.hash="#/";return}
 document.title=n.t+" — Billie Global BR";var c=cat(n);
-paint('<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a> · <a class="back" href="#/c/'+c[0]+'">Mais em '+esc(c[1])+'</a><div class="k">'+esc(c[1])+'</div><h1>'+esc(n.t)+'</h1><div class="m">'+esc(n.s)+(n.date?' · '+esc(n.date):'')+'</div>'+(n.img?'<img class="hero" alt="" src="'+esc(n.img)+'" onerror="this.remove()">':'')+(n.body&&n.body.length?n.body.map(function(x){return '<p class="p">'+esc(x)+'</p>'}).join(""):'<p class="p">'+esc(n.d)+'</p>')+'<div class="srcbox">Texto produzido pela equipe do Billie Global BR com base em informações publicadas por <b>'+esc(n.s)+'</b>'+(n.img?' · Foto: '+esc(n.s):'')+'<br><a href="'+esc(n.u)+'" target="_blank" rel="noopener">Fonte: ver matéria original ↗</a></div><div class="row"><a class="btn" href="#/">← Voltar ao início</a><a class="btn o" href="#/noticias">Todas as notícias</a></div></div>');return}
-if(h==="#/sobre"){paint('<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a><h1>Sobre o Billie Global BR</h1><p>O Billie Global BR é a comunidade brasileira de fãs da Billie Eilish e este é o nosso portal de notícias: reunimos, em português, o que acontece com a cantora no mundo todo.</p><p>O portal é atualizado automaticamente a cada 30 minutos. Os textos são produzidos a partir de informações publicadas por outros veículos, que são sempre citados no fim de cada notícia, com link para a matéria original.</p><p>Somos um site de fãs, não oficial, sem ligação com Billie Eilish, sua equipe ou gravadoras. Para falar com a gente e acompanhar tudo em tempo real, entre no canal e no grupo do WhatsApp.</p><div class="row"><a class="btn" href="#/canal">Canal de WhatsApp</a><a class="btn" href="#/grupo">Grupo de WhatsApp</a><a class="btn o" href="#/">← Início</a></div></div>');return}
+paint('<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a> · <a class="back" href="#/c/'+c[0]+'">Mais em '+esc(c[1])+'</a><div class="k">'+esc(c[1])+'</div><h1>'+esc(n.t)+'</h1><div class="m">'+esc(n.s)+(n.date?' · '+esc(n.date):'')+'</div>'+artBody(n)+'<div class="srcbox">Texto produzido pela equipe do Billie Global BR com base em informações publicadas por <b>'+esc(n.s)+'</b>'+'<br><a href="'+esc(n.u)+'" target="_blank" rel="noopener">Fonte: ver matéria original ↗</a></div><div class="row"><a class="btn" href="#/">← Voltar ao início</a><a class="btn o" href="#/noticias">Todas as notícias</a></div></div>');return}
+if(h==="#/sobre"){paint('<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a><h1>Sobre o Billie Global BR</h1><p>O Billie Global BR é a comunidade brasileira de fãs da Billie Eilish e este é o nosso portal de notícias: reunimos, em português, o que acontece com a cantora no mundo todo.</p><p>O portal é atualizado automaticamente a cada 30 minutos. Os textos são produzidos com apoio de inteligência artificial a partir de informações publicadas por outros veículos, que são sempre citados no fim de cada notícia, com link para a matéria original.</p><p>Somos um site de fãs, não oficial, sem ligação com Billie Eilish, sua equipe ou gravadoras. Para falar com a gente e acompanhar tudo em tempo real, entre no canal e no grupo do WhatsApp.</p><div class="row"><a class="btn" href="#/canal">Canal de WhatsApp</a><a class="btn" href="#/grupo">Grupo de WhatsApp</a><a class="btn o" href="#/">← Início</a></div></div>');return}
 if(h==="#/canal"){paint(waPage("Canal de WhatsApp","Receba as principais notícias da Billie Eilish direto no seu WhatsApp, sem precisar abrir o site.",LINK_CANAL,"Seguir o canal"));return}
 if(h==="#/grupo"){paint(waPage("Grupo de WhatsApp","Converse com outros fãs brasileiros da Billie Eilish. Respeito sempre, e sem spam.",LINK_GRUPO,"Entrar no grupo"));return}
 if(h==="#/noticias"){cur=function(){return '<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a><h1>Todas as notícias</h1>'+chipsH("all")+listH(items)+'</div>'};paint(cur());return}
@@ -135,6 +150,7 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")closeAll()})
 $("dg").href=LINK_GRUPO;$("dc").href=LINK_CANAL;
 $("dcat").innerHTML=CATS.map(function(c){return '<a href="#/c/'+c[0]+'">'+c[1]+'</a>'}).join("");
 addEventListener("hashchange",route);
+fetch("photos.json?"+Date.now()).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(j){if(j&&j.length){PHOTOS=j;if(/^#\/n\//.test(location.hash))route()}}).catch(function(){});
 route();
 fetch("news.json?"+Date.now()).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(j){
 if(j&&j.length){items=j;upd="Atualizado há instantes";if(!$("q").value)route()}}).catch(function(){});

@@ -9,7 +9,8 @@ from pathlib import Path
 OUT = Path(__file__).resolve().parent.parent / "news.json"
 PHOTOS_OUT = Path(__file__).resolve().parent.parent / "photos.json"
 MAX_ITEMS = 200
-MAX_REWRITE = 20          # notícias reescritas por rodada (controla custo/tempo)
+IMGV = 3                 # versão da regra de imagens (aumente para refazer todas)
+MAX_REWRITE = 25         # notícias reescritas por rodada (controla custo/tempo)
 VERSION = 2              # aumente para forçar reescrever tudo de novo
 FALLBACK_IMAGE = ""
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -99,10 +100,12 @@ def page_images(url):
             out.append(u)
     return out[:4]
 
-def parse_commons(data):
+def parse_commons(data, only_relevant=False):
     out = []
     for pg in (data.get("query", {}).get("pages", {}) or {}).values():
         ii = (pg.get("imageinfo") or [{}])[0]
+        if only_relevant and not re.search(r"billie|eilish|finneas", pg.get("title", ""), re.I):
+            continue
         url = ii.get("thumburl") or ii.get("url") or ""
         if not re.search(r"\.jpe?g$", url, re.I) or ii.get("width", 0) < 1000:
             continue
@@ -120,7 +123,7 @@ def commons_photos():
         url = ("https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=50"
                "&prop=imageinfo&iiprop=url|extmetadata|size&iiurlwidth=1200&format=json&gsrsearch=" + urllib.parse.quote(q))
         try:
-            pool += parse_commons(json.loads(get(url, 20, ua)))
+            pool += parse_commons(json.loads(get(url, 20, ua)), True)
         except Exception as e:
             print("Commons falhou:", q, e)
     seen, res = set(), []
@@ -275,16 +278,20 @@ def main():
         seen.add(key); seen.add(n["u"]); merged.append(n)
     merged.sort(key=lambda n: n.get("ts", ""), reverse=True)
     merged = merged[:MAX_ITEMS]
-    for n in merged[:20]:
-        if not n.get("img"):
-            n["img"] = og_image(n["u"]) or FALLBACK_IMAGE
 
-    cnt = 0
-    for n in merged[:40]:
-        if "imgs" in n or cnt >= 15:
-            continue
-        cnt += 1
-        n["imgs"] = [{"u": u, "s": n["s"], "l": n["u"]} for u in page_images(n["u"]) if u != n.get("img")][:3]
+    # Só usamos imagem da matéria quando o título é sobre a Billie; imagens "soltas" da página foram removidas
+    for n in merged:
+        rel = bool(re.search(r"billie", (n.get("orig") or n["t"]) + " " + n.get("orig_d", ""), re.I))
+        if n.get("imgv") != IMGV:
+            n["imgs"], n["pics"], n["imgv"] = [], [], IMGV
+        if not rel:
+            n["img"] = ""
+        n["imgs"] = []
+        n["_rel"] = rel
+    for n in merged[:20]:
+        if n["_rel"] and not n.get("img"):
+            n["img"] = og_image(n["u"]) or ""
+
     lists = []
     for fn in (commons_deep, commons_photos, openverse_photos, local_photos):
         try:
@@ -322,9 +329,9 @@ def main():
     for n in merged:
         if done >= MAX_REWRITE or not (GEMINI_KEY or OPENAI_KEY):
             break
-        if n.get("v") == VERSION or n.get("tries_v%d" % VERSION, 0) >= 3:
+        if n.get("v", 0) >= 2 or n.get("tries3", 0) >= 6:
             continue
-        n["tries_v%d" % VERSION] = n.get("tries_v%d" % VERSION, 0) + 1
+        n["tries3"] = n.get("tries3", 0) + 1
         orig = n.get("orig") or n["t"]
         print("Reescrevendo:", orig[:70])
         text = article_text(n["u"])
@@ -332,20 +339,28 @@ def main():
             text = n.get("orig_d") or n["d"]
             print("  texto curto — usando resumo + pesquisa")
         n.setdefault("orig_d", n["d"])
-        try:
-            res = parse_ai(call_ai(PROMPT % (orig, n.get("date", ""), text)))
-        except Exception as e:
-            print("  IA falhou:", e); continue
+        res = None
+        for attempt in (1, 2):
+            try:
+                res = parse_ai(call_ai(PROMPT % (orig, n.get("date", ""), text)))
+                break
+            except Exception as e:
+                print("  IA falhou:", e)
+                if attempt == 1 and ("429" in str(e) or "503" in str(e)):
+                    time.sleep(40); continue
+                break
         if not res:
-            print("  resposta da IA fora do formato"); continue
+            print("  sem texto da IA nesta tentativa"); continue
         n["t"], n["d"], n["body"], n["v"], n["orig"] = res["t"], res["d"], res["body"], VERSION, orig
         done += 1
-        time.sleep(2)
+        time.sleep(6)
     print(f"{done} notícias reescritas")
+    for n in merged:
+        n.pop("_rel", None)
     if merged:
         OUT.write_text(json.dumps(merged, ensure_ascii=False, indent=1), "utf-8")
         print(f"{len(merged)} notícias salvas")
 
 if __name__ == "__main__":
     main()
-    
+        

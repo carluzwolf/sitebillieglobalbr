@@ -26,15 +26,25 @@ main{max-width:880px;margin:0 auto;padding:0 16px}
 @media(max-width:600px){.card{flex-direction:column;gap:10px}.cover{flex:none;width:100%;height:150px}}
 .more{display:block;margin:28px auto;padding:12px 28px;border:1px solid var(--red);background:transparent;color:var(--red);font:600 14px inherit;font-family:inherit;border-radius:6px;cursor:pointer}
 .more:hover{background:var(--red);color:#fff}.more[hidden]{display:none}
+#art{padding:22px 0 10px}#art[hidden]{display:none}
+.back{display:inline-block;margin-bottom:14px;color:var(--red);font-weight:600;font-size:14px;text-decoration:none}
+#art .k{font-size:12px;font-weight:700;color:var(--red);text-transform:uppercase;letter-spacing:.06em}
+#art h1{margin:6px 0 8px;font-size:clamp(24px,5vw,34px);line-height:1.2;letter-spacing:-.02em}
+#art .m{color:var(--mut);font-size:13px;margin-bottom:16px}
+#art .hero{width:100%;max-height:460px;object-fit:cover;border-radius:8px;display:block;margin-bottom:18px;background:var(--soft)}
+#art .p{font-size:17px;line-height:1.7;margin:0 0 20px}
+#art .srcbox{border:1px solid var(--line);border-left:4px solid var(--red);padding:14px 16px;border-radius:6px;font-size:13px;color:var(--mut);background:var(--soft)}
+#art .srcbox a{display:inline-block;margin-top:8px;color:var(--red);font-weight:600}
 footer{border-top:1px solid var(--line);text-align:center;color:var(--mut);font-size:12px;padding:20px 16px 40px;background:var(--soft)}
 </style></head><body>
 <header><div class="bar"><div class="logo">Billie Global <b>BR</b></div>
 <a class="btn" id="lg" href="#" target="_blank" rel="noopener">Grupo de fãs</a>
 <a class="btn o" id="lc" href="#" target="_blank" rel="noopener">Canal</a></div></header>
 <main>
-<div class="top"><h1>Últimas notícias da Billie Eilish</h1><small id="upd"></small></div>
+<div id="art" hidden></div>
+<div id="list"><div class="top"><h1>Últimas notícias da Billie Eilish</h1><small id="upd"></small></div>
 <div id="feed"></div>
-<button class="more" id="more">Ver mais notícias</button>
+<button class="more" id="more">Ver mais notícias</button></div>
 </main>
 <footer>© Billie Global BR · Portal de fãs não oficial. Os textos são resumos; o conteúdo original pertence às fontes citadas.</footer>
 <script>
@@ -56,14 +66,23 @@ document.getElementById("lg").href=LINK_GRUPO;document.getElementById("lc").href
 function esc(x){var e=document.createElement("div");e.textContent=x||"";return e.innerHTML}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.1});
 function render(){var f=document.getElementById("feed"),end=Math.min(shown+PER,items.length);
-for(var i=shown;i<end;i++){var n=items[i],a=document.createElement("a");a.className="card";a.href=n.u;a.target="_blank";a.rel="noopener";
+for(var i=shown;i<end;i++){var n=items[i],a=document.createElement("a");a.className="card";a.href="#/n/"+nid(n);
 a.innerHTML='<div class="cover k'+(i%3)+'">'+(n.img?'<img loading="lazy" alt="" src="'+esc(n.img)+'" onerror="this.remove()">':'')+'<span>'+esc(n.g||"Notícia")+'</span></div><div class="txt"><div class="meta"><b>'+esc(n.s)+'</b> · '+esc(n.date||"")+'</div><h2>'+esc(n.t)+'</h2><p>'+esc(n.d)+'</p></div>';
 f.appendChild(a);io.observe(a)}
 shown=end;document.getElementById("more").hidden=shown>=items.length}
+function nid(n){var h=0,x=n.t||"";for(var i=0;i<x.length;i++){h=(h*31+x.charCodeAt(i))|0}return Math.abs(h).toString(36)}
+function route(){var m=location.hash.match(/^#\/n\/(\w+)/),A=document.getElementById("art"),L=document.getElementById("list");
+if(!m){A.hidden=true;L.hidden=false;document.title="Billie Global BR — Notícias da Billie Eilish";return}
+var n=items.filter(function(x){return nid(x)===m[1]})[0];
+if(!n){A.hidden=true;L.hidden=false;return}
+L.hidden=true;A.hidden=false;document.title=n.t+" — Billie Global BR";
+A.innerHTML='<a class="back" href="#/">← Voltar às notícias</a><div class="k">'+esc(n.g||"Notícia")+'</div><h1>'+esc(n.t)+'</h1><div class="m">'+esc(n.s)+(n.date?' · '+esc(n.date):'')+'</div>'+(n.img?'<img class="hero" alt="" src="'+esc(n.img)+'" onerror="this.remove()">':'')+(n.body&&n.body.length?n.body.map(function(x){return '<p class="p">'+esc(x)+'</p>'}).join(''):'<p class="p">'+esc(n.d)+'</p>')+'<div class="srcbox">Texto produzido pela equipe do Billie Global BR com base em informações publicadas por <b>'+esc(n.s)+'</b>'+(n.img?' · Foto: '+esc(n.s):'')+'<br><a href="'+esc(n.u)+'" target="_blank" rel="noopener">Fonte: ver matéria original ↗</a></div>';
+scrollTo(0,0)}
+addEventListener("hashchange",route);
 document.getElementById("more").onclick=render;
 document.getElementById("upd").textContent="Atualizado em 26 out 2026";
-render();
+render();route();
 // Atualização automática: se existir news.json no mesmo endereço (gerado a cada 30 min), ele substitui a lista acima.
 fetch("news.json?"+Date.now()).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(j){
-if(j&&j.length){items=j;shown=0;document.getElementById("feed").innerHTML="";render();document.getElementById("upd").textContent="Atualizado há instantes"}}).catch(function(){});
+if(j&&j.length){items=j;shown=0;document.getElementById("feed").innerHTML="";render();route();document.getElementById("upd").textContent="Atualizado há instantes"}}).catch(function(){});
 </script></body></html>

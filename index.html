@@ -82,16 +82,6 @@ footer a{color:var(--red);text-decoration:none;font-weight:600;margin:0 6px}
 // ===== LINKS DO WHATSAPP =====
 var LINK_GRUPO="https://chat.whatsapp.com/FFtSaPi4UYn7l4jrKQGXzd?s=cl&p=a&mlu=4&ilr=4", LINK_CANAL="https://whatsapp.com/channel/0029VavaVBp5kg77PEh3Bq2g";
 // =============================
-var SEED=[
-{t:"Finneas celebra a reeleição de Lula e comemora nas redes",d:"O irmão e parceiro de Billie Eilish repercutiu o resultado do segundo turno brasileiro e compartilhou uma mensagem ligando a vitória ao cenário político dos EUA.",s:"Vagalume",date:"26 out 2026",u:"https://vagalume.com.br/news/2026/10/26/finneas-celebra-vitoria-de-lula-e-dispara-se-o-brasil-conseguiu-a-america-tambem-pode.html",g:"Destaque"},
-{t:"Billie Eilish pode ser atração do Glastonbury 2027, diz imprensa britânica",d:"Segundo o Daily Mail, citado pelo Mega Hits, a cantora deve se apresentar no palco Pyramid em junho. Há rumores de nova turnê mundial e álbum inédito, ainda sem confirmação oficial.",s:"Mega Hits",date:"26 out 2026",u:"https://megahits.fm/mega-news/18566/billie-eilish-confirmada-num-dos-maiores-festivais-do-mundo",g:"Shows"},
-{t:"Billie será protagonista de “A Redoma de Vidro”, de Sarah Polley",d:"A cantora se prepara para seu primeiro grande papel no cinema, como Esther Greenwood, na nova adaptação do romance de Sylvia Plath.",s:"Fakti.bg",date:"24 out 2026",u:"https://fakti.bg/en/amp/life/1093434-billie-eilish-had-a-breast-reduction-photos",g:"Cinema"},
-{t:"Novo visual da Billie viraliza e divide opiniões entre os fãs",d:"Fotos recentes com cabelo mais claro e corte novo geraram debate nas redes. O BuzzFeed reuniu as reações dos internautas.",s:"BuzzFeed",date:"22 out 2026",u:"https://www.buzzfeed.com/ellendurney/billie-eilish-unrecognizable-in-new-photos",g:"Redes"},
-{t:"Billie volta às redes sociais e mostra novo cabelo",d:"A cantora publicou um retorno ao Instagram com o novo visual, um bob ondulado em tom acobreado claro, que rendeu comparações com o irmão Finneas.",s:"Billboard",date:"6 out 2026",u:"https://www.billboard.com/music/music-news/billie-eilish-new-hair-color-length-transformation-1236355039/",g:"Redes"},
-{t:"Billie Eilish celebra o casamento do irmão Finneas como celebrante",d:"Finneas se casou com Claudia Sulewski em cerimônia em Montecito, na Califórnia, conduzida por Billie, que também se apresentou na festa.",s:"HELLO!",date:"out 2026",u:"https://www.hellomagazine.com/tags/billie-eilish/",g:"Família"},
-{t:"Hit Me Hard and Soft: The Tour (Live in 3D) chegou aos cinemas",d:"O filme de show dirigido por James Cameron e Billie estreou em maio de 2026 e registra a turnê nas apresentações de Manchester.",s:"Wikipedia",date:"mai 2026",u:"https://en.wikipedia.org/wiki/Billie_Eilish_%E2%80%93_Hit_Me_Hard_and_Soft:_The_Tour_(Live_in_3D)",g:"Cinema"},
-{t:"Emoção de Billie em show em Brisbane faz fãs chorarem",d:"Momento durante a passagem pela Austrália virou assunto entre fãs e veículos de entretenimento.",s:"HELLO!",date:"2026",u:"https://www.hellomagazine.com/tags/billie-eilish/",g:"Shows"}
-];
 var items=SEED.slice(),PER=6,lim=PER,cur=null,upd="Atualizado em 26 out 2026";
 var CATS=[["musica","Música",/álbum|album|single|música|musica|song|lançamento|clipe|faixa|canção|streaming|new music/i],["shows","Shows e turnê",/tour|turnê|turne|show|concert|festival|glastonbury|coachella|ingresso|palco/i],["cinema","Cinema e TV",/filme|cinema|movie|film|série|serie|atriz|papel|netflix|redoma|bell jar/i],["premios","Premiações",/grammy|oscar|vmas|prêmio|premio|award|indicad|billboard music/i],["ativismo","Ativismo e política",/ativis|clima|ambient|política|politica|lula|eleiç|imigra|protest|climate/i],["familia","Família e vida pessoal",/finneas|irmão|casamento|namor|família|familia|wedding|boyfriend/i],["visual","Visual e moda",/cabelo|visual|look|moda|fashion|hair|vestido|outfit|estilo/i],["redes","Redes sociais",/instagram|tiktok|redes sociais|viral|fãs reag/i]];
 var ORDER=["premios","shows","cinema","musica","ativismo","familia","visual","redes"];
@@ -154,5 +144,5 @@ addEventListener("hashchange",route);
 fetch("photos.json?"+Date.now()).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(j){if(j&&j.length){PHOTOS=j;if(/^#\/n\//.test(location.hash))route()}}).catch(function(){});
 route();
 fetch("news.json?"+Date.now()).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(j){
-if(j&&j.length){items=j;upd="Atualizado há instantes";if(!$("q").value)route()}}).catch(function(){});
+j=(j||[]).filter(function(x){return !x.hide});if(j.length){items=j;upd="Atualizado há instantes";if(!$("q").value)route()}}).catch(function(){});
 </script></body></html>

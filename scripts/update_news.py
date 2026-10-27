@@ -116,8 +116,8 @@ def parse_commons(data):
 def commons_photos():
     ua = {"User-Agent": "BillieGlobalBR/1.0 (fan news portal; https://billieglobalbr.com.br)"}
     pool = []
-    for q in ("Billie Eilish", "Billie Eilish concert", "Finneas O'Connell"):
-        url = ("https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=30"
+    for q in ("Billie Eilish", "Billie Eilish concert", "Billie Eilish Grammy", "Billie Eilish Coachella", "Billie Eilish Lollapalooza", "Hit Me Hard and Soft tour", "Happier Than Ever tour", "Finneas O'Connell", "Finneas concert"):
+        url = ("https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=50"
                "&prop=imageinfo&iiprop=url|extmetadata|size&iiurlwidth=1200&format=json&gsrsearch=" + urllib.parse.quote(q))
         try:
             pool += parse_commons(json.loads(get(url, 20, ua)))
@@ -127,7 +127,71 @@ def commons_photos():
     for x in pool:
         if x["u"] not in seen:
             seen.add(x["u"]); res.append(x)
-    return res[:40]
+    return res[:150]
+
+def parse_openverse(data, key):
+    out = []
+    for r in data.get("results", []):
+        u = r.get("url") or ""
+        txt = ((r.get("title") or "") + " " + " ".join(t.get("name", "") for t in (r.get("tags") or []))).lower()
+        if key not in txt or (r.get("width") or 0) < 1000 or not re.search(r"\.jpe?g", u, re.I):
+            continue
+        lic = ("CC " + (r.get("license") or "").upper() + " " + (r.get("license_version") or "")).strip()
+        out.append({"u": u, "c": f"{r.get('creator') or 'Autor desconhecido'} / {r.get('source') or 'Openverse'} ({lic})",
+                    "l": r.get("foreign_landing_url") or "https://openverse.org"})
+    return out
+
+def openverse_photos():
+    ua = {"User-Agent": "BillieGlobalBR/1.0 (fan news portal)"}
+    out = []
+    for q, key in (("Billie Eilish", "billie"), ("Billie Eilish concert", "billie"), ("Finneas O'Connell", "finneas")):
+        for page in (1, 2, 3):
+            url = ("https://api.openverse.org/v1/images/?page_size=50&license_type=commercial,modification&extension=jpg&page=%d&q=" % page
+                   + urllib.parse.quote(q))
+            try:
+                out += parse_openverse(json.loads(get(url, 20, ua)), key)
+            except Exception as e:
+                print("Openverse falhou:", q, page, e); break
+    return out
+
+def local_photos():
+    d = Path(__file__).resolve().parent.parent / "fotos"
+    if not d.exists():
+        return []
+    return [{"u": "fotos/" + f.name, "c": "Divulgação / Billie Global BR", "l": "#/"}
+            for f in sorted(d.iterdir()) if f.suffix.lower() in (".jpg", ".jpeg", ".png", ".webp")]
+
+def commons_category(root, max_subcats=15):
+    ua = {"User-Agent": "BillieGlobalBR/1.0 (fan news portal; https://billieglobalbr.com.br)"}
+    base = "https://commons.wikimedia.org/w/api.php?format=json&action=query&"
+    cats = [root]
+    try:
+        d = json.loads(get(base + "list=categorymembers&cmtype=subcat&cmlimit=50&cmtitle=" + urllib.parse.quote(root), 20, ua))
+        cats += [m["title"] for m in d["query"]["categorymembers"]][:max_subcats]
+    except Exception as e:
+        print("Subcategorias falharam:", root, e)
+    out = []
+    for c in cats:
+        cont = ""
+        for _ in range(3):
+            url = (base + "generator=categorymembers&gcmtype=file&gcmlimit=50&prop=imageinfo&iiprop=url|extmetadata|size"
+                   "&iiurlwidth=1200&gcmtitle=" + urllib.parse.quote(c) + cont)
+            try:
+                d = json.loads(get(url, 25, ua))
+            except Exception as e:
+                print("Categoria falhou:", c, e); break
+            out += parse_commons(d)
+            if "continue" not in d:
+                break
+            cont = "".join("&%s=%s" % (k, urllib.parse.quote(str(v))) for k, v in d["continue"].items())
+            time.sleep(0.3)
+    return out
+
+def commons_deep():
+    out = []
+    for root in ("Category:Billie Eilish", "Category:Finneas O'Connell"):
+        out += commons_category(root)
+    return out
 
 def article_text(url):
     page = get_page(url)
@@ -221,13 +285,36 @@ def main():
             continue
         cnt += 1
         n["imgs"] = [{"u": u, "s": n["s"], "l": n["u"]} for u in page_images(n["u"]) if u != n.get("img")][:3]
-    try:
-        pool = commons_photos()
-        if pool:
-            PHOTOS_OUT.write_text(json.dumps(pool, ensure_ascii=False), "utf-8")
-            print(len(pool), "fotos do Wikimedia Commons")
-    except Exception as e:
-        print("Fotos falharam:", e)
+    lists = []
+    for fn in (commons_deep, commons_photos, openverse_photos, local_photos):
+        try:
+            lists.append(fn())
+        except Exception as e:
+            print("Fotos falharam:", fn.__name__, e)
+    mixed, seenp = [], set()
+    for i in range(max([len(x) for x in lists] or [0])):
+        for lst in lists:
+            if i < len(lst) and lst[i]["u"] not in seenp:
+                seenp.add(lst[i]["u"]); mixed.append(lst[i])
+    if mixed:
+        PHOTOS_OUT.write_text(json.dumps(mixed, ensure_ascii=False), "utf-8")
+    print(len(mixed), "fotos livres no banco")
+    # cada notícia recebe fotos que NENHUMA outra usa; se o banco acabar, mostra menos fotos (nunca repete)
+    used = set()
+    for n in merged:
+        used.add(n.get("img"))
+        used.update(x["u"] for x in n.get("imgs", []))
+        used.update(x["u"] for x in n.get("pics", []))
+    for n in merged:
+        own = len({u for u in [n.get("img")] + [x["u"] for x in n.get("imgs", [])] if u})
+        goal = 3 if "imgs" in n else 1
+        pics = n.setdefault("pics", [])
+        for ph in mixed:
+            if own + len(pics) >= goal:
+                break
+            if ph["u"] in used:
+                continue
+            used.add(ph["u"]); pics.append(ph)
 
     if not (GEMINI_KEY or OPENAI_KEY):
         print("ATENÇÃO: nenhuma chave de IA encontrada (GEMINI_API_KEY / OPENAI_API_KEY).")
@@ -261,4 +348,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-        
+    

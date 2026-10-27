@@ -1,0 +1,21 @@
+name: Limpar notícias incompletas
+on:
+  workflow_dispatch: {}   # só roda quando você clicar em Run workflow
+permissions:
+  contents: write
+jobs:
+  clean:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/clean_news.py
+      - name: Commit
+        run: |
+          git config user.name "news-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add news.json
+          git diff --cached --quiet || (git commit -m "Remove notícias incompletas" && git push)
+          

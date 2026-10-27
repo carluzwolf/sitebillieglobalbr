@@ -10,7 +10,7 @@ OUT = Path(__file__).resolve().parent.parent / "news.json"
 PHOTOS_OUT = Path(__file__).resolve().parent.parent / "photos.json"
 MAX_ITEMS = 200
 IMGV = 4                 # versão da regra de imagens (aumente para refazer todas)
-MAX_REWRITE = 50         # notícias reescritas por rodada (controla custo/tempo)
+MAX_REWRITE = 10         # notícias reescritas por rodada (controla custo/tempo)
 VERSION = 2              # aumente para forçar reescrever tudo de novo
 FALLBACK_IMAGE = ""
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -388,7 +388,7 @@ def main():
     for n in merged:
         if done >= MAX_REWRITE or not (GEMINI_KEY or OPENAI_KEY):
             break
-        if n.get("v", 0) >= 2 or n.get("tries3", 0) >= 6:
+        if n.get("hide") or n.get("v", 0) >= 2 or n.get("tries3", 0) >= 6:
             continue
         n["tries3"] = n.get("tries3", 0) + 1
         orig = n.get("orig") or n["t"]
@@ -419,4 +419,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-        
+    

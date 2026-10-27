@@ -1,5 +1,5 @@
 """Busca notícias da Billie Eilish (Bing News RSS), reescreve com IA (traduz + expande) e grava news.json."""
-import json, os, re, ssl, html, time, urllib.request, urllib.parse
+import json, os, re, ssl, html, time, urllib.request, urllib.parse, urllib.error
 from urllib.parse import urljoin
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
@@ -10,12 +10,13 @@ OUT = Path(__file__).resolve().parent.parent / "news.json"
 PHOTOS_OUT = Path(__file__).resolve().parent.parent / "photos.json"
 MAX_ITEMS = 200
 IMGV = 3                 # versão da regra de imagens (aumente para refazer todas)
-MAX_REWRITE = 25         # notícias reescritas por rodada (controla custo/tempo)
+MAX_REWRITE = 10         # notícias reescritas por rodada (controla custo/tempo)
 VERSION = 2              # aumente para forçar reescrever tudo de novo
 FALLBACK_IMAGE = ""
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
 OPENAI_KEY = os.environ.get("OPENAI_API_KEY", "")
 GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+GEMINI_FALLBACKS = [m for m in os.environ.get("GEMINI_FALLBACKS", "gemini-2.5-flash-lite").split(",") if m]
 OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-4o-mini")
 FEEDS = [
     "https://www.bing.com/news/search?q=%22Billie+Eilish%22&format=rss&setlang=pt-BR&mkt=pt-BR",
@@ -107,7 +108,7 @@ def parse_commons(data, only_relevant=False):
         if only_relevant and not re.search(r"billie|eilish|finneas", pg.get("title", ""), re.I):
             continue
         url = ii.get("thumburl") or ii.get("url") or ""
-        if not re.search(r"\.jpe?g$", url, re.I) or ii.get("width", 0) < 1000:
+        if not re.search(r"\.jpe?g$", url, re.I) or ii.get("width", 0) < 800:
             continue
         meta = ii.get("extmetadata", {})
         artist = clean(meta.get("Artist", {}).get("value", ""))[:40] or "Wikimedia Commons"
@@ -144,8 +145,21 @@ def parse_openverse(data, key):
                     "l": r.get("foreign_landing_url") or "https://openverse.org"})
     return out
 
+def openverse_token():
+    cid, sec = os.environ.get("OPENVERSE_CLIENT_ID", ""), os.environ.get("OPENVERSE_CLIENT_SECRET", "")
+    if not (cid and sec):
+        return ""
+    data = urllib.parse.urlencode({"grant_type": "client_credentials", "client_id": cid, "client_secret": sec}).encode()
+    req = urllib.request.Request("https://api.openverse.org/v1/auth_tokens/token/", data, {"User-Agent": UA["User-Agent"]})
+    with urllib.request.urlopen(req, timeout=20, context=ssl.create_default_context()) as r:
+        return json.loads(r.read())["access_token"]
+
 def openverse_photos():
-    ua = {"User-Agent": "BillieGlobalBR/1.0 (fan news portal)"}
+    tok = openverse_token()
+    if not tok:
+        print("Openverse pulado (agora exige chave gratuita); usando só o Wikimedia Commons")
+        return []
+    ua = {"User-Agent": "BillieGlobalBR/1.0 (fan news portal)", "Authorization": "Bearer " + tok}
     out = []
     for q, key in (("Billie Eilish", "billie"), ("Billie Eilish concert", "billie"), ("Finneas O'Connell", "finneas")):
         for page in (1, 2, 3):
@@ -193,7 +207,9 @@ def commons_category(root, max_subcats=15):
 def commons_deep():
     out = []
     for root in ("Category:Billie Eilish", "Category:Finneas O'Connell"):
-        out += commons_category(root)
+        got = commons_category(root)
+        print("Commons categoria", root, "->", len(got), "fotos")
+        out += got
     return out
 
 def article_text(url):
@@ -204,23 +220,40 @@ def article_text(url):
     ps = [clean(x) for x in re.findall(r"(?is)<p[^>]*>(.*?)</p>", page)]
     return " ".join(x for x in ps if len(x) > 40)[:9000]
 
+class Quota(Exception):
+    pass
+
 def post_json(url, payload, headers):
     req = urllib.request.Request(url, json.dumps(payload).encode(), {**headers, "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=120, context=ssl.create_default_context()) as r:
-        return json.loads(r.read())
+    try:
+        with urllib.request.urlopen(req, timeout=120, context=ssl.create_default_context()) as r:
+            return json.loads(r.read())
+    except urllib.error.HTTPError as e:
+        body = e.read()[:400].decode("utf-8", "ignore")
+        if e.code == 429:
+            raise Quota(body)
+        raise RuntimeError("HTTP %s: %s" % (e.code, body))
+
+def gem_call(model, body):
+    u = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={GEMINI_KEY}"
+    try:  # com pesquisa no Google para trazer mais contexto
+        r = post_json(u, {**body, "tools": [{"google_search": {}}]}, {})
+    except Quota:
+        r = post_json(u, body, {})   # a pesquisa tem cota própria; tenta sem ela
+    parts = r["candidates"][0]["content"]["parts"]
+    return "".join(p.get("text", "") for p in parts)
 
 def call_ai(prompt):
     if GEMINI_KEY:
-        u = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent?key={GEMINI_KEY}"
-        body = {"contents": [{"parts": [{"text": prompt}]}],
-                "generationConfig": {"temperature": 0.7, "maxOutputTokens": 8000}}
-        try:  # com pesquisa no Google para trazer mais contexto
-            r = post_json(u, {**body, "tools": [{"google_search": {}}]}, {})
-        except Exception as e:
-            print("  sem pesquisa (", e, ") — tentando sem")
-            r = post_json(u, body, {})
-        parts = r["candidates"][0]["content"]["parts"]
-        return "".join(p.get("text", "") for p in parts)
+        body = {"contents": [{"parts": [{"text": prompt}]}], "generationConfig": {"temperature": 0.7, "maxOutputTokens": 8000}}
+        last = None
+        for model in [GEMINI_MODEL] + GEMINI_FALLBACKS:
+            try:
+                return gem_call(model, body)
+            except Quota as e:
+                last = e
+                print("  cota esgotada no modelo", model)
+        raise last
     if OPENAI_KEY:
         r = post_json("https://api.openai.com/v1/chat/completions",
                       {"model": OPENAI_MODEL, "messages": [{"role": "user", "content": prompt}]},
@@ -295,7 +328,9 @@ def main():
     lists = []
     for fn in (commons_deep, commons_photos, openverse_photos, local_photos):
         try:
-            lists.append(fn())
+            got = fn()
+            print("Fonte", fn.__name__, "->", len(got), "fotos")
+            lists.append(got)
         except Exception as e:
             print("Fotos falharam:", fn.__name__, e)
     mixed, seenp = [], set()
@@ -340,20 +375,19 @@ def main():
             print("  texto curto — usando resumo + pesquisa")
         n.setdefault("orig_d", n["d"])
         res = None
-        for attempt in (1, 2):
-            try:
-                res = parse_ai(call_ai(PROMPT % (orig, n.get("date", ""), text)))
-                break
-            except Exception as e:
-                print("  IA falhou:", e)
-                if attempt == 1 and ("429" in str(e) or "503" in str(e)):
-                    time.sleep(40); continue
-                break
+        try:
+            res = parse_ai(call_ai(PROMPT % (orig, n.get("date", ""), text)))
+        except Quota as e:
+            print("  LIMITE DA IA ATINGIDO, parando por agora:", str(e)[:300].replace("\n", " "))
+            n["tries3"] -= 1
+            break
+        except Exception as e:
+            print("  IA falhou:", e)
         if not res:
             print("  sem texto da IA nesta tentativa"); continue
         n["t"], n["d"], n["body"], n["v"], n["orig"] = res["t"], res["d"], res["body"], VERSION, orig
         done += 1
-        time.sleep(6)
+        time.sleep(8)
     print(f"{done} notícias reescritas")
     for n in merged:
         n.pop("_rel", None)
@@ -363,4 +397,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-        

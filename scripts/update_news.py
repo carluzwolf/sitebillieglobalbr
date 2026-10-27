@@ -7,7 +7,7 @@ from pathlib import Path
 
 OUT = Path(__file__).resolve().parent.parent / "news.json"
 MAX_ITEMS = 200
-MAX_REWRITE = 6          # notícias reescritas por rodada (controla custo/tempo)
+MAX_REWRITE = 20          # notícias reescritas por rodada (controla custo/tempo)
 VERSION = 2              # aumente para forçar reescrever tudo de novo
 FALLBACK_IMAGE = ""
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")

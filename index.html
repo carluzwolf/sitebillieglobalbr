@@ -104,7 +104,7 @@ return ["geral","Geral"]}
 function byCat(s){return items.filter(function(n){return cat(n)[0]===s})}
 function matches(q){q=q.toLowerCase();return items.filter(function(n){return (n.t+" "+n.d+" "+(n.body||[]).join(" ")+" "+n.s).toLowerCase().indexOf(q)>-1})}
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08});
-function cardH(n,i){return '<a class="card" href="#/n/'+nid(n)+'"><div class="cover k'+(i%3)+'">'+(n.img?'<img loading="lazy" alt="" src="'+esc(n.img)+'" onerror="this.remove()">':'')+'<span>'+esc(cat(n)[1])+'</span></div><div class="txt"><div class="meta"><b>'+esc(n.s)+'</b> · '+esc(n.date||"")+'</div><h2>'+esc(n.t)+'</h2><p>'+esc(n.d)+'</p></div></a>'}
+function cardH(n,i){return '<a class="card" href="#/n/'+nid(n)+'"><div class="cover k'+(i%3)+'">'+coverImg(n)+'<span>'+esc(cat(n)[1])+'</span></div><div class="txt"><div class="meta"><b>'+esc(n.s)+'</b> · '+esc(n.date||"")+'</div><h2>'+esc(n.t)+'</h2><p>'+esc(n.d)+'</p></div></a>'}
 function listH(a){if(!a.length)return '<div class="empty">Nenhuma notícia encontrada.</div>';
 var h=a.slice(0,lim).map(cardH).join("");if(a.length>lim)h+='<button class="more" onclick="more()">Ver mais notícias</button>';return h}
 function chipsH(act){var h='<div class="chips"><a class="chip'+(act==="all"?" on":"")+'" href="#/noticias">Todas</a>';
@@ -113,12 +113,13 @@ function paint(h,keep){$("v").innerHTML=h;document.querySelectorAll(".card").for
 function more(){lim+=PER;if(cur)paint(cur(),true)}
 function waPage(t,txt,u,b){return '<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a><h1>'+t+'</h1><p>'+txt+'</p><div class="row"><a class="btn" href="'+u+'" target="_blank" rel="noopener">'+b+'</a><a class="btn o" href="#/">Ver as notícias</a></div></div>'}
 var PHOTOS=[];
-function figH(p){return '<figure class="fig"><img loading="lazy" alt="" src="'+esc(p.u)+'" onerror="this.closest(\'figure\').remove()"><figcaption>Foto: <a href="'+esc(p.l)+'" target="_blank" rel="noopener">'+esc(p.c)+'</a></figcaption></figure>'}
+function coverImg(n){var a=imgsFor(n);if(!a.length)return "";return '<img loading="lazy" referrerpolicy="no-referrer" alt="" src="'+esc(a[0].u)+'" data-n="'+encodeURIComponent(JSON.stringify(a.slice(1).map(function(x){return x.u})))+'" onerror="nx(this)">'}
+function nx(el){var r=[];try{r=JSON.parse(decodeURIComponent(el.dataset.n||"[]"))}catch(e){}var u=r.shift();if(u){el.dataset.n=encodeURIComponent(JSON.stringify(r));el.src=u}else el.remove()}
+function figH(p){return '<figure class="fig"><img loading="lazy" referrerpolicy="no-referrer" alt="" src="'+esc(p.u)+'" onerror="this.closest(\'figure\').remove()"><figcaption>Foto: <a href="'+esc(p.l)+'" target="_blank" rel="noopener">'+esc(p.c)+'</a></figcaption></figure>'}
 function imgsFor(n){var a=[],seen={},seed=parseInt(nid(n),36)||0,i,p,o;
 function add(u,c,l){if(u&&!seen[u]&&a.length<3){seen[u]=1;a.push({u:u,c:c,l:l||n.u})}}
 add(n.img,n.s,n.u);(n.imgs||[]).forEach(function(q){add(q.u,q.s,q.l)});
-for(i=0;i<PHOTOS.length&&a.length<3;i++){p=PHOTOS[(seed+i*7)%PHOTOS.length];add(p.u,p.c,p.l)}
-for(i=0;i<items.length&&a.length<3;i++){o=items[(seed+i)%items.length];if(o!==n)add(o.img,o.s,o.u)}
+(n.pics||[]).forEach(function(q){add(q.u,q.c,q.l)});
 return a}
 function artBody(n){var a=imgsFor(n),ps=(n.body&&n.body.length?n.body:[n.d]),h=a[0]?figH(a[0]):"",u1=a[1],u2=a[2];
 ps.forEach(function(x,i){h+='<p class="p">'+esc(x)+'</p>';
@@ -150,8 +151,6 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")closeAll()})
 $("dg").href=LINK_GRUPO;$("dc").href=LINK_CANAL;
 $("dcat").innerHTML=CATS.map(function(c){return '<a href="#/c/'+c[0]+'">'+c[1]+'</a>'}).join("");
 addEventListener("hashchange",route);
-fetch("photos.json?"+Date.now()).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(j){if(j&&j.length){PHOTOS=j;if(/^#\/n\//.test(location.hash))route()}}).catch(function(){});
-route();
 fetch("news.json?"+Date.now()).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(j){
 if(j&&j.length){items=j;upd="Atualizado há instantes";if(!$("q").value)route()}}).catch(function(){});
 </script></body></html>

@@ -1,11 +1,13 @@
 """Busca notícias da Billie Eilish (Bing News RSS), reescreve com IA (traduz + expande) e grava news.json."""
 import json, os, re, ssl, html, time, urllib.request, urllib.parse
+from urllib.parse import urljoin
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
 from datetime import datetime, timezone
 from pathlib import Path
 
 OUT = Path(__file__).resolve().parent.parent / "news.json"
+PHOTOS_OUT = Path(__file__).resolve().parent.parent / "photos.json"
 MAX_ITEMS = 200
 MAX_REWRITE = 20          # notícias reescritas por rodada (controla custo/tempo)
 VERSION = 2              # aumente para forçar reescrever tudo de novo
@@ -46,8 +48,8 @@ DATA: %s
 TEXTO ORIGINAL (pode estar vazio ou curto):
 %s"""
 
-def get(url, timeout=20):
-    req = urllib.request.Request(url, headers=UA)
+def get(url, timeout=20, ua=None):
+    req = urllib.request.Request(url, headers=ua or UA)
     with urllib.request.urlopen(req, timeout=timeout, context=ssl.create_default_context()) as r:
         return r.read()
 
@@ -68,11 +70,68 @@ def og_image(url):
     except Exception:
         return ""
 
+PAGES = {}
+BAD = re.compile(r"logo|icon|avatar|sprite|pixel|tracking|author|profile|placeholder|\.svg|\.gif|1x1|blank|/ads?/|badge", re.I)
+
+def get_page(url):
+    if url not in PAGES:
+        try:
+            PAGES[url] = get(url, 15)[:900000].decode("utf-8", "ignore")
+        except Exception:
+            PAGES[url] = ""
+    return PAGES[url]
+
+def page_images(url):
+    page = get_page(url)
+    found = []
+    for pat in (r'<meta[^>]+(?:property|name)=["\'](?:og:image|twitter:image)["\'][^>]+content=["\']([^"\']+)',
+                r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\'](?:og:image|twitter:image)["\']'):
+        found += re.findall(pat, page)
+    for tag in re.findall(r"(?is)<img\b[^>]*>", page):
+        m = re.search(r'(?:data-src|src)=["\']([^"\']+)', tag)
+        w = re.search(r'width=["\']?(\d+)', tag)
+        if m and (not w or int(w.group(1)) >= 400):
+            found.append(m.group(1))
+    out = []
+    for u in found:
+        u = urljoin(url, html.unescape(u.strip()))
+        if u.startswith("http") and re.search(r"\.(jpe?g|webp|png)(\?|$)", u, re.I) and not BAD.search(u) and u not in out:
+            out.append(u)
+    return out[:4]
+
+def parse_commons(data):
+    out = []
+    for pg in (data.get("query", {}).get("pages", {}) or {}).values():
+        ii = (pg.get("imageinfo") or [{}])[0]
+        url = ii.get("thumburl") or ii.get("url") or ""
+        if not re.search(r"\.jpe?g$", url, re.I) or ii.get("width", 0) < 1000:
+            continue
+        meta = ii.get("extmetadata", {})
+        artist = clean(meta.get("Artist", {}).get("value", ""))[:40] or "Wikimedia Commons"
+        lic = clean(meta.get("LicenseShortName", {}).get("value", ""))
+        out.append({"u": url, "c": f"{artist} / Wikimedia Commons" + (f" ({lic})" if lic else ""),
+                    "l": ii.get("descriptionurl", "https://commons.wikimedia.org")})
+    return out
+
+def commons_photos():
+    ua = {"User-Agent": "BillieGlobalBR/1.0 (fan news portal; https://billieglobalbr.com.br)"}
+    pool = []
+    for q in ("Billie Eilish", "Billie Eilish concert", "Finneas O'Connell"):
+        url = ("https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrnamespace=6&gsrlimit=30"
+               "&prop=imageinfo&iiprop=url|extmetadata|size&iiurlwidth=1200&format=json&gsrsearch=" + urllib.parse.quote(q))
+        try:
+            pool += parse_commons(json.loads(get(url, 20, ua)))
+        except Exception as e:
+            print("Commons falhou:", q, e)
+    seen, res = set(), []
+    for x in pool:
+        if x["u"] not in seen:
+            seen.add(x["u"]); res.append(x)
+    return res[:40]
+
 def article_text(url):
-    try:
-        page = get(url, 15)[:800000].decode("utf-8", "ignore")
-    except Exception as e:
-        print("  não abriu a matéria:", e)
+    page = get_page(url)
+    if not page:
         return ""
     page = re.sub(r"(?is)<(script|style|nav|header|footer|aside|form)[^>]*>.*?</\1>", " ", page)
     ps = [clean(x) for x in re.findall(r"(?is)<p[^>]*>(.*?)</p>", page)]
@@ -156,6 +215,20 @@ def main():
         if not n.get("img"):
             n["img"] = og_image(n["u"]) or FALLBACK_IMAGE
 
+    cnt = 0
+    for n in merged[:40]:
+        if "imgs" in n or cnt >= 15:
+            continue
+        cnt += 1
+        n["imgs"] = [{"u": u, "s": n["s"], "l": n["u"]} for u in page_images(n["u"]) if u != n.get("img")][:3]
+    try:
+        pool = commons_photos()
+        if pool:
+            PHOTOS_OUT.write_text(json.dumps(pool, ensure_ascii=False), "utf-8")
+            print(len(pool), "fotos do Wikimedia Commons")
+    except Exception as e:
+        print("Fotos falharam:", e)
+
     if not (GEMINI_KEY or OPENAI_KEY):
         print("ATENÇÃO: nenhuma chave de IA encontrada (GEMINI_API_KEY / OPENAI_API_KEY).")
     done = 0
@@ -188,4 +261,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
+        

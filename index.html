@@ -113,7 +113,7 @@ function paint(h,keep){$("v").innerHTML=h;document.querySelectorAll(".card").for
 function more(){lim+=PER;if(cur)paint(cur(),true)}
 function waPage(t,txt,u,b){return '<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a><h1>'+t+'</h1><p>'+txt+'</p><div class="row"><a class="btn" href="'+u+'" target="_blank" rel="noopener">'+b+'</a><a class="btn o" href="#/">Ver as notícias</a></div></div>'}
 var PHOTOS=[];
-function coverImg(n){var a=imgsFor(n);if(!a.length)return "";return '<img loading="lazy" referrerpolicy="no-referrer" alt="" src="'+esc(a[0].u)+'" data-n="'+encodeURIComponent(JSON.stringify(a.slice(1).map(function(x){return x.u})))+'" onerror="nx(this)">'}
+function coverImg(n){var a=imgsFor(n).map(function(x){return x.u});a.push("banner.png");return '<img loading="lazy" referrerpolicy="no-referrer" alt="" src="'+esc(a[0])+'" data-n="'+encodeURIComponent(JSON.stringify(a.slice(1)))+'" onerror="nx(this)">'}
 function nx(el){var r=[];try{r=JSON.parse(decodeURIComponent(el.dataset.n||"[]"))}catch(e){}var u=r.shift();if(u){el.dataset.n=encodeURIComponent(JSON.stringify(r));el.src=u}else el.remove()}
 function figH(p){return '<figure class="fig"><img loading="lazy" referrerpolicy="no-referrer" alt="" src="'+esc(p.u)+'" onerror="this.closest(\'figure\').remove()"><figcaption>Foto: <a href="'+esc(p.l)+'" target="_blank" rel="noopener">'+esc(p.c)+'</a></figcaption></figure>'}
 function imgsFor(n){var a=[],seen={},seed=parseInt(nid(n),36)||0,i,p,o;
@@ -151,6 +151,8 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")closeAll()})
 $("dg").href=LINK_GRUPO;$("dc").href=LINK_CANAL;
 $("dcat").innerHTML=CATS.map(function(c){return '<a href="#/c/'+c[0]+'">'+c[1]+'</a>'}).join("");
 addEventListener("hashchange",route);
+fetch("photos.json?"+Date.now()).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(j){if(j&&j.length){PHOTOS=j;if(/^#\/n\//.test(location.hash))route()}}).catch(function(){});
+route();
 fetch("news.json?"+Date.now()).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(j){
 if(j&&j.length){items=j;upd="Atualizado há instantes";if(!$("q").value)route()}}).catch(function(){});
 </script></body></html>

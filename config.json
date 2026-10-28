@@ -1,0 +1,24 @@
+{
+ "ai_enabled": true,
+ "max_rewrite": 50,
+ "max_items": 200,
+ "gemini_model": "gemini-3.5-flash-lite",
+ "gemini_fallbacks": "gemini-3.5-flash,gemini-2.5-flash",
+ "openai_model": "gpt-4o-mini",
+ "keyword": "billie",
+ "queries": [
+  {
+   "q": "\"Billie Eilish\"",
+   "lang": "pt-BR"
+  },
+  {
+   "q": "\"Billie Eilish\"",
+   "lang": "en-US"
+  },
+  {
+   "q": "Billie Eilish Finneas",
+   "lang": "pt-BR"
+  }
+ ],
+ "prompt": "Você é redator sênior do portal de fãs Billie Global BR, dedicado à Billie Eilish.\nAbaixo estão o título e o texto (que pode estar em inglês e/ou incompleto) de uma matéria de outro veículo.\nTarefa: escreva uma notícia COMPLETA, NOVA e ORIGINAL em português do Brasil.\n- Traduza e use as informações do texto como base e, se tiver acesso à pesquisa, consulte outras fontes confiáveis para acrescentar contexto, detalhes e histórico relevante (turnês, álbuns, declarações, datas).\n- Tamanho: 6 a 9 parágrafos, entre 350 e 600 palavras. Pode usar um parágrafo de contexto sobre o tema.\n- Use palavras e estrutura próprias; não copie frases nem a ordem do original. Citações: no máximo 8 palavras entre aspas e só se essencial.\n- Nunca invente fatos, datas, números ou falas. Se algo não for confirmado, diga que não há confirmação oficial.\n- Tom jornalístico, claro e envolvente para fãs brasileiros."
+}

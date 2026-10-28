@@ -1,0 +1,78 @@
+{
+ "name": "Billie Global",
+ "suffix": "BR",
+ "banner": "uploads/mvrf71tslu77.jpg",
+ "bannerAlt": "Billie Global BR — Seu site de notícias sobre a Billie Eilish",
+ "homeTitle": "Últimas notícias",
+ "ctaGrupo": "Grupo de fãs no WhatsApp",
+ "ctaCanal": "Canal no WhatsApp",
+ "links": {
+  "grupo": "https://chat.whatsapp.com/FFtSaPi4UYn7l4jrKQGXzd?s=cl&p=a&mlu=4&ilr=4",
+  "canal": "https://whatsapp.com/channel/0029VavaVBp5kg77PEh3Bq2g"
+ },
+ "footer": "© Billie Global BR · Portal de fãs não oficial, sem ligação com Billie Eilish ou sua equipe. Textos produzidos com apoio de inteligência artificial a partir de informações publicadas pelas fontes citadas.",
+ "sobre": {
+  "title": "Sobre o Billie Global BR",
+  "body": [
+   "O Billie Global BR é a comunidade brasileira de fãs da Billie Eilish e este é o nosso portal de notícias: reunimos, em português, o que acontece com a cantora no mundo todo.",
+   "O portal é atualizado automaticamente a cada 30 minutos. Os textos são produzidos com apoio de inteligência artificial a partir de informações publicadas por outros veículos, que são sempre citados no fim de cada notícia, com link para a matéria original.",
+   "Somos um site de fãs, não oficial, sem ligação com Billie Eilish, sua equipe ou gravadoras. Para falar com a gente e acompanhar tudo em tempo real, entre no canal e no grupo do WhatsApp."
+  ]
+ },
+ "canal": {
+  "title": "Canal de WhatsApp",
+  "button": "Seguir o canal",
+  "body": [
+   "Receba as principais notícias da Billie Eilish direto no seu WhatsApp, sem precisar abrir o site."
+  ]
+ },
+ "grupo": {
+  "title": "Grupo de WhatsApp",
+  "button": "Entrar no grupo",
+  "body": [
+   "Converse com outros fãs brasileiros da Billie Eilish. Respeito sempre, e sem spam."
+  ]
+ },
+ "cats": [
+  {
+   "slug": "premios",
+   "label": "Premiações",
+   "keywords": "grammy,oscar,vmas,prêmio,premio,award,indicad,billboard music"
+  },
+  {
+   "slug": "shows",
+   "label": "Shows e turnê",
+   "keywords": "tour,turnê,turne,show,concert,festival,glastonbury,coachella,ingresso,palco"
+  },
+  {
+   "slug": "cinema",
+   "label": "Cinema e TV",
+   "keywords": "filme,cinema,movie,film,série,serie,atriz,papel,netflix,redoma,bell jar"
+  },
+  {
+   "slug": "musica",
+   "label": "Música",
+   "keywords": "álbum,album,single,música,musica,song,lançamento,clipe,faixa,canção,streaming,new music"
+  },
+  {
+   "slug": "ativismo",
+   "label": "Ativismo e política",
+   "keywords": "ativis,clima,ambient,política,politica,lula,eleiç,imigra,protest,climate"
+  },
+  {
+   "slug": "familia",
+   "label": "Família e vida pessoal",
+   "keywords": "finneas,irmão,casamento,namor,família,familia,wedding,boyfriend"
+  },
+  {
+   "slug": "visual",
+   "label": "Visual e moda",
+   "keywords": "cabelo,visual,look,moda,fashion,hair,vestido,outfit,estilo"
+  },
+  {
+   "slug": "redes",
+   "label": "Redes sociais",
+   "keywords": "instagram,tiktok,redes sociais,viral,fãs reag"
+  }
+ ]
+}

@@ -138,7 +138,7 @@ if(h==="#/grupo"){paint(waPage("Grupo de WhatsApp","Converse com outros fãs bra
 if(h==="#/noticias"){cur=function(){return '<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a><h1>Todas as notícias</h1>'+chipsH("all")+listH(items)+'</div>'};paint(cur());return}
 if(m=h.match(/^#\/c\/(\w+)/)){var cc=CATS.filter(function(x){return x[0]===m[1]})[0]||["geral","Geral"];
 cur=function(){return '<div class="pg"><a class="back" href="#/">← Voltar ao site principal</a><h1>'+esc(cc[1])+'</h1>'+chipsH(cc[0])+listH(byCat(cc[0]))+'</div>'};paint(cur());return}
-cur=function(){return '<img class="banner" src="banner.png" alt="Billie Global BR — Seu site de notícias sobre a Billie Eilish"><div class="cta"><a class="btn" href="'+esc(LINK_GRUPO)+'" target="_blank" rel="noopener">Grupo de fãs no WhatsApp</a><a class="btn" href="'+esc(LINK_CANAL)+'" target="_blank" rel="noopener">Canal no WhatsApp</a></div><div class="top"><h1>Últimas notícias</h1><small>'+upd+'</small></div>'+chipsH("")+listH(items)};
+cur=function(){return '<img class="banner" src="banner.jpg" alt="Billie Global BR — Seu site de notícias sobre a Billie Eilish"><div class="cta"><a class="btn" href="'+esc(LINK_GRUPO)+'" target="_blank" rel="noopener">Grupo de fãs no WhatsApp</a><a class="btn" href="'+esc(LINK_CANAL)+'" target="_blank" rel="noopener">Canal no WhatsApp</a></div><div class="top"><h1>Últimas notícias</h1><small>'+upd+'</small></div>'+chipsH("")+listH(items)};
 paint(cur())}
 function closeAll(){$("dr").classList.remove("on");$("ov").classList.remove("on");$("sp").classList.remove("on")}
 $("bm").onclick=function(){$("dr").classList.add("on");$("ov").classList.add("on")};

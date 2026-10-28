@@ -41,7 +41,7 @@ a{color:inherit;text-decoration:none}button{font-family:inherit}img{max-width:10
 .kk{display:block;color:var(--red);font:800 11.5px/1 var(--sans);text-transform:uppercase;letter-spacing:.05em;margin-bottom:7px}
 .meta{font:12px/1.4 var(--sans);color:var(--mut);margin-top:8px}.meta b{color:var(--ink)}.pin{color:var(--red)}
 .im{display:block;position:relative;background:var(--soft);overflow:hidden}.im img{display:block;width:100%;height:100%;object-fit:cover}
-.rv{opacity:0;transform:translateY(14px);transition:opacity .5s,transform .5s}.rv.in{opacity:1;transform:none}
+.rv{transition:opacity .5s,transform .5s}.rv.hid{opacity:0;transform:translateY(14px)}
 .stitle{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin:30px 0 4px;padding-bottom:8px;border-bottom:3px solid var(--ink)}
 .stitle h2{margin:0;font:900 19px/1.1 var(--sans);text-transform:uppercase;letter-spacing:.01em;display:flex;align-items:center;gap:9px}.stitle h2:before{content:"";width:6px;height:20px;background:var(--red);display:block}
 .stitle small{color:var(--mut);font-size:12px}
@@ -83,7 +83,8 @@ footer .fl a{display:block;padding:4px 0;color:#d8d8d8}footer .fl a:hover{color:
 footer .fb{font:800 22px var(--sans);color:#fff}footer .fb b{background:#fff;color:var(--red);padding:2px 6px;border-radius:3px;margin-left:6px;font-size:18px}
 footer .fc{border-top:1px solid #2c2c2c;padding-top:18px;color:#9a9a9a;font-size:12px}
 @media(min-width:760px){footer .fw{grid-template-columns:1.6fr 1fr 1fr}}
-</style></head><body>
+</style>
+<script>window.onerror=function(m,s,l){var v=document.getElementById("v");if(v&&!v.innerHTML.trim())v.innerHTML='<div style="padding:24px;font:14px sans-serif;line-height:1.5"><b>Não foi possível carregar o site.</b><br>Erro: '+m+' (linha '+l+')</div>'};</script></head><body>
 <div id="top"><div class="hb">
 <button class="ib" id="bm" aria-label="Menu"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
 <a class="logo" href="#/"><span class="ln">Billie Global</span><b>BR</b></a>
@@ -130,10 +131,27 @@ return ["geral","Geral"]}
 function ordered(a){return a.filter(function(x){return x.pin}).concat(a.filter(function(x){return !x.pin}))}
 function byCat(s){return ordered(items.filter(function(n){return cat(n)[0]===s}))}
 function matches(q){q=q.toLowerCase();return ordered(items.filter(function(n){return (n.t+" "+n.d+" "+(n.body||[]).join(" ")+" "+n.s).toLowerCase().indexOf(q)>-1}))}
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.05});
+var io=window.IntersectionObserver?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.remove("hid");io.unobserve(e.target)}})},{threshold:.05}):null;
 /* imagens */
 function figH(p){return '<figure class="fig"><img loading="lazy" referrerpolicy="no-referrer" alt="" src="'+esc(p.u)+'" onerror="this.closest(\'figure\').remove()">'+capH(p)+'</figure>'}
 function capH(p){if(p.free)return p.cap?'<figcaption>'+esc(p.cap)+'</figcaption>':'';if(!p.l||/^manual:|^#/.test(p.l))return '<figcaption>Foto: '+esc(p.c)+'</figcaption>';return '<figcaption>Foto: <a href="'+esc(p.l)+'" target="_blank" rel="noopener">'+esc(p.c)+'</a></figcaption>'}
+function imgsFor(n){var a=[],seen={};function add(u,c,l){if(u&&!seen[u]&&a.length<3){seen[u]=1;a.push({u:u,c:c,l:l||n.u})}}
+add(n.img,n.imgc||n.s,n.imgl||n.u);if(n.manual||n.locked)return a;(n.imgs||[]).forEach(function(q){add(q.u,q.s,q.l)});(n.pics||[]).forEach(function(q){add(q.u,q.c,q.l)});return a}
+function coverImg(n){var a=imgsFor(n).map(function(x){return x.u});if(!a.length)return "";return '<img loading="lazy" referrerpolicy="no-referrer" alt="" src="'+esc(a[0])+'" data-n="'+encodeURIComponent(JSON.stringify(a.slice(1)))+'" onerror="nx(this)">'}
+function nx(el){var r=[];try{r=JSON.parse(decodeURIComponent(el.dataset.n||"[]"))}catch(e){}var u=r.shift();if(u){el.dataset.n=encodeURIComponent(JSON.stringify(r));el.src=u}else{var c=el.closest('.im');if(c)c.remove();else el.remove()}}
+function blk(x){x=String(x==null?"":x);var m=x.match(/^\[img:([^|\]]+)(?:\|([^\]]*))?\]$/);
+if(m)return figH({u:m[1],free:1,cap:m[2]||""});
+if(/^##\s/.test(x))return '<h2 class="sh">'+esc(x.slice(3))+'</h2>';
+return '<p class="p">'+esc(x)+'</p>'}
+function blocksH(ps){return (ps||[]).map(blk).join("")}
+function artBody(n){var ps=(n.body&&n.body.length?n.body:[n.d]),a=imgsFor(n),own=ps.some(function(x){return /^\[img:/.test(x)});
+if(n.manual||n.locked||own){return (a[0]?figH(a[0]):"")+blocksH(ps)}
+var h=a[0]?figH(a[0]):"",u1=a[1],u2=a[2];
+ps.forEach(function(x,i){h+=blk(x);
+if(i===1&&u1&&ps.length>=3){h+=figH(u1);u1=null}
+if(i===3&&u2&&ps.length>=6){h+=figH(u2);u2=null}});
+if(u1)h+=figH(u1);if(u2)h+=figH(u2);return h}
+/* cartões */
 function metaH(n){return '<div class="meta">'+(n.pin?'<b class="pin">📌 Fixada</b> · ':'')+'<b>'+esc(n.s)+'</b> · '+esc(n.date||"")+'</div>'}
 function imH(n){var c=coverImg(n);return c?'<span class="im">'+c+'</span>':''}
 function leadH(n){var c=coverImg(n);return '<a class="lead rv" href="#/n/'+nid(n)+'">'+(c?'<span class="im">'+c+'</span>':'')+'<span class="kk" style="margin-top:14px">'+esc(cat(n)[1])+'</span><h2 style="margin-top:0">'+esc(n.t)+'</h2><p>'+esc(n.d)+'</p>'+metaH(n)+'</a>'}
@@ -157,8 +175,9 @@ return '<article class="art"><div class="crumb"><a href="'+bk+'">← Voltar</a><
 '<div class="acts"><a class="btn" href="'+wa+'" target="_blank" rel="noopener">Compartilhar no WhatsApp</a><a class="btn o" href="'+bk+'">← Voltar às notícias</a></div></article>'+
 (rel.length?'<div class="rel">'+stitle("Leia também")+rel.map(rowH).join("")+'</div>':'')}
 /* rotas */
-function paint(h,mode){$("v").innerHTML=h;document.querySelectorAll(".rv").forEach(function(c){io.observe(c)});
-if(mode==="keep")return;if(typeof mode==="number"){scrollTo(0,mode);document.querySelectorAll(".rv").forEach(function(c){if(c.getBoundingClientRect().top<innerHeight*1.2){c.classList.add("in");io.unobserve(c)}})}else scrollTo(0,0)}
+function reveal(){if(!io)return;document.querySelectorAll(".rv").forEach(function(c){if(c.getBoundingClientRect().top>innerHeight*1.1){c.classList.add("hid");io.observe(c)}});
+setTimeout(function(){document.querySelectorAll(".rv.hid").forEach(function(c){c.classList.remove("hid")})},4000)}
+function paint(h,mode){$("v").innerHTML=h;if(mode==="keep"){reveal();return}if(typeof mode==="number")scrollTo(0,mode);else scrollTo(0,0);reveal()}
 function more(){lim+=PER;if(cur)paint(cur(),"keep")}
 function route(){var h=location.hash||"#/",m,kind="list",key=h,act="home",restore=null;cur=null;closeAll();$("q").value="";
 document.title=SITE.name+" "+SITE.suffix+" — Notícias da Billie Eilish";
@@ -204,7 +223,7 @@ $("ft").textContent=SITE.footer;$("dg").href=LINK_GRUPO;$("dc").href=LINK_CANAL;
 $("dcat").innerHTML=CATS.map(function(c){return '<a href="#/c/'+c[0]+'">'+c[1]+'</a>'}).join("")}catch(e){}}
 addEventListener("hashchange",route);
 applySite({});
-route();
+try{route()}catch(e){items=SEED.slice();try{route()}catch(e2){}}
 fetch("site.json?"+Date.now()).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(s){applySite(s);try{if(!$("q").value)route()}catch(e){}}).catch(function(){});
 fetch("news.json?"+Date.now()).then(function(r){return r.ok?r.json():Promise.reject()}).then(function(j){
 j=(Array.isArray(j)?j:[]).filter(function(x){return x&&x.t&&x.u&&!x.hide});if(j.length){var bk=items;items=j;upd="Atualizado há instantes";try{if(!$("q").value)route()}catch(e){items=bk;route()}}}).catch(function(){});

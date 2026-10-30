@@ -1,0 +1,22 @@
+{
+ "name": "Billie Global BR",
+ "short_name": "Billie Global",
+ "description": "Billie Global BR: o portal brasileiro de notícias sobre Billie Eilish. Lançamentos, turnê, shows, Grammy, Finneas e tudo da cantora, em português e atualizado a cada 30 minutos.",
+ "lang": "pt-BR",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#ffffff",
+ "theme_color": "#d4101f",
+ "icons": [
+  {
+   "src": "/icon-192.png",
+   "sizes": "192x192",
+   "type": "image/png"
+  },
+  {
+   "src": "/icon-512.png",
+   "sizes": "512x512",
+   "type": "image/png"
+  }
+ ]
+}

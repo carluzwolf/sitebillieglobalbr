@@ -1,0 +1,41 @@
+name: Atualizar notícias
+on:
+  schedule:
+    - cron: "*/30 * * * *"   # a cada 30 minutos
+  workflow_dispatch: {}       # permite rodar manualmente
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/update_news.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Atualizar calendário (eventos confirmados)
+        run: python scripts/update_events.py
+        continue-on-error: true   # se falhar, as notícias continuam sendo salvas
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Traduzir notícias para inglês e espanhol
+        run: python scripts/translate_news.py
+        continue-on-error: true   # se falhar, o site continua em português
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Commit
+        run: |
+          git config user.name "news-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add news.json
+          [ -f events.json ] && git add events.json || true
+          [ -f events_seen.json ] && git add events_seen.json || true
+          [ -f photos.json ] && git add photos.json || true
+          git diff --cached --quiet || (git commit -m "Atualiza notícias" && git push)
+          

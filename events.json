@@ -1,0 +1,218 @@
+[
+ {
+  "id": "2001-12-18-0",
+  "date": "2001-12-18",
+  "t": "Aniversário de Billie Eilish (faz {n} anos)",
+  "d": "Billie Eilish Pirate Baird O'Connell nasceu em 18 de dezembro de 2001, em Los Angeles, Califórnia.",
+  "cat": "marcos",
+  "conf": true,
+  "s": "Registro histórico",
+  "rec": "anual",
+  "start": 2001,
+  "locked": true
+ },
+ {
+  "id": "2015-11-18-1",
+  "date": "2015-11-18",
+  "t": "“Ocean Eyes” aparece no SoundCloud",
+  "d": "Billie publicou “Ocean Eyes”, composta por Finneas, no SoundCloud. A faixa viralizou e deu início à sua carreira.",
+  "cat": "musica",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2017-08-11-2",
+  "date": "2017-08-11",
+  "t": "Lançamento do EP “Don't Smile at Me”",
+  "d": "Primeiro EP de Billie, que reúne “Ocean Eyes”, “Bellyache” e “Watch”.",
+  "cat": "musica",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2018-04-19-3",
+  "date": "2018-04-19",
+  "t": "Lançamento de “Lovely”, com Khalid",
+  "d": "Parceria entre Billie e Khalid, lançada em abril de 2018.",
+  "cat": "musica",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2019-03-29-4",
+  "date": "2019-03-29",
+  "t": "Lançamento de “When We All Fall Asleep, Where Do We Go?”",
+  "d": "Álbum de estreia de Billie, que inclui “bad guy”, “bury a friend” e “when the party's over”.",
+  "cat": "musica",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2020-01-26-5",
+  "date": "2020-01-26",
+  "t": "Grammy 2020: Billie vence as 4 principais categorias",
+  "d": "Aos 18 anos, Billie levou Gravação do Ano, Álbum do Ano, Canção do Ano e Artista Revelação, além de Melhor Álbum Vocal Pop, na 62ª edição do prêmio.",
+  "cat": "premios",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2020-02-09-6",
+  "date": "2020-02-09",
+  "t": "Billie toca “Yesterday” na homenagem do Oscar 2020",
+  "d": "Na cerimônia do Oscar, Billie cantou “Yesterday”, dos Beatles, durante o segmento In Memoriam.",
+  "cat": "shows",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2020-02-13-7",
+  "date": "2020-02-13",
+  "t": "Lançamento de “No Time to Die”",
+  "d": "Tema do filme 007 – Sem Tempo para Morrer, escrito por Billie e Finneas.",
+  "cat": "musica",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2021-07-30-8",
+  "date": "2021-07-30",
+  "t": "Lançamento de “Happier Than Ever”",
+  "d": "Segundo álbum de estúdio de Billie, com “Your Power”, “NDA” e a faixa-título.",
+  "cat": "musica",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2021-09-13-9",
+  "date": "2021-09-13",
+  "t": "Billie é co-anfitriã do Met Gala 2021",
+  "d": "Billie foi uma das co-presidentes do baile, com um vestido Oscar de la Renta.",
+  "cat": "marcos",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2022-02-03-10",
+  "date": "2022-02-03",
+  "t": "Começa a turnê Happier Than Ever, The World Tour",
+  "d": "A turnê mundial de Billie estreou em Nova Orleans, nos Estados Unidos.",
+  "cat": "shows",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2022-03-27-11",
+  "date": "2022-03-27",
+  "t": "Oscar 2022: “No Time to Die” vence Melhor Canção Original",
+  "d": "Billie e Finneas conquistaram o primeiro Oscar da carreira.",
+  "cat": "premios",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2022-04-16-12",
+  "date": "2022-04-16",
+  "t": "Billie é headliner do Coachella 2022",
+  "d": "Billie se apresentou no palco principal do festival no dia 16 de abril e voltou no dia 23, no segundo fim de semana.",
+  "cat": "shows",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2022-06-25-13",
+  "date": "2022-06-25",
+  "t": "Billie é headliner do Glastonbury 2022",
+  "d": "Aos 20 anos, Billie fechou o Pyramid Stage do festival britânico e foi a headliner mais jovem da história do evento.",
+  "cat": "shows",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2023-03-24-14",
+  "date": "2023-03-24",
+  "t": "Billie é atração principal do Lollapalooza Brasil 2023",
+  "d": "Billie se apresentou no festival em São Paulo, no primeiro dia do evento.",
+  "cat": "shows",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2023-07-13-15",
+  "date": "2023-07-13",
+  "t": "Lançamento de “What Was I Made For?”",
+  "d": "Canção de Billie e Finneas para o filme Barbie, lançada antes da estreia do longa.",
+  "cat": "musica",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2024-02-04-16",
+  "date": "2024-02-04",
+  "t": "Grammy 2024: “What Was I Made For?” vence Canção do Ano",
+  "d": "Billie e Finneas levaram Canção do Ano na 66ª edição do Grammy.",
+  "cat": "premios",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2024-03-10-17",
+  "date": "2024-03-10",
+  "t": "Oscar 2024: segundo Oscar de Billie e Finneas",
+  "d": "“What Was I Made For?” venceu Melhor Canção Original e deu a Billie e Finneas o segundo Oscar da carreira.",
+  "cat": "premios",
+  "conf": true,
+  "s": "Veja",
+  "u": "https://veja.abril.com.br/coluna/em-cartaz/billie-eilish-e-finneas-batem-recorde-como-mais-jovens-a-ganhar-2-oscars/"
+ },
+ {
+  "id": "2024-05-17-18",
+  "date": "2024-05-17",
+  "t": "Lançamento de “Hit Me Hard and Soft”",
+  "d": "Terceiro álbum de estúdio de Billie, com “Lunch”, “Chihiro” e “Birds of a Feather”.",
+  "cat": "musica",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2024-09-29-19",
+  "date": "2024-09-29",
+  "t": "Começa a turnê Hit Me Hard and Soft: The Tour",
+  "d": "A turnê do terceiro álbum estreou em Quebec, no Canadá.",
+  "cat": "shows",
+  "conf": true,
+  "s": "Registro histórico"
+ },
+ {
+  "id": "2026-02-01-20",
+  "date": "2026-02-01",
+  "t": "Grammy 2026: “Wildflower” vence Canção do Ano",
+  "d": "Billie e Finneas levaram Canção do Ano com “Wildflower”, o 10º Grammy da carreira de Billie. No discurso, Billie falou sobre imigração.",
+  "cat": "premios",
+  "conf": true,
+  "s": "Billboard",
+  "u": "https://ca.billboard.com/music/awards/billie-eilish-grammys-speech-2026-1236169933/"
+ },
+ {
+  "id": "2026-10-21-21",
+  "date": "2026-10-21",
+  "t": "Billie e Finneas lançam coleção de joias com a John Hardy",
+  "d": "Os irmãos apresentaram uma coleção de joias sustentáveis em parceria com a marca John Hardy.",
+  "cat": "marcos",
+  "conf": true,
+  "s": "Billboard",
+  "u": "https://www.billboard.com/culture/product-recommendations/billie-eilish-finneas-john-hardy-jewelry-2026-buy-online-1236364477/",
+  "img": "http://www.bing.com/th?id=ONUT.5vyOb5NK3r0ZkJjWye3HCw&pid=News"
+ },
+ {
+  "id": "2026-10-29-22",
+  "date": "2026-10-29",
+  "t": "Billie dá voz a personagem em curta animado do My Chemical Romance",
+  "d": "Billie e Phoebe Bridgers participam do elenco de voz do novo curta-metragem animado da banda.",
+  "cat": "cinema",
+  "conf": true,
+  "s": "Rolling Stone Brasil",
+  "u": "https://rollingstone.com.br/musica/my-chemical-romance-lanca-curta-animado-com-billie-eilish-e-phoebe-bridgers/",
+  "img": "http://www.bing.com/th?id=ONUT.2jG_dcfGQCutD0U3bo86QA&pid=News"
+ }
+]

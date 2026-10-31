@@ -31,6 +31,10 @@ T = {
  "srclink": ["Fonte: ver matéria original ↗", "Source: read the original article ↗", "Fuente: ver la nota original ↗"],
  "pub": ["Publicado pela equipe do Billie Global BR.", "Published by the Billie Global BR team.", "Publicado por el equipo de Billie Global BR."],
  "home": ["Início", "Home", "Inicio"],
+ "twL": ["Ver publicação no X/Twitter ↗", "View post on X/Twitter ↗", "Ver publicación en X/Twitter ↗"],
+ "igL": ["Ver publicação no Instagram ↗", "View post on Instagram ↗", "Ver publicación en Instagram ↗"],
+ "tkL": ["Ver no TikTok ↗", "View on TikTok ↗", "Ver en TikTok ↗"],
+ "vid": ["Vídeo", "Video", "Vídeo"],
  "team": ["Redação Billie Global BR", "Billie Global BR Newsroom", "Redacción Billie Global BR"],
  "footer": [
   "© Billie Global BR · Portal de fãs não oficial, sem ligação com Billie Eilish ou sua equipe. Textos produzidos com apoio de inteligência artificial a partir de informações publicadas pelas fontes citadas.",
@@ -78,7 +82,7 @@ def https(u):
 def clean_text(s):
     return re.sub(r"\s+", " ", re.sub(r"\[[a-z]+:[^\]]*\]", "", str(s or ""))).strip()
 
-def block(x):
+def block(x, li=0):
     x = str(x or "")
     m = re.match(r"^\[img:([^|\]]+)(?:\|([^\]]*))?\]$", x)
     if m:
@@ -87,11 +91,25 @@ def block(x):
     m = re.match(r"^\[(tweet|insta|tiktok|video):([^\]]+)\]$", x)
     if m:
         k, u = m.group(1), m.group(2).strip()
+        e = esc(u)
         if k == "video":
-            return '<div class="emb"><div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/%s" loading="lazy" allowfullscreen title="Video"></iframe></div></div>' % esc(u)
-        return '<p class="p"><a href="%s" target="_blank" rel="noopener nofollow">%s ↗</a></p>' % (esc(u), esc(u))
+            return '<div class="emb"><div class="vid"><iframe src="https://www.youtube-nocookie.com/embed/%s" loading="lazy" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" title="%s"></iframe></div></div>' % (e, esc(t("vid", li)))
+        if k == "tweet":
+            return '<div class="emb"><blockquote class="twitter-tweet" data-dnt="true"><a href="%s" target="_blank" rel="noopener">%s</a></blockquote></div>' % (esc(u.replace("//x.com/", "//twitter.com/")), esc(t("twL", li)))
+        if k == "insta":
+            return '<div class="emb"><blockquote class="instagram-media" data-instgrm-permalink="%s" data-instgrm-version="14" style="max-width:540px;width:100%%;margin:0 auto;background:#fff;border:1px solid #ddd;padding:12px"><a href="%s" target="_blank" rel="noopener">%s</a></blockquote></div>' % (e, e, esc(t("igL", li)))
+        vid = (re.search(r"video/(\d+)", u) or [None, ""])[1]
+        return '<div class="emb"><blockquote class="tiktok-embed" cite="%s" data-video-id="%s" style="max-width:605px;min-width:325px"><section><a href="%s" target="_blank" rel="noopener">%s</a></section></blockquote></div>' % (e, vid, e, esc(t("tkL", li)))
     if x.startswith("## "): return '<h2 class="sh">%s</h2>' % esc(x[3:])
     return '<p class="p">%s</p>' % esc(x)
+
+def embed_scripts(body):
+    j = " ".join(str(p) for p in (body or []))
+    out = ""
+    if "[tweet:" in j: out += '<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>\n'
+    if "[insta:" in j: out += '<script async src="https://www.instagram.com/embed.js"></script>\n'
+    if "[tiktok:" in j: out += '<script async src="https://www.tiktok.com/embed.js"></script>\n'
+    return out
 
 def view(n, lang):
     """Título/descrição/corpo no idioma pedido (None se não houver tradução)."""
@@ -196,14 +214,14 @@ def render(n, lang, slug, v, others, slugs):
 %(srcbox)s
 <div class="acts"><a class="btn" href="%(wa)s" target="_blank" rel="noopener">%(share)s</a><a class="btn o" href="%(home)s">%(back)s</a></div></article>%(rel)s</main>
 <footer><div class="fw"><div><div class="fb"><span class="ln2">Billie Global</span><b>BR</b></div><p style="margin:12px 0 0;max-width:420px">%(footer)s</p></div></div></footer>
-</body></html>
+%(embjs)s</body></html>
 """ % dict(
         hl=HL[lang], title=esc(title), site=SITE_NAME, desc=esc(plain_desc), canon=canon, alts=alts, ogl=OGL[lang],
         img=esc(img), iso=iso, mod=modified, ld=json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"),
         crumbs=json.dumps(crumbs, ensure_ascii=False).replace("</", "<\\/"), home=HOME[lang], langmenu=langmenu,
         back=esc(t("back", li)), sub=('<p class="sub">%s</p>' % esc(clean_text(desc))) if desc else "",
         by=esc(t("by", li)), author=esc(SITE_NAME if own else t("team", li)), date=esc(fdate(d, li)), mins=mins,
-        minread=esc(t("minread", li)), fig=fig, body="".join(block(p) for p in (body or [desc or ""])),
+        minread=esc(t("minread", li)), fig=fig, body="".join(block(p, li) for p in (body or [desc or ""])), embjs=embed_scripts(body),
         srcbox=srcbox, wa=esc(wa), share=esc(t("share", li)), rel=rel, footer=esc(t("footer", li)))
 
 def main():
@@ -267,4 +285,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-  
+
+                                      

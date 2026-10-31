@@ -16,7 +16,19 @@
   "pin": true,
   "hide": false,
   "k": "manual-mmvwlntu7",
-  "slug": "site-da-billie-global-br-agora-possui-sua-versao-em-ingles-e-espanhol"
+  "slug": "site-da-billie-global-br-agora-possui-sua-versao-em-ingles-e-espanhol",
+  "tr": {
+   "en": {
+    "t": "Billie Global BR website now has its English and Spanish version",
+    "d": "The Billie Global BR website now features its content in English and Spanish, becoming Billie Eilish's first international news website.",
+    "body": []
+   },
+   "es": {
+    "t": "El sitio web de Billie Global BR ahora cuenta con su versión en inglés y español",
+    "d": "El sitio web de Billie Global BR ahora ofrece su contenido en inglés y español, convirtiéndose en el primer sitio de noticias internacional de Billie Eilish.",
+    "body": []
+   }
+  }
  },
  {
   "k": "billieeilishsharessteamymomentwithbeaunatwolffinfirstsightinginmonths",
@@ -109,7 +121,38 @@
   "v": 2,
   "mtries": 1,
   "mv": 1,
-  "trt": 1
+  "tr": {
+   "en": {
+    "t": "Billie Eilish featured in article on veganism and sustainability",
+    "d": "The singer was mentioned in a national article discussing the vegan lifestyle adopted by celebrities and essential health care.",
+    "body": [
+     "The O Globo portal recently published a special feature on veganism, highlighting international and national public figures who have decided to eliminate the consumption of animal products from their routines. Among the high-profile names cited in the text is Billie Eilish, globally recognized for using her immense platform to advocate for environmental causes and animal welfare.",
+     "[img:https://s2-oglobo.glbimg.com/eayWP7KBkjEXCL7tnsTOcax9Ftw=/0x0:900x600/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2026/2/H/krZEVySMeKBZufHQBSZA/xuxa-blad-meneghel.jpg|Xuxa está prestes a começar a turnê \"O Último Voo da Nave\" — Foto: Reprodução/Instagram]",
+     "Since her teens, the voice behind global hits has embraced the cruelty-free lifestyle, becoming one of the most influential voices of her generation when it comes to sustainability. The artist frequently uses her social media and public appearances to raise fans' awareness about the impacts of the livestock industry on the planet, encouraging more conscious choices aligned with environmental preservation.",
+     "[img:https://s2-oglobo.glbimg.com/cERQMLll12IBS1GxhJb8rlyJEsU=/0x0:2443x3664/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2025/A/M/fzQQc4TeuHHBH0Jc6rcw/109905550-los-angeles-california-february-02-for-editorial-use-only-billie-eilish-attends-the.jpg|Billie Eilish no Grammy 2025 — Foto: Frazer Harrison/Getty Images/AFP]",
+     "The article also points out that the movement goes far beyond the plate, encompassing conscious consumption and ecological concern. In addition to Billie, the report listed Brazilian personalities such as Xuxa Meneghel, Yasmin Brunet, and Luisa Mell, who also use their visibility to advocate for animal rights and the expansion of an animal exploitation-free routine.",
+     "To deepen the debate on health impacts, the outlet consulted nutrition experts to clarify common doubts about this dietary transition. It was emphasized that adopting a plant-based menu requires proper planning and food variety, demystifying the idea that the absence of meat, by itself, automatically guarantees a healthy routine.",
+     "[img:https://s2-oglobo.glbimg.com/p7cYhOjWoKMLN9SYl0-hz2g1lrc=/0x0:1800x1013/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2026/j/k/Xl2MuaS9CxH8hbvnjIhg/245504-1-.jpg|Yasmin Brunet — Foto: Divulgação TV Globo]",
+     "Among the main points highlighted by the professionals is the importance of ensuring the correct intake of proteins through legumes, grains, and soy derivatives. Another fundamental warning made in the report concerns vitamin B12, an essential nutrient that is not naturally found in sufficient quantities in vegetables, making supplementation and regular professional monitoring indispensable.",
+     "Finally, the text reinforces that veganism should not be strictly viewed as a miraculous method for weight loss, since ultra-processed products can also be part of this universe. For Billie Eilish fans and admirers of the cause, the article serves as an encouragement to seek quality information, respect the individuality of one's own body, and adopt sustainable practices responsibly."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish destacada en un artículo sobre veganismo y sostenibilidad",
+    "d": "La cantante fue mencionada en un artículo nacional que aborda el estilo de vida vegano adoptado por celebridades y los cuidados esenciales para la salud.",
+    "body": [
+     "El portal O Globo publicó recientemente un reportaje especial sobre el veganismo, destacando a figuras públicas internacionales y nacionales que han decidido eliminar el consumo de productos de origen animal de sus rutinas. Entre los nombres de gran repercusión citados en el texto se encuentra el de Billie Eilish, reconocida mundialmente por usar su inmensa plataforma para defender causas ambientales y el bienestar animal.",
+     "[img:https://s2-oglobo.glbimg.com/eayWP7KBkjEXCL7tnsTOcax9Ftw=/0x0:900x600/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2026/2/H/krZEVySMeKBZufHQBSZA/xuxa-blad-meneghel.jpg|Xuxa está prestes a começar a turnê \"O Último Voo da Nave\" — Foto: Reprodução/Instagram]",
+     "Desde su adolescencia, la voz de éxitos globales abrazó el estilo de vida libre de crueldad, convirtiéndose en una de las voces más influyentes de su generación en lo que respecta a la sostenibilidad. La artista utiliza frecuentemente sus redes sociales y apariciones públicas para concienciar a los fans sobre los impactos de la industria ganadera en el planeta, fomentando elecciones más conscientes y alineadas con la preservación ambiental.",
+     "[img:https://s2-oglobo.glbimg.com/cERQMLll12IBS1GxhJb8rlyJEsU=/0x0:2443x3664/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2025/A/M/fzQQc4TeuHHBH0Jc6rcw/109905550-los-angeles-california-february-02-for-editorial-use-only-billie-eilish-attends-the.jpg|Billie Eilish no Grammy 2025 — Foto: Frazer Harrison/Getty Images/AFP]",
+     "El artículo también señala que el movimiento va mucho más allá del plato, abarcando el consumo consciente y la preocupación ecológica. Además de Billie, el reportaje enumeró a personalidades brasileñas como Xuxa Meneghel, Yasmin Brunet y Luisa Mell, quienes también utilizan su visibilidad para promover la defensa de los derechos de los animales y la expansión de una rutina libre de explotación animal.",
+     "Para profundizar en el debate sobre los impactos en la salud, el medio consultó a especialistas en nutrición para aclarar dudas comunes sobre esta transición alimentaria. Se recalcó que la adopción de un menú vegetal exige una planificación adecuada y variedad en los alimentos, desmitificando la idea de que la ausencia de carne, por sí sola, garantiza automáticamente una rutina saludable.",
+     "[img:https://s2-oglobo.glbimg.com/p7cYhOjWoKMLN9SYl0-hz2g1lrc=/0x0:1800x1013/1000x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_da025474c0c44edd99332dddb09cabe8/internal_photos/bs/2026/j/k/Xl2MuaS9CxH8hbvnjIhg/245504-1-.jpg|Yasmin Brunet — Foto: Divulgação TV Globo]",
+     "Entre los puntos principales destacados por los profesionales está la importancia de garantizar la ingesta correcta de proteínas a través de legumbres, granos y derivados de soja. Otra advertencia fundamental realizada en el reportaje se refiere a la vitamina B12, un nutriente esencial que no se encuentra naturalmente en cantidades suficientes en los vegetales, por lo que la suplementación y el seguimiento profesional regular son indispensables.",
+     "Por último, el texto refuerza que el veganismo no debe ser visto estrictamente como un método milagroso para la pérdida de peso, ya que los productos ultraprocesados también pueden formar parte de este universo. Para los fans de Billie Eilish y admiradores de la causa, el artículo sirve como un estímulo para buscar información de calidad, respetar la individualidad del propio organismo y adoptar prácticas sostenibles con responsabilidad."
+    ]
+   }
+  }
  },
  {
   "k": "mychemicalromancelançacurtaanimadocombillieeilishephoebebridgers",
@@ -140,7 +183,34 @@
   "v": 2,
   "mtries": 1,
   "mv": 1,
-  "trt": 1
+  "tr": {
+   "en": {
+    "t": "Billie Eilish joins voice cast in My Chemical Romance's new animated short film",
+    "d": "The singer participates in the commemorative production celebrating twenty years of the classic album The Black Parade, created by Lauren Tsai.",
+    "body": [
+     "The alternative rock universe and contemporary pop aesthetics met in a surprising way in a new audiovisual production celebrating the trajectory of one of the most influential bands of the 2000s. The group My Chemical Romance surprised fans by releasing an animated short film titled Prelude to the End, created to mark two decades since the release of the iconic record The Black Parade. The artistic initiative brought together major names in current music, including singer Billie Eilish, who lent her voice to one of the main characters in the plot.",
+     "[img:https://rollingstone.com.br/wp-content/uploads/2026/10/My-Chemical-Romance-Lauren-Tsai-Prelude-to-The-End-Foto_-Reproducao.png|My Chemical Romance & Lauren Tsai - Prelude to The End (Foto: Reprodução)]",
+     "With a runtime of nine minutes, the project was developed through a direct collaboration between the musical group and visual artist Lauren Tsai, through her studio UNREAL INC. The short's narrative follows the journey of Astrid, a boarding school student voiced by Tsai herself. The young protagonist ventures through a playful and melancholic scenery known as the world of forgotten ideas, after trying to retrieve her sketchbook that had been discarded by the school authorities.",
+     "On this journey, the main character interacts with figures voiced by highly prominent special guests. Billie Eilish takes on the role of a friend of the protagonist, while indie singer Phoebe Bridgers plays Astrid's sister. The voice cast also features unexpected participations, such as renowned video game designer Hideo Kojima in the role of a teacher and actor John C. McGinley portraying the dean of the educational institution.",
+     "In statements released to the press, Lauren Tsai celebrated the partnership and highlighted the strong mutual admiration for frontman Gerard Way. The production combines the characteristic visual style of The Dying World animation universe with the track The End, which opens the band's famous concept album originally released in 2006. For Billie Eilish fans, the news reinforces the singer's artistic versatility, as she easily moves between different branches of pop culture and conceptual visual projects.",
+     "[insta:https://www.instagram.com/reel/DfFwWnhhhsK]",
+     "The release of the short film accompanies a series of special celebrations promoted by My Chemical Romance to celebrate the legacy of the historic record. In addition to the animation, the band made available an expanded edition of the album and held commemorative live performances on the Long Live The Black Parade tour. With this collaboration, Billie Eilish adds yet another important artistic experience to her portfolio, uniting her voice with a work that has marked generations of listeners around the world."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish se une al elenco de voces del nuevo cortometraje animado de My Chemical Romance",
+    "d": "La cantante participa en la producción conmemorativa de los veinte años del clásico álbum The Black Parade, ideada por Lauren Tsai.",
+    "body": [
+     "El universo del rock alternativo y la estética pop contemporánea se encontraron de manera sorprendente en una nueva producción audiovisual que celebra la trayectoria de una de las bandas más influyentes de los años 2000. El grupo My Chemical Romance sorprendió a los fans al lanzar un cortometraje de animación titulado Prelude to the End, creado para marcar las dos décadas de circulación del icónico disco The Black Parade. La iniciativa artística reunió a nombres de peso de la música actual, incluida la cantante Billie Eilish, quien prestó su voz para uno de los personajes principales de la trama.",
+     "[img:https://rollingstone.com.br/wp-content/uploads/2026/10/My-Chemical-Romance-Lauren-Tsai-Prelude-to-The-End-Foto_-Reproducao.png|My Chemical Romance & Lauren Tsai - Prelude to The End (Foto: Reprodução)]",
+     "Con una duración de nueve minutos, el proyecto fue desarrollado en una colaboración directa entre el grupo musical y la artista visual Lauren Tsai, a través de su estudio UNREAL INC. La narrativa del cortometraje acompaña el viaje de Astrid, una estudiante de internado doblada por la propia Tsai. La joven protagonista se aventura por un escenario lúdico y melancólico conocido como el mundo de las ideas olvidadas, tras intentar recuperar su cuaderno de dibujos que había sido descartado por las autoridades del colegio.",
+     "En este viaje, el personaje principal interactúa con figuras dobladas por invitados especiales de gran relevancia. Billie Eilish asume el papel de una amiga de la protagonista, mientras que la cantante indie Phoebe Bridgers interpreta a la hermana de Astrid. El elenco de voces también cuenta con participaciones inusuales, como el renombrado diseñador de videojuegos Hideo Kojima en el papel de un profesor y el actor John C. McGinley interpretando al rector de la institución educativa.",
+     "En declaraciones difundidas a la prensa, Lauren Tsai celebró la alianza y destacó la fuerte admiración mutua por el vocalista Gerard Way. La producción une el estilo visual característico del universo de animación The Dying World con el tema The End, que abre el famoso álbum conceptual de la banda lanzado originalmente en 2006. Para los fans de Billie Eilish, la novedad refuerza la versatilidad artística de la cantante, que transita con facilidad entre diferentes vertientes de la cultura pop y proyectos visuales conceptuales.",
+     "[insta:https://www.instagram.com/reel/DfFwWnhhhsK]",
+     "El lanzamiento del cortometraje acompaña una serie de celebraciones especiales promovidas por My Chemical Romance para festejar el legado del disco histórico. Además de la animación, la banda puso a disposición una edición expandida del álbum y realizó presentaciones conmemorativas en vivo en la gira Long Live The Black Parade. Con esta colaboración, Billie Eilish añade otra experiencia artística importante a su cartera, uniendo su voz a una obra que marcó a generaciones de oyentes en todo el mundo."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishnowhasagroveoftreesnamedafterherintexas",
@@ -464,7 +534,34 @@
   "v": 2,
   "mtries": 1,
   "mv": 1,
-  "trt": 1
+  "tr": {
+   "en": {
+    "t": "Billie Eilish lends her voice to My Chemical Romance's animated short film",
+    "d": "The singer is part of the voice cast for the emotional short film Prelude to the End, released to celebrate the 20th anniversary of the album The Black Parade.",
+    "body": [
+     "My Chemical Romance surprised fans by releasing an ambitious animated short film titled Prelude to the End. The production arrives to celebrate the twentieth anniversary of their iconic third studio album, The Black Parade. The musical and visual news was accompanied by an expanded edition of the classic 2000s record, packed with bonus tracks eagerly awaited by fans of the alternative rock band.",
+     "To bring this emotional story to life, the group gathered a stellar voice cast that features the participation of Billie Eilish. In addition to the artist behind HIT ME HARD AND SOFT, the project also features Phoebe Bridgers, expanding the band's connection with major names in contemporary music who share a striking and emotive artistic aesthetic.",
+     "With a runtime of about seven minutes, the work blends traditional hand-drawn animation with stop-motion techniques. Direction was handled by visual artist and actress Lauren Tsai, who also wrote the screenplay and stars as the protagonist Astrid. In the plot, a strict boarding school student ends up falling into an underground world of trash after searching for her confiscated sketchbook.",
+     "In this surreal and poetic journey, the main character receives essential support from her sister, voiced by Phoebe Bridgers, and a friend, whose voice is played by Billie Eilish. The heavy-hitting cast also features unusual appearances such as game designer Hideo Kojima and actor John C. McGinley, enriching the playful and dark universe created by Tsai.",
+     "The visual narrative is driven by the opening track of My Chemical Romance's conceptual album. The plot addresses deep themes such as youth, the relationship with artistic creativity, and the relentless pursuit of expressing one's own truth. The director revealed that the invitation was the realization of a childhood dream, a period when she already created videos inspired by the group's songs.",
+     "This is not Tsai's first partnership with prominent names from the current indie and pop scene, having previously directed the animated music video for Cool About It for the supergroup Boygenius. The release of the short serves as a warmup for the special screenings preceding the final shows of the band's commemorative residency in Los Angeles.",
+     "For Billie Eilish fans, her participation in the project reinforces her artistic versatility and her movement across different strands of pop culture and alternative rock. Although there is no confirmation of new parallel vocal projects announced by the singer at the moment, her presence in a production of such historical importance for rock certainly marks another unforgettable moment in her career."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish presta su voz para el cortometraje animado de My Chemical Romance",
+    "d": "La cantante forma parte del elenco de doblaje del emotivo cortometraje Prelude to the End, lanzado para celebrar los 20 años del álbum The Black Parade.",
+    "body": [
+     "My Chemical Romance sorprendió a los fans al lanzar un ambicioso cortometraje animado titulado Prelude to the End. La producción llega para celebrar el vigésimo aniversario de su icónico tercer álbum de estudio, The Black Parade. La novedad musical y visual vino acompañada de una edición expandida del clásico disco de los años 2000, repleta de canciones bonus muy esperadas por los admiradores de la banda de rock alternativo.",
+     "Para dar vida a esta historia emotiva, el grupo reunió un elenco de voces estelar que cuenta con la participación de Billie Eilish. Además de la dueña de HIT ME HARD AND SOFT, el proyecto también trae a Phoebe Bridgers, ampliando la conexión de la banda con grandes nombres de la música contemporánea que comparten una estética artística marcada y emotiva.",
+     "Con una duración de unos siete minutos, la obra mezcla animación tradicional hecha a mano con técnicas de stop-motion. La dirección estuvo a cargo de la artista visual y actriz Lauren Tsai, quien también firma el guion e interpreta a la protagonista Astrid. En la trama, una estudiante de un internado riguroso termina cayendo en un mundo subterráneo de basura tras buscar su cuaderno de bocetos confiscado.",
+     "En este viaje surrealista y poético, la personaje principal recibe un apoyo fundamental de su hermana, doblada por Phoebe Bridgers, y de una amiga, cuya voz es interpretada por Billie Eilish. El peso pesado del elenco también cuenta con participaciones inusuales como la del diseñador de videojuegos Hideo Kojima y el actor John C. McGinley, enriqueciendo el universo lúdico y sombrío creado por Tsai.",
+     "La narrativa visual está ambientada por la pista de apertura del álbum conceptual de My Chemical Romance. El argumento aborda temas profundos como la juventud, la relación con la creatividad artística y la búsqueda incesante de la expresión de la propia verdad. La directora reveló que la invitación fue la realización de un sueño de infancia, período en el que ya creaba vídeos inspirados por las canciones del grupo.",
+     "Esta no es la primera colaboración de Tsai con nombres destacados de la escena indie y pop actual, ya que anteriormente dirigió el videoclip animado de Cool About It para el supergrupo Boygenius. El lanzamiento del cortometraje sirve como calentamiento para las proyecciones especiales que preceden a los conciertos de clausura de la residencia conmemorativa de la banda en Los Ángeles.",
+     "Para los fans de Billie Eilish, su participación en el proyecto refuerza su versatilidad artística y su tránsito por diferentes vertientes de la cultura pop y del rock alternativo. Aunque por el momento no hay confirmación de nuevos proyectos vocales paralelos anunciados por la cantante, su presencia en una producción de tanta importancia histórica para el rock ciertamente marca otro momento inolvidable en su trayectoria."
+    ]
+   }
+  }
  },
  {
   "k": "mychemicalromanceandlaurentsaispreludetotheendhasstarstuddedcastincludingbilliee",
@@ -1758,7 +1855,39 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Baseless speculations about Billie Eilish circulate on social media and are debunked",
+    "d": "Recent social media posts raised false rumors about the artist, ignoring the singer's own previous statements about her body.",
+    "body": [
+     "In recent days, social media posts have once again placed Billie Eilish's body at the center of baseless discussions. Users of digital platforms began comparing old photographic records of the singer with more recent images, creating ungrounded theories about a supposed breast reduction surgery. The rumor gained traction after posts featuring side-by-side photos sparked debate among netizens regarding changes in the pop star's physical appearance.",
+     "The wave of speculation began when profiles on the social network X started sharing visual comparisons, using terms that suggested a drastic transformation in the artist's silhouette. Among the images used were records in which Eilish wore a black polka-dot top in the past, contrasted with more recent photos where she appears in clothing with different tailoring. Given the repercussion, part of the public quickly pointed out that weight variations, the use of different clothing styles, and even camera angles perfectly explain the visual differences.",
+     "[tweet:https://x.com/PicturesFoIder/status/2113373609788166213]",
+     "While some users fueled the narrative, many fans and privacy advocates came to the artist's defense. Several comments criticized the obsession of others with the female body, reminding that a woman's anatomy should not be treated as a subject of public debate on the internet. Furthermore, defenders of the singer emphasized that superficial analyses based solely on photographs taken at different times hold no factual validity.",
+     "Investigations into the veracity of these claims confirm that it is all nothing more than a rumor. There is no reliable evidence, official statement, or medical record pointing to any cosmetic surgical intervention on the part of Billie Eilish. Neither the singer nor her team has commented on the matter, which reinforces the speculative and unfounded nature of the posts that went viral on the web.",
+     "[tweet:https://x.com/esjesjesj/status/2113382308484898952]",
+     "Historically, the artist behind Hit Me Hard and Soft has had to deal with invasive comments about her physical appearance on various occasions throughout her career. In an interview granted to Variety magazine, Eilish openly addressed how she deals with judgments about her body since childhood, highlighting that her physical build is naturally a part of who she is. The artist has always had to confront public objectification, even after transitioning to more varied clothing choices in her adulthood.",
+     "[img:https://media.pubninja.com/articles/body/copy_1792739487150_1031103d.jpg|Billie Eilish attends the 2025 WSJ Magazine Innovator Awards at MOMA on October 29, 2025, in New York City (Taylor Hill/Getty Images)]",
+     "Moreover, recent discussions about natural aging reinforce the singer's stance regarding her own body. In podcast appearances throughout 2026, Billie expressed enthusiasm for the aging process and demonstrated acceptance regarding the natural physical changes that occur over time, distancing herself from aesthetic procedures. For Billie Global BR fans, the episode serves as yet another reminder of the importance of respecting the artist's privacy and autonomy, ignoring malicious rumors that frequently pop up on the internet."
+    ]
+   },
+   "es": {
+    "t": "Especulaciones infundadas sobre Billie Eilish circulan en las redes sociales y son desmentidas",
+    "d": "Publicaciones recientes en las redes sociales levantaron falsos rumores sobre la artista, ignorando declaraciones anteriores de la propia cantante sobre su cuerpo.",
+    "body": [
+     "En los últimos días, publicaciones en las redes sociales volvieron a colocar el cuerpo de Billie Eilish en el centro de discusiones infundadas. Usuarios de plataformas digitales comenzaron a comparar registros fotográficos antiguos de la cantante con imágenes más recientes, creando teorías sin fundamento sobre una supuesta cirugía de reducción de mamas. El rumor ganó tracción después de publicaciones que colocaban fotos lado a lado, generando debate entre internautas sobre cambios en la apariencia física de la estrella pop.",
+     "La ola de especulaciones tuvo inicio cuando perfiles en la red social X comenzaron a compartir comparaciones visuales, usando términos que sugerían una transformación drástica en la silueta de la artista. Entre las imágenes utilizadas estaban registros en los que Eilish vestía una blusa de lunares negra en el pasado, puestas en contraste con fotos más recientes en las que aparece con ropa de patronaje diferente. Ante la repercusión, parte del público rápidamente señaló que las variaciones de peso, el uso de diferentes estilos de ropa y hasta los ángulos de las cámaras explican perfectamente las diferencias visuales.",
+     "[tweet:https://x.com/PicturesFoIder/status/2113373609788166213]",
+     "Mientras algunos usuarios alimentaban la narrativa, muchos fans y defensores de la privacidad salieron en defensa de la artista. Diversos comentarios criticaron la obsesión ajena con el cuerpo femenino, recordando que la anatomía de una mujer no debe ser tratada como tema de debate público en internet. Además, los defensores de la cantante resaltaron que los análisis superficiales basados únicamente en fotografías tomadas en momentos distintos no poseen ninguna validez fáctica.",
+     "Las investigaciones sobre la veracidad de estas afirmaciones confirman que todo no pasa de un rumor. No existe ninguna evidencia confiable, comunicado oficial o registro médico que apunte a cualquier intervención quirúrgica estética por parte de Billie Eilish. Ni la cantante ni su equipo se han pronunciado sobre el asunto, lo que refuerza el carácter especulativo y sin fundamento de las publicaciones que se viralizaron en la web.",
+     "[tweet:https://x.com/esjesjesj/status/2113382308484898952]",
+     "Históricamente, la intérprete de Hit Me Hard and Soft ya ha tenido que lidiar con comentarios invasivos sobre su apariencia física en diversas ocasiones a lo largo de su carrera. En una entrevista concedida a la revista Variety, Eilish abordó abiertamente cómo convive con los juicios sobre su cuerpo desde la infancia, destacando que su complexión física forma parte de quién es de manera natural. La artista siempre ha tenido que confrontar la objetificación pública, incluso después de transicionar a opciones de vestuario más variadas en su etapa adulta.",
+     "[img:https://media.pubninja.com/articles/body/copy_1792739487150_1031103d.jpg|Billie Eilish attends the 2025 WSJ Magazine Innovator Awards at MOMA on October 29, 2025, in New York City (Taylor Hill/Getty Images)]",
+     "Además, las discusiones recientes sobre el envejecimiento natural refuerzan la postura de la cantante con respecto a su propio cuerpo. En participaciones en podcasts a lo largo de 2026, Billie expresó entusiasmo con el proceso de envejecimiento y demostró aceptación en relación con los cambios físicos naturales que ocurren con el tiempo, distanciándose de los procedimientos estéticos. Para los fans de Billie Global BR, el episodio sirve como un recordatorio más de la importancia de respetar la privacidad y la autonomía de la artista, ignorando rumores maliciosos que surgen frecuentemente en internet."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishsparksbreastreductionrumorswithhernewlookdidsheundergoplasticsurgery",
@@ -1796,7 +1925,51 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish sparks internet rumors after new advertising campaign",
+    "d": "A recent appearance by the singer alongside Finneas sparked speculation on social media about a possible plastic surgery.",
+    "body": [
+     "Singer Billie Eilish has once again become the center of attention on social media this week. This time, besides catching attention because of a new hair transformation, the artist became a trending topic among fans due to speculative rumors about her physical appearance in a recent advertising campaign.",
+     "[img:https://www.bollywoodshaadis.com/img/article-l-20261029512514046300000.webp|Billie Eilish Sparks Breast Reduction Rumors With Her New Look, Did She Undergo Plastic Surgery? · Foto: via BollywoodShaadis]",
+     "The buzz began after the release of promotional materials for a jewelry partnership alongside her brother, Finneas. In the images and videos from the John Hardy brand campaign, observant followers noticed changes in the artist's silhouette, which quickly prompted comments and theories on digital platforms about a supposed breast reduction surgery.",
+     "[img:https://www.bollywoodshaadis.com/img-scale/1024/article-2026102957560028560000.webp|Foto: via BollywoodShaadis]",
+     "Despite the massive repercussion and posts with millions of views on the social network X, there is no official confirmation or verification that the singer has undergone any surgical procedures. Several internet users pointed out that differences in angles, clothing, and postures in the photos can easily alter visual perception, dismissing the hasty assumptions.",
+     "While the discussion about her appearance divided opinions on the internet, the main news was the official launch of the jewelry collection co-created by the Eilish siblings. The luxury line was made available to the public in October 2026, reflecting the duo's contrasting styles and marking an important step in their partnership with the accessory brand, after having taken on the role of ambassadors the previous year.",
+     "[img:https://www.bollywoodshaadis.com/img-scale/1024/article-2026102957563128591000.webp|Foto: via BollywoodShaadis]",
+     "In addition to the commercial project, Billie also surprised fans by showing off a new haircut. The Grammy winner adopted a shorter look, going for an auburn blonde style right below the chin, which was widely praised and received millions of likes on her official social media accounts.",
+     "[img:https://www.bollywoodshaadis.com/img-scale/360/article-l-20261030214341052450000.webp|Patrick Stewart · Foto: via BollywoodShaadis]",
+     "[img:https://www.bollywoodshaadis.com/img-scale/360/article-l-20261030213574050260000.webp|Jiya Shankar Sparks Breakup Rumours, Shares Cryptic Posts And Unfollows Fiance, KD, · Foto: via BollywoodShaadis]",
+     "[img:https://www.bollywoodshaadis.com/img-scale/360/article-l-20251235816530960789000.webp|Foto: via BollywoodShaadis]",
+     "The singer's relationship with her own public image and the clothes she wears has always been a recurring theme in her career. In her early years in the industry, she opted for baggy clothes precisely to avoid being sexualized or judged by her body, making any current aesthetic change plenty of fuel for public debate on the internet.",
+     "[img:https://www.bollywoodshaadis.com/img-scale/360/article-l-20251235119421070930000.webp|Foto: via BollywoodShaadis]",
+     "[img:https://www.bollywoodshaadis.com/img-scale/360/article-l-20261030213151247712000.webp|Is Robin Williams Alive? Daughter, Zelda Blasts Conspiracy Theories About Father, · Foto: via BollywoodShaadis]",
+     "For fans following every step of the artist's journey, it is worth remembering that unfounded rumors on the internet are frequent, but the singer's focus remains on her music, her new visual phase, and her creative ventures alongside Finneas."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish genera rumores en internet tras nueva campaña publicitaria",
+    "d": "Una aparición reciente de la cantante junto a Finneas generó especulaciones en las redes sociales sobre una posible cirugía plástica.",
+    "body": [
+     "La cantante Billie Eilish volvió a ser el centro de atención en las redes sociales esta semana. Esta vez, además de llamar la atención debido a una nueva transformación capilar, la artista se convirtió en tema de conversación entre los fans debido a rumores especulativos sobre su apariencia física en una campaña publicitaria reciente.",
+     "[img:https://www.bollywoodshaadis.com/img/article-l-20261029512514046300000.webp|Billie Eilish Sparks Breast Reduction Rumors With Her New Look, Did She Undergo Plastic Surgery? · Foto: via BollywoodShaadis]",
+     "El revuelo comenzó tras la divulgación de materiales promocionales para una asociación de joyería junto a su hermano, Finneas. En las imágenes y videos de la campaña de la marca John Hardy, seguidores atentos notaron cambios en la silueta de la artista, lo que rápidamente motivó comentarios y teorías en las plataformas digitales sobre una supuesta cirugía de reducción de mamas.",
+     "[img:https://www.bollywoodshaadis.com/img-scale/1024/article-2026102957560028560000.webp|Foto: via BollywoodShaadis]",
+     "A pesar de la repercusión estrondosa y de publicaciones con millones de visitas en la red social X, no existe ninguna confirmación oficial o verificación de que la intérprete se haya sometido a procedimientos quirúrgicos. Diversos internautas señalaron que las diferencias de ángulos, vestimentas y posturas en las fotos pueden alterar fácilmente la percepción visual, descartando las suposiciones precipitadas.",
+     "Mientras la discusión sobre su apariencia dividía opiniones en internet, la novedad principal era el lanzamiento oficial de la colección de joyas cocreada por los hermanos Eilish. La línea de lujo fue puesta a disposición del público en octubre de 2026, reflejando los estilos contrastantes del dúo y marcando un paso importante en su asociación con la marca de accesorios, tras haber asumido el puesto de embajadores el año anterior.",
+     "[img:https://www.bollywoodshaadis.com/img-scale/1024/article-2026102957563128591000.webp|Foto: via BollywoodShaadis]",
+     "Además del proyecto comercial, Billie también sorprendió a los fans al lucir un nuevo corte de pelo. La ganadora del Grammy adoptó un look más corto, apostando por un estilo rubio caoba justo debajo de la barbilla, que fue ampliamente elogiado y recibió millones de 'me gusta' en sus redes sociales oficiales.",
+     "[img:https://www.bollywoodshaadis.com/img-scale/360/article-l-20261030214341052450000.webp|Patrick Stewart · Foto: via BollywoodShaadis]",
+     "[img:https://www.bollywoodshaadis.com/img-scale/360/article-l-20261030213574050260000.webp|Jiya Shankar Sparks Breakup Rumours, Shares Cryptic Posts And Unfollows Fiance, KD, · Foto: via BollywoodShaadis]",
+     "[img:https://www.bollywoodshaadis.com/img-scale/360/article-l-20251235816530960789000.webp|Foto: via BollywoodShaadis]",
+     "La relación de la cantante con su propia imagen pública y con la ropa que viste siempre ha sido un tema recurrente en su carrera. En sus primeros años en la industria, optaba por ropa holgada precisamente para evitar ser sexualizada o juzgada por su cuerpo, convirtiendo cualquier cambio estético actual en un plato fuerte para el debate público en internet.",
+     "[img:https://www.bollywoodshaadis.com/img-scale/360/article-l-20251235119421070930000.webp|Foto: via BollywoodShaadis]",
+     "[img:https://www.bollywoodshaadis.com/img-scale/360/article-l-20261030213151247712000.webp|Is Robin Williams Alive? Daughter, Zelda Blasts Conspiracy Theories About Father, · Foto: via BollywoodShaadis]",
+     "Para los fans que acompañan cada paso de la trayectoria de artista, vale recordar que los rumores infundados en internet son frecuentes, pero el foco de la cantante sigue enfocado en su música, su nueva fase visual y sus emprendimientos creativos junto a Finneas."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishsnewshorthairsendsfansintoafrenzyassomejokeshelooksmorelikeherbrothe",
@@ -1824,7 +1997,31 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish surprises fans by showing off new short hair and strawberry-blonde tone",
+    "d": "The singer opted for a bold hair transformation and sparked fun debates on social media about her resemblance to her brother, Finneas.",
+    "body": [
+     "Singer Billie Eilish caused a stir among her millions of followers by posting a new video on her official Instagram account. In the recent post, the 24-year-old artist fully revealed her new look, showing off short locks in a light red shade known as strawberry-blonde. The radical change quickly caught the public's attention, stirring up social media with thousands of reactions and comments about the pop star's new aesthetic.",
+     "World-renowned for her constant and striking hair transformations throughout her career, Billie has already tried several iconic colors, such as the neon green that marked the era of her debut album, the platinum blonde of the Happier Than Ever phase, as well as stints with black and dark brown. This time, the choice for a much shorter cut and a shade leaning toward light red renewed the singer's image, marking yet another chapter in her aesthetic journey.",
+     "As soon as the video was posted, the internet wasted no time and the comment section was taken over by lighthearted reactions. Many fans and admirers began to joke that, with the new haircut and revamped look, Billie was increasingly resembling her brother and longtime musical partner, Finneas O'Connell. The good-humored comparisons between the siblings quickly became one of the most talked-about topics on social media, amusing the global fandom.",
+     "Despite the fans' affectionate jokes about the family resemblance, the reception to the new look was overwhelmingly positive. Admirers from all over the world praised the singer's authenticity and highlighted how she manages to visually reinvent herself with every new phase of her career. Billie Eilish's versatility in setting trends and surprising the public with bold choices continues to be one of her trademarks.",
+     "Currently, Billie Eilish continues to reap the rewards of her solid musical journey, marked by streaming records, major awards, and highly successful tours around the globe. While fans continue to follow the artist's every step on social media, it remains to be seen whether the new strawberry-blonde look is here to stay or if it is part of the preparation for the singer's future artistic projects."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish sorprende a sus fans al lucir nuevo cabello corto y tono rubio fresa",
+    "d": "La cantante apostó por una osada transformación capilar y generó divertidos debates en las redes sociales sobre su parecido con su hermano, Finneas.",
+    "body": [
+     "La cantante Billie Eilish causó revuelo entre sus millones de seguidores al publicar un nuevo video en su cuenta oficial de Instagram. En la reciente publicación, la artista de 24 años reveló por fin su nuevo look, luciendo mechones cortos en un tono pelirrojo claro conocido como rubio fresa (strawberry-blonde). El cambio radical captó rápidamente la atención del público, movilizando las redes sociales con miles de reacciones y comentarios sobre la nueva estética de la estrella pop.",
+     "Conocida mundialmente por sus constantes y marcadas transformaciones capilares a lo largo de su carrera, Billie ya ha transitado por diversos colores icónicos, como el verde neón que marcó la era de su álbum debut, el rubio platino de la fase Happier Than Ever, además de pasos por el negro y el castaño oscuro. Esta vez, la elección de un corte mucho más corto y una tonalidad tirando a pelirrojo claro renovó la imagen de la cantante, marcando un capítulo más en su trayectoria estética.",
+     "Tan pronto como se publicó el video, internet no perdió el tiempo y la sección de comentarios se vio inundada de reacciones humorísticas. Muchos fans y admiradores comenzaron a bromear con que, con el nuevo corte de cabello y el look renovado, Billie se parecía cada vez más a su hermano y compañero musical de toda la vida, Finneas O'Connell. Las divertidas comparaciones entre los hermanos se convirtieron rápidamente en uno de los temas más comentados en las redes sociales, divirtiendo al fandom global.",
+     "A pesar de las bromas cariñosas de los fans sobre el parecido familiar, la recepción del nuevo look fue ampliamente positiva. Admiradores de todo el mundo elogiaron la autenticidad de la cantante y destacaron cómo logra reinventarse visualmente en cada nueva fase de su carrera. La versatilidad de Billie Eilish para marcar tendencia y sorprender al público con elecciones osadas sigue siendo una de sus marcas registradas.",
+     "Actualmente, Billie Eilish sigue cosechando los frutos de su sólida trayectoria en la música, marcada por récords de streaming, premios importantes y giras de gran éxito alrededor del mundo. Mientras los fans continúan siguiendo cada paso de la artista en las redes sociales, queda por ver si el nuevo look rubio fresa llegó para quedarse o si forma parte de la preparación para futuros proyectos artísticos de la cantante."
+    ]
+   }
+  }
  },
  {
   "k": "dearianagrandeabillieeilishasfamosasestãoobcecadaspelocabelocurto",
@@ -1873,7 +2070,33 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish surprises fans with a renewed look in a jewelry campaign",
+    "d": "The singer caught the attention of the international media by starring in a new photoshoot for a jewelry campaign alongside her brother and producer Finneas.",
+    "body": [
+     "Billie Eilish's visual aesthetics have once again become one of the main topics on social media and in the international press. The Los Angeles artist charmed the public and fashion critics by appearing with a very sophisticated style proposal in a recent advertising photoshoot.",
+     "The unpublished images are part of a collaboration focused on the fine jewelry market. Known for her authenticity and for setting trends since the beginning of her meteoric career in the music industry, the interpreter of What Was I Made For? showcased visual productions that highlight elegant and minimalist accessories.",
+     "What made the project even more special for admirers was the presence of her brother and longtime musical partner, Finneas. The duo, who compose and produce the vast majority of the hits of Billie's career in a home studio, appeared united in several records of the commercial promotion.",
+     "Over the past few years, Billie's relationship with the fashion world has undergone striking transformations. From the time she exclusively adopted oversized clothes to protect herself from judgments about her body, to the transition to more classic and daring looks on red carpets, the artist has always used clothing as a form of artistic manifestation.",
+     "The positive repercussion of the photoshoot reinforces the cultural impact that the singer possesses off the stage. In addition to accumulating multiple Grammy awards and Oscar statuettes, she has consolidated herself as a generational icon capable of influencing global luxury brands without giving up her striking identity.",
+     "So far, representatives of the artist have not released additional details about the long-term contract with the jewelry brand or if there will be collections signed by them in the future. Fans remain attentive to the official channels to follow the next steps of the era that succeeds the acclaimed album Hit Me Hard and Soft."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish sorprende a los fans con un look renovado en campaña de joyería",
+    "d": "La cantante llamó la atención de los medios internacionales al protagonizar una nueva sesión de fotos para una campaña de joyería junto a su hermano y productor Finneas.",
+    "body": [
+     "La estética visual de Billie Eilish ha vuelto a ser uno de los principales temas en las redes sociales y en la prensa internacional. La artista de Los Ángeles cautivó al público y a los críticos de moda al aparecer con una propuesta de estilo bastante sofisticada en una reciente sesión de fotos publicitaria.",
+     "Las imágenes inéditas forman parte de una colaboración orientada al mercado de la joyería fina. Conocida por su autenticidad y por marcar tendencia desde el inicio de su trayectoria meteórica en la industria musical, la intérprete de What Was I Made For? lució producciones visuales que destacan accesorios elegantes y minimalistas.",
+     "Lo que hizo que el proyecto fuera aún más especial para los admiradores fue la presencia de su hermano y compañero musical de larga data, Finneas. El dúo, que compone y produce la gran mayoría de los éxitos de la carrera de Billie en un estudio casero, apareció unido en diversos registros de la difusión comercial.",
+     "A lo largo de los últimos años, la relación de Billie con el mundo de la moda ha pasado por transformaciones marcadas. Desde la época en que adoptaba exclusivamente ropa oversized para protegerse de los juicios sobre su cuerpo, hasta la transición hacia looks más clásicos y audaces en las alfombras rojas, la artista siempre ha usado la vestimenta como una forma de manifestación artística.",
+     "La repercusión positiva del ensayo refuerza el impacto cultural que la cantante posee fuera de los escenarios. Además de acumular múltiples premios Grammy y estatuillas del Óscar, se ha consolidado como un icono generacional capaz de influir en marcas de lujo globales sin renunciar a su marcada identidad.",
+     "Hasta el momento, los representantes de la artista no han divulgado detalles adicionales sobre el contrato a largo plazo con la marca de joyería o si habrá colecciones firmadas por ellos en el futuro. Los fans continúan atentos a los canales oficiales para acompañar los próximos pasos de la era que sucede al aclamado álbum Hit Me Hard and Soft."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishbreastreductionsurgeryrumourscirculateonlineafterunverifiedclaimdraw",
@@ -1903,7 +2126,35 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Unfounded rumors about Billie Eilish spark debates on social media",
+    "d": "Speculative online publications regarding Billie Eilish's health lack any official or medical corroboration.",
+    "body": [
+     "In recent days, social media posts began speculating about a supposed breast reduction surgery performed by Billie Eilish. The discussion gained traction mainly on X, formerly Twitter, where users started comparing old and recent photographs of the artist at various public events.",
+     "The posts are based on visual comparisons without any kind of concrete evidence or official statement. Among the images used in the collages are records of the singer on the red carpet of the 2023 Met Gala and more recent photos where she appears with different blouse styles.",
+     "Despite the repercussion generated by the comparisons and the use of artificial intelligence tools to formulate assumptions, there is no confirmation or medical data validating such claims. Fans and other users quickly pointed out that variations in silhouette can be explained by simple wardrobe factors, such as the use of different clothing cuts, support, and natural weight changes.",
+     "The singer herself has a history of strong opposition to invasive comments about her body and aesthetic choices. Throughout her career, the voice behind Hit Me Hard and Soft has repeatedly had to deal with public objectification and constant criticism about the way she dresses, whether opting for baggy clothes or more fitted pieces.",
+     "In previous interviews, such as a striking conversation with Variety magazine, Billie addressed the aesthetic pressure she has suffered since childhood and criticized society's double standards. She highlighted that her breast size frequently generated disproportionate judgments, while other women wearing the same type of clothing received entirely different reactions.",
+     "Furthermore, the artist has publicly expressed her relationship with the natural aging of the body. In recent podcast appearances throughout 2026, she stated that she is excited to see her face and body age without resorting to surgical aesthetic interventions.",
+     "It is worth noting that these previous statements about aging are unrelated to the recent rumors, having been merely general reflections by the star on acceptance. To date, the rumors about the surgical procedure remain mere unfounded speculations created by internet users."
+    ]
+   },
+   "es": {
+    "t": "Rumores infundados sobre Billie Eilish generan debates en las redes sociales",
+    "d": "Publicaciones especulativas en internet sobre la salud de Billie Eilish carecen de cualquier comprobación oficial o médica.",
+    "body": [
+     "En los últimos días, las publicaciones en las redes sociales comenzaron a especular sobre una supuesta cirugía de reducción de mamas realizada por Billie Eilish. La discusión cobró fuerza principalmente en X, antes Twitter, donde los usuarios empezaron a comparar fotografías antiguas y recientes de la artista en diferentes ocasiones públicas.",
+     "Las publicaciones se basan en comparaciones visuales sin ningún tipo de evidencia concreta o declaración oficial. Entre las imágenes utilizadas en los montajes se encuentran registros de la cantante en la alfombra roja de la Met Gala de 2023 y fotos más recientes en las que aparece con diferentes estilos de blusas.",
+     "A pesar de la repercusión generada por las comparaciones y el uso de herramientas de inteligencia artificial para formular suposiciones, no existe ninguna confirmación o dato médico que valide tales afirmaciones. Los fans y otros usuarios señalaron rápidamente que las variaciones en la silueta pueden explicarse por factores simples de vestuario, como el uso de diferentes modelajes de ropa, soporte y alteraciones naturales de peso.",
+     "La propia cantante tiene un historial de fuerte oposición a los comentarios invasivos sobre su cuerpo y sus elecciones estéticas. A lo largo de su carrera, la voz de Hit Me Hard and Soft ha tenido que lidiar repetidamente con la objetificación pública y con críticas constantes sobre su forma de vestir, ya sea optando por ropa holgada o por prendas más ajustadas.",
+     "En entrevistas anteriores, como en una conversación destacada con la revista Variety, Billie abordó la presión estética que sufre desde la infancia y criticó el doble rasero de la sociedad. Destacó que el tamaño de sus pechos a menudo generaba juicios desproporcionados, mientras que otras mujeres que usaban el mismo tipo de ropa recibían reacciones totalmente diferentes.",
+     "Además, la artista ya ha manifestado públicamente su relación con el envejecimiento natural del cuerpo. En apariciones recientes en podcasts a lo largo de 2026, declaró estar entusiasmada por ver su rostro y su cuerpo envejecer sin recurrir a intervenciones estéticas quirúrgicas.",
+     "Cabe destacar que estas declaraciones anteriores sobre el envejecimiento no guardan relación con los rumores recientes, habiendo sido solo reflexiones generales de la estrella sobre la aceptación. Hasta el momento, los rumores sobre el procedimiento quirúrgico siguen siendo meras especulaciones infundadas creadas por usuarios en internet."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishatualizafãssobrenovodiscotemosfeitomuitamúsica",
@@ -1932,7 +2183,33 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish updates fans on the development of her next studio album",
+    "d": "In a new statement to admirers, the singer confirmed that she is focused on creating a brand-new repertoire alongside Finneas.",
+    "body": [
+     "Singer Billie Eilish has brought exciting new updates for fans who are already eagerly awaiting the next steps in her discography. During a recent public interaction, the artist commented on the progress of studio work for the successor to the acclaimed album Hit Me Hard and Soft, released in 2024.",
+     "According to the songwriter, the creative process has been intense and quite productive. She highlighted that she has been spending a lot of time in the studio alongside her brother, producer, and longtime musical partner, Finneas, resulting in a large amount of unreleased material currently in development.",
+     "Despite the exciting news about the songwriting process, the artist's team has not yet released official launch dates, a tracklist, or conceptual details about the new project. Internet speculations also point to possible performances in large arenas and stadiums in the future, but such plans lack official confirmation so far.",
+     "The duo's recent track record demonstrates a steady work pace and a strong artistic connection. Since their global explosion with the debut album When We All Fall Asleep, Where Do We Go?, released in 2019, Billie and Finneas have consolidated an intimate and innovative formula that has yielded multiple Grammy awards and worldwide critical acclaim.",
+     "The release of Hit Me Hard and Soft kicked off a new era in the star's career, accompanied by a world tour that quickly sold out tickets across multiple continents. Brazilian fans are closely following every development, hoping that the next production cycle will also bring new opportunities to see the singer live in the country.",
+     "While new official announcements are not yet revealed, the recommendation for the fandom is to stay tuned to the artist's communication channels and continue celebrating the legacy of the current era. The Billie Global BR portal will continue following and translating all official updates on the future steps of our favorite fairy."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish actualiza a los fans sobre el desarrollo de su próximo álbum de estudio",
+    "d": "En una nueva declaración a sus admiradores, la cantante confirmó que está enfocada en la creación de un repertorio inédito junto a Finneas.",
+    "body": [
+     "La cantante Billie Eilish trajo nuevas y emocionantes actualizaciones para los fans que ya esperan ansiosos los próximos pasos de su discografía. Durante una reciente interacción pública, la artista comentó sobre el avance de los trabajos en el estudio dirigidos al sucesor del aclamado álbum Hit Me Hard and Soft, lanzado en 2024.",
+     "Según la compositora, el proceso creativo ha sido intenso y bastante productivo. Destacó que ha pasado mucho tiempo en el estudio junto a su hermano, productor y compañero musical de toda la vida, Finneas, lo que ha resultado en una gran cantidad de material inédito en fase de desarrollo.",
+     "A pesar de las alentadoras noticias sobre el proceso de composición, el equipo de la artista aún no ha divulgado fechas oficiales de lanzamiento, lista de canciones o detalles conceptuales sobre el nuevo proyecto. Las especulaciones en internet también apuntan a posibles presentaciones en grandes arenas y estadios en el futuro, pero dichos planes carecen de confirmación oficial hasta el momento.",
+     "El historial reciente del dúo demuestra un ritmo de trabajo constante y una fuerte conexión artística. Desde la explosión global con el disco debut When We All Fall Asleep, Where Do We Go?, lanzado en 2019, Billie y Finneas han consolidado una fórmula intimista e innovadora que les ha valido múltiples premios Grammy y el reconocimiento mundial de la crítica especializada.",
+     "El lanzamiento de Hit Me Hard and Soft dio inicio a una nueva era en la carrera de la estrella, acompañada por una gira mundial que agotó las entradas rápidamente en diversos continentes. Los fans brasileños siguen de cerca cada novedad, con la esperanza de que el próximo ciclo de producciones también traiga nuevas oportunidades de ver a la cantante en vivo en el país.",
+     "Mientras no se revelen nuevos anuncios oficiales, la recomendación para el fandom es mantenerse atento a los canales de comunicación de la artista y continuar celebrando el legado de la era actual. El portal Billie Global BR seguirá acompañando y traduciendo todas las actualizaciones oficiales sobre los futuros pasos de nuestra hada favorita."
+    ]
+   }
+  }
  },
  {
   "k": "cabeloscurtosconquistamfamosasinspiresenosnovosvisuais",
@@ -1965,7 +2242,41 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish surprises fans and adopts a new short, layered haircut",
+    "d": "The singer opted for a chin-length look full of movement, marking a new phase in her aesthetic journey.",
+    "body": [
+     "Hair changes in the celebrity universe usually stir up the internet quickly, serving as inspiration for millions of fans around the world. Transforming one's hair is one of the most common ways artists find to signal the end of a cycle and the beginning of a new artistic or personal era.",
+     "[img:https://p2.trrsf.com/image/fget/cf/1548/0/images.terra.com/2026/10/22/118477933-cabelo-1792699278.jpg|Confira as famosas que aderiram ao cabelo curtinho Foto: reprodução/@arianagrande / todateen]",
+     "Recently, singer Billie Eilish caught the public's attention by showing off a completely revamped look. Known for her striking and authentic choices throughout her career, the interpreter of Hit Me Hard and Soft decided to make a radical change and adopt an aesthetic quite different from what the public was used to seeing lately.",
+     "According to information released by the press, the artist appeared with chin-length hair, opting for a very layered cut full of movement. The news resonated immediately among admirers, who wasted no time commenting on the star's new hair phase on social media.",
+     "[insta:https://www.instagram.com/reel/Dezci9bh_4T]",
+     "Billie Eilish has a history of quite striking visual transformations since she burst onto the music scene. The singer has gone through several iconic colorings, including the famous black hair with neon green roots, fully blonde tresses, and natural dark shades, always using her image as an extension of her artistic identity.",
+     "[insta:https://www.instagram.com/reel/DdMe0oQpQhl]",
+     "Besides the North American star, other major music and acting personalities have also recently embraced short hair. Heavyweights of international and national pop culture have been betting on variations ranging from the bob style to more cropped cuts, proving that the trend is in full swing.",
+     "The versatility of short tresses has been gaining more and more ground among female celebrities, showing that there are dozens of alternatives for those who wish to change their look. Whether with bangs, textured ends, or wavy finishes, the proposal pleases different styles and personalities.",
+     "For fans who follow every step of the singer's journey, the news is a treat for discussions and, of course, inspiration for future visits to the hair salon. There is still no official confirmation about the reasons behind the change, but admirers have already approved the new style."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish sorprende a los fans y adopta un nuevo corte de cabello corto y desmechado",
+    "d": "La cantante apostó por un look a la altura de la barbilla lleno de movimiento, marcando una nueva fase en su trayectoria estética.",
+    "body": [
+     "Los cambios de cabello en el universo de las celebridades suelen revolucionar internet rápidamente, sirviendo de inspiración para millones de fans alrededor del mundo. La transformación del pelo es una de las formas más comunes que encuentran los artistas para señalar el cierre de un ciclo y el inicio de una nueva era artística o personal.",
+     "[img:https://p2.trrsf.com/image/fget/cf/1548/0/images.terra.com/2026/10/22/118477933-cabelo-1792699278.jpg|Confira as famosas que aderiram ao cabelo curtinho Foto: reprodução/@arianagrande / todateen]",
+     "Recientemente, la cantante Billie Eilish llamó la atención del público al lucir un aspecto totalmente renovado. Conocida por sus elecciones llamativas y auténticas a lo largo de su carrera, la intérprete de Hit Me Hard and Soft decidió dar un giro radical y adoptar una estética muy diferente a la que el público estaba acostumbrado a ver últimamente.",
+     "De acuerdo con información divulgada por la prensa, la artista apareció con el cabello a la altura de la barbilla, apostando por un corte bastante desmechado y lleno de movimiento. La novedad repercutió de inmediato entre los admiradores, que no tardaron en comentar la nueva fase capilar de la estrella en las redes sociales.",
+     "[insta:https://www.instagram.com/reel/Dezci9bh_4T]",
+     "Billie Eilish tiene un historial de transformaciones visuales bastante llamativas desde que surgió en la industria musical. La cantante ha pasado por diversas coloraciones icónicas, incluyendo el famoso cabello negro con raíz verde neón, melenas totalmente rubias y tonos oscuros naturales, usando siempre su imagen como extensión de su identidad artística.",
+     "[insta:https://www.instagram.com/reel/DdMe0oQpQhl]",
+     "Además de la estrella norteamericana, otras grandes personalidades de la música y de la actuación también se han sumado recientemente al cabello cortito. Pesos pesados de la cultura pop internacional y nacional han apostado por variaciones que van desde el estilo bob hasta cortes más rebajados, demostrando que la tendencia está con todo.",
+     "La versatilidad de las melenas cortas ha ganado cada vez más espacio entre las famosas, mostrando que existen decenas de alternativas para quienes desean cambiar de look. Ya sea con flequillos, puntas desfiladas o acabados ondulados, la propuesta se adapta a diferentes estilos y personalidades.",
+     "Para los fans que siguen cada paso de la trayectoria de la cantante, la novedad es perfecta para generar debates y, por supuesto, inspiración para futuras visitas al salón de belleza. Todavía no hay confirmación oficial sobre los motivos detrás del cambio, pero los admiradores ya han dado el visto bueno al nuevo estilo."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishaparececomcabelocurtoesurpreendeseguidoresnasredes",
@@ -1997,7 +2308,35 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish shocks fans by debuting short haircut and copper tone",
+    "d": "The artist surprised the public this Thursday (22) by showing off a new Italian bob look in a strawberry blonde shade on social media.",
+    "body": [
+     "Singer Billie Eilish stirred up social media on Thursday morning (22) by posting an unprecedented video on her Instagram profile. In the recording, the pop star revealed a radical change in her appearance, showing much shorter and revamped locks that quickly became a trending topic among followers worldwide.",
+     "[img:https://vanitybrasil.com.br/wp-content/uploads/2026/10/xuxa-2026-10-22t161017.101-860x599.jpg|Créditos/Reprodução Internet]",
+     "The new style adopted by the singer is a classic cut known as the Italian bob, characterized by structured layers and a chin-length cut. In addition to the shape, the coloration also drew a lot of attention, opting for the strawberry blonde shade, a copper blonde that combines golden and reddish nuances.",
+     "In the shared clip, Eilish appears seated in a car, positioning the camera strategically to highlight the details of the transformation and the fall of her new hair. The choice of the video's soundtrack brought a touch of humor and irony, being backed by the song Cut Your Hair by alternative rock band Pavement.",
+     "The reaction to the post was immediate on digital platforms, with thousands of admirers commenting on the artist's boldness. The harmony between the new look and the singer's striking aesthetic identity was widely praised by Brazilian and international fans, who approved of the novelty.",
+     "Known for her striking visual transformations throughout her career, Billie Eilish has already gone through several memorable aesthetic phases. From her iconic black hair with fluorescent green roots to the platinum blonde of the Happier Than Ever era, passing through recent dark and red tones, the artist frequently uses her image as an extension of her artistic expression.",
+     "So far, there is no official confirmation whether the new haircut is part of the preparation for a new musical era or specific visual project. While admirers wait for news about the next steps in the singer's career, it remains to follow social media to check out the developments of this hair phase."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish impresiona a los fans al aparecer con corte de pelo corto y tono cobrizo",
+    "d": "La artista sorprendió al público este jueves (22) al mostrar un nuevo look estilo bob italiano en tono rubio fresa en las redes sociales.",
+    "body": [
+     "La cantante Billie Eilish revolucionó las redes sociales la mañana de este jueves (22) al publicar un video inédito en su perfil de Instagram. En la grabación, la estrella pop reveló un cambio radical en su apariencia, luciendo un cabello mucho más corto y renovado que rápidamente se convirtió en tema de conversación entre seguidores de todo el mundo.",
+     "[img:https://vanitybrasil.com.br/wp-content/uploads/2026/10/xuxa-2026-10-22t161017.101-860x599.jpg|Créditos/Reprodução Internet]",
+     "El nuevo estilo adoptado por la intérprete es un corte clásico conocido como bob italiano, caracterizado por capas estructuradas y un largo a la altura de la barbilla. Además de la forma, la coloración también llamó bastante la atención, apostando por el tono rubio fresa, un rubio cobrizo que combina matices dorados y rojizos.",
+     "En el registro compartido, Eilish aparece cómoda en el asiento de un automóvil, posicionando la cámara de manera estratégica para evidenciar los detalles de la transformación y la caída de su nueva melena. La elección de la banda sonora del video aportó un toque de humor e ironía, estando musicalizado por la canción Cut Your Hair, de la banda de rock alternativo Pavement.",
+     "La repercusión de la publicación fue inmediata en las plataformas digitales, con miles de admiradores comentando sobre la osadía de la artista. La sintonía entre el nuevo look y la marcada identidad estética de la cantante fue ampliamente elogiada por los fans brasileños e internacionales, quienes aprobaron la novedad.",
+     "Conocida por sus impactantes transformaciones visuales a lo largo de su carrera, Billie Eilish ya ha transitado por diversas fases estéticas memorables. Desde su icónico cabello negro con raíces verdes fluorescentes hasta el rubio platino de la era Happier Than Ever, pasando por los tonos oscuros y rojizos recientes, la artista utiliza frecuentemente su imagen como una extensión de su expresión artística.",
+     "Hasta el momento, no hay confirmación oficial de si el nuevo corte forma parte de la preparación para una nueva era musical o un proyecto visual específico. Mientras los admiradores esperan novedades sobre los próximos pasos en la carrera de la cantante, queda seguir las redes sociales para comprobar los acontecimientos de esta fase capilar."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishdebutsfreshnewlightauburnbob",
@@ -2026,7 +2365,33 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish surprises fans by debuting new look with light red hair",
+    "d": "The Grammy-winning artist was spotted with a shoulder-length bob in a light red shade, generating great buzz on social media.",
+    "body": [
+     "Singer Billie Eilish drew the attention of the public and international media by appearing with a striking hair transformation. Known for her constant and iconic visual changes over the years, the pop star recently adopted a shoulder-length bob cut accompanied by a light red shade, a style that quickly resonated among fans on social media.",
+     "The appearance with the new look took place behind the scenes of recent recordings and professional commitments of the artist. Although Billie's team and the singer herself have not yet officially commented with details about the motivation behind the change, it is speculated that the new style may be related to character requirements or ongoing audiovisual projects.",
+     "Among the rumors circulating on the internet, the association of the new hair with cinematic productions in which the artist might be involved stands out, such as the film adaptation project of the literary classic The Bell Jar. So far, however, there is no official confirmation from the singer's representatives regarding the veracity of these speculations linked to the movie.",
+     "Throughout her career, Billie Eilish has turned hair aesthetics into one of her trademarks. The artist's trajectory includes memorable phases that marked important musical eras, from the iconic black hair with neon green roots from her debut era with When We All Fall Asleep, Where Do We Go?, passing through the platinum blonde of the Happier Than Ever era, to the dark and deeper red tones that accompanied the release of the album Hit Me Hard and Soft.",
+     "Each visual change usually signals the beginning of a new artistic chapter for the singer, which always sparks great anticipation in her global fan base. The Brazilian fandom, represented by Billie Global BR, was quick to react and compare the new phase to classic moments of the artist's aesthetic, stirring up digital platforms with dozens of theories.",
+     "While waiting for official announcements or new public appearances, admirers celebrate the singer's versatility. The expectation now is that Billie Eilish will reveal more details about her next steps in music and acting, further consolidating her striking presence in both the music industry and the cinematic universe."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish sorprende a los fans al estrenar nuevo look con cabello pelirrojo claro",
+    "d": "La artista ganadora del Grammy fue vista con un corte bob en un tono pelirrojo claro, generando gran repercusión en las redes sociales.",
+    "body": [
+     "La cantante Billie Eilish llamó la atención del público y de los medios internacionales al aparecer con una transformación capilar llamativa. Conocida por sus constantes e icónicos cambios de look a lo largo de los años, la estrella del pop adoptó recientemente un corte bob a la altura de los hombros acompañado por una tonalidad pelirroja clara, un estilo que rápidamente repercutió entre los fans en las redes sociales.",
+     "La aparición con el nuevo look ocurrió durante los bastidores de grabaciones y compromisos profesionales recientes de la artista. Aunque el equipo de Billie y la propia cantante aún no se han pronunciado oficialmente con detalles sobre la motivación detrás del cambio, se especula que el nuevo estilo podría estar relacionado con exigencias de personajes o proyectos audiovisuales en marcha.",
+     "Entre los rumores que circulan en internet, se destaca la asociación del nuevo cabello con producciones cinematográficas en las que la artista estaría involucrada, como el proyecto de adaptación para el cine del clásico literario The Bell Jar. Hasta el momento, sin embargo, no hay confirmación oficial por parte de los representantes de la cantante sobre la veracidad de estas especulaciones vinculadas a la película.",
+     "A lo largo de su carrera, Billie Eilish ha convertido la estética capilar en una de sus marcas registradas. La trayectoria de la artista incluye fases memorables que marcaron eras musicales importantes, desde el icónico cabello negro con raíces verde neón de la era de su debut con When We All Fall Asleep, Where Do We Go?, pasando por el rubio platinado de la era Happier Than Ever, hasta los tonos oscuros y pelirrojos más cerrados que acompañaron el lanzamiento del álbum Hit Me Hard and Soft.",
+     "Cada cambio de look suele señalar el inicio de un nuevo capítulo artístico para la cantante, lo que siempre despierta gran expectativa en su base global de fans. El fandom brasileño, representado por Billie Global BR, no tardó en reaccionar y comparar la nueva fase con momentos clásicos de la estética de la artista, movilizando las plataformas digitales con decenas de teorías.",
+     "Mientras esperan declaraciones oficiales o nuevas apariciones públicas, los admiradores celebran la versatilidad de la cantante. La expectativa ahora es que Billie Eilish revele más detalles sobre sus próximos pasos en la música y la actuación, consolidando aún más su fuerte presencia tanto en la industria fonográfica como en el universo cinematográfico."
+    ]
+   }
+  }
  },
  {
   "k": "arianagrandeandbillieeilisharebobtwins",
@@ -2076,7 +2441,35 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish surprises fans with new shaggy bob haircut after red hair phase",
+    "d": "The American artist has changed her look once again and appeared with a modern layered cut, just weeks after dyeing her hair red.",
+    "body": [
+     "The chameleon-like Billie Eilish has once again caught the public's attention by showing off a new hair transformation. Known for moving between striking styles throughout her journey in pop music, the artist surprised fans by adopting a casual and edgy shaggy bob cut.",
+     "The news comes surprisingly fast after the singer's last major change. Just two weeks ago, she had revealed a radical transformation to her followers by adopting entirely reddish hair, marking a vibrant aesthetic that perfectly matched her most recent musical phase.",
+     "The new look with layered cuts and bangs evokes 1970s aesthetic references and alternative rock, styles that the songwriter often incorporates into her unique wardrobe. The speed with which she alternates between colors and cuts reinforces her artistic freedom and her taste for breaking visual expectations.",
+     "Since the beginning of her career, when she shocked the world by adopting iconic black hair with neon green roots during the era of her debut album When We All Fall Asleep, Where Do We Go?, Billie has turned every aesthetic change into a cultural event awaited by millions of admirers around the globe.",
+     "Her transition to the platinum blonde look in 2021, which inaugurated the Happier Than Ever era, and the return to darker tones during the promotion of the acclaimed album Hit Me Hard and Soft show that the star's image is in constant creative evolution.",
+     "For now, there is no official confirmation about the reasons behind the new hair change or whether the cut is part of the preparation for an unprecedented visual project, advertising campaign, or a new leg of her world tour.",
+     "Aware of the impact she causes on the internet, the artist shared the new style casually, immediately generating thousands of reactions on social media. Brazilian fans of the Billie Global BR portal remain attentive to the singer's next steps, as she continues to set trends both on and off the stage."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish sorprende a los fans con un nuevo corte shaggy bob tras su etapa pelirroja",
+    "d": "La artista estadounidense ha cambiado de imagen una vez más y ha aparecido con un moderno corte desmechado, apenas semanas después de teñirse el cabello de rojo.",
+    "body": [
+     "La camaleónica Billie Eilish ha vuelto a llamar la atención del público al lucir una nueva transformación capilar. Conocida por transitar entre estilos llamativos a lo largo de su trayectoria en la música pop, la artista sorprendió a los fans al adoptar un corte shaggy bob desenfadado y lleno de actitud.",
+     "La novedad llega sorprendentemente rápido después del último gran cambio de la cantante. Hace apenas dos semanas, había revelado a sus seguidores una transformación radical al adoptar el cabello totalmente rojizo, marcando una estética vibrante que combinaba perfectamente con su fase musical más reciente.",
+     "El nuevo look con capas desmechadas y flequillo remite a referencias estéticas de la década de 1970 y del rock alternativo, estilos que la compositora suele incorporar en su guardarropa único. La rapidez con la que alterna entre colores y cortes refuerza su libertad artística y su gusto por romper las expectativas visuales.",
+     "Desde el inicio de su carrera, cuando sacudió al mundo al adoptar el icónico cabello negro con raíces verde neón en la era de su álbum debut When We All Fall Asleep, Where Do We Go?, Billie ha convertido cada cambio estético en un evento cultural esperado por millones de admiradores en todo el mundo.",
+     "El paso por el look rubio platino en 2021, que inauguró la era Happier Than Ever, y el regreso a tonos más oscuros durante la promoción del aclamado disco Hit Me Hard and Soft demuestran que la imagen de la estrella está en constante evolución creativa.",
+     "Por ahora, no hay confirmación oficial sobre los motivos detrás del nuevo cambio capilar o si el corte forma parte de la preparación para algún proyecto visual inédito, campaña publicitaria o una nueva etapa de su gira mundial.",
+     "Consciente del impacto que causa en internet, la artista compartió el nuevo estilo de manera casual, generando inmediatamente miles de reacciones en las redes sociales. Los fans brasileños del portal Billie Global BR siguen atentos a los próximos pasos de la cantante, que continúa marcando tendencia dentro y fuera de los escenarios."
+    ]
+   }
+  }
  },
  {
   "k": "johnhardyapresentacoleçãoemparceriacombillieeilishefinneas",
@@ -2105,7 +2498,33 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish and Finneas launch sustainable jewelry collection in partnership with John Hardy",
+    "d": "After taking on the role of ambassadors, the siblings created an exclusive ten-piece line focused on recycled metals and lab-grown diamonds.",
+    "body": [
+     "Billie Eilish and her brother and musical partner, Finneas O’Connell, expanded their creativity beyond the studios and stages by signing a new jewelry collection in collaboration with the traditional brand John Hardy. The project, recently revealed, took about two years of meticulous development to reflect the aesthetic identity and particular tastes of the duo of artists.",
+     "The relationship between the musicians and the brand began to grow closer in September 2025, when they officially assumed the role of ambassadors for the Lovestruck line. From the beginning, the shared environmental commitment served as the main bridge for the union, aligning with the well-known ecological positions that Billie and Finneas defend in their careers and personal lives.",
+     "For this limited edition, the focus on sustainability translated into the expressive use of conscious materials. More than 99% of the metals used in the ten sterling silver pieces—which include necklaces, rings, bracelets, and earrings—are fully recovered, reinforcing the circular economy proposal valued by both parties.",
+     "The collection was divided into two distinct creative branches: \"Wildflower\" and \"Screwball\". The first relies on delicate floral themes adorned with lab-grown diamonds, directly dialoguing with the aesthetic preferences that the singer usually adopts in her daily routine away from the big spotlights.",
+     "In contrast, the \"Screwball\" line explores chains with an industrial and robust appeal, referring to the energetic look that usually marks the singer's live performances. The curation of the items sought to translate different moments and forms of expression through striking accessories.",
+     "According to statements released during the launch, jewelry has always occupied a prominent space in the construction of the artist's self-expression. The project made it possible to materialize their appreciation for minimalist pendants and elements of nature, resulting in a versatile catalog aligned with the ethical values of the current generation of fans."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish y Finneas lanzan colección de joyería sostenible en colaboración con John Hardy",
+    "d": "Tras asumir el cargo de embajadores, los hermanos crearon una línea exclusiva de diez piezas centrada en metales reciclados y diamantes de laboratorio.",
+    "body": [
+     "Billie Eilish y su hermano y socio musical, Finneas O’Connell, ampliaron su creatividad más allá de los estudios y los escenarios al firmar una nueva colección de joyería en colaboración con la tradicional marca John Hardy. El proyecto, revelado recientemente, tomó alrededor de dos años de desarrollo meticuloso para reflejar la identidad estética y los gustos particulares del dúo de artistas.",
+     "La relación entre los músicos y la firma comenzó a estrecharse en septiembre de 2025, cuando asumieron oficialmente el papel de embajadores de la línea Lovestruck. Desde el principio, el compromiso ambiental compartido sirvió como el principal puente para la unión, alineándose con las conocidas posturas ecológicas que Billie y Finneas defienden en sus carreras y vidas personales.",
+     "Para esta edición limitada, el foco en la sostenibilidad se tradujo en el uso expresivo de materiales conscientes. Más del 99% de los metales empleados en las diez piezas de plata esterlina —que incluyen collares, anillos, pulseras y aretes— son totalmente recuperados, reforzando la propuesta de economía circular valorada por ambas partes.",
+     "La colección se dividió en dos vertientes creativas distintas: \"Wildflower\" y \"Screwball\". La primera apuesta por delicados temas florales adornados con diamantes producidos en laboratorio, dialogando directamente con las preferencias estéticas que la intérprete suele adoptar en su rutina lejos de los grandes focos.",
+     "En contraparte, la línea \"Screwball\" explora cadenas de atractivo industrial y robusto, remitiendo al aspecto enérgico que suele marcar las presentaciones en vivo de la cantante. La curaduría de los artículos buscó traducir diferentes momentos y formas de expresión a través de accesorios llamativos.",
+     "Según declaraciones difundidas durante el lanzamiento, la joyería siempre ha ocupado un espacio destacado en la construcción de la autoexpresión de la artista. El proyecto permitió materializar el aprecio por los dijes minimalistas y los elementos de la naturaleza, dando como resultado un catálogo versátil y alineado con los valores éticos de la generación actual de fans."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishshowsoffhershortstrawberryblondehairinnewvideosoundtrackspostwithcut",
@@ -2138,7 +2557,41 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish debuts new strawberry blonde look in Instagram video",
+    "d": "The pop superstar shared a car video highlighting her layered haircut and a nostalgic soundtrack.",
+    "body": [
+     "Singer Billie Eilish caught fans' attention this Thursday by publishing a new post on her official Instagram account. In the video shared on the social network, the 24-year-old artist appears inside a car enthusiastically showing off the details of her short strawberry blonde hair, displaying the fall of the layers and the new texture of her locks to the public.",
+     "[insta:https://www.instagram.com/reel/Dezci9bh_4T]",
+     "To accompany the visuals, the global hitmaker chose as a soundtrack an alternative rock track released in 1994 by the band Pavement. Maintaining the discretion she usually adopts in her captions, she chose to include only a single emoji, letting followers fill the comment section with compliments and enthusiastic reactions to the aesthetic novelty.",
+     "Although the recent video generated great repercussion, the hair change was presented to the public weeks earlier, in early October. On that occasion, the Grammy winner traded her longer, darker strands for a shoulder-length cut, marked by choppy layers and a side part, marking yet another transition in her visual trajectory.",
+     "[insta:https://www.instagram.com/p/DeHvGYLmOLb]",
+     "Throughout her career, the songwriter has built a striking history of aesthetic transformations that frequently accompany musical eras or new professional projects. From the days when she sported iconic black hair with neon green roots to the platinum blonde phase that marked the release of the album Happier Than Ever, the young artist has always used her image as a tool for creative expression.",
+     "The gradual transition to lighter tones and shorter cuts throughout the year has also been closely followed by fashion and entertainment publications. Alongside musical and aesthetic news, the singer has directed part of her energy toward new artistic horizons, including her starring role in the film adaptation of the work The Bell Jar.",
+     "[img:https://www.justjared.com/wp-content/uploads/2026/10/billie-eilish-new-hair-2.jpg|Foto: via Just Jared]",
+     "[img:https://www.justjared.com/wp-content/uploads/2026/10/billie-eilish-new-hair-1.jpg|Foto: via Just Jared]",
+     "Despite the public's constant curiosity surrounding her personal and artistic life, the singer's team has not released additional information about future studio releases. While admirers wait for news in the musical scene, social networks continue to serve as the main channel of direct interaction between the artist and her global fan base."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish presume de nuevo look rubio fresa en un vídeo de Instagram",
+    "d": "La superestrella del pop compartió una grabación en coche destacando su corte en capas y una banda sonora nostálgica.",
+    "body": [
+     "La cantante Billie Eilish llamó la atención de los fans este jueves al publicar una nueva grabación en su cuenta oficial de Instagram. En el vídeo compartido en la red social, la artista de 24 años aparece dentro de un automóvil luciendo con entusiasmo los detalles de su cabello corto en tonos rubio fresa, mostrando la caída de las capas y la nueva textura de su melena al público.",
+     "[insta:https://www.instagram.com/reel/Dezci9bh_4T]",
+     "Para acompañar las imágenes, la intérprete de éxitos globales eligió como banda sonora un tema de rock alternativo lanzado en 1994 por la banda Pavement. Manteniendo la discreción que suele adoptar en sus subtítulos, optó por incluir únicamente un emoji, dejando que los seguidores llenaran la sección de comentarios con elogios y reacciones entusiastas a la novedad estética.",
+     "Aunque el reciente vídeo generó gran repercusión, el cambio capilar fue presentado al público semanas antes, a principios de octubre. En aquella ocasión, la ganadora del Grammy cambió sus mechones más largos y oscuros por un corte a la altura de los hombros, marcado por capas desfiladas y raya al lado, marcando una transición más en su trayectoria visual.",
+     "[insta:https://www.instagram.com/p/DeHvGYLmOLb]",
+     "A lo largo de su carrera, la compositora ha construido un historial notable de transformaciones estéticas que frecuentemente acompañan a eras musicales o nuevos proyectos profesionales. Desde los tiempos en que lucía el icónico cabello negro con la raíz verde neón hasta la fase rubio platino que marcó el lanzamiento del álbum Happier Than Ever, la joven artista siempre ha utilizado su imagen como herramienta de expresión creativa.",
+     "La transición gradual hacia tonos más claros y cortes más cortos a lo largo del año también ha sido seguida de cerca por publicaciones de moda y entretenimiento. Paralelamente a las novedades musicales y estéticas, la cantante ha dirigido parte de su energía hacia nuevos horizontes artísticos, incluyendo su participación como protagonista en la adaptación cinematográfica de la obra The Bell Jar.",
+     "[img:https://www.justjared.com/wp-content/uploads/2026/10/billie-eilish-new-hair-2.jpg|Foto: via Just Jared]",
+     "[img:https://www.justjared.com/wp-content/uploads/2026/10/billie-eilish-new-hair-1.jpg|Foto: via Just Jared]",
+     "A pesar de la constante curiosidad del público en torno a su vida personal y artística, el equipo de la cantante no ha divulgado información adicional sobre futuros lanzamientos de estudio. Mientras los admiradores esperan novedades en el panorama musical, las redes sociales continúan sirviendo como el principal canal de interacción directa entre la artista y su base global de fans."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishdebutsdramaticnewlookandpeopleareconvincedshesanothercelebrity",
@@ -2167,7 +2620,8 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "trt": 1
  },
  {
   "k": "billieeilishelevatestopheldupbyjust2stringswithjohnhardybling",
@@ -2196,7 +2650,33 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish blends romanticism and boldness in new jewelry campaign with John Hardy",
+    "d": "Alongside her brother Finneas, the singer debuted a fine jewelry collaboration that contrasts delicate lace pieces with heavy metallic accessories.",
+    "body": [
+     "Billie Eilish continues to shape the course of contemporary fashion and has further cemented her status as a global style icon by announcing a new venture in the world of fine jewelry. The Oscar-winning star joined creative forces with the renowned atelier John Hardy to launch an exclusive collaborative collection, starring in the official campaign alongside her brother and longtime musical partner, Finneas.",
+     "For the promotional photos recently released, the artist adopted an aesthetic that transitions seamlessly between vintage romanticism and the urban attitude she is known for. She appeared wearing a delicate ivory-toned satin and lace tank top, held up only by thin spaghetti straps. The boudoir-inspired piece also featured a romantic bow at the waist, creating a soft silhouette that dialogues with the brand's proposition.",
+     "However, the main highlight of the look was the intentional contrast provided by the jewelry. The singer layered over the delicacy of the fabric a robust selection of sterling silver accessories from the collaborative collection itself. The styling featured thick chain-link necklaces around the neck, striking bracelets, and textured rings that showcase the fusion between industrial elements and floral motifs characteristic of the line.",
+     "Finneas also integrated the campaign's visual records, posing alongside his sister in a patterned button-down shirt and silver chains in harmony with the aesthetic proposal. In one of the main shots, the duo appears in an intimate pose, while the singer displays her dark hair in soft waves and a natural makeup with an illuminated finish.",
+     "This new partnership reinforces the artist's ability to dictate trends without following conventional standards, blending references from different aesthetic universes with total authenticity. Whether on stage or in major global advertising campaigns, she demonstrates that she understands luxury and behavior like few names of her generation.",
+     "Brazilian fans and fashion admirers around the world are already celebrating yet another successful step in the singer's fashion career. More details about the availability of the pieces and the collection's developments can be followed directly on the brand's official channels and through updates on the Billie Global BR portal."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish une romanticismo y audacia en su nueva campaña de joyería con John Hardy",
+    "d": "Junto a su hermano Finneas, la cantante debutó una colaboración de alta joyería que contrasta piezas de encaje delicado con accesorios metálicos pesados.",
+    "body": [
+     "Billie Eilish continúa marcando el rumbo de la moda contemporánea y ha consolidado aún más su estatus de icono global de estilo al anunciar una nueva incursión en el universo de la alta joyería. La estrella ganadora del Óscar unió fuerzas creativas con el renombrado taller John Hardy para el lanzamiento de una colección colaborativa exclusiva, protagonizando la campaña oficial junto a su hermano y compañero musical de toda la vida, Finneas.",
+     "Para las fotos promocionales publicadas recientemente, la artista adoptó una estética que transita a la perfección entre el romanticismo vintage y la actitud urbana por la que se ha hecho conocida. Apareció vistiendo una delicada camiseta sin mangas de satén y encaje en tono marfil, sostenida únicamente por tirantes finos. La prenda de inspiración lencera también contó con un lazo romántico en la cintura, creando una silueta suave que dialoga con la propuesta de la marca.",
+     "Sin embargo, el gran protagonista del look fue el contraste intencional proporcionado por las joyas. La cantante superpuso a la delicadeza del tejido una selección robusta de accesorios de plata esterlina de la propia colección colaborativa. El estilismo apostó por collares de eslabones gruesos alrededor del cuello, brazaletes llamativos y anillos texturizados que exhiben la fusión entre elementos industriales y motivos florales característicos de la línea.",
+     "Finneas también formó parte de los registros visuales de la campaña, posando junto a su hermana con una camisa abotonada estampada y cadenas plateadas en armonía con la propuesta estética. En una de las tomas principales, el dúo aparece en una pose intimista, mientras la intérprete luce su cabello oscuro en ondas suaves y un maquillaje natural de acabado iluminado.",
+     "Esta nueva alianza refuerza la capacidad de la artista para dictar tendencias sin seguir los patrones convencionales, mezclando referencias de diferentes universos estéticos con total autenticidad. Ya sea sobre los escenarios o en grandes campañas publicitarias globales, demuestra que entiende de lujo y comportamiento como pocos nombres de su generación.",
+     "Los fans brasileños y los amantes de la moda de todo el mundo ya celebran un nuevo paso exitoso en la carrera de moda de la cantante. Más detalles sobre la disponibilidad de las piezas y los acontecimientos de la colección se pueden seguir directamente en los canales oficiales de la marca y en las actualizaciones del portal Billie Global BR."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishandfinneasdebutjewelrycollectionforjohnhardy",
@@ -2226,7 +2706,35 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish and Finneas launch exclusive sustainable jewelry collection in partnership with John Hardy",
+    "d": "The siblings have joined forces with the renowned brand to create artisanal pieces that reflect their unique aesthetic and environmental commitment.",
+    "body": [
+     "The creativity of siblings Billie Eilish and Finneas O'Connell has just expanded into the universe of fine jewelry. The duo officially announced the launch of their first jewelry line in collaboration with the traditional brand John Hardy, a project that unites the artists' striking design with the artisanal expertise of the international luxury brand.",
+     "Named The Billie Eilish & Finneas Collection, the complete line is now available for purchase through the brand's official website. Fans and fashion enthusiasts can acquire the items with prices ranging from 195 to 2,400 dollars, covering different price ranges and varied options of exclusive accessories.",
+     "Known for their strong convictions regarding sustainability and ecological responsibility, Billie and Finneas made a point for the partnership to reflect these fundamental values. John Hardy is widely recognized in the market for using ethical production practices, employing recycled metals and responsibly sourced stones in their artisanal creations.",
+     "This is not the first time that the musicians' aesthetic overflows into the fashion and lifestyle market. Throughout their meteoric career, which began with the global success of their debut album When We All Fall Asleep, Where Do We Go?, Billie Eilish has dictated visual trends, always prioritizing comfort and an authentic identity.",
+     "In turn, Finneas also imprints his refined aesthetic taste both in music production and in his visual choices, perfectly complementing his sister's artistic vision. The creative union of the two in the studio now translates into forms sculpted in metal, bringing the duo's essence to pieces that can be worn on a daily basis.",
+     "To date, details about future expansions of the line to selected physical stores have not been detailed by the brand's press office. However, digital availability has already mobilized fans around world who wish to collect yet another official item signed by the Oscar and Grammy-winning artists.",
+     "For the Brazilian and international public that follows every step of the siblings' trajectory, the collection represents another bridge between avant-garde music and the universe of conscious design. With this venture, Billie Eilish and Finneas continue to expand their creative horizons far beyond the stages and the hit charts."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish y Finneas lanzan una colección exclusiva de joyería sostenible en colaboración con John Hardy",
+    "d": "Los hermanos han unificado fuerzas con la reconocida marca para crear piezas artesanales que reflejan su estética única y su compromiso ambiental.",
+    "body": [
+     "La creatividad de los hermanos Billie Eilish y Finneas O'Connell acaba de expandirse hacia el universo de la alta joyería. El dúo anunció oficialmente el lanzamiento de su primera línea de joyas en colaboración con la tradicional marca John Hardy, un proyecto que une el llamativo diseño de los artistas con la experiencia artesanal de la marca internacional de lujo.",
+     "Bautizada como The Billie Eilish & Finneas Collection, la línea completa ya está disponible para su compra a través del sitio web oficial de la marca. Los fans y entusiastas de la moda pueden adquirir los artículos con precios que varían de 195 a 2.400 dólares, contemplando diferentes rangos de precios y variadas opciones de accesorios exclusivos.",
+     "Conocidos por sus fuertes convicciones en relación con la sostenibilidad y la responsabilidad ecológica, Billie y Finneas se aseguraron de que la asociación reflejara estos valores fundamentales. John Hardy es ampliamente reconocida en el mercado por utilizar prácticas éticas de producción, empleando metales reciclados y piedras de origen responsable en sus confecciones artesanales.",
+     "Esta no es la primera vez que la estética de los músicos desborda hacia el mercado de la moda y del estilo de vida. A lo largo de su meteórica carrera, iniciada con el éxito global de su álbum debut When We All Fall Asleep, Where Do We Go?, Billie Eilish ha dictado tendencias visuales, priorizando siempre la comodidad y una identidad auténtica.",
+     "Por su parte, Finneas también imprime su refinado gusto estético tanto en la producción musical como en sus elecciones visuales, complementando perfectamente la visión artística de su hermana. La unión creativa de ambos en el estudio se traduce ahora en formas esculpidas en metal, llevando la esencia del dúo a piezas que se pueden usar en el día a día.",
+     "Hasta el momento, los detalles sobre futuras expansiones de la línea a tiendas físicas seleccionadas no han sido detallados por la asesoría de prensa de la marca. Sin embargo, la disponibilidad digital ya ha movilizado a fans de todo el mundo que desean coleccionar un artículo oficial más firmado por los artistas ganadores del Óscar y del Grammy.",
+     "Para el público brasileño e internacional que sigue cada paso de la trayectoria de los hermanos, la colección representa un puente más entre la música de vanguardia y el universo del diseño consciente. Con este emprendimiento, Billie Eilish y Finneas continúan expandiendo sus horizontes creativos mucho más allá de los escenarios y de las listas de éxitos."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishfinneasnewjohnhardycollectiontakeswildflowerfromsoftfloralstochunkyc",
@@ -2262,7 +2770,47 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish and Finneas launch exclusive jewelry collection in partnership with John Hardy",
+    "d": "The Grammy-winning siblings joined forces with the John Hardy brand to create a jewelry line split between delicate style and an industrial look.",
+    "body": [
+     "The creativity of siblings Billie Eilish and Finneas has crossed the boundaries of the music industry and expanded into the universe of fine jewelry. Known worldwide for accumulating major Grammy awards and making their mark on generations with their releases, the duo surprised fans by announcing an unprecedented design collaboration.",
+     "[img:https://www.billboard.com/wp-content/uploads/2026/10/BF_COLLAB_DESIGN-MEETING_BTS_1.jpg?w=300|Billie Eilish and Finneas behind the scenes in a John Hardy design meeting. John Hardy · Foto: via Billboard]",
+     "The artists teamed up with the renowned brand John Hardy to develop an exclusive collection of accessories that directly reflects their contrasting personalities and aesthetic preferences. The project was officially launched on October 21st, becoming available both in selected physical stores and on the brand's official website.",
+     "[img:https://www.billboard.com/wp-content/uploads/2026/10/Wildflower-Stud-Earrings.jpeg?w=1024|BILLIE EILISH & FINNEAS X JH Wildflower Stud Earrings available now to shop 2026 · Foto: via Billboard]",
+     "[img:https://www.billboard.com/wp-content/uploads/2026/10/Wildflower-Pendant-Necklace.jpeg?w=1024|BILLIE EILISH & FINNEAS X JH Wildflower Pendant Necklace available now to shop 2026 · Foto: via Billboard]",
+     "Divided into two main branches, the catalog seeks to balance softness with boldness. The first line was named Wildflower, a clear reference to the track of the same name featured on the acclaimed album Hit Me Hard and Soft. This selection focuses on sterling silver rings, earrings, and necklaces adorned with lab-grown diamonds and floral pendants.",
+     "[img:https://www.billboard.com/wp-content/uploads/2026/10/Wildflower-Stacking-Rings-Set-of-3.jpeg?w=1024|BILLIE EILISH & FINNEAS X JH Wildflower Stacking Rings Set of 3 available now to shop 2026 · Foto: via Billboard]",
+     "[img:https://www.billboard.com/wp-content/uploads/2026/10/Screwball-Link-Necklace.jpeg?w=1024|BILLIE EILISH & FINNEAS X JH Screwball Link Necklace available now to shop 2026 · Foto: via Billboard]",
+     "In contrast, the second line was named Screwball and directs its focus toward a heavier, urban look. Composed of thick chains, sculptural bracelets, and industrial-inspired hardware, this part of the collection dialogues perfectly with the striking aesthetic that Eilish usually displays on stage.",
+     "[img:https://www.billboard.com/wp-content/uploads/2026/10/Screwball-Link-Bracelet.jpeg?w=1024|BILLIE EILISH & FINNEAS X JH Screwball Link Bracelet available now to shop 2026 · Foto: via Billboard]",
+     "[img:https://www.billboard.com/wp-content/uploads/2026/10/Screwball-Open-Ring.jpeg?w=1024|BILLIE EILISH & FINNEAS X JH Screwball Open Ring available now to shop 2026 · Foto: via Billboard]",
+     "According to information released about the project, the musicians' involvement was deep and enduring. Billie and Finneas dedicated an entire year of work alongside the brand's design teams in New York and Bali, closely following every step, from conceptual sketches to the finishing of the pieces.",
+     "Sustainability was also at the center of the creative process, with the use of recycled metals and lab-grown stones. The curation caters to both more discreet everyday moments and the robust energy required on world tours, as highlighted by the singer herself in an official statement about the partnership."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish y Finneas lanzan una colección exclusiva de joyas en colaboración con John Hardy",
+    "d": "Los hermanos ganadores del Grammy unieron fuerzas con la marca John Hardy para crear una línea de joyas dividida entre el estilo delicado y el aspecto industrial.",
+    "body": [
+     "La creatividad de los hermanos Billie Eilish y Finneas ha traspasado los límites de la industria musical y se ha expandido al universo de la alta joyería. Conocidos mundialmente por acumular importantes premios Grammy y marcar a generaciones con sus lanzamientos, el dúo sorprendió a los fans al anunciar una colaboración de diseño sin precedentes.",
+     "[img:https://www.billboard.com/wp-content/uploads/2026/10/BF_COLLAB_DESIGN-MEETING_BTS_1.jpg?w=300|Billie Eilish and Finneas behind the scenes in a John Hardy design meeting. John Hardy · Foto: via Billboard]",
+     "Los artistas se asociaron con la reconocida marca John Hardy para desarrollar una colección exclusiva de accesorios que refleja directamente las personalidades y preferencias estéticas contrastantes de ambos. El proyecto se lanzó oficialmente el 21 de octubre, estando disponible tanto en tiendas físicas seleccionadas como en el sitio web oficial de la marca.",
+     "[img:https://www.billboard.com/wp-content/uploads/2026/10/Wildflower-Stud-Earrings.jpeg?w=1024|BILLIE EILISH & FINNEAS X JH Wildflower Stud Earrings available now to shop 2026 · Foto: via Billboard]",
+     "[img:https://www.billboard.com/wp-content/uploads/2026/10/Wildflower-Pendant-Necklace.jpeg?w=1024|BILLIE EILISH & FINNEAS X JH Wildflower Pendant Necklace available now to shop 2026 · Foto: via Billboard]",
+     "Dividido en dos vertientes principales, el catálogo busca equilibrar la suavidad con la audacia. La primera línea fue bautizada como Wildflower, una clara referencia al tema del mismo nombre presente en el aclamado álbum Hit Me Hard and Soft. Esta selección apuesta por anillos, pendientes y collares de plata esterlina adornados con diamantes cultivados en laboratorio y colgantes florales.",
+     "[img:https://www.billboard.com/wp-content/uploads/2026/10/Wildflower-Stacking-Rings-Set-of-3.jpeg?w=1024|BILLIE EILISH & FINNEAS X JH Wildflower Stacking Rings Set of 3 available now to shop 2026 · Foto: via Billboard]",
+     "[img:https://www.billboard.com/wp-content/uploads/2026/10/Screwball-Link-Necklace.jpeg?w=1024|BILLIE EILISH & FINNEAS X JH Screwball Link Necklace available now to shop 2026 · Foto: via Billboard]",
+     "En contraste, la segunda línea recibió el nombre de Screwball y enfoca su atención en un aspecto más pesado y urbano. Compuesta por cadenas gruesas, pulseras escultóricas y herrajes con inspiración industrial, esta parte de la colección dialoga perfectamente con la estética llamativa que Eilish suele lucir en los escenarios.",
+     "[img:https://www.billboard.com/wp-content/uploads/2026/10/Screwball-Link-Bracelet.jpeg?w=1024|BILLIE EILISH & FINNEAS X JH Screwball Link Bracelet available now to shop 2026 · Foto: via Billboard]",
+     "[img:https://www.billboard.com/wp-content/uploads/2026/10/Screwball-Open-Ring.jpeg?w=1024|BILLIE EILISH & FINNEAS X JH Screwball Open Ring available now to shop 2026 · Foto: via Billboard]",
+     "Según la información divulgada sobre el proyecto, la participación de los músicos fue profunda y duradera. Billie y Finneas dedicaron un año entero de trabajo junto a los equipos de diseño de la marca en Nueva York y Bali, siguiendo de cerca cada etapa, desde los bocetos conceptuales hasta el acabado de las piezas.",
+     "La sostenibilidad también estuvo en el centro del proceso creativo, con el uso de metales reciclados y piedras producidas en laboratorio. La selección se adapta tanto a los momentos cotidianos más discretos como a la energía robusta que exigen las giras mundiales, tal como destacó la propia cantante en un comunicado oficial sobre la colaboración."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishandfinneasjustaddedjewelrydesignertotheirresumes",
@@ -2291,7 +2839,33 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish and Finneas expand their horizons and launch an exclusive jewelry collection in partnership with John Hardy",
+    "d": "The singer and her brother surprised fans by announcing an unprecedented collaboration in the world of high jewelry, uniting delicacy and alternative style.",
+    "body": [
+     "The creativity of Billie Eilish and Finneas seems to know no bounds. Known worldwide for revolutionizing contemporary pop music with acclaimed albums, sold-out tours, and multiple Grammy awards, the siblings now officially add the title of jewelry designers to their impressive artistic resume. The news was revealed to the public this week, generating great repercussion among the duo's admirers and fashion enthusiasts.",
+     "For this unprecedented endeavor, the duo joined forces with the renowned brand John Hardy. The result of this collaboration is a collection that perfectly translates the artists' unique visual identity, balancing delicate elements with a striking and alternative aesthetic. Each piece reflects the siblings' personal taste for accessories that stray from the ordinary, while maintaining the characteristic sophistication of the partner brand.",
+     "Throughout their careers, Billie and Finneas have always used fashion as a powerful extension of their artistic expressions. From the days of oversized outfits and eccentric looks to the more recent red carpet phases, the singer's style is constantly copied and celebrated globally. Their official entry into jewelry design crowns this long-standing relationship with the fashion universe, allowing fans to acquire items that carry the duo's aesthetic essence.",
+     "John Hardy is widely recognized for its commitment to sustainable craftsmanship and the use of high-quality materials in jewelry production. This ecological and ethical philosophy aligns directly with the environmental issues that Billie Eilish fervently defends in her personal life and on her world tours. The choice of the brand for this design debut demonstrates the siblings' care in associating their names with projects that respect socio-environmental values.",
+     "Although the announcement has excited the public, full details regarding the global availability of the products, price ranges, and points of sale are still being gradually released by the brand's and the artists' official channels. Fans wishing to acquire the pieces should keep an eye on international updates, as the brand typically has selective distribution in global markets.",
+     "This news arrives at a very busy time for the duo, who continue to reap the rewards of their recent musical projects and their strong presence in pop culture. Whether breaking records on the music charts or innovating in the accessories market, Billie and Finneas prove once again that they are creative powerhouses capable of moving through different industries with authenticity and success."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish y Finneas expanden sus horizontes y lanzan una colección exclusiva de joyas en colaboración con John Hardy",
+    "d": "La cantante y su hermano sorprendieron a los fans al anunciar una colaboración inédita en el mundo de la alta joyería, uniendo delicadeza y estilo alternativo.",
+    "body": [
+     "La creatividad de Billie Eilish y Finneas parece no tener límites. Conocidos mundialmente por revolucionar la música pop contemporánea con álbumes aclamados, giras con entradas agotadas y múltiples premios Grammy, los hermanos añaden ahora oficialmente el título de diseñadores de joyas a su impresionante currículum artístico. La novedad fue revelada al público esta semana, generando una gran repercusión entre los admiradores del dúo y los entusiastas de la moda.",
+     "Para esta iniciativa inédita, la dupla unió fuerzas con la renombrada marca John Hardy. El resultado de esta colaboración es una colección que traduce perfectamente la identidad visual única de los artistas, equilibrando elementos delicados con una estética llamativa y alternativa. Cada pieza refleja el gusto personal de los hermanos por los accesorios que escapan de lo obvio, manteniendo la sofisticación característica de la marca socia.",
+     "A lo largo de sus carreras, Billie y Finneas siempre han utilizado la moda como una extensión poderosa de sus expresiones artísticas. Desde los tiempos de atuendos oversized y looks excéntricos hasta las fases más recientes de alfombras rojas, el estilo de la cantante es constantemente copiado y celebrado a nivel mundial. La entrada oficial en el diseño de joyas corona esta larga relación con el universo de la moda, permitiendo que los fans adquieran artículos que llevan la esencia estética del dúo.",
+     "John Hardy es ampliamente reconocida por su compromiso con la artesanía sostenible y el uso de materiales de alta calidad en la producción de joyería. Esta filosofía ecológica y ética se alinea directamente con las causas ambientales que Billie Eilish defiende fervientemente en su vida personal y en sus giras mundiales. La elección de la marca para este debut en el diseño demuestra el cuidado de los hermanos por asociar sus nombres a proyectos que respetan los valores socioambientales.",
+     "Aunque el anuncio ha entusiasmado al público, los detalles completos sobre la disponibilidad global de los productos, los rangos de precios y los puntos de venta todavía se están divulgando poco a poco a través de los canales oficiales de la marca y de los artistas. Los fans que deseen adquirir las piezas deben estar atentos a las actualizaciones internacionales, ya que la marca suele tener una distribución selecta en los mercados globales.",
+     "Esta novedad llega en un momento bastante agitado para el dúo, que sigue cosechando los frutos de sus recientes proyectos musicales y de su fuerte presencia en la cultura pop. Ya sea batiendo récords en las listas de música o innovando en el mercado de accesorios, Billie and Finneas demuestran una vez más que son potencias creativas capaces de transitar por diferentes industrias con autenticidad y éxito."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishandfinneasslatestcollaborationdesigningjewelry",
@@ -2320,7 +2894,33 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish and Finneas launch sustainable jewelry collection in partnership with John Hardy",
+    "d": "The famous sibling duo expands their creativity into the fashion world by co-signing an exclusive line of eco-friendly accessories.",
+    "body": [
+     "Known worldwide for dominating the music charts and winning prestigious awards, Billie Eilish and Finneas have decided to explore a new creative territory. While preparing new studio projects for fans, the siblings surprised the public by announcing an unprecedented collaboration in the universe of fine jewelry. The venture consists of a complete line of accessories developed in partnership with the renowned brand John Hardy.",
+     "The project was divided into two distinct lines that reflect the duo's complementary personalities. The first line, named Wildflower as a direct reference to one of the artist's musical hits, focuses on delicate floral motifs and recycled sterling silver. Meanwhile, the second collection, called Screwball, explores sculptural chains and geometric shapes, bringing a bolder and more urban aesthetic for those who like to mix pieces.",
+     "The creation process happened very organically, with the singer testing various items directly on stage during her recent tours. According to the siblings, the priority was to ensure that the accessories were comfortable for daily wear and did not cause discomfort during energetic performances. This practical testing phase helped shape the weight and final shape of each ring, necklace, and bracelet.",
+     "Another fundamental pillar for the duo was the undeniable commitment to sustainability and environmental preservation. The entire collection was crafted using exclusively reclaimed materials and lab-created diamonds, which have a lower ecological impact. For the musicians, who frequently support environmental causes on their tours, it was essential that the manufacturing process was aligned with their personal values.",
+     "The initiative also marks a striking evolution in the artists' personal style over the years. Known at the beginning of her career for super oversized looks and lots of flashy jewelry, the singer now prefers more discreet accessories for everyday life. Finneas, in turn, has adopted a minimalist look and saw in the pieces an elegant way to complement more basic outfits.",
+     "The complete line is now available on the international market with prices that vary considerably depending on the chosen piece. Although the current focus is the partnership with the jewelry brand, the siblings do not rule out the possibility of getting involved in future design projects. For now, fans of the duo can celebrate this fashion novelty while anxiously awaiting news in their music careers."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish y Finneas lanzan una colección de joyería sostenible en colaboración con John Hardy",
+    "d": "El famoso dúo de hermanos expande su creatividad al mundo de la moda al cofirmar una línea exclusiva de accesorios ecológicos.",
+    "body": [
+     "Conocidos mundialmente por dominar las listas de éxitos musicales y ganar prestigiosos premios, Billie Eilish y Finneas han decidido explorar un nuevo territorio creativo. Mientras preparan nuevos proyectos en el estudio para los fans, los hermanos sorprendieron al público al anunciar una colaboración inédita en el universo de la alta joyería. La iniciativa consiste en una línea completa de accesorios desarrollada en colaboración con la reconocida marca John Hardy.",
+     "El proyecto se dividió en dos líneas distintas que reflejan las personalidades complementarias del dúo. La primera línea, bautizada como Wildflower en referencia directa a uno de los éxitos musicales de la artista, apuesta por delicados motivos florales y plata de ley reciclada. Por su parte, la segunda colección, llamada Screwball, explora cadenas esculturales y formas geométricas, aportando una estética más audaz y urbana para quienes disfrutan mezclando piezas.",
+     "El proceso de creación ocurrió de manera muy orgánica, con la cantante probando varios artículos directamente en los escenarios durante sus giras recientes. Según los hermanos, la prioridad era garantizar que los accesorios fueran cómodos para el uso diario y no causaran molestias durante las actuaciones enérgicas. Esta fase de pruebas prácticas ayudó a moldear el peso y la forma final de cada anillo, collar y pulsera.",
+     "Otro pilar fundamental para el dúo fue el compromiso innegable con la sostenibilidad y la preservación ambiental. Toda la colección fue confeccionada utilizando exclusivamente materiales reutilizados y diamantes creados en laboratorio, que tienen un menor impacto ecológico. Para los músicos, que apoyan frecuentemente causas ambientales en sus giras, era indispensable que el proceso de fabricación estuviera alineado con sus valores personales.",
+     "La iniciativa también marca una evolución notable en el estilo personal de los artistas a lo largo de los años. Conocida al principio de su carrera por looks superoversized y muchas joyas llamativas, la intérprete hoy prefiere accesorios más discretos para el día a día. Finneas, a su vez, adoptó un estilo minimalista y vio en las piezas una forma elegante de complementar prendas más básicas.",
+     "La línea completa ya está disponible en el mercado internacional con precios que varían considerablemente según la pieza elegida. Aunque el enfoque actual es la asociación con la marca de joyería, los hermanos no descartan la posibilidad de involucrarse en futuros proyectos de diseño. Por ahora, los admiradores del dúo pueden celebrar esta novedad de la moda mientras esperan ansiosos novedades en la carrera musical de ambos."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishestaráapreparardigressãoemestádiospara2027",
@@ -2339,7 +2939,19 @@
   "imgs": [],
   "imgv": 4,
   "tries3": 6,
-  "ogt": 1
+  "ogt": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish is reportedly preparing a stadium tour for 2027",
+    "d": "The American singer is working on her fourth album and promoters are reportedly negotiating stadium and festival concerts for 2027 and 2028, according to The Sun newspaper...",
+    "body": []
+   },
+   "es": {
+    "t": "Billie Eilish estaría preparando una gira por estadios para 2027",
+    "d": "La cantante estadounidense trabaja en su cuarto álbum y los promotores estarían negociando conciertos en estadios y festivales para 2027 y 2028, según avanza el diario The Sun...",
+    "body": []
+   }
+  }
  },
  {
   "k": "billieeilishsettomakeepic2027comebackwithnewstudioalbumandstadiumtourincludingfe",
@@ -2396,7 +3008,33 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish surprises fans by adopting a revamped look and bringing back classic hair color",
+    "d": "The 24-year-old artist showcased a hair transformation on social media, ditching her long locks in favor of a layered cut with side bangs and a color that marked her career.",
+    "body": [
+     "Singer Billie Eilish has once again grabbed the public's attention by showcasing a drastic change in her look on social media. The 24-year-old artist surprised followers by appearing with visibly shorter hair, leaving behind the long locks she had been sporting lately.",
+     "According to the published images, the transformation consists of a choppy haircut accompanied by a striking side part. Besides the new shape, the choice of shade caught the fanbase's attention, as it brings back a very familiar color that was present during significant phases of the pop star's musical journey.",
+     "Billie's relationship with her hair transformations has always acted as a thermometer for the different moments of her career. Each style change usually accompanies the release of new albums, world tours, or distinct conceptual phases, marking important transitions in the visual and sonic aesthetics of the Grammy-winning songwriter.",
+     "Since her global breakout with her debut album and the resounding success of subsequent projects, the singer's image has gone through countless public metamorphoses. The public has already accompanied her with her signature neon green roots, the platinum blonde look of the Happier Than Ever era, natural dark shades, and, most recently, long brown hair.",
+     "Despite the immediate buzz among admirers on digital platforms, the artist's official team has not yet released additional details about the reasons behind the change or whether the new style anticipates any unreleased project. There is no official confirmation regarding studio recordings or new developments in the tour schedule for the coming months.",
+     "The reaction on social media was instantaneous, with fans recalling past eras and speculating about the meaning behind the return of the classic coloring. While waiting for concrete news about their idol's musical career, followers continue to closely monitor every update shared by the artist on her official profiles."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish sorprende a sus fans al adoptar un look renovado y rescatar un color de pelo clásico",
+    "d": "La artista de 24 años lució una transformación capilar en las redes sociales, abandonando la melena larga en favor de un corte en capas con flequillo lateral y una coloración que marcó su carrera.",
+    "body": [
+     "La cantante Billie Eilish volvió a captar la atención del público al mostrar un cambio drástico en su imagen a través de las redes sociales. La artista de 24 años sorprendió a sus seguidores al aparecer con el cabello visiblemente más corto, dejando atrás la larga melena que había estado luciendo últimamente.",
+     "De acuerdo con las imágenes publicadas, la transformación consiste en un corte desmechado acompañado de una marcada raya al costado. Además del nuevo formato, la elección del tono llamó la atención de la base de fans, ya que rescata un color muy familiar que estuvo presente en etapas memorables de la trayectoria musical de la estrella pop.",
+     "La relación de Billie con sus transformaciones capilares siempre ha funcionado como un termómetro para los diferentes momentos de su carrera. Cada cambio de estilo suele acompañar el lanzamiento de nuevos álbumes, giras mundiales o distintas fases conceptuales, marcando transiciones importantes en la estética visual y sonora de la compositora ganadora del Grammy.",
+     "Desde su salto a la fama mundial con su disco debut y el rotundo éxito de sus proyectos posteriores, la imagen de la cantante ha pasado por innumerables metamorfosis públicas. El público ya la ha acompañado con sus características raíces verde neón, el look platinado de la era Happier Than Ever, tonos oscuros naturales y, más recientemente, el cabello castaño largo.",
+     "A pesar de la repercusión inmediata entre los admiradores en las plataformas digitales, el equipo oficial de la artista aún no ha divulgado detalles adicionales sobre los motivos detrás del cambio ni sobre si el nuevo estilo anticipa algún proyecto inédito. No hay confirmación oficial sobre grabaciones de estudio o nuevas novedades en la agenda de conciertos para los próximos meses.",
+     "La repercusión en las redes sociales fue instantánea, con fans recordando eras pasadas y especulando sobre el significado del regreso de la coloración clásica. A la espera de noticias concretas sobre la carrera musical de su ídola, los seguidores continúan siguiendo de cerca cada actualización compartida por la artista en sus perfiles oficiales."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishunveilsmajortransformationwithstrawberryblondehair",
@@ -2425,7 +3063,33 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish surprises fans by adopting a new strawberry blonde hair look",
+    "d": "The singer opted for a radical change in appearance, abandoning her dark locks for a golden tone reminiscent of the Happier Than Ever era.",
+    "body": [
+     "Singer Billie Eilish left fans in a frenzy on social media by showing off a striking hair transformation. Known for transitioning between bold styles and iconic colors throughout her career, the artist opted for shorter locks in a soft golden shade, known as strawberry blonde.",
+     "The news immediately caught the attention of the global public and specialized press, marking a new cycle in the pop star's aesthetic. The revamped look directly recalls 2021, when she surprised the world by adopting platinum hair to promote the acclaimed album Happier Than Ever.",
+     "Since then, the interpreter of What Was I Made For? had returned to darker tones and deep browns, which became her trademark during the Hit Me Hard and Soft era. This constant alternation between visual palettes has always worked as a thermometer for the different artistic moments of the singer's career.",
+     "However, so far, there is no official confirmation whether this drastic change in her hair is associated with the development of a new music project, the start of a future tour, or if it is simply a personal style choice. The artist's team has not yet commented on the reasons behind the makeover.",
+     "Historically, Billie uses her image to mark important transitions in her music journey. The famous blonde phase of 2021, for example, symbolized a phase of greater maturity and artistic openness after the global phenomenon of her debut album, When We All Fall Asleep, Where Do We Go?.",
+     "Brazilian and international fans have already started speculating on social media about the meaning of the new color and what it might represent for the artist's next steps. It now remains to be seen whether the strawberry blonde is here to stay and what surprises Billie Eilish is preparing for the future."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish sorprende a los fans al adoptar un nuevo look con cabello rubio fresa",
+    "d": "La cantante apostó por un cambio radical en su apariencia, abandonando su melena oscura por un tono dorado que recuerda a la era Happier Than Ever.",
+    "body": [
+     "La cantante Billie Eilish dejó a los fans revolucionados en las redes sociales al mostrar una transformación capilar llamativa. Conocida por transitar entre estilos audaces y colores icónicos a lo largo de su carrera, la artista optó por un cabello más corto en un tono dorado suave, conocido como rubio fresa.",
+     "La novedad llamó inmediatamente la atención del público global y de la prensa especializada, marcando un nuevo ciclo en la estética de la estrella del pop. El renovado look remonta directamente a 2021, época en la que sorprendió al mundo al adoptar el cabello platinado para promover el aclamado álbum Happier Than Ever.",
+     "Desde entonces, la intérprete de What Was I Made For? había regresado a tonos más oscuros y castaños profundos, que se convirtieron en su marca registrada durante la era Hit Me Hard and Soft. Esta alternancia constante entre paletas visuales siempre ha funcionado como un termómetro para los diferentes momentos artísticos de la carrera de la cantante.",
+     "Sin embargo, hasta el momento, no hay confirmación oficial de si este cambio drástico en su cabello está asociado al desarrollo de un nuevo proyecto musical, al inicio de una futura gira o si es simplemente una elección de estilo personal. El equipo de la artista todavía no se ha pronunciado sobre los motivos detrás del cambio de imagen.",
+     "Históricamente, Billie utiliza su imagen para demarcar transiciones importantes en su trayectoria musical. La famosa fase rubia de 2021, por ejemplo, simbolizó una etapa de mayor madurez y apertura artística tras el fenómeno global de su álbum debut, When We All Fall Asleep, Where Do We Go?.",
+     "Los fans brasileños e internacionales ya han comenzado a especular en las redes sociales sobre el significado del nuevo color y lo que puede representar para los próximos pasos de la artista. Ahora solo queda esperar para ver si el rubio fresa llegó para quedarse y qué sorpresas prepara Billie Eilish para el futuro."
+    ]
+   }
+  }
  },
  {
   "k": "billieeilishlookssodifferentasshedebutsherlightesthaircolorinyears",
@@ -2453,7 +3117,31 @@
   ],
   "v": 2,
   "mtries": 1,
-  "mv": 1
+  "mv": 1,
+  "tr": {
+   "en": {
+    "t": "Billie Eilish surprises fans and debuts her lightest hair in recent years",
+    "d": "The singer opted for a bold transformation for the autumn season and showed off much lighter locks.",
+    "body": [
+     "Singer Billie Eilish left fans completely surprised at the beginning of October by revealing a radical change to her look. World-renowned for her striking hair experiments throughout her career, the artist chose to adopt the lightest shade she has sported in several years, generating a major reaction on social media and among her fan community.",
+     "The transformation was shared by the star herself in a new photograph posted on October 4. In the post, which quickly accumulated millions of likes and comments, it is possible to notice that the coloring brings an aesthetic fully aligned with the atmosphere of the season, marking an unprecedented visual phase for the singer of Hit Me Hard and Soft.",
+     "Throughout her musical journey, Billie's visual identity has always been directly linked to her hair. From the iconic neon-green locks with black roots that marked the era of her debut album, through blue, the classic platinum that announced the Happier Than Ever album, to the dark brown and natural black of recent times, the singer uses her hair as a tool for artistic expression.",
+     "So far, there is no official confirmation whether this new light shade is here to stay for a long period or if it is part of the preparation for a specific visual project, advertising campaign, or a new leg of her current tour. The artist's team has not released additional details about the coloring process or what the exact chosen color would be.",
+     "For Brazilian and international fans, each change of look by the artist is always interpreted as the end of a cycle and the beginning of new creative moments. The expectation now is to see whether the new look will be maintained in the singer's upcoming public appearances or if new hair surprises are on the way in the coming months."
+    ]
+   },
+   "es": {
+    "t": "Billie Eilish sorprende a sus fans y estrena el cabello más claro de los últimos años",
+    "d": "La cantante apostó por una transformación audaz para la temporada de otoño y lució mechones mucho más claros.",
+    "body": [
+     "La cantante Billie Eilish dejó a sus fans completamente sorprendidos a principios de octubre al revelar un cambio radical en su look. Conocida mundialmente por sus marcados experimentos capilares a lo largo de su carrera, la artista optó por adoptar el tono más claro que ha lucido en varios años, generando una gran repercusión en las redes sociales y entre su comunidad de admiradores.",
+     "La transformación fue compartida por la propia estrella en una nueva fotografía publicada el 4 de octubre. En el registro, que rápidamente acumuló millones de 'me gusta' y comentarios, se puede notar que la coloración trae una estética totalmente alineada con la atmósfera de la estación, marcando una fase visual inédita para la intérprete de Hit Me Hard and Soft.",
+     "A lo largo de su trayectoria en la música, la identidad visual de Billie siempre ha estado directamente ligada a sus cabellos. Desde los icónicos mechones verde neón con raíces negras que marcaron la era de su álbum debut, pasando por el azul, el platino clásico que anunció el disco Happier Than Ever, hasta el castaño oscuro y el negro natural de los últimos tiempos, la cantante utiliza su cabello como herramienta de expresión artística.",
+     "Hasta el momento, no hay confirmación oficial de si este nuevo tono claro llegó para quedarse por un largo periodo o si forma parte de la preparación para algún proyecto visual específico, campaña publicitaria o nueva etapa de su gira actual. El equipo de la artista no dio a cuál sería el color exacto elegido ni detalles adicionales sobre el proceso de coloración.",
+     "Para los fans brasileños e internacionales, cada cambio de look de la artista es interpretado siempre como el cierre de un ciclo y el inicio de nuevos momentos creativos. La expectativa ahora es ver si la novedad se mantendrá en las próximas apariciones públicas de la cantante o si nuevas sorpresas capilares están en camino en los próximos meses."
+    ]
+   }
+  }
  },
  {
   "k": "oliviarodrigocouldjoinbillieeilishinararegrammystreak",

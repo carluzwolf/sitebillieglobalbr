@@ -8,32 +8,43 @@ from pathlib import Path
 
 OUT = Path(__file__).resolve().parent.parent / "news.json"
 PHOTOS_OUT = Path(__file__).resolve().parent.parent / "photos.json"
-MAX_ITEMS = 200
+try:  # config.json é editado pelo painel de administração (todos os campos são opcionais)
+    CFG = json.loads((Path(__file__).resolve().parent.parent / "config.json").read_text("utf-8"))
+except Exception:
+    CFG = {}
+MAX_ITEMS = int(CFG.get("max_items") or 200)
+AI_ON = CFG.get("ai_enabled", True)
+KEYWORDS = [k.strip().lower() for k in str(CFG.get("keyword") or "billie").split(",") if k.strip()]
 IMGV = 4                 # versão da regra de imagens (aumente para refazer todas)
-MAX_REWRITE = 50         # notícias reescritas por rodada (controla custo/tempo)
+MAX_REWRITE = int(CFG.get("max_rewrite") or 10)         # notícias reescritas por rodada (controla custo/tempo)
 VERSION = 2              # aumente para forçar reescrever tudo de novo
 FALLBACK_IMAGE = ""
 GEMINI_KEY = os.environ.get("GEMINI_API_KEY", "")
 OPENAI_KEY = os.environ.get("OPENAI_API_KEY", "")
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash-lite")
-GEMINI_FALLBACKS = [m for m in os.environ.get("GEMINI_FALLBACKS", "gemini-3.5-flash,gemini-2.5-flash").split(",") if m]
-OPENAI_MODEL = os.environ.get("OPENAI_MODEL", "gpt-4o-mini")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL") or CFG.get("gemini_model") or "gemini-3.5-flash-lite"
+GEMINI_FALLBACKS = [m for m in os.environ.get("GEMINI_FALLBACKS") or CFG.get("gemini_fallbacks") or "gemini-3.5-flash,gemini-2.5-flash".split(",") if m]
+OPENAI_MODEL = os.environ.get("OPENAI_MODEL") or CFG.get("openai_model") or "gpt-4o-mini"
 FEEDS = [
-    "https://www.bing.com/news/search?q=%22Billie+Eilish%22&format=rss&setlang=pt-BR&mkt=pt-BR",
-    "https://www.bing.com/news/search?q=%22Billie+Eilish%22&format=rss&setlang=en-US&mkt=en-US",
-    "https://www.bing.com/news/search?q=Billie+Eilish+Finneas&format=rss&setlang=pt-BR&mkt=pt-BR",
+    "https://www.bing.com/news/search?q=%s&format=rss&setlang=%s&mkt=%s" % (urllib.parse.quote_plus(q["q"]), q.get("lang", "pt-BR"), q.get("lang", "pt-BR"))
+    for q in (CFG.get("queries") or [{"q": '"Billie Eilish"', "lang": "pt-BR"}, {"q": '"Billie Eilish"', "lang": "en-US"}, {"q": "Billie Eilish Finneas", "lang": "pt-BR"}])
+    if q.get("q")
 ]
 MESES = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"]
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
 
-PROMPT = """Você é redator sênior do portal de fãs Billie Global BR, dedicado à Billie Eilish.
+PROMPT_RULES = """Você é redator sênior do portal de fãs Billie Global BR, dedicado à Billie Eilish.
 Abaixo estão o título e o texto (que pode estar em inglês e/ou incompleto) de uma matéria de outro veículo.
 Tarefa: escreva uma notícia COMPLETA, NOVA e ORIGINAL em português do Brasil.
 - Traduza e use as informações do texto como base e, se tiver acesso à pesquisa, consulte outras fontes confiáveis para acrescentar contexto, detalhes e histórico relevante (turnês, álbuns, declarações, datas).
 - Tamanho: 6 a 9 parágrafos, entre 350 e 600 palavras. Pode usar um parágrafo de contexto sobre o tema.
 - Use palavras e estrutura próprias; não copie frases nem a ordem do original. Citações: no máximo 8 palavras entre aspas e só se essencial.
 - Nunca invente fatos, datas, números ou falas. Se algo não for confirmado, diga que não há confirmação oficial.
-- Tom jornalístico, claro e envolvente para fãs brasileiros.
+- Tom jornalístico, claro e envolvente para fãs brasileiros."""
+PROMPT_RULES = CFG.get("prompt") or PROMPT_RULES
+PROMPT_FORMAT = """
+Se o texto original trouxer marcadores [[MIDIA n]] (fotos, vídeos ou publicações de redes sociais), mantenha cada marcador relevante SOZINHO em uma linha, entre dois parágrafos, no ponto equivalente da sua matéria. Não invente marcadores e não repita.
+Se o texto original estiver incompleto (cortado, "leia mais" ou exclusivo para assinantes), pesquise a mesma notícia em outros veículos confiáveis e use apenas fatos confirmados. Não tente reproduzir conteúdo restrito e não invente nada.
+
 Formato EXATO da resposta (sem markdown, sem comentários):
 TITULO: <título novo>
 RESUMO: <1 ou 2 frases>
@@ -44,11 +55,15 @@ TEXTO:
 
 ...
 
-TÍTULO ORIGINAL: %s
-DATA: %s
+TÍTULO ORIGINAL: {titulo}
+DATA: {data}
 
 TEXTO ORIGINAL (pode estar vazio ou curto):
-%s"""
+{texto}"""
+
+def build_prompt(titulo, data, texto):
+    return (PROMPT_RULES.rstrip() + "\n" + PROMPT_FORMAT).replace("{titulo}", titulo).replace("{data}", data).replace("{texto}", texto)
+
 
 def get(url, timeout=20, ua=None):
     req = urllib.request.Request(url, headers=ua or UA)
@@ -223,6 +238,174 @@ def commons_deep():
         out += got
     return out
 
+NOISE = re.compile(r"relacionad|related|leia também|leia mais|veja também|mais lidas|recomendad|recommended|you may also|read more|newsletter|publicidade|advertis|patrocinad", re.I)
+PAYWALL = re.compile(r"assine para|exclusivo para assinantes|conteúdo exclusivo|para continuar lendo|subscribe to (continue|read)|already a subscriber|sign in to read|become a member", re.I)
+TW = re.compile(r"https?://(?:www\.)?(?:twitter|x)\.com/\w+/status/\d+", re.I)
+IG = re.compile(r"https?://(?:www\.)?instagram\.com/(?:p|reel|tv)/[\w-]+", re.I)
+TK = re.compile(r"https?://(?:www\.)?tiktok\.com/@[\w.]+/video/\d+", re.I)
+YT = re.compile(r"(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=)|youtu\.be/)([\w-]{11})", re.I)
+BLOCKS = re.compile(r"(?is)(?P<bq><blockquote\b[^>]*>.*?</blockquote>)|(?P<fig><figure\b.*?</figure>)|(?P<ifr><iframe\b[^>]*>)|(?P<img><img\b[^>]*>)|(?P<h><h[23]\b[^>]*>.*?</h[23]>)|(?P<p><p\b[^>]*>.*?</p>)")
+
+
+def norm(u):
+    return re.sub(r"^https?://(www\.)?|\?.*$", "", str(u or "")).lower()
+
+
+def img_url(tag, base):
+    cands = []
+    for attr in ("data-srcset", "srcset"):
+        m = re.search(r'(?<![\w-])' + attr + r'=["\']([^"\']+)', tag)
+        if m:
+            best, bw = "", -1
+            for part in m.group(1).split(","):
+                bits = part.strip().split()
+                if not bits:
+                    continue
+                w = int(re.sub(r"\D", "", bits[1]) or 0) if len(bits) > 1 else 0
+                if w >= bw:
+                    best, bw = bits[0], w
+            if best:
+                cands.append(best)
+    for attr in ("data-src", "data-lazy-src", "data-original", "src"):
+        m = re.search(r'(?<![\w-])' + attr + r'=["\']([^"\']+)', tag)
+        if m:
+            cands.append(m.group(1))
+    w = re.search(r'(?<![\w-])width=["\']?(\d+)', tag)
+    if w and int(w.group(1)) < 300:
+        return ""
+    for c in cands:
+        u = urljoin(base, html.unescape(c.strip()))
+        if u.startswith("http") and re.search(r"\.(jpe?g|png|webp)(\?|$)|/image|/img|/photo|/media|cdn|upload", u, re.I) and not BAD.search(u) and not re.search(r"[|\[\]]", u):
+            return u
+    return ""
+
+
+def _extract(page, base):
+    paywall = bool(PAYWALL.search(page))
+    page = re.sub(r"(?is)<(script|style|nav|header|footer|aside|form|noscript|template|svg)\b[^>]*>.*?</\1>", " ", page)
+    arts = re.findall(r"(?is)<article\b.*?</article>", page)
+    box = max(arts, key=len) if arts and len(max(arts, key=len)) > 800 else page
+    paras, media, seen, skip = [], [], set(), False
+
+    def add(kind, u, cap=""):
+        if len(media) >= MEDIA_MAX or not u or norm(u) in seen:
+            return
+        seen.add(norm(u))
+        media.append({"k": kind, "u": u, "cap": clean(cap)[:140], "pos": len(paras)})
+
+    for m in BLOCKS.finditer(box):
+        kind, sx = m.lastgroup, m.group(0)
+        if kind == "p":
+            txt = clean(sx)
+            link = TW.search(sx) or IG.search(sx) or TK.search(sx)
+            if link and len(txt) < 90 and not skip:
+                add("tweet" if TW.match(link.group(0)) else "insta" if IG.match(link.group(0)) else "tiktok", link.group(0))
+                continue
+            if len(txt) > 40:
+                if NOISE.search(txt) and len(txt) < 120:
+                    skip = True; continue
+                if len(txt) > 120:
+                    skip = False
+                if not skip:
+                    paras.append(txt)
+        elif kind == "h":
+            txt = clean(sx)
+            skip = bool(NOISE.search(txt))
+            if txt and not skip and len(txt) < 120:
+                paras.append("## " + txt)
+        elif skip:
+            continue
+        elif kind == "bq":
+            tws, igs, tks = TW.findall(sx), IG.findall(sx), TK.findall(sx)
+            if re.search(r"twitter-tweet", sx, re.I) and tws:
+                add("tweet", tws[-1])
+            elif re.search(r"instagram-media", sx, re.I) and igs:
+                add("insta", igs[0])
+            elif re.search(r"tiktok-embed", sx, re.I) and tks:
+                add("tiktok", tks[0])
+            elif tws:
+                add("tweet", tws[-1])
+            else:
+                txt = clean(sx)
+                if len(txt) > 40:
+                    paras.append(txt)
+        elif kind in ("ifr", "fig", "img"):
+            y = YT.search(sx)
+            if y and kind != "img":
+                add("video", y.group(1))
+                if kind == "ifr":
+                    continue
+            im = re.search(r"(?is)<img\b[^>]*>", sx)
+            if im:
+                cap = re.search(r"(?is)<figcaption[^>]*>(.*?)</figcaption>", sx)
+                alt = re.search(r'alt=["\']([^"\']{9,})', im.group(0))
+                add("img", img_url(im.group(0), base), clean(cap.group(1)) if cap else (alt.group(1) if alt else ""))
+    return {"text": " ".join(paras), "paras": paras, "media": media, "tot": len(paras), "paywall": paywall}
+
+
+def extract_article(url):
+    page = get_page(url)
+    if not page:
+        return {"text": "", "paras": [], "media": [], "tot": 0, "paywall": False}
+    res = _extract(page, url)
+    amp = re.search(r'<link[^>]+rel=["\']amphtml["\'][^>]+href=["\']([^"\']+)', page)
+    if amp and (len(res["text"]) < 600 or res["paywall"]):   # versão AMP é pública
+        au = urljoin(url, html.unescape(amp.group(1)))
+        ap = get_page(au)
+        if ap:
+            r2 = _extract(ap, au)
+            if len(r2["text"]) > len(res["text"]):
+                res = r2
+    return res
+
+
+def source_with_media(ex):
+    lines, i = [], 0
+    media = ex["media"]
+    for k in range(len(ex["paras"]) + 1):
+        for j, m in enumerate(media):
+            if m["pos"] == k:
+                lines.append("[[MIDIA %d]]" % (j + 1))
+        if k < len(ex["paras"]):
+            lines.append(ex["paras"][k])
+    legend = ["MIDIA %d: %s%s" % (j + 1, {"img": "foto", "tweet": "publicação do X/Twitter", "insta": "publicação do Instagram", "tiktok": "vídeo do TikTok", "video": "vídeo do YouTube"}[m["k"]], (" — legenda: " + m["cap"]) if m["cap"] else "") for j, m in enumerate(media)]
+    txt = "\n\n".join(lines)[:9000]
+    return txt + ("\n\nLEGENDA DAS MÍDIAS:\n" + "\n".join(legend) if legend else "")
+
+
+def media_marker(m, src):
+    if m["k"] == "img":
+        c = m["cap"]
+        c = c if re.search(r"foto|crédito|credit|getty|reuters|afp|divulga|reprodu|imagem:|image:", c, re.I) else ((c + " · ") if c else "") + "Foto: via " + src
+        cap = re.sub(r"[|\[\]]", " ", c)[:200]
+        return "[img:%s|%s]" % (m["u"], cap)
+    return "[%s:%s]" % (m["k"], m["u"])
+
+
+def place_media(paras, media, src, tot):
+    used, body = set(), []
+    for x in paras:
+        mk = MARK.match(x)
+        if mk:
+            i = int(mk.group(1)) - 1
+            if 0 <= i < len(media) and i not in used:
+                used.add(i); body.append(media_marker(media[i], src))
+            continue
+        body.append(x)
+    rest = [i for i in range(len(media)) if i not in used]
+    texts = [x for x in body if not x.startswith("[")]
+    for i in sorted(rest, key=lambda i: -media[i]["pos"]):
+        target = max(1, round(media[i]["pos"] / max(1, tot) * len(texts)))
+        # posição entre blocos de texto (ignora marcadores já colocados)
+        idx, seen_t = 0, 0
+        while idx < len(body) and seen_t < target:
+            if not body[idx].startswith("["):
+                seen_t += 1
+            idx += 1
+        body.insert(idx, media_marker(media[i], src))
+    return body
+
+
 def article_text(url):
     page = get_page(url)
     if not page:
@@ -256,10 +439,20 @@ def gem_call(model, body):
         r = post_json(u, {**body, "tools": [{"google_search": {}}]}, {})
     except Quota:
         r = post_json(u, body, {})   # a pesquisa tem cota própria; tenta sem ela
+    LAST_SRC[:] = []
+    try:
+        for c in r["candidates"][0].get("groundingMetadata", {}).get("groundingChunks", []):
+            w = c.get("web") or {}
+            if w.get("uri") and w.get("title") and all(w["title"] != x["t"] for x in LAST_SRC):
+                LAST_SRC.append({"t": w["title"], "u": w["uri"]})
+    except Exception:
+        pass
     parts = r["candidates"][0]["content"]["parts"]
     return "".join(p.get("text", "") for p in parts)
 
 LAST_AI = [0.0]
+LAST_SRC = []
+MEDIA_MAX = 8
 
 def call_ai(prompt):
     wait = 7 - (time.time() - LAST_AI[0])
@@ -283,17 +476,21 @@ def call_ai(prompt):
         return r["choices"][0]["message"]["content"]
     return ""
 
+MARK = re.compile(r"^\[\[MIDIA (\d+)\]\]$")
+
 def parse_ai(raw):
     t = re.search(r"TITULO:\s*(.+)", raw)
     r = re.search(r"RESUMO:\s*(.+)", raw)
     b = re.search(r"TEXTO:\s*(.+)", raw, re.S)
     if not (t and b):
         return None
-    paras = [re.sub(r"\s+", " ", x).strip().strip("*#") for x in re.split(r"\n\s*\n", b.group(1))]
-    paras = [x for x in paras if len(x) > 30]
-    if len(paras) < 3:
+    txt = re.sub(r"\s*(\[\[MIDIA \d+\]\])\s*", r"\n\n\1\n\n", b.group(1))
+    paras = [re.sub(r"\s+", " ", x).strip().strip("*#") for x in re.split(r"\n\s*\n", txt)]
+    paras = [x for x in paras if len(x) > 30 or MARK.match(x)]
+    if len([x for x in paras if not MARK.match(x)]) < 3:
         return None
-    return {"t": t.group(1).strip().strip("*#"), "d": (r.group(1).strip() if r else paras[0][:200]), "body": paras}
+    first = next(x for x in paras if not MARK.match(x))
+    return {"t": t.group(1).strip().strip("*#"), "d": (r.group(1).strip() if r else first[:200]), "body": paras}
 
 def parse(feed):
     ns = {"News": "http://schemas.microsoft.com/live/news"}
@@ -302,7 +499,7 @@ def parse(feed):
     for it in root.iter("item"):
         title = clean(it.findtext("title"))
         desc = clean(it.findtext("description"))
-        if "billie" not in (title + " " + desc).lower():
+        if not any(k in (title + " " + desc).lower() for k in KEYWORDS):
             continue
         link = real_url(it.findtext("link") or "")
         tags = {c.tag.split("}")[-1]: (c.text or "").strip() for c in it}
@@ -326,23 +523,28 @@ def main():
         except Exception as e:
             print("Falhou:", f, e)
     seen, merged = set(), []
-    for n in new + old:
+    for n in old + new:
+        if not isinstance(n, dict) or not n.get("t"):
+            continue
         key = n.get("k") or re.sub(r"\W+", "", n["t"].lower())[:80]
         n["k"] = key
         if key in seen or n.get("u") in seen or not n.get("u"):
             continue
         seen.add(key); seen.add(n["u"]); merged.append(n)
     merged.sort(key=lambda n: n.get("ts", ""), reverse=True)
-    merged = merged[:MAX_ITEMS]
+    keep = [n for n in merged[MAX_ITEMS:] if n.get("manual") or n.get("pin") or n.get("locked")]
+    merged = merged[:MAX_ITEMS] + keep
+    FROZEN = lambda n: bool(n.get("manual") or n.get("locked") or n.get("hide"))
 
     # Imagem de capa = a imagem ORIGINAL da própria notícia (Bing ou og:image da matéria)
     for n in merged:
-        if n.get("imgv") != IMGV:
+        if not FROZEN(n) and n.get("imgv") != IMGV:
             n["imgs"], n["pics"], n["imgv"], n["ogt"] = [], [], IMGV, 0
-        n["imgs"] = []
+        if not FROZEN(n):
+            n["imgs"] = []
     fetched = 0
     for n in merged:
-        if n.get("img") or n.get("ogt", 0) >= 3 or fetched >= 60:
+        if FROZEN(n) or n.get("img") or n.get("ogt", 0) >= 3 or fetched >= 60:
             continue
         fetched += 1
         n["ogt"] = n.get("ogt", 0) + 1
@@ -372,6 +574,8 @@ def main():
         used.update(x["u"] for x in n.get("imgs", []))
         used.update(x["u"] for x in n.get("pics", []))
     for n in merged:
+        if FROZEN(n):
+            continue
         own = len({u for u in [n.get("img")] + [x["u"] for x in n.get("imgs", [])] if u})
         goal = 3 if "imgs" in n else 1
         pics = n.setdefault("pics", [])
@@ -386,21 +590,25 @@ def main():
         print("ATENÇÃO: nenhuma chave de IA encontrada (GEMINI_API_KEY / OPENAI_API_KEY).")
     done = 0
     for n in merged:
-        if done >= MAX_REWRITE or not (GEMINI_KEY or OPENAI_KEY):
+        if done >= MAX_REWRITE or not AI_ON or not (GEMINI_KEY or OPENAI_KEY):
             break
-        if n.get("hide") or n.get("v", 0) >= 2 or n.get("tries3", 0) >= 6:
+        if FROZEN(n) or n.get("v", 0) >= 2 or n.get("tries3", 0) >= 6:
             continue
         n["tries3"] = n.get("tries3", 0) + 1
         orig = n.get("orig") or n["t"]
         print("Reescrevendo:", orig[:70])
-        text = article_text(n["u"])
-        if len(text) < 300:
-            text = n.get("orig_d") or n["d"]
-            print("  texto curto — usando resumo + pesquisa")
+        ex = extract_article(n["u"])
+        trunc = len(ex["text"]) < 500 or ex["paywall"]
         n.setdefault("orig_d", n["d"])
+        if trunc:
+            print("  texto incompleto: pesquisando a mesma notícia em outras fontes")
+            text = (source_with_media(ex) + "\n\n" if ex["text"] else "") + "(texto original incompleto; resumo: " + n["orig_d"] + ")"
+        else:
+            text = source_with_media(ex)
         res = None
+        LAST_SRC[:] = []
         try:
-            res = parse_ai(call_ai(PROMPT % (orig, n.get("date", ""), text)))
+            res = parse_ai(call_ai(build_prompt(orig, n.get("date", ""), text)))
         except (Quota, Missing) as e:
             print("  IA INDISPONÍVEL (limite ou modelo), parando por agora:", str(e)[:300].replace("\n", " "))
             n["tries3"] -= 1
@@ -409,9 +617,29 @@ def main():
             print("  IA falhou:", e)
         if not res:
             print("  sem texto da IA nesta tentativa"); continue
+        res["body"] = place_media(res["body"], [m for m in ex["media"] if norm(m["u"]) != norm(n.get("img"))], n["s"], ex["tot"])
+        n["alts"] = list(LAST_SRC)[:4] if trunc else []
+        n["mv"] = 1
         n["t"], n["d"], n["body"], n["v"], n["orig"] = res["t"], res["d"], res["body"], VERSION, orig
         done += 1
         time.sleep(8)
+    enr = 0
+    for n in merged:
+        if enr >= 20:
+            break
+        if FROZEN(n) or not n.get("body") or n.get("mv") == 1 or n.get("mtries", 0) >= 2:
+            continue
+        n["mtries"] = n.get("mtries", 0) + 1
+        try:
+            ex = extract_article(n["u"])
+            cover = {norm(n.get("img")), norm(og_only(n["u"]))}
+            md = [m for m in ex["media"] if norm(m["u"]) not in cover]
+            if md:
+                n["body"] = place_media(n["body"], md, n["s"], ex["tot"])
+            n["mv"] = 1; enr += 1
+        except Exception as e:
+            print("  mídia falhou:", e)
+    print(f"{enr} matérias enriquecidas com imagens e publicações")
     print(f"{done} notícias reescritas")
     if merged:
         OUT.write_text(json.dumps(merged, ensure_ascii=False, indent=1), "utf-8")
@@ -419,4 +647,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    

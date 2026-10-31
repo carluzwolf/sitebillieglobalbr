@@ -17,11 +17,19 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Atualizar calendário (eventos confirmados)
+        run: python scripts/update_events.py
+        continue-on-error: true   # se falhar, as notícias continuam sendo salvas
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       - name: Commit
         run: |
           git config user.name "news-bot"
           git config user.email "bot@users.noreply.github.com"
           git add news.json
+          [ -f events.json ] && git add events.json || true
+          [ -f events_seen.json ] && git add events_seen.json || true
           [ -f photos.json ] && git add photos.json || true
           git diff --cached --quiet || (git commit -m "Atualiza notícias" && git push)
           

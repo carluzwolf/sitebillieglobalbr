@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.billieglobalbr.com.br/sitemap.xml
+Sitemap: https://www.billieglobalbr.com.br/sitemap-noticias.xml
+Sitemap: https://www.billieglobalbr.com.br/news-sitemap.xml

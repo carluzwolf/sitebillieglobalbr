@@ -279,6 +279,22 @@
   "d_es": "La gira del tercer álbum arrancó en Quebec, Canadá."
  },
  {
+  "date": "2025-10-30",
+  "t": "Billie Eilish participa de show de Phoebe Bridgers em Los Angeles",
+  "d": "Billie Eilish fez uma participação surpresa no concerto de Halloween de Phoebe Bridgers no Intuit Dome, em Los Angeles, realizado em 30 de outubro.",
+  "cat": "shows",
+  "conf": true,
+  "s": "Daily Breeze on MSN",
+  "u": "https://www.msn.com/en-us/entertainment/music/phoebe-bridgers-joined-by-billie-eilish-muna-for-la-halloween-homecoming/ar-AA2gvOIn",
+  "t_en": "Billie Eilish performs at Phoebe Bridgers' concert in Los Angeles",
+  "d_en": "Billie Eilish made a surprise guest appearance at Phoebe Bridgers' Halloween concert at the Intuit Dome in Los Angeles on October 30.",
+  "t_es": "Billie Eilish participa en el concierto de Phoebe Bridgers en Los Ángeles",
+  "d_es": "Billie Eilish hizo una aparición sorpresa en el concierto de Halloween de Phoebe Bridgers en el Intuit Dome de Los Ángeles el 30 de octubre.",
+  "place": "Los Angeles/Intuit Dome",
+  "id": "2025-10-30-billieeilishparticipades",
+  "img": ""
+ },
+ {
   "id": "2026-02-01-20",
   "date": "2026-02-01",
   "t": "Grammy 2026: “Wildflower” vence Canção do Ano",

@@ -2,17 +2,19 @@
  {
   "id": "mmvys2mmi",
   "manual": true,
-  "locked": false,
+  "locked": true,
   "t": "Agora o site da Billie Global BR possui Quizzes sobre a Billie Eilish e Ranking de Pontuação",
   "d": "No site agora você pode acumular XP respondendo quizzes diários e garantir emblemas e sua posição no ranking geral",
   "s": "Billie Global BR",
   "u": "manual:mmvys2mmi",
   "date": "2 nov 2026",
   "ts": "2026-11-02T04:47:44.394Z",
-  "img": "https://www.google.com/search?client=ms-android-motorola-rvo3&hs=YlaB&sca_esv=231f7aaf60709034&sxsrf=AKL5yDijilWeCWwsyMtogFa_zm6AGbddlg:1793594831733&udm=2&fbs=ACAhTvwDHIJOqwlL4Oqvyxosc1dFAXjcwYEUBuaHzrpm-L7dXQveQjClVhH5j80k-sjqy5CjZXuvGx2p4bWdl9mD4HSowwXy06JcBHNL0OPA6yx2DF1JjnYRsB11bWHh5alqI5ytusLLjxxwLEwpIS_tpX_HLzv5kJyAxWN8c0oQOFStZ6ShWNWWAtEco03G-hQ9iNQHRAMVDhggds645UwDz47d6Q9s1OGUYeKtkLp8GsO_p1ac1II&q=Billie+Eilish&sa=X&ved=2ahUKEwiN0cO2veiXAxUQjpUCHTizMLwQtKgLegQIEBAB&biw=411&bih=795&dpr=1.75#sv=CAMSVxoyKhBlLWRzN2dRcUNqSmV3U3dNMg5kczdnUXFDakpld1N3TToOakw0MmJ5Sng2N1p5Rk0gBCoXCgFzEhBlLWRzN2dRcUNqSmV3U3dNGAEwAUoECAEQAhgHIOub7p8OSggQAhgBIAIoAQ",
+  "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPjf78RfhpZNP27z3fT5xATgLS7jGc8_hOQh6RA0P-1w&s=10",
   "imgc": "",
   "cat": "",
-  "body": [],
+  "body": [
+   "No site agora você pode acumular XP respondendo quizzes diários e garantir emblemas e sua posição no ranking geral"
+  ],
   "pin": false,
   "hide": false,
   "k": "manual-mmvys2mmi",

@@ -1,0 +1,41 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+
+    "users": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid",
+        ".write": "auth != null && auth.uid === $uid",
+        "name":   { ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 30" },
+        "photo":  { ".validate": "newData.isString() && newData.val().length <= 15000" },
+        "xp":     { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= (data.exists() ? data.val() : 0) + 300" },
+        "streak": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5000" },
+        "last":   { ".validate": "newData.isString() && newData.val().length <= 10" },
+        "days": {
+          "$d": {
+            "ci": { ".validate": "newData.val() === 1 && !data.exists()" },
+            "s":  { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 10 && !data.exists()" },
+            "$other": { ".validate": false }
+          }
+        },
+        "wk":  { "$w": { ".validate": "newData.val() === 1 && !data.exists()" } },
+        "ach": { "$a": { ".validate": "newData.isNumber() && !data.exists()" } },
+        "$other": { ".validate": false }
+      }
+    },
+
+    "rank": {
+      ".read": true,
+      ".indexOn": ["x"],
+      "$uid": {
+        ".write": "auth != null && auth.uid === $uid",
+        ".validate": "newData.hasChildren(['n', 'x'])",
+        "n": { ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 30" },
+        "p": { ".validate": "newData.isString() && newData.val().length <= 15000" },
+        "x": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= (data.exists() ? data.val() : 0) + 300" },
+        "$other": { ".validate": false }
+      }
+    }
+  }
+}

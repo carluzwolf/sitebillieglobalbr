@@ -1,0 +1,249 @@
+{
+ "date": "",
+ "questions": [],
+ "history": [],
+ "bank": [
+  {
+   "q": "Qual música lançada no SoundCloud em 2015 apresentou Billie ao mundo?",
+   "o": [
+    "Idontwannabeyouanymore",
+    "Ocean Eyes",
+    "Lovely",
+    "Bellyache"
+   ],
+   "a": 1,
+   "e": "“Ocean Eyes” foi escrita por Finneas e viralizou em 2015."
+  },
+  {
+   "q": "Quem é o irmão de Billie que produz e coescreve suas músicas?",
+   "o": [
+    "Danny Elfman",
+    "Jacob Collier",
+    "Khalid",
+    "Finneas"
+   ],
+   "a": 3,
+   "e": "Finneas O'Connell é produtor e parceiro musical dela desde o início."
+  },
+  {
+   "q": "Qual é o álbum de estreia de Billie, lançado em 2019?",
+   "o": [
+    "When We All Fall Asleep, Where Do We Go?",
+    "Hit Me Hard and Soft",
+    "Happier Than Ever",
+    "Don't Smile at Me"
+   ],
+   "a": 0,
+   "e": "O álbum saiu em março de 2019 e inclui “bad guy”."
+  },
+  {
+   "q": "No Grammy de 2020, Billie venceu as quatro principais categorias. Qual destas NÃO é uma delas?",
+   "o": [
+    "Álbum do Ano",
+    "Melhor Performance de Rock",
+    "Gravação do Ano",
+    "Artista Revelação"
+   ],
+   "a": 1,
+   "e": "As “Big Four” são Álbum, Gravação, Canção do Ano e Artista Revelação."
+  },
+  {
+   "q": "Qual música de Billie e Finneas venceu o Oscar de Melhor Canção Original por um filme do 007?",
+   "o": [
+    "Lovely",
+    "Happier Than Ever",
+    "Skyfall",
+    "No Time to Die"
+   ],
+   "a": 3,
+   "e": "“No Time to Die” é o tema do filme de James Bond de mesmo nome."
+  },
+  {
+   "q": "Para qual filme foi composta “What Was I Made For?”?",
+   "o": [
+    "Oppenheimer",
+    "Barbie",
+    "Wonka",
+    "Elemental"
+   ],
+   "a": 1,
+   "e": "A música é de Barbie (2023) e rendeu o segundo Oscar do duo."
+  },
+  {
+   "q": "Qual álbum de 2021 traz a faixa “Your Power”?",
+   "o": [
+    "Happier Than Ever",
+    "Guitar Songs",
+    "Hit Me Hard and Soft",
+    "Don't Smile at Me"
+   ],
+   "a": 0,
+   "e": "“Your Power” é um dos singles de Happier Than Ever."
+  },
+  {
+   "q": "“Birds of a Feather” faz parte de qual álbum?",
+   "o": [
+    "Don't Smile at Me",
+    "Happier Than Ever",
+    "Hit Me Hard and Soft",
+    "When We All Fall Asleep, Where Do We Go?"
+   ],
+   "a": 2,
+   "e": "O álbum foi lançado em maio de 2024."
+  },
+  {
+   "q": "Em qual cidade americana Billie Eilish nasceu?",
+   "o": [
+    "Chicago",
+    "Miami",
+    "Los Angeles",
+    "Nova York"
+   ],
+   "a": 2,
+   "e": "Ela nasceu e cresceu em Los Angeles, na Califórnia."
+  },
+  {
+   "q": "Em que ano Billie Eilish nasceu?",
+   "o": [
+    "2003",
+    "2002",
+    "2000",
+    "2001"
+   ],
+   "a": 3,
+   "e": "Ela nasceu em 18 de dezembro de 2001."
+  },
+  {
+   "q": "Qual foi a primeira música de Billie a chegar ao 1º lugar da Billboard Hot 100?",
+   "o": [
+    "Therefore I Am",
+    "Ocean Eyes",
+    "bad guy",
+    "Lovely"
+   ],
+   "a": 2,
+   "e": "“bad guy” chegou ao topo da Hot 100 em 2019."
+  },
+  {
+   "q": "Qual faixa abre o álbum Happier Than Ever?",
+   "o": [
+    "Getting Older",
+    "Lost Cause",
+    "Happier Than Ever",
+    "NDA"
+   ],
+   "a": 0,
+   "e": "“Getting Older” é a primeira faixa do álbum de 2021."
+  },
+  {
+   "q": "“Lovely”, de 2018, é uma parceria de Billie com qual cantor?",
+   "o": [
+    "Ed Sheeran",
+    "Khalid",
+    "Justin Bieber",
+    "Post Malone"
+   ],
+   "a": 1,
+   "e": "“Lovely” aparece na trilha de 13 Reasons Why."
+  },
+  {
+   "q": "Qual é o nome do EP que Billie lançou em 2017?",
+   "o": [
+    "Lunch",
+    "Happier Than Ever",
+    "Don't Smile at Me",
+    "Guitar Songs"
+   ],
+   "a": 2,
+   "e": "O EP traz “Ocean Eyes” e “Bellyache”."
+  },
+  {
+   "q": "“Wildflower” e “Lunch” fazem parte de qual álbum?",
+   "o": [
+    "Hit Me Hard and Soft",
+    "When We All Fall Asleep, Where Do We Go?",
+    "Don't Smile at Me",
+    "Happier Than Ever"
+   ],
+   "a": 0,
+   "e": "Ambas estão em Hit Me Hard and Soft (2024)."
+  },
+  {
+   "q": "Em qual festival brasileiro Billie foi atração em 2022?",
+   "o": [
+    "Primavera Sound",
+    "Rock in Rio",
+    "Tomorrowland Brasil",
+    "The Town"
+   ],
+   "a": 1,
+   "e": "Ela se apresentou no Rock in Rio em setembro de 2022."
+  },
+  {
+   "q": "Em que ano foi lançado o álbum Hit Me Hard and Soft?",
+   "o": [
+    "2022",
+    "2025",
+    "2024",
+    "2023"
+   ],
+   "a": 2,
+   "e": "O lançamento foi em 17 de maio de 2024."
+  },
+  {
+   "q": "Complete o nome completo: Billie Eilish ___ Baird O'Connell.",
+   "o": [
+    "Pirate",
+    "Eilish",
+    "Grace",
+    "Rose"
+   ],
+   "a": 0,
+   "e": "O nome completo dela é Billie Eilish Pirate Baird O'Connell."
+  },
+  {
+   "q": "Em qual plataforma estreou o filme-concerto “Happier Than Ever: A Love Letter to Los Angeles”?",
+   "o": [
+    "Max",
+    "Netflix",
+    "Disney+",
+    "Prime Video"
+   ],
+   "a": 2,
+   "e": "O filme estreou no Disney+ em setembro de 2021."
+  },
+  {
+   "q": "Quem codirigiu com Billie o filme-concerto “Hit Me Hard and Soft: The Tour (Live in 3D)”?",
+   "o": [
+    "Steven Spielberg",
+    "James Cameron",
+    "Greta Gerwig",
+    "Denis Villeneuve"
+   ],
+   "a": 1,
+   "e": "O filme foi dirigido por James Cameron e Billie."
+  },
+  {
+   "q": "Qual cor de cabelo, junto com o preto, virou marca visual de Billie por volta de 2018-2019?",
+   "o": [
+    "Roxo",
+    "Rosa",
+    "Verde neon",
+    "Azul"
+   ],
+   "a": 2,
+   "e": "O cabelo preto com raiz verde neon marcou a fase de “bad guy”."
+  },
+  {
+   "q": "Qual faixa abre o álbum Hit Me Hard and Soft?",
+   "o": [
+    "BLUE",
+    "SKINNY",
+    "LUNCH",
+    "CHIHIRO"
+   ],
+   "a": 1,
+   "e": "“SKINNY” é a primeira faixa do álbum de 2024."
+  }
+ ]
+}

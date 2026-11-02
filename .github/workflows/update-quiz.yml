@@ -1,0 +1,28 @@
+name: Atualizar quiz diário
+on:
+  schedule:
+    - cron: "10 3 * * *"   # 00:10 de Brasília
+    - cron: "40 8 * * *"   # segunda tentativa (se a primeira falhar)
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: quiz-update
+jobs:
+  quiz:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/update_quiz.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Commit
+        run: |
+          git config user.name "quiz-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add quiz.json
+          git diff --cached --quiet || (git commit -m "Atualiza quiz diário" && git pull --rebase && git push)

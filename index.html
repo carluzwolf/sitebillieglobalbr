@@ -56,6 +56,7 @@ a{color:inherit;text-decoration:none}button{font-family:inherit}img{max-width:10
 #lm{display:none;position:absolute;right:8px;top:calc(54px + env(safe-area-inset-top,0px));background:var(--bg);border:1px solid var(--line);border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:60;min-width:160px;overflow:hidden}#lm.on{display:block}
 #lm button{display:block;width:100%;text-align:left;padding:14px 18px;border:0;border-bottom:1px solid var(--line);background:none;color:var(--ink);font:700 14px var(--sans);cursor:pointer}#lm button:last-child{border-bottom:0}#lm button:hover,#lm button.on{color:var(--red)}
 .notpt{background:var(--soft);border-left:4px solid var(--mut);padding:10px 14px;font:13px/1.5 var(--sans);color:var(--mut);margin:0 0 18px}
+#bu{width:46px}
 /* seções */
 .sec{background:var(--bg);border-bottom:1px solid var(--line);overflow-x:auto;white-space:nowrap;scrollbar-width:none}.sec::-webkit-scrollbar{display:none}
 .sec div{max-width:1040px;margin:0 auto;padding:0 8px;display:flex}
@@ -171,18 +172,18 @@ footer .fc{border-top:1px solid #2c2c2c;padding-top:18px;color:#9a9a9a;font-size
 <div id="top"><div class="hb">
 <button class="ib" id="bm" data-al="menu" aria-label="Menu"><svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
 <a class="logo" href="#/"><span class="ln">Billie Global</span><b>BR</b></a>
-<button class="ib" id="bl" aria-label="Language" aria-haspopup="true"><span id="bll">PT</span></button><button class="ib" id="bs" data-al="search" aria-label="Pesquisar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+<button class="ib" id="bl" aria-label="Language" aria-haspopup="true"><span id="bll">PT</span></button><button class="ib" id="bu" data-al="quizP" aria-label="Quiz" onclick="location.hash='#/quiz'"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg></button><button class="ib" id="bs" data-al="search" aria-label="Pesquisar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
 </div><div id="sp"><div><input id="q" type="search" data-ph="ph" placeholder="Pesquisar notícias da Billie Eilish..." autocomplete="off"></div></div>
 <div id="lm" role="menu"><button data-l="pt">Português</button><button data-l="en">English</button><button data-l="es">Español</button></div></div>
 <nav class="sec" id="sec"><div></div></nav>
 <div id="ov"></div>
 <aside id="dr" aria-label="Menu"><div class="dh"><span class="dn">Billie Global <b>BR</b></span><button class="ib" id="bx" data-al="close" aria-label="Fechar"><svg viewBox="0 0 24 24"><path d="M5 5l14 14M19 5L5 19"/></svg></button></div>
-<a class="m" href="#/" data-i="home">Início</a><a class="m" href="#/noticias" data-i="all">Todas as notícias</a><a class="m" href="#/calendario" data-i="cal">📅 Calendário da Billie</a><a class="m" href="#/charts" data-i="charts">📊 Charts da Billie</a><div class="sub" id="dcat"></div>
+<a class="m" href="#/" data-i="home">Início</a><a class="m" href="#/noticias" data-i="all">Todas as notícias</a><a class="m" href="#/calendario" data-i="cal">📅 Calendário da Billie</a><a class="m" href="#/charts" data-i="charts">📊 Charts da Billie</a><a class="m" href="#/quiz" data-i="quiz">🎯 Quiz e Ranking</a><div class="sub" id="dcat"></div>
 <a class="m" href="#/sobre" data-i="about">Sobre</a><a class="m" href="#/canal" data-i="channel">Canal de WhatsApp</a><a class="m" href="#/grupo" data-i="group">Grupo de WhatsApp</a>
 <a class="btn wa" id="dg" data-i="joinG" target="_blank" rel="noopener">Entrar no grupo de fãs</a><a class="btn o wa" id="dc" data-i="followC" target="_blank" rel="noopener">Seguir o canal</a></aside>
 <main id="v"></main>
 <footer><div class="fw"><div><div class="fb"><span class="ln2">Billie Global</span><b>BR</b></div><p id="ft" style="margin:12px 0 0;max-width:420px"></p></div>
-<div class="fl"><h4 data-i="sections">Seções</h4><a href="#/" data-i="home">Início</a><a href="#/noticias" data-i="all">Todas as notícias</a><a href="#/calendario" data-i="calF">Calendário da Billie</a><a href="#/charts" data-i="chartsF">Charts da Billie</a><a href="#/sobre" data-i="about">Sobre</a></div>
+<div class="fl"><h4 data-i="sections">Seções</h4><a href="#/" data-i="home">Início</a><a href="#/noticias" data-i="all">Todas as notícias</a><a href="#/calendario" data-i="calF">Calendário da Billie</a><a href="#/charts" data-i="chartsF">Charts da Billie</a><a href="#/quiz" data-i="quizF">Quiz e Ranking</a><a href="#/sobre" data-i="about">Sobre</a></div>
 <div class="fl"><h4 data-i="community">Comunidade</h4><a id="fg" data-i="group" target="_blank" rel="noopener">Grupo de WhatsApp</a><a id="fc2" data-i="channel" target="_blank" rel="noopener">Canal de WhatsApp</a></div></div></footer>
 <script>
 
@@ -227,6 +228,7 @@ noEvMonth:["Sem eventos registrados em {m}.","No events recorded in {m}.","Sin e
 noFut:["Ainda não há datas futuras confirmadas oficialmente. Assim que a Billie ou fontes confiáveis anunciarem algo, o calendário é atualizado automaticamente.","There are no officially confirmed future dates yet. As soon as Billie or reliable sources announce something, the calendar is updated automatically.","Todavía no hay fechas futuras confirmadas oficialmente. En cuanto Billie o fuentes fiables anuncien algo, el calendario se actualiza automáticamente."],
 ev1:["evento","event","evento"],evN:["eventos","events","eventos"],d1:["dia","day","día"],dN:["dias","days","días"],todayA:["hoje","today","hoy"],
 hist:["Registro histórico","Historical record","Registro histórico"],
+quiz:["🎯 Quiz e Ranking","🎯 Quiz & Ranking","🎯 Quiz y Ranking"],quizS:["🎯 Quiz","🎯 Quiz","🎯 Quiz"],quizF:["Quiz e Ranking","Quiz & Ranking","Quiz y Ranking"],quizP:["Quiz e perfil","Quiz and profile","Quiz y perfil"],loadQ:["Carregando o quiz…","Loading the quiz…","Cargando el quiz…"],
 sob:["Sobre","About","Acerca de"]};
 function t(k){var a=TX[k];return a?a[LI]:k}
 var TMES=[["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],["January","February","March","April","May","June","July","August","September","October","November","December"],["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"]];
@@ -338,7 +340,7 @@ function updTxt(){return upd?upd:t("updAt")+" "+fdt("26 out 2026")}
 function secNav(act){var h='<a href="#/"'+(act==="home"?' class="on"':'')+'>'+t("home")+'</a>';
 CATS.forEach(function(c){if(byCat(c[0]).length)h+='<a href="#/c/'+c[0]+'"'+(act===c[0]?' class="on"':'')+'>'+esc(c[1])+'</a>'});
 if(byCat("geral").length)h+='<a href="#/c/geral"'+(act==="geral"?' class="on"':'')+'>'+catL("geral","Geral")+'</a>';
-h+='<a href="#/noticias"'+(act==="all"?' class="on"':'')+'>'+t("allS")+'</a><a href="#/calendario"'+(act==="cal"?' class="on"':'')+'>'+t("calS")+'</a><a href="#/charts"'+(act==="charts"?' class="on"':'')+'>'+t("chartsS")+'</a>';$("sec").firstElementChild.innerHTML=h}
+h+='<a href="#/noticias"'+(act==="all"?' class="on"':'')+'>'+t("allS")+'</a><a href="#/calendario"'+(act==="cal"?' class="on"':'')+'>'+t("calS")+'</a><a href="#/charts"'+(act==="charts"?' class="on"':'')+'>'+t("chartsS")+'</a><a href="#/quiz"'+(act==="quiz"?' class="on"':'')+'>'+t("quizS")+'</a>';$("sec").firstElementChild.innerHTML=h}
 /* páginas */
 function waPage(pg,u){return '<div class="art"><div class="crumb"><a href="#/">'+t("backSite")+'</a></div><h1>'+esc(pg.title)+'</h1>'+blocksH(pg.body)+'<div class="acts"><a class="btn" href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(pg.button||"Open")+'</a><a class="btn o" href="#/">'+t("seeNews")+'</a></div></div>'}
 function minRead(n){var w=((n.body||[]).join(" ").split(/\s+/).length);return Math.max(1,Math.round(w/190))}
@@ -357,7 +359,7 @@ function paint(h,mode){$("v").innerHTML=h;if(mode==="keep"){reveal();return}if(t
 function more(){lim+=PER;if(cur)paint(cur(),"keep")}
 function route(){var h=location.hash||"#/",m,kind="list",key=h,act="home",restore=null;cur=null;closeAll();$("q").value="";
 document.title=SITE.name+" "+SITE.suffix+" — "+t("title");
-if(h.match(/^#\/n\//)||h.match(/^#\/calendario/)||h.match(/^#\/charts/)||h==="#/sobre"||h==="#/canal"||h==="#/grupo")kind="page";
+if(h.match(/^#\/n\//)||h.match(/^#\/calendario/)||h.match(/^#\/charts/)||h.match(/^#\/quiz/)||h==="#/sobre"||h==="#/canal"||h==="#/grupo")kind="page";
 if(kind==="list"&&lastKind==="page"&&POS[h])restore=POS[h];
 lim=restore?restore.lim:PER;
 var py=restore?restore.y:undefined;
@@ -366,6 +368,7 @@ if(!n){location.hash="#/";return}
 if(n.slug){location.replace(nurl(n));return}
 document.title=n.t+" — "+SITE.name+" "+SITE.suffix;secNav(cat(n)[0]);paint(artPage(n));embeds();lastKind="page";lastKey=h;return}
 if(h.match(/^#\/charts/)){secNav("charts");lastKind="page";lastKey=h;if(CH_LOADED&&CH.d){chRoute(h);paint(chartsPage());return}paint('<div class="wrap"><div class="empty">'+t("loadC")+'</div></div>');ensureCharts(function(){if(/^#\/charts/.test(location.hash))chShow(h)});return}
+if(h.match(/^#\/quiz/)){secNav("quiz");lastKind="page";lastKey=h;if(QZ_LOADED&&window.QZ){QZ.show(h);return}paint('<div class="wrap"><div class="empty">'+t("loadQ")+'</div></div>');ensureQuiz(function(){if(/^#\/quiz/.test(location.hash))QZ.show(location.hash)});return}
 if(h.match(/^#\/calendario/)){calRoute(h);secNav("cal");paint(calPage());lastKind="page";lastKey=h;return}
 if(h==="#/sobre"){secNav("");paint('<div class="art"><div class="crumb"><a href="#/">'+t("backSite")+'</a></div><h1>'+esc(SITE.sobre.title)+'</h1>'+blocksH(SITE.sobre.body)+'<div class="acts"><a class="btn" href="#/canal">'+t("channel")+'</a><a class="btn" href="#/grupo">'+t("group")+'</a><a class="btn o" href="#/">'+t("backHome")+'</a></div></div>');lastKind="page";return}
 if(h==="#/canal"){secNav("");paint(waPage(SITE.canal,LINK_CANAL));lastKind="page";return}
@@ -384,6 +387,14 @@ function ensureCharts(cb){if(CH_LOADED){cb();return}
 var l=document.createElement("link");l.rel="stylesheet";l.href="/charts.css";document.head.appendChild(l);
 var s=document.createElement("script");s.src="/charts.js";s.onload=function(){CH_LOADED=true;cb()};
 s.onerror=function(){paint('<div class="wrap"><div class="empty">Charts indisponível no momento / unavailable right now.</div></div>')};document.head.appendChild(s)}
+/* ===== QUIZ (carrega quiz.js e quiz.css só quando alguém abre a aba ou já está logado) ===== */
+var QZ_LOADED=false,QZ_LOADING=null;
+function ensureQuiz(cb){if(QZ_LOADED){cb();return}
+if(!QZ_LOADING){QZ_LOADING=[];var l=document.createElement("link");l.rel="stylesheet";l.href="/quiz.css";document.head.appendChild(l);
+var s=document.createElement("script");s.src="/quiz.js";s.onload=function(){QZ_LOADED=true;var q=QZ_LOADING;QZ_LOADING=null;q.forEach(function(f){f()})};
+s.onerror=function(){QZ_LOADING=null;paint('<div class="wrap"><div class="empty">Quiz indisponível no momento / unavailable right now.</div></div>')};document.head.appendChild(s)}
+QZ_LOADING.push(cb)}
+try{if(localStorage.getItem("bg_qz")==="1")setTimeout(function(){ensureQuiz(function(){QZ.boot()})},1200)}catch(e){}
 /* ===== CALENDÁRIO ===== */
 var EV=[],EVM=null,CAL={y:0,m:0,sel:""},CAL_MIN=2000,CAL_MAX=2030;
 var MESN=TMES[LI];

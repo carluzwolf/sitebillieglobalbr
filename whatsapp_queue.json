@@ -72,7 +72,7 @@
  "queue": [
   {
    "slug": "teste",
-   "status": "approved",
+   "status": "failed",
    "text": "🚨 *Teste*\n\nTeste de Bot\n\n🔗 Leia a matéria completa:\nhttps://www.billieglobalbr.com.br/noticia/teste/\n\n— Billie Global BR",
    "img": "",
    "url": "https://www.billieglobalbr.com.br/noticia/teste/"

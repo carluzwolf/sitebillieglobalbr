@@ -79,7 +79,7 @@
   },
   {
    "slug": "teste-2",
-   "status": "failed",
+   "status": "approved",
    "text": "🚨 *Teste*\n\nTeste de Bot\n\n🔗 Leia a matéria completa:\nhttps://www.billieglobalbr.com.br/noticia/teste-2/\n\n— Billie Global BR",
    "img": "",
    "url": "https://www.billieglobalbr.com.br/noticia/teste-2/"

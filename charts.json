@@ -54,7 +54,7 @@
    "platform": "spotify",
    "region": "global",
    "home": "https://charts.spotify.com/charts/view/regional-global-daily/latest",
-   "fetched": "2026-11-02T02:41Z"
+   "fetched": "2026-11-02T12:02Z"
   },
   "spotify_br": {
    "date": "2026-10-31",
@@ -64,7 +64,7 @@
    "platform": "spotify",
    "region": "br",
    "home": "https://charts.spotify.com/charts/view/regional-br-daily/latest",
-   "fetched": "2026-11-02T02:41Z"
+   "fetched": "2026-11-02T12:02Z"
   },
   "apple_br": {
    "date": null,
@@ -74,7 +74,7 @@
    "platform": "apple",
    "region": "br",
    "home": "",
-   "fetched": "2026-11-02T02:41Z"
+   "fetched": "2026-11-02T12:02Z"
   },
   "apple_us": {
    "date": null,
@@ -84,7 +84,7 @@
    "platform": "apple",
    "region": "us",
    "home": "",
-   "fetched": "2026-11-02T02:41Z"
+   "fetched": "2026-11-02T12:02Z"
   },
   "deezer_world": {
    "date": "2026-11-02",
@@ -92,28 +92,19 @@
    "unit": null,
    "entries": [
     {
-     "pos": 61,
+     "pos": 43,
      "title": "BIRDS OF A FEATHER",
      "artist": "Billie Eilish",
      "dur": 210,
      "cover": "https://cdn-images.dzcdn.net/images/cover/5d284b31cb9ddeb1a0c79aede5a94e1c/500x500-000000-80-0-0.jpg",
      "url": "https://www.deezer.com/track/2801558052",
      "album": "HIT ME HARD AND SOFT"
-    },
-    {
-     "pos": 80,
-     "title": "bury a friend",
-     "artist": "Billie Eilish",
-     "dur": 193,
-     "cover": "https://cdn-images.dzcdn.net/images/cover/6630083f454d48eadb6a9b53f035d734/500x500-000000-80-0-0.jpg",
-     "url": "https://www.deezer.com/track/655095992",
-     "album": "WHEN WE ALL FALL ASLEEP, WHERE DO WE GO?"
     }
    ],
    "platform": "deezer",
    "region": "world",
    "home": "https://www.deezer.com/playlist/3155776842",
-   "fetched": "2026-11-02T02:41Z"
+   "fetched": "2026-11-02T12:02Z"
   },
   "billboard_global200": {
    "date": "2026-10-31",
@@ -463,6 +454,11 @@
    "title": "Happier Than Ever",
    "mark": 1500000000,
    "date": "2026-11-02"
+  },
+  {
+   "title": "Happier Than Ever",
+   "mark": 1500000000,
+   "date": "2026-11-02"
   }
  ],
  "history": {
@@ -497,8 +493,8 @@
   "deezer_world": [
    {
     "d": "2026-11-02",
-    "n": 2,
-    "best": 61
+    "n": 1,
+    "best": 43
    }
   ],
   "billboard_global200": [
@@ -775,8 +771,10 @@
   }
  },
  "streams_date": "2026-11-02",
- "updated": "2026-11-02T02:41Z",
+ "updated": "2026-11-02T12:02Z",
  "errors": [
-  "apple_global: HTTP Error 404: Not Found"
+  "apple_global: HTTP Error 404: Not Found",
+  "billboard_global200: billboard: poucas linhas (0) — o site pode ter bloqueado ou mudado",
+  "billboard_globalexus: billboard: poucas linhas (0) — o site pode ter bloqueado ou mudado"
  ]
 }

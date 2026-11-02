@@ -25,7 +25,7 @@ jobs:
         env:
           WHAPI_TOKEN: ${{ secrets.WHAPI_TOKEN }}
           WA_CHANNEL_ID: ${{ secrets.WA_CHANNEL_ID }}
-          WA_REQUIRE_APPROVAL: "1"   # troque para "0" para publicar sem aprovação
+          WA_REQUIRE_APPROVAL: "0"   # troque para "0" para publicar sem aprovação
       - name: Salvar estado
         if: always()
         run: |

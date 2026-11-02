@@ -16,7 +16,19 @@
   "pin": false,
   "hide": false,
   "k": "manual-mmvzkqzt4",
-  "slug": "teste"
+  "slug": "teste-2",
+  "tr": {
+   "en": {
+    "t": "Test",
+    "d": "Bot Test",
+    "body": []
+   },
+   "es": {
+    "t": "Prueba",
+    "d": "Prueba de Bot",
+    "body": []
+   }
+  }
  },
  {
   "id": "mmvys2mmi",

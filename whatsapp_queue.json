@@ -69,5 +69,13 @@
   "billie-eilish-explora-maturidade-e-autodescoberta-em-hit-me-hard-and-soft": "seed",
   "billie-eilish-e-finneas-fazem-historia-ao-vencerem-o-segundo-oscar-da-carreira": "seed"
  },
- "queue": []
+ "queue": [
+  {
+   "slug": "teste",
+   "status": "pending",
+   "text": "🚨 *Teste*\n\nTeste de Bot\n\n🔗 Leia a matéria completa:\nhttps://www.billieglobalbr.com.br/noticia/teste/\n\n— Billie Global BR",
+   "img": "",
+   "url": "https://www.billieglobalbr.com.br/noticia/teste/"
+  }
+ ]
 }

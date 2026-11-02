@@ -1,0 +1,35 @@
+name: Publicar no canal do WhatsApp
+on:
+  workflow_run:
+    workflows: ["Atualizar notícias"]   # roda depois que o site publica
+    types: [completed]
+  workflow_dispatch: {}                 # também dá pra rodar manualmente (use p/ aprovar)
+permissions:
+  contents: write
+concurrency:
+  group: whatsapp
+  cancel-in-progress: false
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main   # pega o commit mais recente (com as notícias novas)
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Aguardar o site publicar as páginas novas
+        run: sleep 90
+      - run: python scripts/whatsapp_post.py
+        env:
+          WHAPI_TOKEN: ${{ secrets.WHAPI_TOKEN }}
+          WA_CHANNEL_ID: ${{ secrets.WA_CHANNEL_ID }}
+          WA_REQUIRE_APPROVAL: "1"   # troque para "0" para publicar sem aprovação
+      - name: Salvar estado
+        if: always()
+        run: |
+          git config user.name "news-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add whatsapp_queue.json
+          git diff --cached --quiet || (git commit -m "WhatsApp: atualiza fila" && git pull --rebase && git push)

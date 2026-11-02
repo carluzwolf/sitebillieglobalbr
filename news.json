@@ -18,7 +18,23 @@
   "pin": false,
   "hide": false,
   "k": "manual-mmvys2mmi",
-  "slug": "agora-o-site-da-billie-global-br-possui-quizzes-sobre-a-billie-eilish-e-ran"
+  "slug": "agora-o-site-da-billie-global-br-possui-quizzes-sobre-a-billie-eilish-e-ran",
+  "tr": {
+   "en": {
+    "t": "Now the Billie Global BR website features Billie Eilish quizzes and a Score Ranking",
+    "d": "On the website, you can now accumulate XP by answering daily quizzes and secure badges and your position in the overall ranking",
+    "body": [
+     "On the website, you can now accumulate XP by answering daily quizzes and secure badges and your position in the overall ranking"
+    ]
+   },
+   "es": {
+    "t": "Ahora el sitio web de Billie Global BR cuenta con cuestionarios sobre Billie Eilish y un ranking de puntuación",
+    "d": "En el sitio web ahora puedes acumular XP respondiendo cuestionarios diarios y asegurar insignias y tu posición en el ranking general",
+    "body": [
+     "En el sitio web ahora puedes acumular XP respondiendo cuestionarios diarios y asegurar insignias y tu posición en el ranking general"
+    ]
+   }
+  }
  },
  {
   "k": "mychemicalromancereleasepreludetotheendshortfilmfeaturingbillieeilishandphoebebr",

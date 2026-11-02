@@ -68,7 +68,8 @@ def http(method, path, payload):
     req = urllib.request.Request(
         API + path, data=json.dumps(payload).encode(), method=method,
         headers={"Authorization": "Bearer " + TOKEN, "Content-Type": "application/json",
-                 "Accept": "application/json"})
+                 "Accept": "application/json",
+                 "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36"})
     with urllib.request.urlopen(req, timeout=60) as r:
         return json.loads(r.read().decode() or "{}")
 
@@ -157,3 +158,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+  

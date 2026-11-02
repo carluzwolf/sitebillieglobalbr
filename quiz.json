@@ -1,7 +1,129 @@
 {
- "date": "",
- "questions": [],
- "history": [],
+ "date": "2026-11-02",
+ "questions": [
+  {
+   "q": "Qual foi o primeiro álbum de estúdio lançado por Billie Eilish?",
+   "o": [
+    "Hit Me Hard and Soft",
+    "When We All Fall Asleep, Where Do We Go?",
+    "Happier Than Ever",
+    "Don't Smile at Me"
+   ],
+   "a": 1,
+   "e": "O álbum de estreia de Billie Eilish foi lançado em março de 2019."
+  },
+  {
+   "q": "Qual é o nome do irmão e principal parceiro musical de Billie Eilish?",
+   "o": [
+    "Justin Bieber",
+    "Jesse Carmichael",
+    "Finneas O'Connell",
+    "Jesse Rutherford"
+   ],
+   "a": 2,
+   "e": "Finneas é irmão de Billie e co-escreve e produz quase todas as suas músicas."
+  },
+  {
+   "q": "Qual música da trilha sonora de Barbie rendeu a Billie Eilish um Oscar?",
+   "o": [
+    "Dance the Night",
+    "I'm Just Ken",
+    "What Was I Made For?",
+    "Barbie World"
+   ],
+   "a": 2,
+   "e": "A balada emocional venceu a categoria de Melhor Canção Original no Oscar."
+  },
+  {
+   "q": "Qual é a cor natural do cabelo com a qual Billie Eilish nasceu?",
+   "o": [
+    "Castanho claro",
+    "Loiro",
+    "Preto",
+    "Ruivo"
+   ],
+   "a": 1,
+   "e": "Billie Eilish nasceu com cabelos loiros naturais."
+  },
+  {
+   "q": "Em que ano Billie Eilish se tornou a artista mais jovem a vencer as quatro principais categorias do Grammy na mesma noite?",
+   "o": [
+    "2021",
+    "2020",
+    "2019",
+    "2022"
+   ],
+   "a": 1,
+   "e": "Em 2020, ela fez história ao vencer Álbum, Gravação, Música do Ano e Artista Revelação."
+  },
+  {
+   "q": "Qual o nome do EP de estreia lançado por Billie Eilish em 2017?",
+   "o": [
+    "Don't Smile at Me",
+    "Up Next Session",
+    "Live at Third Man Records",
+    "Party Favor"
+   ],
+   "a": 0,
+   "e": "O EP de estreia 'Don't Smile at Me' colocou Billie no mapa da música pop alternativa."
+  },
+  {
+   "q": "Qual é o nome do documentário oficial sobre a vida e a carreira de Billie Eilish lançado em 2021?",
+   "o": [
+    "The World's a Little Blurry",
+    "Not My Responsibility",
+    "Happier Than Ever Tour",
+    "Smile and Wave"
+   ],
+   "a": 0,
+   "e": "'Billie Eilish: The World's a Little Blurry' acompanha os bastidores da criação do seu primeiro álbum."
+  },
+  {
+   "q": "Qual foi o primeiro single de Billie Eilish a alcançar o topo da Billboard Hot 100?",
+   "o": [
+    "Therefore I Am",
+    "Bad Guy",
+    "Happier Than Ever",
+    "Ocean Eyes"
+   ],
+   "a": 1,
+   "e": "'Bad Guy' atingiu o primeiro lugar da parada americana em agosto de 2019."
+  },
+  {
+   "q": "Em qual cidade americana Billie Eilish nasceu e foi criada?",
+   "o": [
+    "Nova York",
+    "Chicago",
+    "Los Angeles",
+    "Seattle"
+   ],
+   "a": 2,
+   "e": "Billie Eilish nasceu e cresceu em Los Angeles, na Califórnia."
+  },
+  {
+   "q": "Qual marca de calçados esportivos colaborou frequentemente com Billie Eilish em relançamentos de modelos clássicos?",
+   "o": [
+    "Nike",
+    "Puma",
+    "Adidas",
+    "Vans"
+   ],
+   "a": 0,
+   "e": "Billie Eilish tem parcerias icônicas de tênis com a Nike e a Jordan Brand usando materiais sustentáveis."
+  }
+ ],
+ "history": [
+  "Qual foi o primeiro álbum de estúdio lançado por Billie Eilish?",
+  "Qual é o nome do irmão e principal parceiro musical de Billie Eilish?",
+  "Qual música da trilha sonora de Barbie rendeu a Billie Eilish um Oscar?",
+  "Qual é a cor natural do cabelo com a qual Billie Eilish nasceu?",
+  "Em que ano Billie Eilish se tornou a artista mais jovem a vencer as quatro principais categorias do Grammy na mesma noite?",
+  "Qual o nome do EP de estreia lançado por Billie Eilish em 2017?",
+  "Qual é o nome do documentário oficial sobre a vida e a carreira de Billie Eilish lançado em 2021?",
+  "Qual foi o primeiro single de Billie Eilish a alcançar o topo da Billboard Hot 100?",
+  "Em qual cidade americana Billie Eilish nasceu e foi criada?",
+  "Qual marca de calçados esportivos colaborou frequentemente com Billie Eilish em relançamentos de modelos clássicos?"
+ ],
  "bank": [
   {
    "q": "Qual música lançada no SoundCloud em 2015 apresentou Billie ao mundo?",

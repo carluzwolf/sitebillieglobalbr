@@ -67,7 +67,8 @@
   "billie-eilish-entrevista-finneas-em-vodcast-para-falar-sobre-o-album-solo-do": "seed",
   "finneas-irmao-e-parceiro-musical-de-billie-eilish-anuncia-segundo-album-solo": "seed",
   "billie-eilish-explora-maturidade-e-autodescoberta-em-hit-me-hard-and-soft": "seed",
-  "billie-eilish-e-finneas-fazem-historia-ao-vencerem-o-segundo-oscar-da-carreira": "seed"
+  "billie-eilish-e-finneas-fazem-historia-ao-vencerem-o-segundo-oscar-da-carreira": "seed",
+  "teste-2": "2026-11-02T18:18:23.183431+00:00"
  },
  "queue": [
   {
@@ -76,13 +77,6 @@
    "text": "🚨 *Teste*\n\nTeste de Bot\n\n🔗 Leia a matéria completa:\nhttps://www.billieglobalbr.com.br/noticia/teste/\n\n— Billie Global BR",
    "img": "",
    "url": "https://www.billieglobalbr.com.br/noticia/teste/"
-  },
-  {
-   "slug": "teste-2",
-   "status": "approved",
-   "text": "🚨 *Teste*\n\nTeste de Bot\n\n🔗 Leia a matéria completa:\nhttps://www.billieglobalbr.com.br/noticia/teste-2/\n\n— Billie Global BR",
-   "img": "",
-   "url": "https://www.billieglobalbr.com.br/noticia/teste-2/"
   }
  ]
 }

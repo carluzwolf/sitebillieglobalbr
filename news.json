@@ -1,36 +1,5 @@
 [
  {
-  "id": "mmvzkc5zi",
-  "manual": true,
-  "locked": true,
-  "t": "Teste",
-  "d": "Teste de Bot",
-  "s": "Billie Global BR",
-  "u": "manual:mmvzkc5zi",
-  "date": "2 nov 2026",
-  "ts": "2026-11-02T17:58:58.638Z",
-  "img": "",
-  "imgc": "",
-  "cat": "",
-  "body": [],
-  "pin": false,
-  "hide": false,
-  "k": "manual-mmvzkc5zi",
-  "slug": "teste",
-  "tr": {
-   "en": {
-    "t": "Test",
-    "d": "Bot Test",
-    "body": []
-   },
-   "es": {
-    "t": "Prueba",
-    "d": "Prueba de Bot",
-    "body": []
-   }
-  }
- },
- {
   "id": "mmvys2mmi",
   "manual": true,
   "locked": false,

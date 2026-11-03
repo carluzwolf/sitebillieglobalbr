@@ -72,7 +72,8 @@
   "hit-me-hard-and-soft-o-album-que-revelou-uma-nova-profundidade-artistica-de": "2026-11-02T18:36:36.374683+00:00",
   "billie-eilish-exibe-novo-visual-ruivo-e-troca-beijos-com-nat-wolff-em-los": "2026-11-02T18:36:36.374683+00:00",
   "nova-colaboracao-de-billie-eilish-com-a-john-hardy-causa-furor-nas-redes-sociais": "2026-11-03T05:59:44.216745+00:00",
-  "fas-debatem-suposta-cirurgia-de-billie-eilish-apos-aparicoes-com-roupas": "2026-11-03T05:59:44.216745+00:00"
+  "fas-debatem-suposta-cirurgia-de-billie-eilish-apos-aparicoes-com-roupas": "2026-11-03T05:59:44.216745+00:00",
+  "billie-eilish-celebra-o-casamento-do-irmao-finneas-o-connell-com-claudia": "too-old"
  },
  "queue": [
   {
@@ -81,6 +82,20 @@
    "text": "🚨 *Teste*\n\nTeste de Bot\n\n🔗 Leia a matéria completa:\nhttps://www.billieglobalbr.com.br/noticia/teste/\n\n— Billie Global BR",
    "img": "",
    "url": "https://www.billieglobalbr.com.br/noticia/teste/"
+  },
+  {
+   "slug": "novas-fotos-de-billie-eilish-geram-debates-na-internet-sobre-cirurgia-estetica",
+   "status": "failed",
+   "text": "🚨 *Novas fotos de Billie Eilish geram debates na internet sobre cirurgia estética*\n\nImagens recentes da parceria da cantora com uma marca de joias dividiram opiniões nas redes sociais, reacendendo discussões sobre a privacidade e o corpo da artista.\n\n🔗 Leia a matéria completa:\nhttps://www.billieglobalbr.com.br/noticia/novas-fotos-de-billie-eilish-geram-debates-na-internet-sobre-cirurgia-estetica/\n\n— Billie Global BR",
+   "img": "https://i2-prod.dailystar.co.uk/article37837011.ece/ALTERNATES/s1200d/1_BESTPIX-The-2022-Met-Gala-Celebrating-In-America-An-Anthology-of-Fashion-Inside.jpg",
+   "url": "https://www.billieglobalbr.com.br/noticia/novas-fotos-de-billie-eilish-geram-debates-na-internet-sobre-cirurgia-estetica/"
+  },
+  {
+   "slug": "novas-fotos-de-billie-eilish-geram-debates-e-especulacoes-entre-fas-nas-redes",
+   "status": "failed",
+   "text": "🚨 *Novas fotos de Billie Eilish geram debates e especulações entre fãs nas redes sociais*\n\nUma recente aparição da cantora em um ensaio fotográfico provocou comentários e teorias na internet sobre seu visual.\n\n🔗 Leia a matéria completa:\nhttps://www.billieglobalbr.com.br/noticia/novas-fotos-de-billie-eilish-geram-debates-e-especulacoes-entre-fas-nas-redes/\n\n— Billie Global BR",
+   "img": "https://s2-quem.glbimg.com/s3NkUeQ0TVPz2Gc5fYTvn_EFkDs=/1200x/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_b0f0e84207c948ab8b8777be5a6a4395/internal_photos/bs/2026/i/z/g39mxZRMm8iNpl8M9Caw/be.jpg",
+   "url": "https://www.billieglobalbr.com.br/noticia/novas-fotos-de-billie-eilish-geram-debates-e-especulacoes-entre-fas-nas-redes/"
   }
  ]
 }

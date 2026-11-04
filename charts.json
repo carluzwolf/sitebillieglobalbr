@@ -1,36 +1,36 @@
 {
  "sources": {
   "spotify_global": {
-   "date": "2026-11-02",
+   "date": "2026-11-03",
    "size": 200,
    "unit": "streams",
    "entries": [
     {
      "pos": 26,
-     "move": 11,
+     "move": 0,
      "title": "BIRDS OF A FEATHER",
      "artist": "Billie Eilish",
      "id": "6dOtVTDdiauQNBQEDOtlAB",
-     "days": 900,
+     "days": 901,
      "peak": 1,
-     "streams": 2012149,
-     "streams_delta": 199796,
-     "total": 4026549519,
+     "streams": 2137579,
+     "streams_delta": 125430,
+     "total": 4028687098,
      "url": "https://open.spotify.com/track/6dOtVTDdiauQNBQEDOtlAB",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
      "dur": 210
     },
     {
-     "pos": 51,
-     "move": 12,
+     "pos": 49,
+     "move": 2,
      "title": "WILDFLOWER",
      "artist": "Billie Eilish",
      "id": "3QaPy1KgI7nu9FJEQUgn6h",
-     "days": 900,
+     "days": 901,
      "peak": 8,
-     "streams": 1646293,
-     "streams_delta": 181531,
-     "total": 2277622239,
+     "streams": 1706352,
+     "streams_delta": 60059,
+     "total": 2279328591,
      "url": "https://open.spotify.com/track/3QaPy1KgI7nu9FJEQUgn6h",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
      "dur": 261
@@ -39,7 +39,7 @@
    "platform": "spotify",
    "region": "global",
    "home": "https://charts.spotify.com/charts/view/regional-global-daily/latest",
-   "fetched": "2026-11-04T17:46Z"
+   "fetched": "2026-11-04T23:15Z"
   },
   "spotify_br": {
    "date": "2026-11-02",
@@ -49,7 +49,7 @@
    "platform": "spotify",
    "region": "br",
    "home": "https://charts.spotify.com/charts/view/regional-br-daily/latest",
-   "fetched": "2026-11-04T17:46Z"
+   "fetched": "2026-11-04T23:15Z"
   },
   "apple_br": {
    "date": null,
@@ -57,7 +57,7 @@
    "unit": null,
    "entries": [
     {
-     "pos": 87,
+     "pos": 86,
      "title": "BIRDS OF A FEATHER",
      "artist": "Billie Eilish",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
@@ -65,7 +65,7 @@
      "dur": 210
     },
     {
-     "pos": 97,
+     "pos": 99,
      "title": "WILDFLOWER",
      "artist": "Billie Eilish",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
@@ -76,7 +76,7 @@
    "platform": "apple",
    "region": "br",
    "home": "",
-   "fetched": "2026-11-04T17:46Z"
+   "fetched": "2026-11-04T23:15Z"
   },
   "apple_us": {
    "date": null,
@@ -86,7 +86,7 @@
    "platform": "apple",
    "region": "us",
    "home": "",
-   "fetched": "2026-11-04T17:46Z"
+   "fetched": "2026-11-04T23:15Z"
   },
   "deezer_world": {
    "date": "2026-11-04",
@@ -106,7 +106,7 @@
    "platform": "deezer",
    "region": "world",
    "home": "https://www.deezer.com/playlist/3155776842",
-   "fetched": "2026-11-04T17:46Z"
+   "fetched": "2026-11-04T23:15Z"
   },
   "billboard_global200": {
    "date": "2026-10-31",
@@ -116,7 +116,7 @@
    "platform": "billboard",
    "region": "global200",
    "home": "https://www.billboard.com/charts/billboard-global-200/",
-   "fetched": "2026-11-04T17:46Z"
+   "fetched": "2026-11-04T23:15Z"
   },
   "billboard_globalexus": {
    "date": "2026-10-31",
@@ -126,7 +126,7 @@
    "platform": "billboard",
    "region": "globalexus",
    "home": "https://www.billboard.com/charts/billboard-global-excl-us/",
-   "fetched": "2026-11-04T17:46Z"
+   "fetched": "2026-11-04T23:15Z"
   }
  },
  "streams": [
@@ -470,6 +470,11 @@
   {
    "title": "Happier Than Ever",
    "mark": 1500000000,
+   "date": "2026-11-04"
+  },
+  {
+   "title": "Happier Than Ever",
+   "mark": 1500000000,
    "date": "2026-11-03"
   },
   {
@@ -519,6 +524,11 @@
     "d": "2026-11-02",
     "n": 2,
     "best": 26
+   },
+   {
+    "d": "2026-11-03",
+    "n": 2,
+    "best": 26
    }
   ],
   "spotify_br": [
@@ -552,7 +562,7 @@
    {
     "d": "2026-11-04",
     "n": 2,
-    "best": 87
+    "best": 86
    }
   ],
   "apple_us": [
@@ -863,7 +873,7 @@
   }
  },
  "streams_date": "2026-11-04",
- "updated": "2026-11-04T17:46Z",
+ "updated": "2026-11-04T23:15Z",
  "errors": [
   "apple_global: HTTP Error 404: Not Found"
  ]

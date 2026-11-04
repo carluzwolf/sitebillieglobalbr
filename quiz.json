@@ -1,115 +1,115 @@
 {
- "date": "2026-11-03",
+ "date": "2026-11-04",
  "questions": [
   {
-   "q": "Qual música abre a tracklist do segundo álbum de estúdio de Billie Eilish, Happier Than Ever?",
+   "q": "Qual é a profissão dos pais de Billie Eilish, Maggie Baird e Patrick O'Connell?",
    "o": [
-    "My Future",
-    "Oxytocin",
-    "Getting Older",
-    "Billie Bossa Nova"
-   ],
-   "a": 2,
-   "e": "Getting Older é a faixa que abre o álbum Happier Than Ever de 2021."
-  },
-  {
-   "q": "Qual o nome do instrumental assinado por Finneas que serve como introdução para o álbum Hit Me Hard and Soft?",
-   "o": [
-    "Skinny",
-    "Chihiro",
-    "Lunch",
-    "Hit Me Hard and Soft"
-   ],
-   "a": 3,
-   "e": "Hit Me Hard and Soft é o título da faixa instrumental que abre o álbum homônimo."
-  },
-  {
-   "q": "Em qual premiação cinematográfica Billie Eilish e Finneas conquistaram seu segundo Oscar por What Was I Made For?",
-   "o": [
-    "Golden Globes",
-    "Critics Choice Awards",
-    "BAFTA Awards",
-    "Academy Awards"
-   ],
-   "a": 3,
-   "e": "A dupla venceu o Oscar de Melhor Canção Original na cerimônia da Academia."
-  },
-  {
-   "q": "Qual o nome do famoso talk show americano onde Billie Eilish fez sua primeira aparição musical televisiva em 2017?",
-   "o": [
-    "The Tonight Show",
-    "The Ellen Show",
-    "Jimmy Kimmel Live",
-    "Late Night with Seth Meyers"
+    "Professores de dança",
+    "Atores e músicos",
+    "Produtores de cinema",
+    "Engenheiros de som"
    ],
    "a": 1,
-   "e": "Billie se apresentou no programa da Ellen DeGeneres no início de sua carreira."
+   "e": "Os pais de Billie Eilish trabalham na indústria do entretenimento como atores e músicos."
   },
   {
-   "q": "Qual o nome da turnê mundial realizada por Billie Eilish para promover o álbum Hit Me Hard and Soft?",
+   "q": "Em qual festival de música mundial Billie Eilish fez sua estreia como atração principal em 2019?",
    "o": [
-    "When We All Fall Asleep Tour",
-    "Happier Than Ever Tour",
-    "Where Do We Go? World Tour",
-    "Hit Me Hard and Soft: The Tour"
+    "Glastonbury",
+    "Rock in Rio",
+    "Lollapalooza",
+    "Coachella"
    ],
    "a": 3,
-   "e": "Hit Me Hard and Soft: The Tour é a turnê oficial de divulgação do terceiro álbum de estúdio."
+   "e": "Billie Eilish se apresentou como headliner do Coachella pela primeira vez em 2019."
   },
   {
-   "q": "Qual cor de cabelo chamou a atenção da mídia quando Billie Eilish abandonou o visual preto com raiz verde em 2021?",
+   "q": "Qual o nome da faixa que encerra a tracklist do álbum Happier Than Ever?",
    "o": [
-    "Loiro platinado",
-    "Castanho natural",
-    "Azul elétrico",
-    "Vermelho intenso"
+    "Male Fantasy",
+    "Happier Than Ever",
+    "NDA",
+    "Halley's Comet"
    ],
    "a": 0,
-   "e": "Billie chocou o público ao estrear o cabelo loiro platinado na capa da Vogue britânica."
+   "e": "A música Male Fantasy é a faixa final do segundo álbum de estúdio de Billie Eilish."
   },
   {
-   "q": "Qual artista pop estabeleceu uma parceria vocal e de remix com Billie Eilish na faixa Bad Guy de 2019?",
+   "q": "Qual o nome do designer de moda e marca de luxo com quem Billie colaborou no Met Gala de 2021?",
    "o": [
-    "Taylor Swift",
-    "Dua Lipa",
-    "Ariana Grande",
-    "Justin Bieber"
+    "Oscar de la Renta",
+    "Chanel",
+    "Vivienne Westwood",
+    "Gucci"
    ],
-   "a": 3,
-   "e": "Justin Bieber participou do remix oficial da música Bad Guy."
+   "a": 0,
+   "e": "Billie Eilish vestiu Oscar de la Renta no Met Gala de 2021 sob a condição de que a marca abolisse o uso de peles."
   },
   {
-   "q": "Qual o nome do documentário dirigido por R.J. Cutler que acompanha o processo de criação do álbum de estreia de Billie?",
+   "q": "Qual o nome do curta-metragem dirigido e estrelado por Billie Eilish exibido em seus shows em 2020?",
    "o": [
-    "Happier Than Ever Film",
-    "The World's a Little Blurry",
-    "Smile Live in London",
-    "Not My Responsibility"
+    "Not My Responsibility",
+    "Lost Cause",
+    "The 30th",
+    "Happier Than Ever"
    ],
-   "a": 1,
-   "e": "The World's a Little Blurry retrata os bastidores da produção de seu primeiro álbum."
+   "a": 0,
+   "e": "Not My Responsibility é o poderoso curta-metragem sobre autoimagem exibido na turnê Where Do We Go?."
   },
   {
-   "q": "Qual é o título da canção lançada por Billie Eilish e Rosalía em 2020 para a trilha sonora da série Euphoria?",
+   "q": "Em que ano Billie Eilish lançou o single exclusivo de Natal chamado Bitches Broken Hearts?",
    "o": [
-    "No Time To Die",
-    "Lo Vas A Olvidar",
-    "Copines",
-    "Encanto"
-   ],
-   "a": 1,
-   "e": "Lo Vas A Olvidar foi o single bilíngue lançado em colaboração com a cantora Rosalía."
-  },
-  {
-   "q": "Qual faixa do álbum Hit Me Hard and Soft foi escolhida como o primeiro single oficial do projeto em 2024?",
-   "o": [
-    "Birds of a Feather",
-    "Wildflower",
-    "Lunch",
-    "Chihiro"
+    "2019",
+    "2018",
+    "2017",
+    "2020"
    ],
    "a": 2,
-   "e": "Lunch foi lançada como o single principal que antecedeu o lançamento do álbum."
+   "e": "A música Bitches Broken Hearts foi lançada originalmente no SoundCloud em 2017 antes de ir para as plataformas."
+  },
+  {
+   "q": "Qual artista britânico convidou Billie Eilish para cantar a música tema de James Bond?",
+   "o": [
+    "Daniel Craig",
+    "Sam Smith",
+    "Paul McCartney",
+    "Hans Zimmer"
+   ],
+   "a": 3,
+   "e": "A trilha sonora de No Time to Die foi composta por Hans Zimmer e contou com Billie Eilish na faixa-título."
+  },
+  {
+   "q": "Qual é o nome da faixa colaborativa entre Billie Eilish e Khalid lançada em 2018?",
+   "o": [
+    "bury a friend",
+    "lovely",
+    "when the party's over",
+    "ocean eyes"
+   ],
+   "a": 1,
+   "e": "A música lovely, em parceria com Khalid, faz parte da trilha sonora da série 13 Reasons Why."
+  },
+  {
+   "q": "Qual o nome da organização de direitos dos animais que nomeou Billie Eilish como Mulher do Ano em 2021?",
+   "o": [
+    "PETA",
+    "Greenpeace",
+    "ASPCA",
+    "WWF"
+   ],
+   "a": 0,
+   "e": "A PETA reconheceu o ativismo vegano de Billie Eilish ao nomeá-la Mulher do Ano em 2021."
+  },
+  {
+   "q": "Qual faixa do álbum Hit Me Hard and Soft apresenta uma mudança drástica de ritmo e tom na metade de sua duração?",
+   "o": [
+    "Wildflower",
+    "Lunch",
+    "Skinny",
+    "L'Amour de Ma Vie"
+   ],
+   "a": 3,
+   "e": "L'Amour de Ma Vie transita de uma balada pop melancólica para uma batida eletrônica dançante."
   }
  ],
  "history": [
@@ -132,7 +132,17 @@
   "Qual artista pop estabeleceu uma parceria vocal e de remix com Billie Eilish na faixa Bad Guy de 2019?",
   "Qual o nome do documentário dirigido por R.J. Cutler que acompanha o processo de criação do álbum de estreia de Billie?",
   "Qual é o título da canção lançada por Billie Eilish e Rosalía em 2020 para a trilha sonora da série Euphoria?",
-  "Qual faixa do álbum Hit Me Hard and Soft foi escolhida como o primeiro single oficial do projeto em 2024?"
+  "Qual faixa do álbum Hit Me Hard and Soft foi escolhida como o primeiro single oficial do projeto em 2024?",
+  "Qual é a profissão dos pais de Billie Eilish, Maggie Baird e Patrick O'Connell?",
+  "Em qual festival de música mundial Billie Eilish fez sua estreia como atração principal em 2019?",
+  "Qual o nome da faixa que encerra a tracklist do álbum Happier Than Ever?",
+  "Qual o nome do designer de moda e marca de luxo com quem Billie colaborou no Met Gala de 2021?",
+  "Qual o nome do curta-metragem dirigido e estrelado por Billie Eilish exibido em seus shows em 2020?",
+  "Em que ano Billie Eilish lançou o single exclusivo de Natal chamado Bitches Broken Hearts?",
+  "Qual artista britânico convidou Billie Eilish para cantar a música tema de James Bond?",
+  "Qual é o nome da faixa colaborativa entre Billie Eilish e Khalid lançada em 2018?",
+  "Qual o nome da organização de direitos dos animais que nomeou Billie Eilish como Mulher do Ano em 2021?",
+  "Qual faixa do álbum Hit Me Hard and Soft apresenta uma mudança drástica de ritmo e tom na metade de sua duração?"
  ],
  "bank": [
   {

@@ -15,9 +15,21 @@
   "imgv": 4,
   "ogt": 0,
   "orig_d": "The Conversation reports that people with Tourette syndrome, like Billie Eilish, often suppress tics, an exhausting process crucial for treatment and understanding.",
-  "trt": 1,
   "slug": "people-with-tourette-syndrome-like-billie-eilish-use-everything-in-their-power",
-  "locked": false
+  "locked": false,
+  "tries3": 1,
+  "tr": {
+   "en": {
+    "t": "People with Tourette syndrome, like Billie Eilish, use everything in their power to suppress tics. This exhausting process is key to treatment.",
+    "d": "The Conversation reports that people with Tourette syndrome, like Billie Eilish, often suppress tics, an exhausting process crucial for treatment and understanding.",
+    "body": []
+   },
+   "es": {
+    "t": "Las personas con síndrome de Tourette, como Billie Eilish, usan todo lo que está a su alcance para reprimir los tics. Este proceso agotador es clave para el tratamiento.",
+    "d": "The Conversation informa que las personas con síndrome de Tourette, como Billie Eilish, a menudo reprimen los tics, un proceso agotador crucial para el tratamiento y la comprensión.",
+    "body": []
+   }
+  }
  },
  {
   "k": "billieeilishs20000tourlinkeddonationhelpedplant150nativetreesina6000squarefootte",
@@ -3909,8 +3921,8 @@
  },
  {
   "k": "billieeilishandfinneasjohnhardyjewelrycollectionwheretobuy",
-  "t": "Billie Eilish and Finneas' John Hardy Jewelry Collection: Where to Buy",
-  "d": "The duo's latest creative collaboration goes beyond music, with jewelry pieces available Oct. 21.",
+  "t": "Billie Eilish e Finneas lançam coleção exclusiva de joias sustentáveis em parceria com a John Hardy",
+  "d": "Os irmãos expandem horizontes criativos com uma linha inédita de joias artesanais desenvolvidas em colaboração com a marca de luxo.",
   "s": "Billboard on MSN",
   "u": "https://www.msn.com/en-us/news/other/billie-eilish-and-finneas-john-hardy-jewelry-collection-where-to-buy/ar-AA2fKYf0",
   "img": "",
@@ -3921,22 +3933,22 @@
   "imgs": [],
   "pics": [],
   "imgv": 4,
-  "ogt": 2,
-  "tries3": 2,
+  "ogt": 3,
+  "tries3": 3,
   "orig_d": "The duo's latest creative collaboration goes beyond music, with jewelry pieces available Oct. 21.",
   "slug": "billie-eilish-and-finneas-john-hardy-jewelry-collection-where-to-buy",
-  "tr": {
-   "en": {
-    "t": "Billie Eilish and Finneas' John Hardy Jewelry Collection: Where to Buy",
-    "d": "The duo's latest creative collaboration goes beyond music, with jewelry pieces available Oct. 21.",
-    "body": []
-   },
-   "es": {
-    "t": "Colección de joyería de John Hardy por Billie Eilish y Finneas: Dónde comprar",
-    "d": "La más reciente colaboración creativa del dúo va más allá de la música, con piezas de joyería disponibles a partir del 21 de octubre.",
-    "body": []
-   }
-  }
+  "alts": [],
+  "mv": 1,
+  "body": [
+   "A criatividade de Billie Eilish e de seu irmão e produtor, Finneas O'Connell, sempre ultrapassou as barreiras da indústria fonográfica. Conhecidos mundialmente por moldar a estética da música pop alternativa com álbuns aclamados e turnês esgotadas, os dois agora decidiram explorar um território totalmente novo ao unirem forças com a renomada marca de joias sustentáveis John Hardy para o lançamento de uma coleção colaborativa exclusiva.",
+   "Disponível ao público a partir de 21 de outubro de 2026, a linha de acessórios materializa a visão artística marcante da dupla em peças de metal e pedrarias. A iniciativa reflete o histórico dos artistas em associar suas imagens a projetos que priorizam a responsabilidade ambiental, alinhando-se aos padrões de sustentabilidade e práticas éticas defendidos pela grife de joalheria.",
+   "Embora o ecossistema criativo dos irmãos seja amplamente associado a produções audiovisuais e figurinos icônicos nos palcos, esta empreitada marca um passo inédito na incursão deles pelo design de alta-costura. Fãs que acompanham a trajetória da cantora desde a era de When We All Fall Asleep, Where Do We Go? reconhecem o apreço dela por acessórios marcantes, anéis robustos e correntes que sempre compuseram seus visuais inconfundíveis.",
+   "A John Hardy é amplamente reconhecida no mercado de luxo global por utilizar prata 100% reciclada e ouro de origem ética em suas criações artesanais na Indonésia. A escolha da marca para esta parceria especial com os músicos não foi por acaso, pois compartilha de valores fundamentais defendidos por Billie e Finneas no que tange à preservação do planeta e ao consumo consciente.",
+   "Detalhes específicos sobre o design de cada peça, os materiais exatos empregados e os pontos de venda físicos selecionados começaram a ser revelados pelas redes sociais oficiais da marca e dos artistas. Até o momento, informações sobre possíveis edições limitadas ou planos para expansão futura da linha não tiveram confirmação oficial por parte dos representantes da dupla.",
+   "Para os admiradores brasileiros que desejam adquirir os itens, a recomendação é acompanhar os canais oficiais de comércio eletrônico da John Hardy e as atualizações do portal Billie Global BR. A collab consolida mais um capítulo na carreira multifacetada dos irmãos, provando que a influência deles dita tendências não apenas nos fones de ouvido, mas também na moda mundial."
+  ],
+  "v": 2,
+  "trt": 1
  },
  {
   "k": "billieeilishfinneasnewjohnhardycollectiontakeswildflowerfromsoftfloralstochunkyc",

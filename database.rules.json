@@ -20,6 +20,7 @@
           }
         },
         "wk":  { "$w": { ".validate": "newData.val() === 1 && !data.exists()" } },
+        "bonus": { "$b": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 20 && !data.exists() && now >= 1793901600000 && now <= 1793928600000" } },
         "ach": { "$a": { ".validate": "newData.isNumber() && !data.exists()" } },
         "$other": { ".validate": false }
       }
@@ -34,6 +35,7 @@
         "n": { ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 30" },
         "p": { ".validate": "newData.isString() && newData.val().length <= 15000" },
         "x": { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= (data.exists() ? data.val() : 0) + 300" },
+        "g": { ".validate": "newData.val() === 1" },
         "$other": { ".validate": false }
       }
     }

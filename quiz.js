@@ -181,4 +181,127 @@ if(!S.bzFail)return '<div class="empty">'+L("loading")+'</div>';
 setTimeout(function(){location.hash="#/quiz"},0);return ""}
 
 /* ====== AUTENTICAÇÃO ====== */
-function go(){var em=($("qz-em")||{}).value||"",pw=($("qz
+function go(){var em=($("qz-em")||{}).value||"",pw=($("qz-pw")||{}).value||"",nm=$("qz-nm")?$("qz-nm").value.trim():"";
+S.fEm=em.trim();S.fNm=nm;S.err="";S.info="";
+if(S.mode==="up"){if(nm.length<2){S.err=L("e_name");return redraw()}S.pend=nm.slice(0,30)}
+S.busy=true;redraw();
+(S.mode==="up"?S.auth.createUserWithEmailAndPassword(S.fEm,pw):S.auth.signInWithEmailAndPassword(S.fEm,pw)).then(function(c){S.busy=false;
+if(S.mode==="up"&&c.user)c.user.updateProfile({displayName:S.pend}).catch(function(){});}).catch(function(e){S.busy=false;S.err=errMsg(e);redraw()})}
+function google(){S.err="";var pr=new firebase.auth.GoogleAuthProvider();
+S.auth.signInWithPopup(pr).catch(function(e){var c=e&&e.code;
+if(c==="auth/popup-blocked"||c==="auth/operation-not-supported-in-this-environment")return S.auth.signInWithRedirect(pr);
+if(c!=="auth/popup-closed-by-user"&&c!=="auth/cancelled-popup-request"){S.err=errMsg(e);redraw()}})}
+function sw(){S.mode=S.mode==="in"?"up":"in";S.err="";S.info="";redraw()}
+function forgot(){var em=($("qz-em")||{}).value||"";em=em.trim();S.fEm=em;S.err="";S.info="";if(!em){S.err=L("needEm");return redraw()}
+S.auth.sendPasswordResetEmail(em).then(function(){S.info=L("resetOk");redraw()}).catch(function(e){S.err=errMsg(e);redraw()})}
+function logout(){S.auth.signOut().then(function(){S.play=null;location.hash="#/quiz"})}
+
+/* ====== PERFIL ====== */
+function saveProf(name,photo){var uid=S.user.uid,u={};
+if(name!=null){u["users/"+uid+"/name"]=name;u["rank/"+uid+"/n"]=name}
+if(photo!=null){u["users/"+uid+"/photo"]=photo;u["rank/"+uid+"/p"]=photo}
+return S.db.ref().update(u).then(function(){if(name!=null)S.me.name=name;if(photo!=null)S.me.photo=photo;S.rankT=0;hdr()})}
+function saveName(){var v=($("qz-pn")||{}).value||"";v=v.trim().slice(0,30);if(v.length<2){S.err=L("e_name");return redraw()}
+S.err="";saveProf(v,null).then(function(){S.info=L("saved");redraw()}).catch(function(){S.err=L("e_def");redraw()})}
+function photo(inp){var f=inp.files&&inp.files[0];if(!f)return;var r=new FileReader();
+r.onload=function(){var im=new Image();im.onload=function(){var c=document.createElement("canvas"),z=96;c.width=c.height=z;var x=c.getContext("2d"),s=Math.min(im.width,im.height);
+x.drawImage(im,(im.width-s)/2,(im.height-s)/2,s,s,0,0,z,z);var d=c.toDataURL("image/jpeg",.72);
+saveProf(null,d).then(function(){S.info=L("saved");redraw()}).catch(function(){S.err=L("e_def");redraw()})};
+im.onerror=function(){S.err=L("e_def");redraw()};im.src=r.result};r.readAsDataURL(f)}
+
+/* ====== RANKING ====== */
+function loadRank(){S.rankT=Date.now();S.rankErr=false;
+S.db.ref("rank").orderByChild("x").limitToLast(50).once("value").then(function(s){var a=[];s.forEach(function(c){var v=c.val()||{};a.push({id:c.key,n:v.n||"?",p:v.p||"",x:v.x||0,g:v.g===1})});
+a.sort(function(p,q){return q.x-p.x});S.rank=a;redraw()}).catch(function(){S.rank=[];S.rankErr=true;redraw()})}
+
+/* ====== TELAS ====== */
+function bar(p){return '<div class="qz-bar"><i style="width:'+p+'%"></i></div>'}
+function tabs(){var v=S.view;return '<nav class="qz-tabs"><a href="#/quiz"'+((v==="hub"||v==="play"||v==="bonus")?' class="on"':'')+'>'+L("tQ")+'</a><a href="#/quiz/ranking"'+(v==="rank"?' class="on"':'')+'>'+L("tR")+'</a><a href="#/quiz/perfil"'+(v==="prof"?' class="on"':'')+'>'+L("tP")+'</a></nav>'}
+function msgs(){return (S.err?'<div class="qz-msg bad">'+esc(S.err)+'</div>':'')+(S.info?'<div class="qz-msg ok">'+esc(S.info)+'</div>':'')}
+function authCard(){var up=S.mode==="up";
+return '<div class="qz-card qz-hero"><h3>'+L("heroT")+'</h3><p>'+L("heroD")+'</p></div>'+
+'<div class="qz-card qz-auth"><h3>'+(up?L("signup"):L("login"))+'</h3>'+msgs()+
+'<form onsubmit="QZ.go();return false">'+(up?'<input id="qz-nm" type="text" maxlength="30" autocomplete="nickname" placeholder="'+ea(L("nameF"))+'" value="'+ea(S.fNm)+'">':'')+
+'<input id="qz-em" type="email" autocomplete="email" placeholder="'+ea(L("email"))+'" value="'+ea(S.fEm)+'">'+
+'<input id="qz-pw" type="password" autocomplete="'+(up?'new-password':'current-password')+'" placeholder="'+ea(L("pass"))+'">'+
+'<button class="btn" type="submit"'+(S.busy?' disabled':'')+'>'+(S.busy?'…':(up?L("signup"):L("login")))+'</button></form>'+
+'<div class="qz-or"><span>'+L("or")+'</span></div>'+
+'<button class="btn o qz-g" type="button" onclick="QZ.google()"><b>G</b> '+L("google")+'</button>'+
+'<div class="qz-links"><button type="button" class="qz-lk" onclick="QZ.sw()">'+(up?L("toIn"):L("toUp"))+'</button>'+(up?'':'<button type="button" class="qz-lk" onclick="QZ.forgot()">'+L("forgot")+'</button>')+'</div></div>'}
+function meCard(){var m=S.me,lv=lvOf(m.xp);
+return '<div class="qz-card qz-me">'+av(m.photo,m.name,60)+'<div class="qz-mi"><b class="qz-nm">'+esc(m.name)+'</b><span class="qz-lv">'+lv.ic+' '+esc(lv.n)+'</span>'+bar(lv.pct)+
+'<small>'+(m.xp||0)+' XP · '+(lv.next?L("toNext",{n:lv.next-(m.xp||0),lv:lv.nn}):L("maxLv"))+'</small></div></div>'}
+function hubPage(){var m=S.me,td=today(),h=meCard();
+if(S.quizErr)return h+'<div class="qz-msg bad">'+L("quizErr")+'</div>';
+if(!S.quiz)return h+'<div class="empty">'+L("loading")+'</div>';
+ensurePlay();var ds0=doneScore(),n=qs().length,btn;
+if(ds0!==null)btn='<p class="qz-big">'+L("doneS",{n:ds0,t:n})+'</p>';
+else btn='<a class="btn" href="#/quiz/jogar">'+(S.play.ans.length?L("cont")+' ('+S.play.ans.length+'/'+n+')':L("start"))+'</a>';
+h+='<div class="qz-card"><h3>🎯 '+(ds0!==null?L("doneT"):L("dT"))+'</h3>'+(ds0===null?'<p>'+L("dD")+'</p>':'')+btn+'</div>';
+var wk=weekKey(td),c=Math.min(wkCount(m,td),WEEK_GOAL),wd=!!(m.wk&&m.wk[wk]);
+h+='<div class="qz-card"><h3>🏆 '+L("wT")+'</h3><p>'+(wd?L("wDone",{x:WEEK_XP}):L("wD",{g:WEEK_GOAL,x:WEEK_XP}))+'</p>'+bar(Math.round(c/WEEK_GOAL*100))+'<small>'+c+'/'+WEEK_GOAL+'</small></div>';
+var st=m.streak||0,ci=m.days&&m.days[td]&&m.days[td].ci;
+h+='<div class="qz-card qz-row2"><div><b>🔥 '+st+'</b><small>'+L("streak")+' · '+(st===1?L("day1"):L("days"))+'</small></div><div><b>✅</b><small>'+(ci?L("ci",{x:CHECKIN_XP}):'…')+'</small></div></div>';
+h+=bonusCard();return h}
+function playPage(){var m=S.me;
+if(S.quizErr)return '<div class="qz-msg bad">'+L("quizErr")+'</div>';
+if(!S.quiz)return '<div class="empty">'+L("loading")+'</div>';
+ensurePlay();var p=S.play,q=qs(),n=q.length;
+if(!p.res&&doneScore()!==null){setTimeout(function(){location.hash="#/quiz"},0);return '<div class="empty">'+L("loading")+'</div>'}
+if(p.res)return resultPage(p.res);
+if(p.saving)return '<div class="qz-card"><p class="qz-big">'+L("saving")+'</p></div>';
+if(p.saveErr||(!p.rev&&p.ans.length>=n)){var h0='<div class="qz-card"><p class="qz-big">'+(p.saveErr?L("saveErr"):L("saving"))+'</p><button class="btn" onclick="QZ.fin()">'+L("retry")+'</button></div>';if(!p.saveErr&&!p.fin)setTimeout(finish,0);return h0}
+var i=p.rev?p.ans.length-1:p.ans.length,Q=q[i];if(!Q)return '<div class="empty">'+L("quizErr")+'</div>';
+var sel=p.rev?p.ans[i]:-1,h='<div class="qz-card qz-q"><div class="qz-qh"><span>'+L("qn",{i:i+1,n:n})+'</span><span>'+(m.xp||0)+' XP</span></div>'+bar(Math.round(i/n*100))+'<h3 class="qz-qt">'+esc(Q.q)+'</h3><div class="qz-opts">';
+Q.o.forEach(function(o,k){var cl="qz-opt";if(p.rev){if(k===Q.a)cl+=" right";else if(k===sel)cl+=" wrong";else cl+=" dim"}
+h+='<button type="button" class="'+cl+'"'+(p.rev?' disabled':' onclick="QZ.pick('+k+')"')+'><i>'+"ABCD".charAt(k)+'</i><span>'+esc(o)+'</span></button>'});
+h+='</div>';
+if(p.rev){var okk=sel===Q.a;h+='<div class="qz-fb '+(okk?'ok':'ko')+'"><b>'+(okk?L("ok"):L("ko"))+'</b>'+(Q.e?'<p>'+esc(Q.e)+'</p>':'')+'</div><button class="btn qz-nx" onclick="QZ.nxt()">'+(p.ans.length>=n?L("seeRes"):L("next"))+'</button>'}
+return h+'</div>'}
+function resultPage(r){var m=S.me,lv=lvOf(m.xp),h='<div class="qz-card qz-res"><h3>'+L("resT")+'</h3><div class="qz-score">'+r.sc+'<small>/'+r.t+'</small></div><p>'+L("resS",{n:r.sc,t:r.t})+'</p><div class="qz-gain">+'+r.gain+' XP</div><ul class="qz-lines">';
+r.lines.forEach(function(l){h+='<li><span>'+esc(l[0])+'</span><b>+'+l[1]+'</b></li>'});h+='</ul>';
+if(r.up)h+='<div class="qz-msg ok">'+L("lvUp",{n:r.up.ic+" "+r.up.n})+'</div>';
+r.got.forEach(function(id){var a=A.filter(function(x){return x.id===id})[0];if(a)h+='<div class="qz-msg ok">'+a.ic+' '+L("newA")+': <b>'+esc(a.n[LI])+'</b></div>'});
+var tx=L("shareTx",{n:r.sc,t:r.t,lv:lv.n})+" "+location.origin+"/#/quiz";
+h+='<div class="acts" style="justify-content:center"><a class="btn" target="_blank" rel="noopener" href="https://wa.me/?text='+encodeURIComponent(tx)+'">'+L("share")+'</a><a class="btn o" href="#/quiz/ranking">'+L("tR")+'</a></div></div>';return h}
+function rankPage(){var h='<div class="qz-card"><h3>'+L("rT")+'</h3><small>'+L("rS")+'</small>';
+if(S.rank===null)return h+'<div class="empty">'+L("loading")+'</div></div>';
+if(S.rankErr)return h+'<div class="qz-msg bad">'+L("rErr")+'</div></div>';
+if(!S.rank.length)return h+'<div class="empty">'+L("rEmpty")+'</div></div>';
+var inTop=false;h+='<div class="qz-rank">';
+S.rank.forEach(function(r,i){var me=S.user&&r.id===S.user.uid,lv=lvOf(r.x);if(me)inTop=true;
+h+='<div class="qz-rr'+(me?' me':'')+'"><b class="qz-pos">'+(i<3?["🥇","🥈","🥉"][i]:"#"+(i+1))+'</b>'+av(r.p,r.n,42)+'<div class="qz-rn"><span'+(r.g?' class="qz-green"':'')+'>'+esc(r.n)+(me?' <em>('+L("you")+')</em>':'')+'</span><small>'+lv.ic+' '+esc(lv.n)+'</small></div><b class="qz-rx">'+r.x+' XP</b></div>'});
+h+='</div>';
+if(S.user&&S.me&&!inTop)h+='<div class="qz-msg">'+L("rNot")+'</div>';
+return h+'</div>'}
+function profPage(){var m=S.me,lv=lvOf(m.xp),n=cnt(m),sc=ds(m).reduce(function(a,b){return a+b},0),acc=n?Math.round(sc/(n*N)*100):0;
+var h=meCard()+'<div class="qz-card">'+msgs()+'<h3>'+L("pT")+'</h3><div class="qz-edit"><label class="btn o qz-ph">'+L("photo")+'<input type="file" accept="image/*" style="display:none" onchange="QZ.photo(this)"></label></div>'+
+'<label class="qz-lb">'+L("nameL")+'</label><div class="qz-nr"><input id="qz-pn" type="text" maxlength="30" value="'+ea(m.name)+'"><button class="btn" onclick="QZ.saveName()">'+L("save")+'</button></div></div>'+
+'<div class="qz-card qz-stats"><div><b>'+(m.xp||0)+'</b><small>'+L("stX")+'</small></div><div><b>'+n+'</b><small>'+L("stQ")+'</small></div><div><b>'+perf(m)+'</b><small>'+L("stP")+'</small></div><div><b>'+acc+'%</b><small>'+L("stA")+'</small></div></div>'+
+'<div class="qz-card"><h3>'+L("aT")+'</h3><div class="qz-ach">';
+A.forEach(function(a){var got=m.ach&&m.ach[a.id],dt=got?new Date(got).toLocaleDateString([LANG==="pt"?"pt-BR":LANG]):"";
+h+='<div class="qz-a'+(got?' on':'')+'"><span class="qz-ai">'+(got?a.ic:'🔒')+'</span><div><b>'+esc(a.n[LI])+'</b><small>'+esc(a.d[LI])+'</small>'+(got?'<em>'+esc(dt)+'</em>':'')+'</div></div>'});
+h+='</div></div><div class="qz-card"><h3>'+L("lvT")+'</h3><div class="qz-lvs">';
+LV.forEach(function(l,i){h+='<div class="qz-l'+(i===lv.i?' cur':(i<lv.i?' past':''))+'"><span>'+l.ic+'</span><b>'+esc(l.n[LI])+'</b><small>'+l.x+' XP</small></div>'});
+h+='</div></div><button class="btn o qz-out" onclick="QZ.logout()">'+L("logout")+'</button>';return h}
+
+function page(){var h='<div class="wrap qz">'+stitle(L("title"),L("stSub"))+tabs();
+if(S.fbErr)return h+'<div class="empty">'+L("fbErr")+'</div></div>';
+if(!S.ready||!S.known)return h+'<div class="empty">'+L("loading")+'</div></div>';
+if(S.view==="rank")return h+rankPage()+'</div>';
+if(!S.user)return h+authCard()+'</div>';
+if(!S.me)return h+'<div class="empty">'+L("loading")+'</div></div>';
+if(S.view==="play")return h+playPage()+'</div>';
+if(S.view==="bonus")return h+bonusPage()+'</div>';
+if(S.view==="prof")return h+profPage()+'</div>';
+return h+hubPage()+'</div>'}
+function redraw(){if(!/^#\/quiz/.test(location.hash))return;try{paint(page(),"keep")}catch(e){}}
+
+function show(h){S.view=/^#\/quiz\/ranking/.test(h)?"rank":/^#\/quiz\/perfil/.test(h)?"prof":/^#\/quiz\/jogar/.test(h)?"play":/^#\/quiz\/bonus/.test(h)?"bonus":"hub";
+S.err="";S.info="";document.title="Billie Quiz — "+SITE.name+" "+SITE.suffix;
+loadQuiz();loadBonus();redraw();
+boot().then(function(){if(!/^#\/quiz/.test(location.hash))return;if(S.view==="rank"&&S.ready&&(S.rank===null||Date.now()-S.rankT>60000))loadRank();redraw()})}
+
+return {show:show,boot:boot,go:go,google:google,sw:sw,forgot:forgot,logout:logout,pick:pick,nxt:nxt,fin:function(){if(S.play){S.play.fin=false;finish()}},saveName:saveName,photo:photo,
+_t:{weekKey:weekKey,lvOf:lvOf,addDays:addDays,pickQuiz:pickQuiz}}
+})();

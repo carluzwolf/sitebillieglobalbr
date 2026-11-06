@@ -9,7 +9,7 @@ var SDK="https://www.gstatic.com/firebasejs/10.14.1/";
 var N=10,CORRECT_XP=10,DONE_XP=20,PERFECT_XP=30,CHECKIN_XP=5,WEEK_GOAL=5,WEEK_XP=50;
 
 /* IDs (UID do Firebase) das contas verificadas. Cole aqui o ID do CARLUZ. */
-var VERIF=["COLE_AQUI_O_ID_DO_CARLUZ"];
+var VERIF=["NaIW7JOJxVVr3T4RKfn5VF7u66T2"];
 function vb(id){return VERIF.indexOf(id)>-1?' <img class="qz-vf" src="/verificado.png" alt="Verificado" title="Conta verificada">':""}
 var S={user:null,me:null,known:false,fbErr:false,ready:false,quiz:null,quizErr:false,play:null,rank:null,rankT:0,rankErr:false,busy:false,err:"",info:"",mode:"in",view:"hub",fEm:"",fNm:""};
 

@@ -74,3 +74,8 @@
 .qzb-tag{display:inline-block;font:800 11px var(--sans);background:#16ff3a;color:#04210b;border-radius:4px;padding:3px 8px;margin-bottom:8px;letter-spacing:.5px}
 .qzb-opts{display:grid;gap:8px;margin:12px 0}
 .qzb-opts.tf{grid-template-columns:1fr 1fr}
+
+/* selo de verificado */
+.qz-nl{display:flex;align-items:center;gap:6px;min-width:0}.qz-nl span{min-width:0}.qz-nl em{font:700 13px var(--sans);flex:none}
+.qz-vf{width:18px;height:18px;flex:none;vertical-align:middle;display:inline-block;margin-left:4px}.qz-nl .qz-vf{margin-left:0}
+  

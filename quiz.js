@@ -8,6 +8,9 @@ var SDK="https://www.gstatic.com/firebasejs/10.14.1/";
 /* ====== REGRAS DO JOGO (ajuste aqui) ====== */
 var N=10,CORRECT_XP=10,DONE_XP=20,PERFECT_XP=30,CHECKIN_XP=5,WEEK_GOAL=5,WEEK_XP=50;
 
+/* IDs (UID do Firebase) das contas verificadas. Cole aqui o ID do CARLUZ. */
+var VERIF=["COLE_AQUI_O_ID_DO_CARLUZ"];
+function vb(id){return VERIF.indexOf(id)>-1?' <img class="qz-vf" src="/verificado.png" alt="Verificado" title="Conta verificada">':""}
 var S={user:null,me:null,known:false,fbErr:false,ready:false,quiz:null,quizErr:false,play:null,rank:null,rankT:0,rankErr:false,busy:false,err:"",info:"",mode:"in",view:"hub",fEm:"",fNm:""};
 
 /* ====== TEXTOS (pt / en / es) ====== */
@@ -229,7 +232,7 @@ return '<div class="qz-card qz-hero"><h3>'+L("heroT")+'</h3><p>'+L("heroD")+'</p
 '<button class="btn o qz-g" type="button" onclick="QZ.google()"><b>G</b> '+L("google")+'</button>'+
 '<div class="qz-links"><button type="button" class="qz-lk" onclick="QZ.sw()">'+(up?L("toIn"):L("toUp"))+'</button>'+(up?'':'<button type="button" class="qz-lk" onclick="QZ.forgot()">'+L("forgot")+'</button>')+'</div></div>'}
 function meCard(){var m=S.me,lv=lvOf(m.xp);
-return '<div class="qz-card qz-me">'+av(m.photo,m.name,60)+'<div class="qz-mi"><b class="qz-nm">'+esc(m.name)+'</b><span class="qz-lv">'+lv.ic+' '+esc(lv.n)+'</span>'+bar(lv.pct)+
+return '<div class="qz-card qz-me">'+av(m.photo,m.name,60)+'<div class="qz-mi"><b class="qz-nm">'+esc(m.name)+vb(S.user&&S.user.uid)+'</b><span class="qz-lv">'+lv.ic+' '+esc(lv.n)+'</span>'+bar(lv.pct)+
 '<small>'+(m.xp||0)+' XP · '+(lv.next?L("toNext",{n:lv.next-(m.xp||0),lv:lv.nn}):L("maxLv"))+'</small></div></div>'}
 function hubPage(){var m=S.me,td=today(),h=meCard();
 if(S.quizErr)return h+'<div class="qz-msg bad">'+L("quizErr")+'</div>';
@@ -270,12 +273,12 @@ if(S.rankErr)return h+'<div class="qz-msg bad">'+L("rErr")+'</div></div>';
 if(!S.rank.length)return h+'<div class="empty">'+L("rEmpty")+'</div></div>';
 var inTop=false;h+='<div class="qz-rank">';
 S.rank.forEach(function(r,i){var me=S.user&&r.id===S.user.uid,lv=lvOf(r.x);if(me)inTop=true;
-h+='<div class="qz-rr'+(me?' me':'')+'"><b class="qz-pos">'+(i<3?["🥇","🥈","🥉"][i]:"#"+(i+1))+'</b>'+av(r.p,r.n,42)+'<div class="qz-rn"><span'+(r.g?' class="qz-green"':'')+'>'+esc(r.n)+(me?' <em>('+L("you")+')</em>':'')+'</span><small>'+lv.ic+' '+esc(lv.n)+'</small></div><b class="qz-rx">'+r.x+' XP</b></div>'});
+h+='<div class="qz-rr'+(me?' me':'')+'"><b class="qz-pos">'+(i<3?["🥇","🥈","🥉"][i]:"#"+(i+1))+'</b>'+av(r.p,r.n,42)+'<div class="qz-rn"><div class="qz-nl"><span'+(r.g?' class="qz-green"':'')+'>'+esc(r.n)+'</span>'+vb(r.id)+(me?'<em>('+L("you")+')</em>':'')+'</div><small>'+lv.ic+' '+esc(lv.n)+'</small></div><b class="qz-rx">'+r.x+' XP</b></div>'});
 h+='</div>';
 if(S.user&&S.me&&!inTop)h+='<div class="qz-msg">'+L("rNot")+'</div>';
 return h+'</div>'}
 function profPage(){var m=S.me,lv=lvOf(m.xp),n=cnt(m),sc=ds(m).reduce(function(a,b){return a+b},0),acc=n?Math.round(sc/(n*N)*100):0;
-var h=meCard()+'<div class="qz-card">'+msgs()+'<h3>'+L("pT")+'</h3><div class="qz-edit"><label class="btn o qz-ph">'+L("photo")+'<input type="file" accept="image/*" style="display:none" onchange="QZ.photo(this)"></label></div>'+
+var h=meCard()+'<div class="qz-card">'+msgs()+'<h3>'+L("pT")+'</h3><small style="opacity:.6;word-break:break-all">ID: '+esc(S.user?S.user.uid:"")+'</small><div class="qz-edit"><label class="btn o qz-ph">'+L("photo")+'<input type="file" accept="image/*" style="display:none" onchange="QZ.photo(this)"></label></div>'+
 '<label class="qz-lb">'+L("nameL")+'</label><div class="qz-nr"><input id="qz-pn" type="text" maxlength="30" value="'+ea(m.name)+'"><button class="btn" onclick="QZ.saveName()">'+L("save")+'</button></div></div>'+
 '<div class="qz-card qz-stats"><div><b>'+(m.xp||0)+'</b><small>'+L("stX")+'</small></div><div><b>'+n+'</b><small>'+L("stQ")+'</small></div><div><b>'+perf(m)+'</b><small>'+L("stP")+'</small></div><div><b>'+acc+'%</b><small>'+L("stA")+'</small></div></div>'+
 '<div class="qz-card"><h3>'+L("aT")+'</h3><div class="qz-ach">';

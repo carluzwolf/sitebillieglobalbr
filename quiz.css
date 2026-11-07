@@ -83,3 +83,21 @@
 /* emblema (pin) ao lado do nome */
 .qz-pin{height:44px;width:auto;max-width:88px;object-fit:contain;flex:none;vertical-align:middle;display:inline-block;margin-left:4px}
 .qz-me .qz-pin{height:56px;max-width:112px}
+
+/* moldura em volta da foto */
+.qz-fw{display:inline-flex;flex:none;padding:3px;border-radius:50%;vertical-align:middle;line-height:0}
+.qz-fw .qz-av{border:2px solid var(--bg)}
+/* galeria */
+.qz-gal h4{margin:18px 0 10px;font:800 13px var(--sans);letter-spacing:.6px;text-transform:uppercase;color:var(--mut)}
+.qz-gal p{margin-bottom:0}
+.qz-gg{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:10px}
+.qz-gt{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 8px 10px;border:2px solid var(--line);border-radius:10px;background:var(--soft);color:inherit;font-family:var(--sans);cursor:pointer;transition:transform .15s,border-color .15s,box-shadow .15s}
+.qz-gt:hover{transform:translateY(-2px);border-color:var(--mut)}
+.qz-gt:disabled{opacity:.6;cursor:wait}
+.qz-gt.on{border-color:var(--red);box-shadow:0 0 0 3px rgba(229,9,20,.15)}
+.qz-gi{display:grid;place-items:center;height:64px;width:100%}
+.qz-gi img{max-height:64px;max-width:100%;object-fit:contain}
+.qz-gt b{font:800 12.5px/1.25 var(--sans);text-align:center;word-break:break-word}
+.qz-gt em{font:800 10.5px var(--sans);font-style:normal;color:var(--red);letter-spacing:.4px;text-transform:uppercase;min-height:13px}
+.qz-ge{padding:16px;border:2px dashed var(--line);border-radius:10px;text-align:center;color:var(--mut);font:14px/1.5 var(--sans)}
+                                   

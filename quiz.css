@@ -81,4 +81,5 @@
   
 
 /* emblema (pin) ao lado do nome */
-.qz-pin{height:22px;width:auto;max-width:44px;object-fit:contain;flex:none;vertical-align:middle;display:inline-block;margin-left:4px}.qz-nl .qz-pin{margin-left:0}
+.qz-pin{height:36px;width:auto;max-width:72px;object-fit:contain;flex:none;vertical-align:middle;display:inline-block;margin-left:4px}
+.qz-me .qz-pin{height:46px;max-width:92px}

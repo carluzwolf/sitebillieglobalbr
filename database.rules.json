@@ -73,7 +73,18 @@
           }
         },
         "pin": {
-          ".validate": "newData.isString() && (newData.val() === 'birds' || newData.val() === 'chihiro' || newData.val() === 'lunch') && !data.exists() && root.child('bzr').child($uid).exists()"
+          ".validate": "newData.isString() && (newData.val() === 'birds' || newData.val() === 'chihiro' || newData.val() === 'lunch') && ((!data.exists() && root.child('bzr').child($uid).exists()) || root.child('pins').child(newData.val()).child($uid).exists())"
+        },
+        "own": {
+          "$k": {
+            ".validate": "newData.val() === 1 && !data.exists() && ($k === 'neon' || $k.matches(/^f_[a-z0-9_]{1,20}$/))"
+          }
+        },
+        "fx": {
+          ".validate": "newData.val() === 'neon' && newData.parent().child('own').child('neon').exists()"
+        },
+        "frame": {
+          ".validate": "newData.isString() && newData.val().length <= 20 && newData.parent().child('own').child('f_' + newData.val()).exists()"
         }
       }
     },
@@ -102,6 +113,9 @@
         },
         "b": {
           ".validate": "newData.isString() && (newData.val() === 'birds' || newData.val() === 'chihiro' || newData.val() === 'lunch')"
+        },
+        "f": {
+          ".validate": "newData.isString() && newData.val().length <= 20 && root.child('users').child($uid).child('own').child('f_' + newData.val()).exists()"
         }
       }
     },

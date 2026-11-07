@@ -7,6 +7,9 @@ var CFG={apiKey:"AIzaSyBRnitmkaXTvn46Nvb7Xsd2Cf-4h4hh-24",authDomain:"siteoficia
 var SDK="https://www.gstatic.com/firebasejs/10.14.1/";
 /* ====== REGRAS DO JOGO (ajuste aqui) ====== */
 var N=10,CORRECT_XP=10,DONE_XP=20,PERFECT_XP=30,CHECKIN_XP=5,WEEK_GOAL=5,WEEK_XP=50;
+/* Compartilhe e ganhe: cada 5 envios no WhatsApp = 50 XP, no máximo 4 vezes por dia (200 XP) */
+var SH_PER=5,SH_XP=50,SH_DAY=4,SH_MAX=SH_PER*SH_DAY,SH_AWAY=10000,SH_WAIT=600000;
+var CANAL=(typeof LINK_CANAL!=="undefined"&&LINK_CANAL)||"https://whatsapp.com/channel/0029VavaVBp5kg77PEh3Bq2g";
 
 /* IDs (UID do Firebase) das contas verificadas. Cole aqui o ID do CARLUZ. */
 var VERIF=["NaIW7JOJxVVr3T4RKfn5VF7u66T2"];
@@ -68,7 +71,20 @@ pT:["Meu perfil","My profile","Mi perfil"],photo:["Trocar foto","Change photo","
 logout:["Sair da conta","Sign out","Cerrar sesión"],
 stQ:["Quizzes feitos","Quizzes done","Quizzes hechos"],stP:["Gabaritos","Perfect scores","Puntajes perfectos"],stA:["Aproveitamento","Accuracy","Aprovechamiento"],stX:["XP total","Total XP","XP total"],
 aT:["Histórico de conquistas","Achievements","Historial de logros"],aLock:["Bloqueada","Locked","Bloqueado"],
-lvT:["Níveis","Levels","Niveles"]
+lvT:["Níveis","Levels","Niveles"],
+shT:["Compartilhe e ganhe","Share and earn","Comparte y gana"],
+shD:["Envie o canal de WhatsApp da Billie Global BR para {n} contatos e ganhe +{x} XP. Dá para repetir até {m} vezes por dia (até {t} XP).","Send the Billie Global BR WhatsApp channel to {n} contacts and earn +{x} XP. You can repeat up to {m} times a day (up to {t} XP).","Envía el canal de WhatsApp de Billie Global BR a {n} contactos y gana +{x} XP. Puedes repetir hasta {m} veces al día (hasta {t} XP)."],
+shBtn:["Compartilhar no WhatsApp","Share on WhatsApp","Compartir en WhatsApp"],
+shProg:["{c}/{n} envios · hoje: {g}/{t} XP","{c}/{n} sends · today: {g}/{t} XP","{c}/{n} envíos · hoy: {g}/{t} XP"],
+shTx:["Ei! Acompanhe a Billie Eilish pelo canal de WhatsApp, o maior canal de WhatsApp do Brasil sobre a Billie Eilish. Acompanhe pela Billie Global BR 🖤\n\n{l}","Hey! Follow Billie Eilish on WhatsApp, the biggest WhatsApp channel in Brazil about Billie Eilish. Follow it through Billie Global BR 🖤\n\n{l}","¡Ey! Sigue a Billie Eilish en WhatsApp, el canal de WhatsApp más grande de Brasil sobre Billie Eilish. Síguela con Billie Global BR 🖤\n\n{l}"],
+shWait:["Abrimos o WhatsApp. Selecione o contato, toque em enviar e volte para cá: contamos o envio quando você voltar.","We opened WhatsApp. Pick a contact, tap send and come back here: we count the send when you return.","Abrimos WhatsApp. Elige un contacto, toca en enviar y vuelve aquí: contamos el envío cuando regreses."],
+shOk:["Envio contado! {c}/{n} 🎉","Send counted! {c}/{n} 🎉","¡Envío contado! {c}/{n} 🎉"],
+shWin:["Barrinha completa! +{x} XP ganhos 🎉","Bar complete! +{x} XP earned 🎉","¡Barra completa! +{x} XP ganados 🎉"],
+shShort:["Você voltou rápido demais, então não contamos esse envio. Toque no botão, escolha o contato e envie a mensagem.","You came back too fast, so we did not count that send. Tap the button, pick a contact and send the message.","Volviste demasiado rápido, así que no contamos ese envío. Toca el botón, elige un contacto y envía el mensaje."],
+shFull:["Limite de hoje atingido (+{t} XP). Volte amanhã para compartilhar de novo!","Today's limit reached (+{t} XP). Come back tomorrow to share again!","Límite de hoy alcanzado (+{t} XP). ¡Vuelve mañana para compartir de nuevo!"],
+shErr:["Não foi possível salvar o envio agora. Tente de novo.","Could not save the send right now. Try again.","No se pudo guardar el envío ahora. Inténtalo de nuevo."],
+shPopT:["Compartilhe e ganhe XP 💚","Share and earn XP 💚","Comparte y gana XP 💚"],
+shLater:["Agora não","Not now","Ahora no"]
 };
 function L(k,o){var a=T[k],s=a?a[LI]:k;if(o)for(var x in o)s=s.split("{"+x+"}").join(o[x]);return s}
 
@@ -183,6 +199,52 @@ function bonusPage(){try{if(window.QZB)return QZB.page(X)}catch(e){}
 if(!S.bzFail)return '<div class="empty">'+L("loading")+'</div>';
 setTimeout(function(){location.hash="#/quiz"},0);return ""}
 
+/* ====== COMPARTILHE E GANHE (WhatsApp) ======
+   O site não consegue "ver" dentro do WhatsApp. A detecção é: o botão abre o WhatsApp; o envio só conta
+   quando a pessoa VOLTA para o site depois de ficar fora por pelo menos SH_AWAY (10s). Cada envio exige novo clique. */
+function shCnt(){var m=S.me,d=m&&m.days&&m.days[today()];return Math.max(0,Math.min(SH_MAX,(d&&typeof d.sh==="number")?d.sh:0))}
+function shTxt(){return L("shTx",{l:CANAL})}
+function shStyle(){if(document.getElementById("qz-sh-css"))return;var s=document.createElement("style");s.id="qz-sh-css";
+s.textContent=".qz-sh .qz-bar{height:14px}.qz-sh .btn{width:100%;text-align:center;margin-top:6px}.qz-sh .btn[disabled]{opacity:.55}.qz-sh .qz-msg{margin:8px 0 0}"+
+"#qz-pop{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;padding:18px}"+
+"#qz-pop .qz-card{max-width:420px;width:100%;margin:0;text-align:center}#qz-pop .btn{width:100%;margin-top:8px}";document.head.appendChild(s)}
+function shAway(){if(!S.shLeft)S.shLeft=Date.now()}
+function shBack(){var p=S.shPend,left=S.shLeft;S.shLeft=0;if(!p||!left||!S.user||!S.me)return;
+if(Date.now()-p>SH_WAIT){S.shPend=0;S.shMsg="";redraw();return}
+var away=Date.now()-left;S.shPend=0;
+if(away<SH_AWAY){S.shMsg=L("shShort");S.shKind="bad";redraw();return}
+shCount()}
+function shCount(){if(S.shBusy||!S.user||!S.me)return;var td=today(),n=shCnt();
+if(n>=SH_MAX){S.shMsg=L("shFull",{t:SH_XP*SH_DAY});S.shKind="ok";redraw();return}
+var nn=n+1,f={},gain=0,win=nn%SH_PER===0;f["days/"+td+"/sh"]=nn;if(win){f["days/"+td+"/shr"]=nn/SH_PER;gain=SH_XP}
+S.shBusy=true;S.shMsg="";
+commit(gain,f).then(function(r){S.shBusy=false;
+S.shMsg=win?L("shWin",{x:SH_XP}):L("shOk",{c:nn%SH_PER,n:SH_PER});S.shKind="ok";
+if(win&&r&&r.up)S.shMsg+=" "+L("lvUp",{n:r.up.ic+" "+r.up.n});
+redraw()}).catch(function(){S.shBusy=false;S.shMsg=L("shErr");S.shKind="bad";redraw()})}
+function shareCanal(){if(!S.user||!S.me||S.shBusy)return;if(shCnt()>=SH_MAX){S.shMsg=L("shFull",{t:SH_XP*SH_DAY});S.shKind="ok";redraw();return}
+shClosePop();S.shPend=Date.now();S.shLeft=0;S.shMsg=L("shWait");S.shKind="";
+var u="https://wa.me/?text="+encodeURIComponent(shTxt());
+var w=null;try{w=window.open(u,"_blank")}catch(e){}
+if(!w)location.href=u;
+redraw()}
+function shBox(){var n=shCnt(),c=n%SH_PER,full=n>=SH_MAX,g=Math.floor(n/SH_PER)*SH_XP;
+return '<div class="qz-card qz-sh"><h3>📲 '+L("shT")+'</h3><p>'+L("shD",{n:SH_PER,x:SH_XP,m:SH_DAY,t:SH_XP*SH_DAY})+'</p>'+bar(full?100:Math.round(c/SH_PER*100))+
+'<small>'+L("shProg",{c:full?SH_PER:c,n:SH_PER,g:g,t:SH_XP*SH_DAY})+'</small>'+
+(S.shMsg?'<div class="qz-msg'+(S.shKind?' '+S.shKind:'')+'">'+esc(S.shMsg)+'</div>':'')+
+(full?'<div class="qz-msg ok">'+L("shFull",{t:SH_XP*SH_DAY})+'</div>':'<button class="btn" type="button" onclick="QZ.shareCanal()"'+(S.shBusy?' disabled':'')+'>💚 '+L("shBtn")+'</button>')+'</div>'}
+function shClosePop(){var e=document.getElementById("qz-pop");if(e)e.remove()}
+function shPopKey(){return "bg_qzpop_"+today()}
+function shPopClose(){try{localStorage.setItem(shPopKey(),"1")}catch(e){}shClosePop()}
+function shPop(){if(!S.user||!S.me||S.view!=="hub"||S.shPopDone||shCnt()>=SH_MAX)return;S.shPopDone=true;
+try{if(localStorage.getItem(shPopKey()))return}catch(e){}
+shStyle();shClosePop();var d=document.createElement("div");d.id="qz-pop";
+d.innerHTML='<div class="qz-card qz-sh"><h3>'+L("shPopT")+'</h3><p>'+L("shD",{n:SH_PER,x:SH_XP,m:SH_DAY,t:SH_XP*SH_DAY})+'</p><button class="btn" type="button" onclick="QZ.shareCanal()">💚 '+L("shBtn")+'</button><button class="btn o" type="button" onclick="QZ.shPopClose()">'+L("shLater")+'</button></div>';
+d.addEventListener("click",function(e){if(e.target===d)shPopClose()});document.body.appendChild(d)}
+document.addEventListener("visibilitychange",function(){if(document.hidden)shAway();else shBack()});
+window.addEventListener("blur",function(){if(S.shPend)shAway()});window.addEventListener("focus",function(){if(S.shPend)shBack()});
+window.addEventListener("pageshow",function(){if(S.shPend)shBack()});
+
 /* ====== AUTENTICAÇÃO ====== */
 function go(){var em=($("qz-em")||{}).value||"",pw=($("qz-pw")||{}).value||"",nm=$("qz-nm")?$("qz-nm").value.trim():"";
 S.fEm=em.trim();S.fNm=nm;S.err="";S.info="";
@@ -241,6 +303,7 @@ ensurePlay();var ds0=doneScore(),n=qs().length,btn;
 if(ds0!==null)btn='<p class="qz-big">'+L("doneS",{n:ds0,t:n})+'</p>';
 else btn='<a class="btn" href="#/quiz/jogar">'+(S.play.ans.length?L("cont")+' ('+S.play.ans.length+'/'+n+')':L("start"))+'</a>';
 h+='<div class="qz-card"><h3>🎯 '+(ds0!==null?L("doneT"):L("dT"))+'</h3>'+(ds0===null?'<p>'+L("dD")+'</p>':'')+btn+'</div>';
+shStyle();h+=shBox();setTimeout(shPop,600);
 var wk=weekKey(td),c=Math.min(wkCount(m,td),WEEK_GOAL),wd=!!(m.wk&&m.wk[wk]);
 h+='<div class="qz-card"><h3>🏆 '+L("wT")+'</h3><p>'+(wd?L("wDone",{x:WEEK_XP}):L("wD",{g:WEEK_GOAL,x:WEEK_XP}))+'</p>'+bar(Math.round(c/WEEK_GOAL*100))+'<small>'+c+'/'+WEEK_GOAL+'</small></div>';
 var st=m.streak||0,ci=m.days&&m.days[td]&&m.days[td].ci;
@@ -300,11 +363,11 @@ if(S.view==="prof")return h+profPage()+'</div>';
 return h+hubPage()+'</div>'}
 function redraw(){if(!/^#\/quiz/.test(location.hash))return;try{paint(page(),"keep")}catch(e){}}
 
-function show(h){S.view=/^#\/quiz\/ranking/.test(h)?"rank":/^#\/quiz\/perfil/.test(h)?"prof":/^#\/quiz\/jogar/.test(h)?"play":/^#\/quiz\/bonus/.test(h)?"bonus":"hub";
+function show(h){shClosePop();S.view=/^#\/quiz\/ranking/.test(h)?"rank":/^#\/quiz\/perfil/.test(h)?"prof":/^#\/quiz\/jogar/.test(h)?"play":/^#\/quiz\/bonus/.test(h)?"bonus":"hub";
 S.err="";S.info="";document.title="Billie Quiz — "+SITE.name+" "+SITE.suffix;
 loadQuiz();loadBonus();redraw();
 boot().then(function(){if(!/^#\/quiz/.test(location.hash))return;if(S.view==="rank"&&S.ready&&(S.rank===null||Date.now()-S.rankT>60000))loadRank();redraw()})}
 
-return {show:show,boot:boot,go:go,google:google,sw:sw,forgot:forgot,logout:logout,pick:pick,nxt:nxt,fin:function(){if(S.play){S.play.fin=false;finish()}},saveName:saveName,photo:photo,
+return {show:show,boot:boot,go:go,google:google,sw:sw,forgot:forgot,logout:logout,pick:pick,nxt:nxt,fin:function(){if(S.play){S.play.fin=false;finish()}},saveName:saveName,photo:photo,shareCanal:shareCanal,shPopClose:shPopClose,
 _t:{weekKey:weekKey,lvOf:lvOf,addDays:addDays,pickQuiz:pickQuiz}}
 })();

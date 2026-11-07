@@ -214,7 +214,7 @@ def render(n, lang, slug, v, others, slugs):
 %(srcbox)s
 <div class="acts"><a class="btn" href="%(wa)s" target="_blank" rel="noopener">%(share)s</a><a class="btn o" href="%(home)s">%(back)s</a></div></article>%(rel)s</main>
 <footer><div class="fw"><div><div class="fb"><span class="ln2">Billie Global</span><b>BR</b></div><p style="margin:12px 0 0;max-width:420px">%(footer)s</p></div></div></footer>
-%(embjs)s</body></html>
+%(embjs)s<script src="/vlibras.js" defer></script></body></html>
 """ % dict(
         hl=HL[lang], title=esc(title), site=SITE_NAME, desc=esc(plain_desc), canon=canon, alts=alts, ogl=OGL[lang],
         img=esc(img), iso=iso, mod=modified, ld=json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"),
@@ -286,4 +286,5 @@ def main():
 if __name__ == "__main__":
     main()
 
-                                      
+
+      

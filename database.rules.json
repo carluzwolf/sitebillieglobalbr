@@ -16,6 +16,8 @@
           "$d": {
             "ci": { ".validate": "newData.val() === 1 && !data.exists()" },
             "s":  { ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 10 && !data.exists()" },
+            "sh": { ".validate": "newData.isNumber() && newData.val() >= (data.exists() ? data.val() : 0) && newData.val() <= (data.exists() ? data.val() : 0) + 1 && newData.val() <= 20" },
+            "shr": { ".validate": "newData.isNumber() && newData.val() >= (data.exists() ? data.val() : 0) && newData.val() <= 4 && newData.val() * 5 <= newData.parent().child('sh').val()" },
             "$other": { ".validate": false }
           }
         },

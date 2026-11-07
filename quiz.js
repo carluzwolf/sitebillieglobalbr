@@ -8,7 +8,7 @@ var SDK="https://www.gstatic.com/firebasejs/10.14.1/";
 /* ====== REGRAS DO JOGO (ajuste aqui) ====== */
 var N=10,CORRECT_XP=10,DONE_XP=20,PERFECT_XP=30,CHECKIN_XP=5,WEEK_GOAL=5,WEEK_XP=50;
 /* Compartilhe e ganhe: cada 5 envios no WhatsApp = 50 XP, no máximo 4 vezes por dia (200 XP) */
-var SH_PER=5,SH_XP=50,SH_DAY=4,SH_MAX=SH_PER*SH_DAY,SH_AWAY=10000,SH_WAIT=600000;
+var SH_PER=5,SH_XP=50,SH_DAY=4,SH_MAX=SH_PER*SH_DAY,SH_WAIT=600000,SH_KEY="bg_shp";
 var CANAL=(typeof LINK_CANAL!=="undefined"&&LINK_CANAL)||"https://whatsapp.com/channel/0029VavaVBp5kg77PEh3Bq2g";
 
 /* IDs (UID do Firebase) das contas verificadas. Cole aqui o ID do CARLUZ. */
@@ -145,7 +145,7 @@ function errMsg(e){var c=String((e&&e.code)||"").replace("auth/","");return (T["
 
 function onAuth(u){S.user=u;S.known=true;try{localStorage.setItem("bg_qz",u?"1":"")}catch(e){}
 if(!u){S.me=null;S.play=null;hdr();redraw();return}
-loadMe(u).then(function(){hdr();redraw();return checkin()}).then(function(){hdr();redraw()}).catch(function(){S.fbErr=true;redraw()})}
+loadMe(u).then(function(){hdr();redraw();return checkin()}).then(function(){hdr();redraw();shResume()}).catch(function(){S.fbErr=true;redraw()})}
 
 function loadMe(u){return S.db.ref("users/"+u.uid).once("value").then(function(s){var v=s.val();if(v){S.me=v;return}
 var nm=String(S.pend||u.displayName||(u.email||"").split("@")[0]||"Fã").trim().slice(0,30)||"Fã",ph=okPh(u.photoURL)?u.photoURL:"";
@@ -210,10 +210,12 @@ s.textContent=".qz-sh .qz-bar{height:14px}.qz-sh .btn{width:100%;text-align:cent
 "#qz-pop .qz-card{max-width:420px;width:100%;margin:0;text-align:center}#qz-pop .btn{width:100%;margin-top:8px}";document.head.appendChild(s)}
 function shAway(){if(!S.shLeft)S.shLeft=Date.now()}
 function shBack(){var p=S.shPend,left=S.shLeft;S.shLeft=0;if(!p||!left||!S.user||!S.me)return;
-if(Date.now()-p>SH_WAIT){S.shPend=0;S.shMsg="";redraw();return}
-var away=Date.now()-left;S.shPend=0;
-if(away<SH_AWAY){S.shMsg=L("shShort");S.shKind="bad";redraw();return}
+S.shPend=0;try{localStorage.removeItem(SH_KEY)}catch(e){}
+if(Date.now()-p>SH_WAIT){S.shMsg="";redraw();return}
 shCount()}
+/* se o site recarregou ao clicar (acontece ao abrir o WhatsApp), conta o envio assim que a conta carrega */
+function shResume(){var p=0;try{p=parseInt(localStorage.getItem(SH_KEY)||"0",10)||0;localStorage.removeItem(SH_KEY)}catch(e){}
+if(!p||Date.now()-p>SH_WAIT||!S.user||!S.me)return;S.shPend=0;shCount()}
 function shCount(){if(S.shBusy||!S.user||!S.me)return;var td=today(),n=shCnt();
 if(n>=SH_MAX){S.shMsg=L("shFull",{t:SH_XP*SH_DAY});S.shKind="ok";redraw();return}
 var nn=n+1,f={},gain=0,win=nn%SH_PER===0;f["days/"+td+"/sh"]=nn;if(win){f["days/"+td+"/shr"]=nn/SH_PER;gain=SH_XP}
@@ -223,7 +225,7 @@ S.shMsg=win?L("shWin",{x:SH_XP}):L("shOk",{c:nn%SH_PER,n:SH_PER});S.shKind="ok";
 if(win&&r&&r.up)S.shMsg+=" "+L("lvUp",{n:r.up.ic+" "+r.up.n});
 redraw()}).catch(function(){S.shBusy=false;S.shMsg=L("shErr");S.shKind="bad";redraw()})}
 function shareCanal(){if(!S.user||!S.me||S.shBusy)return;if(shCnt()>=SH_MAX){S.shMsg=L("shFull",{t:SH_XP*SH_DAY});S.shKind="ok";redraw();return}
-shClosePop();S.shPend=Date.now();S.shLeft=0;S.shMsg=L("shWait");S.shKind="";
+shClosePop();S.shPend=Date.now();S.shLeft=0;try{localStorage.setItem(SH_KEY,String(S.shPend))}catch(e){}S.shMsg=L("shWait");S.shKind="";
 var u="https://wa.me/?text="+encodeURIComponent(shTxt());
 var w=null;try{w=window.open(u,"_blank")}catch(e){}
 if(!w)location.href=u;
@@ -243,7 +245,7 @@ d.innerHTML='<div class="qz-card qz-sh"><h3>'+L("shPopT")+'</h3><p>'+L("shD",{n:
 d.addEventListener("click",function(e){if(e.target===d)shPopClose()});document.body.appendChild(d)}
 document.addEventListener("visibilitychange",function(){if(document.hidden)shAway();else shBack()});
 window.addEventListener("blur",function(){if(S.shPend)shAway()});window.addEventListener("focus",function(){if(S.shPend)shBack()});
-window.addEventListener("pageshow",function(){if(S.shPend)shBack()});
+window.addEventListener("pageshow",function(){if(S.shPend){if(!S.shLeft)S.shLeft=S.shPend;shBack()}});
 
 /* ====== AUTENTICAÇÃO ====== */
 function go(){var em=($("qz-em")||{}).value||"",pw=($("qz-pw")||{}).value||"",nm=$("qz-nm")?$("qz-nm").value.trim():"";

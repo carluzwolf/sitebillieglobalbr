@@ -11,7 +11,7 @@ window.QZB=(function(){
    ║  CHAVE LIGA/DESLIGA:  0 = "Em breve"          ║
    ║                       1 = evento ABERTO       ║
    ╚══════════════════════════════════════════════╝ */
-var ATIVO=0;
+var ATIVO=1;
 
 var PER_PIN=5;                       /* vagas por emblema */
 var PIN_IDS=["birds","chihiro","lunch"];

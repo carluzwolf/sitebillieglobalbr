@@ -12,7 +12,7 @@ var SH_PER=5,SH_XP=50,SH_DAY=4,SH_MAX=SH_PER*SH_DAY,SH_WAIT=600000,SH_KEY="bg_sh
 var CANAL=(typeof LINK_CANAL!=="undefined"&&LINK_CANAL)||"https://whatsapp.com/channel/0029VavaVBp5kg77PEh3Bq2g";
 
 /* IDs (UID do Firebase) das contas verificadas. Cole aqui o ID do CARLUZ. */
-var VERIF=["NaIW7JOJxVVr3T4RKfn5VF7u66T2"];
+var VERIF=["NaIW7JOJxVVr3T4RKfn5VF7u66T2","AZRqSxjFM8Sdjaa46atZ63M4lJc2"];
 function vb(id){return VERIF.indexOf(id)>-1?' <img class="qz-vf" src="/verificado.png" alt="Verificado" title="Conta verificada">':""}
 /* EMBLEMAS (pins) — ficam aqui para aparecerem para sempre, mesmo se o bonus.js for apagado.
    Imagens em /pins/ (suba os arquivos com esses nomes ou ajuste os caminhos). */

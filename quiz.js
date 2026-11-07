@@ -17,11 +17,24 @@ function vb(id){return VERIF.indexOf(id)>-1?' <img class="qz-vf" src="/verificad
 /* EMBLEMAS (pins) — ficam aqui para aparecerem para sempre, mesmo se o bonus.js for apagado.
    Imagens em /pins/ (suba os arquivos com esses nomes ou ajuste os caminhos). */
 var PINS={birds:{n:"Birds of a Feather",img:"/pins/birds-of-a-feather.png"},chihiro:{n:"Chihiro",img:"/pins/chihiro.png"},lunch:{n:"Lunch",img:"/pins/lunch.png"}};
+/* MOLDURAS — círculo em volta da foto (perfil e ranking). Vazio por enquanto.
+   Para criar uma: FRAMES.ouro={n:{pt:"Ouro"...}}; use n:["PT","EN","ES"] e c:"cor ou gradiente CSS".
+   Para dar a alguém: gravar users/UID/own/f_ouro = 1 (o id no banco leva o prefixo f_). */
+var FRAMES={};
+function avf(p,n,sz,fid){var a=av(p,n,sz);if(typeof fid!=="string"||!FRAMES.hasOwnProperty(fid))return a;return '<span class="qz-fw" style="background:'+FRAMES[fid].c+'">'+a+'</span>'}
 function pinImg(id){var p=(typeof id==="string"&&PINS.hasOwnProperty(id))?PINS[id]:null;return p?' <img class="qz-pin" src="'+p.img+'" alt="'+ea(p.n)+'" title="'+ea(p.n)+'">':""}
 var S={user:null,me:null,known:false,fbErr:false,ready:false,quiz:null,quizErr:false,play:null,rank:null,rankT:0,rankErr:false,busy:false,err:"",info:"",mode:"in",view:"hub",fEm:"",fNm:""};
 
 /* ====== TEXTOS (pt / en / es) ====== */
 var T={
+gT:["Minha galeria","My gallery","Mi galería"],
+gD:["Toque em um item para equipar. Toque de novo para desequipar.","Tap an item to equip it. Tap again to unequip.","Toca un elemento para equiparlo. Toca de nuevo para quitarlo."],
+gB:["Emblemas","Badges","Insignias"],gF:["Molduras","Frames","Marcos"],gX:["Efeito de nome","Name effect","Efecto de nombre"],
+gEq:["Equipado","Equipped","Equipado"],gNo:["Nenhum equipado","None equipped","Ninguno equipado"],
+gE1:["Você ainda não tem emblemas. Participe dos desafios para ganhar!","You have no badges yet. Join the challenges to earn some!","Aún no tienes insignias. ¡Participa en los desafíos para ganar!"],
+gE2:["Você ainda não tem molduras.","You have no frames yet.","Aún no tienes marcos."],
+gE3:["Você ainda não tem efeitos de nome.","You have no name effects yet.","Aún no tienes efectos de nombre."],
+gNeon:["Verde neon","Neon green","Verde neón"],gErr:["Não foi possível salvar. Tente de novo.","Could not save. Try again.","No se pudo guardar. Inténtalo de nuevo."],gOk:["Atualizado! ✅","Updated! ✅","¡Actualizado! ✅"],
 title:["Billie Quiz","Billie Quiz","Billie Quiz"],
 stSub:["Jogue, ganhe XP e suba no ranking","Play, earn XP and climb the ranking","Juega, gana XP y sube en el ranking"],
 tQ:["🎯 Quiz","🎯 Quiz","🎯 Quiz"],tR:["🏆 Ranking","🏆 Ranking","🏆 Ranking"],tP:["👤 Perfil","👤 Profile","👤 Perfil"],
@@ -147,7 +160,7 @@ S.auth.getRedirectResult().catch(function(e){S.err=errMsg(e);redraw()});
 S.auth.onAuthStateChanged(onAuth)}).catch(function(){S.fbErr=true;S.known=true;redraw()});return S.bootP}
 function errMsg(e){var c=String((e&&e.code)||"").replace("auth/","");return (T["e_"+c]||T.e_def)[LI]}
 
-function onAuth(u){S.user=u;S.known=true;try{localStorage.setItem("bg_qz",u?"1":"")}catch(e){}
+function onAuth(u){S.user=u;S.known=true;S.gal=null;S.galB=0;try{localStorage.setItem("bg_qz",u?"1":"")}catch(e){}
 if(!u){S.me=null;S.play=null;hdr();redraw();return}
 loadMe(u).then(function(){hdr();redraw();return checkin()}).then(function(){hdr();redraw();shResume()}).catch(function(){S.fbErr=true;redraw()})}
 
@@ -280,9 +293,36 @@ x.drawImage(im,(im.width-s)/2,(im.height-s)/2,s,s,0,0,z,z);var d=c.toDataURL("im
 saveProf(null,d).then(function(){S.info=L("saved");redraw()}).catch(function(){S.err=L("e_def");redraw()})};
 im.onerror=function(){S.err=L("e_def");redraw()};im.src=r.result};r.readAsDataURL(f)}
 
+/* ====== GALERIA (emblemas, molduras, efeito de nome) ====== */
+function loadGal(){if(!S.user||!S.db||!S.me)return;var uid=S.user.uid,m=S.me,ids=Object.keys(PINS);
+Promise.all([S.db.ref("rank/"+uid).once("value")].concat(ids.map(function(i){return S.db.ref("pins/"+i+"/"+uid).once("value")}))).then(function(r){
+var rk=r[0].val()||{},mo=m.own||{},g={pins:{},frames:{},neon:false},mg={};
+ids.forEach(function(id,i){if(r[i+1].exists()||m.pin===id)g.pins[id]=1});
+Object.keys(mo).forEach(function(k){if(k.indexOf("f_")===0&&FRAMES.hasOwnProperty(k.slice(2)))g.frames[k.slice(2)]=1});
+g.neon=rk.g===1||!!mo.neon||m.fx==="neon";
+if(rk.g===1&&!(mo.neon&&m.fx==="neon")){mg["users/"+uid+"/own/neon"]=1;mg["users/"+uid+"/fx"]="neon";m.own=m.own||{};m.own.neon=1;m.fx="neon"}
+S.gal=g;if(Object.keys(mg).length)S.db.ref().update(mg).catch(function(){});redraw()}).catch(function(){S.gal={pins:{},frames:{},neon:false};redraw()})}
+function eq(kind,id){if(!S.user||!S.gal||S.gbusy)return;var uid=S.user.uid,u={},m=S.me;id=id||"";
+if(kind==="pin"){if(id&&!S.gal.pins[id])return;u["users/"+uid+"/pin"]=id||null;u["rank/"+uid+"/b"]=id||null}
+else if(kind==="frame"){if(id&&!S.gal.frames[id])return;u["users/"+uid+"/frame"]=id||null;u["rank/"+uid+"/f"]=id||null}
+else if(kind==="fx"){if(id&&!S.gal.neon)return;u["users/"+uid+"/fx"]=id?"neon":null;u["rank/"+uid+"/g"]=id?1:null}
+else return;
+S.gbusy=true;S.err="";S.info="";
+S.db.ref().update(u).then(function(){var k=kind==="pin"?"pin":kind==="frame"?"frame":"fx",v=id?(kind==="fx"?"neon":id):null;if(v)m[k]=v;else delete m[k];S.rankT=0;S.info=L("gOk")}).catch(function(){S.err=L("gErr")}).then(function(){S.gbusy=false;redraw()})}
+function gTile(kind,id,eqd,inner,label){return '<button type="button" class="qz-gt'+(eqd?' on':'')+'" onclick="QZ.eq(\''+kind+'\',\''+(eqd?'':id)+'\')" aria-pressed="'+(eqd?'true':'false')+'"'+(S.gbusy?' disabled':'')+'><span class="qz-gi">'+inner+'</span><b>'+esc(label)+'</b><em>'+(eqd?L("gEq"):'&nbsp;')+'</em></button>'}
+function galCard(){if(!S.gal){if(!S.galB){S.galB=1;setTimeout(loadGal,0)}return '<div class="qz-card"><h3>🎖️ '+L("gT")+'</h3><div class="empty">'+L("loading")+'</div></div>'}
+var g=S.gal,m=S.me,h='<div class="qz-card qz-gal"><h3>🎖️ '+L("gT")+'</h3><p>'+L("gD")+'</p>',t;
+h+='<h4>'+L("gB")+'</h4>';t=Object.keys(g.pins);
+h+=t.length?'<div class="qz-gg">'+t.map(function(id){return gTile("pin",id,m.pin===id,'<img src="'+ea(PINS[id].img)+'" alt="">',PINS[id].n)}).join("")+'</div>':'<div class="qz-ge">'+L("gE1")+'</div>';
+h+='<h4>'+L("gF")+'</h4>';t=Object.keys(g.frames);
+h+=t.length?'<div class="qz-gg">'+t.map(function(id){return gTile("frame",id,m.frame===id,'<span class="qz-fw" style="background:'+FRAMES[id].c+'"><span class="qz-av" style="width:52px;height:52px"></span></span>',FRAMES[id].n[LI])}).join("")+'</div>':'<div class="qz-ge">'+L("gE2")+'</div>';
+h+='<h4>'+L("gX")+'</h4>';
+h+=g.neon?'<div class="qz-gg">'+gTile("fx","neon",m.fx==="neon",'<span class="qz-green">'+esc(m.name)+'</span>',L("gNeon"))+'</div>':'<div class="qz-ge">'+L("gE3")+'</div>';
+return h+'</div>'}
+
 /* ====== RANKING ====== */
 function loadRank(){S.rankT=Date.now();S.rankErr=false;
-S.db.ref("rank").orderByChild("x").limitToLast(50).once("value").then(function(s){var a=[];s.forEach(function(c){var v=c.val()||{};a.push({id:c.key,n:v.n||"?",p:v.p||"",x:v.x||0,g:v.g===1,b:v.b||""})});
+S.db.ref("rank").orderByChild("x").limitToLast(50).once("value").then(function(s){var a=[];s.forEach(function(c){var v=c.val()||{};a.push({id:c.key,n:v.n||"?",p:v.p||"",x:v.x||0,g:v.g===1,b:v.b||"",f:v.f||""})});
 a.sort(function(p,q){return q.x-p.x});S.rank=a;redraw()}).catch(function(){S.rank=[];S.rankErr=true;redraw()})}
 
 /* ====== TELAS ====== */
@@ -300,7 +340,7 @@ return '<div class="qz-card qz-hero"><h3>'+L("heroT")+'</h3><p>'+L("heroD")+'</p
 '<button class="btn o qz-g" type="button" onclick="QZ.google()"><b>G</b> '+L("google")+'</button>'+
 '<div class="qz-links"><button type="button" class="qz-lk" onclick="QZ.sw()">'+(up?L("toIn"):L("toUp"))+'</button>'+(up?'':'<button type="button" class="qz-lk" onclick="QZ.forgot()">'+L("forgot")+'</button>')+'</div></div>'}
 function meCard(){var m=S.me,lv=lvOf(m.xp);
-return '<div class="qz-card qz-me">'+av(m.photo,m.name,60)+'<div class="qz-mi"><b class="qz-nm">'+esc(m.name)+vb(S.user&&S.user.uid)+pinImg(m.pin)+'</b><span class="qz-lv">'+lv.ic+' '+esc(lv.n)+'</span>'+bar(lv.pct)+
+return '<div class="qz-card qz-me">'+avf(m.photo,m.name,60,m.frame)+'<div class="qz-mi"><b class="qz-nm">'+(m.fx==="neon"?'<span class="qz-green">'+esc(m.name)+'</span>':esc(m.name))+vb(S.user&&S.user.uid)+pinImg(m.pin)+'</b><span class="qz-lv">'+lv.ic+' '+esc(lv.n)+'</span>'+bar(lv.pct)+
 '<small>'+(m.xp||0)+' XP · '+(lv.next?L("toNext",{n:lv.next-(m.xp||0),lv:lv.nn}):L("maxLv"))+'</small></div></div>'}
 function hubPage(){var m=S.me,td=today(),h=meCard();
 if(S.quizErr)return h+'<div class="qz-msg bad">'+L("quizErr")+'</div>';
@@ -342,14 +382,14 @@ if(S.rankErr)return h+'<div class="qz-msg bad">'+L("rErr")+'</div></div>';
 if(!S.rank.length)return h+'<div class="empty">'+L("rEmpty")+'</div></div>';
 var inTop=false;h+='<div class="qz-rank">';
 S.rank.forEach(function(r,i){var me=S.user&&r.id===S.user.uid,lv=lvOf(r.x);if(me)inTop=true;
-h+='<div class="qz-rr'+(me?' me':'')+'"><b class="qz-pos">'+(i<3?["🥇","🥈","🥉"][i]:"#"+(i+1))+'</b>'+av(r.p,r.n,42)+'<div class="qz-rn"><div class="qz-nl"><span'+(r.g?' class="qz-green"':'')+'>'+esc(r.n)+'</span>'+vb(r.id)+pinImg(r.b)+(me?'<em>('+L("you")+')</em>':'')+'</div><small>'+lv.ic+' '+esc(lv.n)+'</small></div><b class="qz-rx">'+r.x+' XP</b></div>'});
+h+='<div class="qz-rr'+(me?' me':'')+'"><b class="qz-pos">'+(i<3?["🥇","🥈","🥉"][i]:"#"+(i+1))+'</b>'+avf(r.p,r.n,42,r.f)+'<div class="qz-rn"><div class="qz-nl"><span'+(r.g?' class="qz-green"':'')+'>'+esc(r.n)+'</span>'+vb(r.id)+pinImg(r.b)+(me?'<em>('+L("you")+')</em>':'')+'</div><small>'+lv.ic+' '+esc(lv.n)+'</small></div><b class="qz-rx">'+r.x+' XP</b></div>'});
 h+='</div>';
 if(S.user&&S.me&&!inTop)h+='<div class="qz-msg">'+L("rNot")+'</div>';
 return h+'</div>'}
 function profPage(){var m=S.me,lv=lvOf(m.xp),n=cnt(m),sc=ds(m).reduce(function(a,b){return a+b},0),acc=n?Math.round(sc/(n*N)*100):0;
 var h=meCard()+'<div class="qz-card">'+msgs()+'<h3>'+L("pT")+'</h3><small style="opacity:.6;word-break:break-all">ID: '+esc(S.user?S.user.uid:"")+'</small><div class="qz-edit"><label class="btn o qz-ph">'+L("photo")+'<input type="file" accept="image/*" style="display:none" onchange="QZ.photo(this)"></label></div>'+
 '<label class="qz-lb">'+L("nameL")+'</label><div class="qz-nr"><input id="qz-pn" type="text" maxlength="30" value="'+ea(m.name)+'"><button class="btn" onclick="QZ.saveName()">'+L("save")+'</button></div></div>'+
-'<div class="qz-card qz-stats"><div><b>'+(m.xp||0)+'</b><small>'+L("stX")+'</small></div><div><b>'+n+'</b><small>'+L("stQ")+'</small></div><div><b>'+perf(m)+'</b><small>'+L("stP")+'</small></div><div><b>'+acc+'%</b><small>'+L("stA")+'</small></div></div>'+
+galCard()+'<div class="qz-card qz-stats"><div><b>'+(m.xp||0)+'</b><small>'+L("stX")+'</small></div><div><b>'+n+'</b><small>'+L("stQ")+'</small></div><div><b>'+perf(m)+'</b><small>'+L("stP")+'</small></div><div><b>'+acc+'%</b><small>'+L("stA")+'</small></div></div>'+
 '<div class="qz-card"><h3>'+L("aT")+'</h3><div class="qz-ach">';
 A.forEach(function(a){var got=m.ach&&m.ach[a.id],dt=got?new Date(got).toLocaleDateString([LANG==="pt"?"pt-BR":LANG]):"";
 h+='<div class="qz-a'+(got?' on':'')+'"><span class="qz-ai">'+(got?a.ic:'🔒')+'</span><div><b>'+esc(a.n[LI])+'</b><small>'+esc(a.d[LI])+'</small>'+(got?'<em>'+esc(dt)+'</em>':'')+'</div></div>'});
@@ -374,7 +414,7 @@ S.err="";S.info="";document.title="Billie Quiz — "+SITE.name+" "+SITE.suffix;
 loadQuiz();loadBonus();redraw();
 boot().then(function(){if(!/^#\/quiz/.test(location.hash))return;if(S.view==="rank"&&S.ready&&(S.rank===null||Date.now()-S.rankT>60000))loadRank();redraw()})}
 
-return {show:show,boot:boot,go:go,google:google,sw:sw,forgot:forgot,logout:logout,pick:pick,nxt:nxt,fin:function(){if(S.play){S.play.fin=false;finish()}},saveName:saveName,photo:photo,shareCanal:shareCanal,shPopClose:shPopClose,
+return {show:show,boot:boot,go:go,google:google,sw:sw,forgot:forgot,logout:logout,pick:pick,nxt:nxt,fin:function(){if(S.play){S.play.fin=false;finish()}},saveName:saveName,eq:eq,photo:photo,shareCanal:shareCanal,shPopClose:shPopClose,
 _t:{weekKey:weekKey,lvOf:lvOf,addDays:addDays,pickQuiz:pickQuiz}}
 })();
    

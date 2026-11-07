@@ -79,3 +79,6 @@
 .qz-nl{display:flex;align-items:center;gap:6px;min-width:0}.qz-nl span{min-width:0}.qz-nl em{font:700 13px var(--sans);flex:none}
 .qz-vf{width:18px;height:18px;flex:none;vertical-align:middle;display:inline-block;margin-left:4px}.qz-nl .qz-vf{margin-left:0}
   
+
+/* emblema (pin) ao lado do nome */
+.qz-pin{height:22px;width:auto;max-width:44px;object-fit:contain;flex:none;vertical-align:middle;display:inline-block;margin-left:4px}.qz-nl .qz-pin{margin-left:0}

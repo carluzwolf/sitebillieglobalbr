@@ -14,6 +14,10 @@ var CANAL=(typeof LINK_CANAL!=="undefined"&&LINK_CANAL)||"https://whatsapp.com/c
 /* IDs (UID do Firebase) das contas verificadas. Cole aqui o ID do CARLUZ. */
 var VERIF=["NaIW7JOJxVVr3T4RKfn5VF7u66T2"];
 function vb(id){return VERIF.indexOf(id)>-1?' <img class="qz-vf" src="/verificado.png" alt="Verificado" title="Conta verificada">':""}
+/* EMBLEMAS (pins) — ficam aqui para aparecerem para sempre, mesmo se o bonus.js for apagado.
+   Imagens em /pins/ (suba os arquivos com esses nomes ou ajuste os caminhos). */
+var PINS={birds:{n:"Birds of a Feather",img:"/pins/birds-of-a-feather.png"},chihiro:{n:"Chihiro",img:"/pins/chihiro.png"},lunch:{n:"Lunch",img:"/pins/lunch.png"}};
+function pinImg(id){var p=(typeof id==="string"&&PINS.hasOwnProperty(id))?PINS[id]:null;return p?' <img class="qz-pin" src="'+p.img+'" alt="'+ea(p.n)+'" title="'+ea(p.n)+'">':""}
 var S={user:null,me:null,known:false,fbErr:false,ready:false,quiz:null,quizErr:false,play:null,rank:null,rankT:0,rankErr:false,busy:false,err:"",info:"",mode:"in",view:"hub",fEm:"",fNm:""};
 
 /* ====== TEXTOS (pt / en / es) ====== */
@@ -191,7 +195,7 @@ p.fin=true;p.saveErr=false;p.saving=true;redraw();
 commit(gain,f).then(function(r){p.saving=false;p.res={sc:sc,t:q.length,gain:gain,lines:lines,up:r.up,got:r.got};redraw()}).catch(function(){p.saving=false;p.fin=false;p.saveErr=true;redraw()})}
 
 /* ====== DESAFIO BÔNUS (arquivo removível: /bonus.js — apague o arquivo e o desafio some) ====== */
-var X={S:S,commit:commit,redraw:redraw,esc:function(v){return esc(v)}};
+var X={S:S,commit:commit,redraw:redraw,PINS:PINS,pinImg:pinImg,esc:function(v){return esc(v)}};
 function loadBonus(){if(S.bzTried)return;S.bzTried=true;var s=document.createElement("script");s.src="/bonus.js?"+Math.floor(Date.now()/60000);
 s.onload=function(){redraw()};s.onerror=function(){S.bzFail=true;redraw()};document.head.appendChild(s)}
 function bonusCard(){try{return window.QZB?QZB.card(X):""}catch(e){return ""}}
@@ -278,7 +282,7 @@ im.onerror=function(){S.err=L("e_def");redraw()};im.src=r.result};r.readAsDataUR
 
 /* ====== RANKING ====== */
 function loadRank(){S.rankT=Date.now();S.rankErr=false;
-S.db.ref("rank").orderByChild("x").limitToLast(50).once("value").then(function(s){var a=[];s.forEach(function(c){var v=c.val()||{};a.push({id:c.key,n:v.n||"?",p:v.p||"",x:v.x||0,g:v.g===1})});
+S.db.ref("rank").orderByChild("x").limitToLast(50).once("value").then(function(s){var a=[];s.forEach(function(c){var v=c.val()||{};a.push({id:c.key,n:v.n||"?",p:v.p||"",x:v.x||0,g:v.g===1,b:v.b||""})});
 a.sort(function(p,q){return q.x-p.x});S.rank=a;redraw()}).catch(function(){S.rank=[];S.rankErr=true;redraw()})}
 
 /* ====== TELAS ====== */
@@ -296,7 +300,7 @@ return '<div class="qz-card qz-hero"><h3>'+L("heroT")+'</h3><p>'+L("heroD")+'</p
 '<button class="btn o qz-g" type="button" onclick="QZ.google()"><b>G</b> '+L("google")+'</button>'+
 '<div class="qz-links"><button type="button" class="qz-lk" onclick="QZ.sw()">'+(up?L("toIn"):L("toUp"))+'</button>'+(up?'':'<button type="button" class="qz-lk" onclick="QZ.forgot()">'+L("forgot")+'</button>')+'</div></div>'}
 function meCard(){var m=S.me,lv=lvOf(m.xp);
-return '<div class="qz-card qz-me">'+av(m.photo,m.name,60)+'<div class="qz-mi"><b class="qz-nm">'+esc(m.name)+vb(S.user&&S.user.uid)+'</b><span class="qz-lv">'+lv.ic+' '+esc(lv.n)+'</span>'+bar(lv.pct)+
+return '<div class="qz-card qz-me">'+av(m.photo,m.name,60)+'<div class="qz-mi"><b class="qz-nm">'+esc(m.name)+vb(S.user&&S.user.uid)+pinImg(m.pin)+'</b><span class="qz-lv">'+lv.ic+' '+esc(lv.n)+'</span>'+bar(lv.pct)+
 '<small>'+(m.xp||0)+' XP · '+(lv.next?L("toNext",{n:lv.next-(m.xp||0),lv:lv.nn}):L("maxLv"))+'</small></div></div>'}
 function hubPage(){var m=S.me,td=today(),h=meCard();
 if(S.quizErr)return h+'<div class="qz-msg bad">'+L("quizErr")+'</div>';
@@ -338,7 +342,7 @@ if(S.rankErr)return h+'<div class="qz-msg bad">'+L("rErr")+'</div></div>';
 if(!S.rank.length)return h+'<div class="empty">'+L("rEmpty")+'</div></div>';
 var inTop=false;h+='<div class="qz-rank">';
 S.rank.forEach(function(r,i){var me=S.user&&r.id===S.user.uid,lv=lvOf(r.x);if(me)inTop=true;
-h+='<div class="qz-rr'+(me?' me':'')+'"><b class="qz-pos">'+(i<3?["🥇","🥈","🥉"][i]:"#"+(i+1))+'</b>'+av(r.p,r.n,42)+'<div class="qz-rn"><div class="qz-nl"><span'+(r.g?' class="qz-green"':'')+'>'+esc(r.n)+'</span>'+vb(r.id)+(me?'<em>('+L("you")+')</em>':'')+'</div><small>'+lv.ic+' '+esc(lv.n)+'</small></div><b class="qz-rx">'+r.x+' XP</b></div>'});
+h+='<div class="qz-rr'+(me?' me':'')+'"><b class="qz-pos">'+(i<3?["🥇","🥈","🥉"][i]:"#"+(i+1))+'</b>'+av(r.p,r.n,42)+'<div class="qz-rn"><div class="qz-nl"><span'+(r.g?' class="qz-green"':'')+'>'+esc(r.n)+'</span>'+vb(r.id)+pinImg(r.b)+(me?'<em>('+L("you")+')</em>':'')+'</div><small>'+lv.ic+' '+esc(lv.n)+'</small></div><b class="qz-rx">'+r.x+' XP</b></div>'});
 h+='</div>';
 if(S.user&&S.me&&!inTop)h+='<div class="qz-msg">'+L("rNot")+'</div>';
 return h+'</div>'}
@@ -373,3 +377,4 @@ boot().then(function(){if(!/^#\/quiz/.test(location.hash))return;if(S.view==="ra
 return {show:show,boot:boot,go:go,google:google,sw:sw,forgot:forgot,logout:logout,pick:pick,nxt:nxt,fin:function(){if(S.play){S.play.fin=false;finish()}},saveName:saveName,photo:photo,shareCanal:shareCanal,shPopClose:shPopClose,
 _t:{weekKey:weekKey,lvOf:lvOf,addDays:addDays,pickQuiz:pickQuiz}}
 })();
+   

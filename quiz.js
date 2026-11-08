@@ -157,7 +157,7 @@ function boot(){if(S.bootP)return S.bootP;
 S.bootP=loadJS(SDK+"firebase-app-compat.js").then(function(){return Promise.all([loadJS(SDK+"firebase-auth-compat.js"),loadJS(SDK+"firebase-database-compat.js")])}).then(function(){
 firebase.initializeApp(CFG);S.auth=firebase.auth();S.db=firebase.database();S.ready=true;
 S.auth.getRedirectResult().catch(function(e){S.err=errMsg(e);redraw()});
-S.auth.onAuthStateChanged(onAuth)}).catch(function(){S.fbErr=true;S.known=true;redraw()});return S.bootP}
+S.db.ref("verified").on("value",function(v){var o=v.val()||{};Object.keys(o).forEach(function(k){if(o[k]===true&&VERIF.indexOf(k)<0)VERIF.push(k)});S.rankT=0;redraw()},function(){});S.auth.onAuthStateChanged(onAuth)}).catch(function(){S.fbErr=true;S.known=true;redraw()});return S.bootP}
 function errMsg(e){var c=String((e&&e.code)||"").replace("auth/","");return (T["e_"+c]||T.e_def)[LI]}
 
 function onAuth(u){S.user=u;S.known=true;S.gal=null;S.galB=0;try{localStorage.setItem("bg_qz",u?"1":"")}catch(e){}

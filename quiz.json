@@ -1,115 +1,115 @@
 {
- "date": "2026-11-07",
+ "date": "2026-11-08",
  "questions": [
   {
-   "q": "Qual é o título da faixa que abre o álbum de estreia When We All Fall Asleep, Where Do We Go?",
+   "q": "Qual instrumento Billie Eilish aprendeu a tocar primeiro na infância?",
    "o": [
-    "Xanny",
-    "You Should See Me in a Crown",
-    "Bad Guy",
-    "!!!!!!!"
-   ],
-   "a": 3,
-   "e": "O álbum começa com a faixa instrumental curta intitulada !!!!!!!."
-  },
-  {
-   "q": "Qual estilista e marca vestiu Billie Eilish no Met Gala de 2021 com um vestido inspirado em Marilyn Monroe?",
-   "o": [
-    "Chanel",
-    "Vivienne Westwood",
-    "Gucci",
-    "Oscar de la Renta"
-   ],
-   "a": 3,
-   "e": "Billie usou um deslumbrante vestido de baile pêssego da Oscar de la Renta."
-  },
-  {
-   "q": "Qual foi o primeiro videoclipe dirigido pela própria Billie Eilish na carreira?",
-   "o": [
-    "Xanny",
-    "Happier Than Ever",
-    "ocean eyes",
-    "bury a friend"
+    "Ukulele",
+    "Violão",
+    "Bateria",
+    "Piano"
    ],
    "a": 0,
-   "e": "Billie fez sua estreia como diretora de videoclipes na faixa Xanny, de 2019."
+   "e": "Billie aprendeu a tocar ukulele ainda na infância e o utilizou para compor suas primeiras músicas."
   },
   {
-   "q": "Qual famoso produtor e músico britânico colaborou com Billie na faixa Guess de 2024?",
+   "q": "Qual o nome do festival onde Billie fez sua estreia como headliner em 2022?",
    "o": [
-    "Calvin Harris",
-    "Disclosure",
-    "Mark Ronson",
-    "Charli XCX"
+    "Lollapalooza",
+    "Rock in Rio",
+    "Glastonbury",
+    "Coachella"
    ],
    "a": 3,
-   "e": "Billie participou do remix da música Guess do álbum Brat de Charli XCX."
+   "e": "Billie Eilish se tornou a artista mais jovem a ser atração principal do Coachella em 2022."
   },
   {
-   "q": "Em qual ano Billie Eilish realizou sua primeira turnê oficial de grande porte, a 1 by 1 Tour?",
+   "q": "Qual marca esportiva lançou coleções de tênis veganos com Billie?",
    "o": [
-    "2017",
+    "Puma",
+    "Adidas",
+    "Nike",
+    "Converse"
+   ],
+   "a": 2,
+   "e": "A parceria de Billie Eilish com a Nike resultou em releituras veganas e sustentáveis de modelos clássicos."
+  },
+  {
+   "q": "Qual é o nome da fragrância de estreia de Billie Eilish?",
+   "o": [
+    "Eilish No. 3",
+    "Happier",
+    "Eilish",
+    "Eilish No. 2"
+   ],
+   "a": 2,
+   "e": "O perfume Eilish, lançado em 2021, foi o primeiro produto de beleza de sua marca pessoal."
+  },
+  {
+   "q": "Quem dirigiu o videoclipe oficial da faixa Happier Than Ever?",
+   "o": [
+    "Billie Eilish",
+    "Dave Meyers",
+    "Finneas",
+    "Cole Bennett"
+   ],
+   "a": 0,
+   "e": "Billie Eilish assumiu a direção de seu próprio videoclipe para a faixa-título do segundo álbum."
+  },
+  {
+   "q": "Qual foi a cor marcante do cabelo de Billie Eilish durante o ano de 2019?",
+   "o": [
+    "Azul neon",
+    "Loiro platinado",
+    "Verde raiz preta",
+    "Vermelho fogo"
+   ],
+   "a": 2,
+   "e": "O cabelo preto com raízes verde-neon se tornou a marca visual registrada de Billie em 2019."
+  },
+  {
+   "q": "Em que ano Billie realizou sua primeira turnê oficial, a 1 by 1 Tour?",
+   "o": [
     "2019",
-    "2018",
-    "2016"
+    "2017",
+    "2020",
+    "2018"
    ],
-   "a": 2,
-   "e": "A turnê 1 by 1 Tour ocorreu em 2018, passando por várias cidades dos EUA e Europa."
+   "a": 3,
+   "e": "A 1 by 1 Tour aconteceu em 2018 e marcou a primeira série de shows solo de Billie Eilish pelo mundo."
   },
   {
-   "q": "Qual artista do rap americano colaborou com Billie Eilish na música LOVELY lançada em 2018?",
+   "q": "Qual artista colaborou com Billie na faixa LOVELY de 2018?",
    "o": [
-    "Kendrick Lamar",
-    "Denzel Curry",
+    "Post Malone",
+    "Khalid",
     "Vince Staples",
-    "Khalid"
+    "Denzel Curry"
    ],
-   "a": 2,
-   "e": "Vince Staples participou da faixa &burn, enquanto Khalid cantou em Lovely."
+   "a": 1,
+   "e": "Khalid participou da faixa Lovely, que fez parte da trilha sonora da série 13 Reasons Why."
   },
   {
-   "q": "Qual é o nome da fragrância número dois lançada por Billie Eilish em sua linha de perfumes em 2022?",
+   "q": "Qual o nome da fragrância lançada por Billie Eilish em 2022?",
    "o": [
-    "Eilish Noir",
-    "Eilish Amber",
+    "Eilish Gold",
     "Eilish No. 2",
-    "Eilish Velvet"
+    "Eilish",
+    "Eilish Rose"
    ],
-   "a": 2,
-   "e": "O segundo perfume da linha foi batizado de Eilish No. 2."
+   "a": 1,
+   "e": "Eilish No. 2 foi lançada no final de 2022 com notas mais amadeiradas e misteriosas."
   },
   {
-   "q": "Qual é a faixa encarregada de fechar o segundo álbum de estúdio, Happier Than Ever?",
+   "q": "Qual faixa fecha o segundo álbum de estúdio, Happier Than Ever?",
    "o": [
-    "Halley's Comet",
+    "NDA",
+    "Haley's Comet",
     "Happier Than Ever",
-    "Male Fantasy",
-    "Oxytocin"
+    "Male Fantasy"
    ],
-   "a": 2,
-   "e": "Male Fantasy é a música que encerra a tracklist padrão do álbum Happier Than Ever."
-  },
-  {
-   "q": "Qual prêmio prestigiado da indústria musical americana Billie Eilish recebeu na categoria de Compositor do Ano em 2019?",
-   "o": [
-    "Grammy Awards",
-    "BMI Pop Awards",
-    "American Music Awards",
-    "ASCAP Pop Music Awards"
-   ],
-   "a": 1,
-   "e": "Billie e Finneas receberam o prêmio de Compositores do Ano da BMI em 2019."
-  },
-  {
-   "q": "Qual icônica banda de rock alternativo dos anos 90 Billie Eilish frequentemente homenageia em suas roupas e entrevistas?",
-   "o": [
-    "Pearl Jam",
-    "Nirvana",
-    "Radiohead",
-    "Green Day"
-   ],
-   "a": 1,
-   "e": "Billie veste com frequência camisetas e moletons com o logotipo da banda Nirvana."
+   "a": 3,
+   "e": "Male Fantasy é a música escolhida para encerrar a tracklist padrão do álbum Happier Than Ever."
   }
  ],
  "history": [
@@ -162,7 +162,17 @@
   "Qual é o nome da fragrância número dois lançada por Billie Eilish em sua linha de perfumes em 2022?",
   "Qual é a faixa encarregada de fechar o segundo álbum de estúdio, Happier Than Ever?",
   "Qual prêmio prestigiado da indústria musical americana Billie Eilish recebeu na categoria de Compositor do Ano em 2019?",
-  "Qual icônica banda de rock alternativo dos anos 90 Billie Eilish frequentemente homenageia em suas roupas e entrevistas?"
+  "Qual icônica banda de rock alternativo dos anos 90 Billie Eilish frequentemente homenageia em suas roupas e entrevistas?",
+  "Qual instrumento Billie Eilish aprendeu a tocar primeiro na infância?",
+  "Qual o nome do festival onde Billie fez sua estreia como headliner em 2022?",
+  "Qual marca esportiva lançou coleções de tênis veganos com Billie?",
+  "Qual é o nome da fragrância de estreia de Billie Eilish?",
+  "Quem dirigiu o videoclipe oficial da faixa Happier Than Ever?",
+  "Qual foi a cor marcante do cabelo de Billie Eilish durante o ano de 2019?",
+  "Em que ano Billie realizou sua primeira turnê oficial, a 1 by 1 Tour?",
+  "Qual artista colaborou com Billie na faixa LOVELY de 2018?",
+  "Qual o nome da fragrância lançada por Billie Eilish em 2022?",
+  "Qual faixa fecha o segundo álbum de estúdio, Happier Than Ever?"
  ],
  "bank": [
   {

@@ -4,89 +4,90 @@
     ".write": false,
     "users": {
       "$uid": {
-        ".read": "auth != null && auth.uid === $uid",
-        ".write": "auth != null && auth.uid === $uid",
+        ".read": "root.child('admins').child(auth.uid).exists() || (auth != null && auth.uid === $uid)",
+        ".write": "root.child('admins').child(auth.uid).exists() || (auth != null && auth.uid === $uid)",
         "name": {
-          ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 30"
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isString() && newData.val().length >= 1 && newData.val().length <= 30)"
         },
         "photo": {
-          ".validate": "newData.isString() && newData.val().length <= 15000"
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isString() && newData.val().length <= 15000)"
         },
         "xp": {
-          ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= (data.exists() ? data.val() : 0) + 300"
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isNumber() && newData.val() >= 0 && newData.val() <= (data.exists() ? data.val() : 0) + 300)"
         },
         "streak": {
-          ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 5000"
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isNumber() && newData.val() >= 0 && newData.val() <= 5000)"
         },
         "last": {
-          ".validate": "newData.isString() && newData.val().length <= 10"
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isString() && newData.val().length <= 10)"
         },
         "days": {
           "$d": {
             "ci": {
-              ".validate": "newData.val() === 1 && !data.exists()"
+              ".validate": "root.child('admins').child(auth.uid).exists() || (newData.val() === 1 && !data.exists())"
             },
             "s": {
-              ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 10 && !data.exists()"
+              ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isNumber() && newData.val() >= 0 && newData.val() <= 10 && !data.exists())"
             },
             "sh": {
-              ".validate": "newData.isNumber() && newData.val() >= (data.exists() ? data.val() : 0) && newData.val() <= (data.exists() ? data.val() : 0) + 1 && newData.val() <= 20"
+              ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isNumber() && newData.val() >= (data.exists() ? data.val() : 0) && newData.val() <= (data.exists() ? data.val() : 0) + 1 && newData.val() <= 20)"
             },
             "shr": {
-              ".validate": "newData.isNumber() && newData.val() >= (data.exists() ? data.val() : 0) && newData.val() <= 4 && newData.val() * 5 <= newData.parent().child('sh').val()"
+              ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isNumber() && newData.val() >= (data.exists() ? data.val() : 0) && newData.val() <= 4 && newData.val() * 5 <= newData.parent().child('sh').val())"
             },
             "$other": {
-              ".validate": false
+              ".validate": "root.child('admins').child(auth.uid).exists()"
             }
           }
         },
         "wk": {
           "$w": {
-            ".validate": "newData.val() === 1 && !data.exists()"
+            ".validate": "root.child('admins').child(auth.uid).exists() || (newData.val() === 1 && !data.exists())"
           }
         },
         "bonus": {
           "$b": {
-            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 20 && !data.exists() && now >= 1793901600000 && now <= 1793928600000"
+            ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isNumber() && newData.val() >= 0 && newData.val() <= 20 && !data.exists() && now >= 1793901600000 && now <= 1793928600000)"
           }
         },
         "ach": {
           "$a": {
-            ".validate": "newData.isNumber() && !data.exists()"
+            ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isNumber() && !data.exists())"
           }
         },
         "$other": {
-          ".validate": false
+          ".validate": "root.child('admins').child(auth.uid).exists()"
         },
         "bz": {
           "s": {
-            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 30 && !data.exists()"
+            ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isNumber() && newData.val() >= 0 && newData.val() <= 30 && !data.exists())"
           },
           "x": {
-            ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= 200 && !data.exists()"
+            ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isNumber() && newData.val() >= 0 && newData.val() <= 200 && !data.exists())"
           },
           "t": {
-            ".validate": "newData.isNumber() && !data.exists()"
+            ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isNumber() && !data.exists())"
           },
           "$other": {
-            ".validate": false
+            ".validate": "root.child('admins').child(auth.uid).exists()"
           }
         },
         "pin": {
-          ".validate": "newData.isString() && (newData.val() === 'birds' || newData.val() === 'chihiro' || newData.val() === 'lunch') && ((!data.exists() && root.child('bzr').child($uid).exists()) || root.child('pins').child(newData.val()).child($uid).exists())"
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isString() && (newData.val() === 'birds' || newData.val() === 'chihiro' || newData.val() === 'lunch') && ((!data.exists() && root.child('bzr').child($uid).exists()) || root.child('pins').child(newData.val()).child($uid).exists()))"
         },
         "own": {
           "$k": {
-            ".validate": "newData.val() === 1 && !data.exists() && ($k === 'neon' || $k.matches(/^f_[a-z0-9_]{1,20}$/))"
+            ".validate": "root.child('admins').child(auth.uid).exists() || (newData.val() === 1 && !data.exists() && ($k === 'neon' || $k.matches(/^f_[a-z0-9_]{1,20}$/)))"
           }
         },
         "fx": {
-          ".validate": "newData.val() === 'neon' && newData.parent().child('own').child('neon').exists()"
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.val() === 'neon' && newData.parent().child('own').child('neon').exists())"
         },
         "frame": {
-          ".validate": "newData.isString() && newData.val().length <= 20 && newData.parent().child('own').child('f_' + newData.val()).exists()"
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isString() && newData.val().length <= 20 && newData.parent().child('own').child('f_' + newData.val()).exists())"
         }
-      }
+      },
+      ".read": "root.child('admins').child(auth.uid).exists()"
     },
     "rank": {
       ".read": true,
@@ -94,28 +95,28 @@
         "x"
       ],
       "$uid": {
-        ".write": "auth != null && auth.uid === $uid",
-        ".validate": "newData.hasChildren(['n', 'x'])",
+        ".write": "root.child('admins').child(auth.uid).exists() || (auth != null && auth.uid === $uid)",
+        ".validate": "root.child('admins').child(auth.uid).exists() || (newData.hasChildren(['n', 'x']))",
         "n": {
-          ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 30"
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isString() && newData.val().length >= 1 && newData.val().length <= 30)"
         },
         "p": {
-          ".validate": "newData.isString() && newData.val().length <= 15000"
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isString() && newData.val().length <= 15000)"
         },
         "x": {
-          ".validate": "newData.isNumber() && newData.val() >= 0 && newData.val() <= (data.exists() ? data.val() : 0) + 300"
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isNumber() && newData.val() >= 0 && newData.val() <= (data.exists() ? data.val() : 0) + 300)"
         },
         "g": {
-          ".validate": "newData.val() === 1"
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.val() === 1)"
         },
         "$other": {
-          ".validate": false
+          ".validate": "root.child('admins').child(auth.uid).exists()"
         },
         "b": {
-          ".validate": "newData.isString() && (newData.val() === 'birds' || newData.val() === 'chihiro' || newData.val() === 'lunch')"
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isString() && (newData.val() === 'birds' || newData.val() === 'chihiro' || newData.val() === 'lunch'))"
         },
         "f": {
-          ".validate": "newData.isString() && newData.val().length <= 20 && root.child('users').child($uid).child('own').child('f_' + newData.val()).exists()"
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isString() && newData.val().length <= 20 && root.child('users').child($uid).child('own').child('f_' + newData.val()).exists())"
         }
       }
     },
@@ -136,9 +137,21 @@
       ".read": true,
       "$pin": {
         "$uid": {
-          ".write": "auth != null && auth.uid === $uid && newData.exists() && !data.exists() && root.child('bzr').child($uid).exists()",
-          ".validate": "newData.isNumber() && ($pin === 'birds' || $pin === 'chihiro' || $pin === 'lunch')"
+          ".write": "root.child('admins').child(auth.uid).exists() || (auth != null && auth.uid === $uid && newData.exists() && !data.exists() && root.child('bzr').child($uid).exists())",
+          ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isNumber() && ($pin === 'birds' || $pin === 'chihiro' || $pin === 'lunch'))"
         }
+      }
+    },
+    "admins": {
+      "$uid": {
+        ".read": "auth != null && auth.uid === $uid"
+      }
+    },
+    "verified": {
+      ".read": true,
+      "$uid": {
+        ".write": "root.child('admins').child(auth.uid).exists()",
+        ".validate": "newData.val() === true"
       }
     }
   }

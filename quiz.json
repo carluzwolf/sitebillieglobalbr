@@ -1,115 +1,115 @@
 {
- "date": "2026-11-08",
+ "date": "2026-11-09",
  "questions": [
   {
-   "q": "Qual instrumento Billie Eilish aprendeu a tocar primeiro na infância?",
+   "q": "Qual é o título da faixa bônus ou escondida que encerra a edição física especial do álbum Hit Me Hard and Soft?",
    "o": [
-    "Ukulele",
-    "Violão",
-    "Bateria",
-    "Piano"
+    "Blue",
+    "Skinny",
+    "The Greatest",
+    "Não possui faixa oculta"
+   ],
+   "a": 3,
+   "e": "O álbum Hit Me Hard and Soft possui uma tracklist padrão de 10 faixas sem faixas ocultas."
+  },
+  {
+   "q": "Qual famosa série de animação americana contou com a participação vocal de Billie Eilish em um episódio especial em 2021?",
+   "o": [
+    "Bob's Burgers",
+    "Uma Família da Pesada",
+    "South Park",
+    "Os Simpsons"
+   ],
+   "a": 3,
+   "e": "Billie Eilish participou de um curta animado dos Simpsons intitulado When Billie Met Lisa em 2021."
+  },
+  {
+   "q": "Qual o nome do festival beneficente global organizado pela Global Citizen no qual Billie Eilish se apresentou em Nova York em 2023?",
+   "o": [
+    "Live Earth",
+    "Global Citizen Now",
+    "Global Goal Live",
+    "Global Citizen Festival"
+   ],
+   "a": 3,
+   "e": "Billie Eilish foi uma das atrações principales do Global Citizen Festival no Central Park em 2023."
+  },
+  {
+   "q": "Qual artista de música eletrônica e pop britânica colaborou com Billie Eilish na remixagem da música Happier Than Ever?",
+   "o": [
+    "Dua Lipa",
+    "Calvin Harris",
+    "FKA twigs",
+    "Charli XCX"
+   ],
+   "a": 3,
+   "e": "Charli XCX e Billie Eilish compartilharam momentos artísticos e parcerias em eventos e festivais recentes."
+  },
+  {
+   "q": "Qual é o nome do estúdio caseiro localizado na casa dos pais de Billie Eilish onde ela e Finneas gravaram o álbum de estreia?",
+   "o": [
+    "O Quarto de Finneas",
+    "The Bedroom Studio",
+    "O Sótão",
+    "Underground Lab"
    ],
    "a": 0,
-   "e": "Billie aprendeu a tocar ukulele ainda na infância e o utilizou para compor suas primeiras músicas."
+   "e": "Todo o primeiro álbum foi gravado no modesto quarto de Finneas em Los Angeles."
   },
   {
-   "q": "Qual o nome do festival onde Billie fez sua estreia como headliner em 2022?",
+   "q": "Qual famoso diretor de cinema colaborou com Billie Eilish criando vinhetas visuais para sua turnê mundial?",
    "o": [
-    "Lollapalooza",
-    "Rock in Rio",
-    "Glastonbury",
-    "Coachella"
-   ],
-   "a": 3,
-   "e": "Billie Eilish se tornou a artista mais jovem a ser atração principal do Coachella em 2022."
-  },
-  {
-   "q": "Qual marca esportiva lançou coleções de tênis veganos com Billie?",
-   "o": [
-    "Puma",
-    "Adidas",
-    "Nike",
-    "Converse"
-   ],
-   "a": 2,
-   "e": "A parceria de Billie Eilish com a Nike resultou em releituras veganas e sustentáveis de modelos clássicos."
-  },
-  {
-   "q": "Qual é o nome da fragrância de estreia de Billie Eilish?",
-   "o": [
-    "Eilish No. 3",
-    "Happier",
-    "Eilish",
-    "Eilish No. 2"
-   ],
-   "a": 2,
-   "e": "O perfume Eilish, lançado em 2021, foi o primeiro produto de beleza de sua marca pessoal."
-  },
-  {
-   "q": "Quem dirigiu o videoclipe oficial da faixa Happier Than Ever?",
-   "o": [
-    "Billie Eilish",
-    "Dave Meyers",
-    "Finneas",
-    "Cole Bennett"
+    "Guillermo del Toro",
+    "Tim Burton",
+    "Quentin Tarantino",
+    "James Cameron"
    ],
    "a": 0,
-   "e": "Billie Eilish assumiu a direção de seu próprio videoclipe para a faixa-título do segundo álbum."
+   "e": "Billie Eilish colaborou com diversos diretores e artistas visuais para criar atmosferas imersivas em suas turnês."
   },
   {
-   "q": "Qual foi a cor marcante do cabelo de Billie Eilish durante o ano de 2019?",
+   "q": "Qual prêmio da indústria de entretenimento americana Billie Eilish e Finneas venceram no Globo de Ouro de 2024?",
    "o": [
-    "Azul neon",
-    "Loiro platinado",
-    "Verde raiz preta",
-    "Vermelho fogo"
+    "Melhor Canção Original",
+    "Melhor Roteiro",
+    "Melhor Filme de Anomia",
+    "Melhor Trilha Sonora"
+   ],
+   "a": 0,
+   "e": "Eles venceram o Globo de Ouro de Melhor Canção Original por What Was I Made For?"
+  },
+  {
+   "q": "Qual é o nome do icônico ukulele que Billie Eilish utilizou para compor várias de suas primeiras músicas na adolescência?",
+   "o": [
+    "Fender Concert",
+    "Mahalo Standard",
+    "Kala Ukulele",
+    "Gibson Tenor"
    ],
    "a": 2,
-   "e": "O cabelo preto com raízes verde-neon se tornou a marca visual registrada de Billie em 2019."
+   "e": "Billie aprendeu a tocar ukulele e compôs muitas de suas primeiras canções usando o instrumento."
   },
   {
-   "q": "Em que ano Billie realizou sua primeira turnê oficial, a 1 by 1 Tour?",
+   "q": "Qual revista de negócios global destacou Billie Eilish em sua lista de jovens inovadores com menos de 30 anos?",
    "o": [
-    "2019",
-    "2017",
-    "2020",
-    "2018"
+    "Forbes",
+    "Bloomberg",
+    "Time",
+    "Fortune"
    ],
-   "a": 3,
-   "e": "A 1 by 1 Tour aconteceu em 2018 e marcou a primeira série de shows solo de Billie Eilish pelo mundo."
+   "a": 0,
+   "e": "Billie Eilish integrou a prestigiada lista da Forbes de jovens líderes e artistas de destaque."
   },
   {
-   "q": "Qual artista colaborou com Billie na faixa LOVELY de 2018?",
+   "q": "Qual animal de estimação resgatado Billie Eilish frequentemente mostrava em suas redes sociais durante o início da carreira?",
    "o": [
-    "Post Malone",
-    "Khalid",
-    "Vince Staples",
-    "Denzel Curry"
-   ],
-   "a": 1,
-   "e": "Khalid participou da faixa Lovely, que fez parte da trilha sonora da série 13 Reasons Why."
-  },
-  {
-   "q": "Qual o nome da fragrância lançada por Billie Eilish em 2022?",
-   "o": [
-    "Eilish Gold",
-    "Eilish No. 2",
-    "Eilish",
-    "Eilish Rose"
+    "Um gato chamado Misha",
+    "Um pitbull chamado Shark",
+    "Um papagaio cinza",
+    "Um coelho branco"
    ],
    "a": 1,
-   "e": "Eilish No. 2 foi lançada no final de 2022 com notas mais amadeiradas e misteriosas."
-  },
-  {
-   "q": "Qual faixa fecha o segundo álbum de estúdio, Happier Than Ever?",
-   "o": [
-    "NDA",
-    "Haley's Comet",
-    "Happier Than Ever",
-    "Male Fantasy"
-   ],
-   "a": 3,
-   "e": "Male Fantasy é a música escolhida para encerrar a tracklist padrão do álbum Happier Than Ever."
+   "e": "Billie adotou vários animais de abrigo, incluindo um cachorro pitbull chamado Shark."
   }
  ],
  "history": [
@@ -172,7 +172,17 @@
   "Em que ano Billie realizou sua primeira turnê oficial, a 1 by 1 Tour?",
   "Qual artista colaborou com Billie na faixa LOVELY de 2018?",
   "Qual o nome da fragrância lançada por Billie Eilish em 2022?",
-  "Qual faixa fecha o segundo álbum de estúdio, Happier Than Ever?"
+  "Qual faixa fecha o segundo álbum de estúdio, Happier Than Ever?",
+  "Qual é o título da faixa bônus ou escondida que encerra a edição física especial do álbum Hit Me Hard and Soft?",
+  "Qual famosa série de animação americana contou com a participação vocal de Billie Eilish em um episódio especial em 2021?",
+  "Qual o nome do festival beneficente global organizado pela Global Citizen no qual Billie Eilish se apresentou em Nova York em 2023?",
+  "Qual artista de música eletrônica e pop britânica colaborou com Billie Eilish na remixagem da música Happier Than Ever?",
+  "Qual é o nome do estúdio caseiro localizado na casa dos pais de Billie Eilish onde ela e Finneas gravaram o álbum de estreia?",
+  "Qual famoso diretor de cinema colaborou com Billie Eilish criando vinhetas visuais para sua turnê mundial?",
+  "Qual prêmio da indústria de entretenimento americana Billie Eilish e Finneas venceram no Globo de Ouro de 2024?",
+  "Qual é o nome do icônico ukulele que Billie Eilish utilizou para compor várias de suas primeiras músicas na adolescência?",
+  "Qual revista de negócios global destacou Billie Eilish em sua lista de jovens inovadores com menos de 30 anos?",
+  "Qual animal de estimação resgatado Billie Eilish frequentemente mostrava em suas redes sociais durante o início da carreira?"
  ],
  "bank": [
   {

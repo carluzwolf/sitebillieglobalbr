@@ -39,7 +39,7 @@
    "platform": "spotify",
    "region": "global",
    "home": "https://charts.spotify.com/charts/view/regional-global-daily/latest",
-   "fetched": "2026-11-10T07:02Z"
+   "fetched": "2026-11-10T16:08Z"
   },
   "spotify_br": {
    "date": "2026-11-08",
@@ -49,17 +49,34 @@
    "platform": "spotify",
    "region": "br",
    "home": "https://charts.spotify.com/charts/view/regional-br-daily/latest",
-   "fetched": "2026-11-10T07:02Z"
+   "fetched": "2026-11-10T16:08Z"
   },
   "apple_br": {
    "date": null,
    "size": 100,
    "unit": null,
-   "entries": [],
+   "entries": [
+    {
+     "pos": 82,
+     "title": "WILDFLOWER",
+     "artist": "Billie Eilish",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
+     "url": "https://music.apple.com/br/album/wildflower/1739659134?i=1739659144",
+     "dur": 261
+    },
+    {
+     "pos": 94,
+     "title": "BIRDS OF A FEATHER",
+     "artist": "Billie Eilish",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
+     "url": "https://music.apple.com/br/album/birds-of-a-feather/1739659134?i=1739659142",
+     "dur": 210
+    }
+   ],
    "platform": "apple",
    "region": "br",
    "home": "",
-   "fetched": "2026-11-10T07:02Z"
+   "fetched": "2026-11-10T16:08Z"
   },
   "apple_us": {
    "date": null,
@@ -69,7 +86,7 @@
    "platform": "apple",
    "region": "us",
    "home": "",
-   "fetched": "2026-11-10T07:02Z"
+   "fetched": "2026-11-10T16:08Z"
   },
   "deezer_world": {
    "date": "2026-11-10",
@@ -77,7 +94,7 @@
    "unit": null,
    "entries": [
     {
-     "pos": 61,
+     "pos": 67,
      "title": "BIRDS OF A FEATHER",
      "artist": "Billie Eilish",
      "dur": 210,
@@ -89,7 +106,7 @@
    "platform": "deezer",
    "region": "world",
    "home": "https://www.deezer.com/playlist/3155776842",
-   "fetched": "2026-11-10T07:02Z"
+   "fetched": "2026-11-10T16:08Z"
   },
   "billboard_global200": {
    "date": "2026-10-31",
@@ -99,7 +116,7 @@
    "platform": "billboard",
    "region": "global200",
    "home": "https://www.billboard.com/charts/billboard-global-200/",
-   "fetched": "2026-11-10T07:02Z"
+   "fetched": "2026-11-10T16:08Z"
   },
   "billboard_globalexus": {
    "date": "2026-10-31",
@@ -109,7 +126,7 @@
    "platform": "billboard",
    "region": "globalexus",
    "home": "https://www.billboard.com/charts/billboard-global-excl-us/",
-   "fetched": "2026-11-10T07:02Z"
+   "fetched": "2026-11-10T16:08Z"
   }
  },
  "streams": [
@@ -443,6 +460,11 @@
   {
    "title": "Happier Than Ever",
    "mark": 1500000000,
+   "date": "2026-11-10"
+  },
+  {
+   "title": "Happier Than Ever",
+   "mark": 1500000000,
    "date": "2026-11-09"
   },
   {
@@ -714,8 +736,8 @@
    },
    {
     "d": "2026-11-10",
-    "n": 0,
-    "best": null
+    "n": 2,
+    "best": 82
    }
   ],
   "apple_us": [
@@ -809,7 +831,7 @@
    {
     "d": "2026-11-10",
     "n": 1,
-    "best": 61
+    "best": 67
    }
   ],
   "billboard_global200": [
@@ -1086,7 +1108,7 @@
   }
  },
  "streams_date": "2026-11-10",
- "updated": "2026-11-10T07:02Z",
+ "updated": "2026-11-10T16:08Z",
  "errors": [
   "apple_global: HTTP Error 404: Not Found"
  ]

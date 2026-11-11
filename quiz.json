@@ -1,115 +1,115 @@
 {
- "date": "2026-11-10",
+ "date": "2026-11-11",
  "questions": [
   {
-   "q": "Qual marca esportiva lançou coleções de calçados sustentáveis em parceria com Billie Eilish?",
+   "q": "Qual o nome da faixa que abre a tracklist do segundo álbum de estúdio, Happier Than Ever?",
    "o": [
-    "Puma",
-    "Adidas",
-    "Vans",
-    "Nike"
+    "Billie Bossa Nova",
+    "Getting Older",
+    "I Didn't Change My Number",
+    "Oxytocin"
    ],
-   "a": 3,
-   "e": "Billie Eilish colaborou com a Nike no lançamento de modelos clássicos feitos com materiais veganos."
+   "a": 1,
+   "e": "Getting Older é a música que inicia a audição do álbum Happier Than Ever."
   },
   {
-   "q": "Qual o nome do festival em que Billie Eilish se tornou a artista mais jovem a ser atração principal em 2022?",
+   "q": "Qual prêmio Grammy de grande destaque Billie Eilish venceu em 2024 pela música What Was I Made For?",
    "o": [
-    "Coachella",
-    "Lollapalooza",
-    "Glastonbury",
-    "Rock in Rio"
-   ],
-   "a": 0,
-   "e": "Billie Eilish foi uma das principais atrações do festival Coachella em 2022."
-  },
-  {
-   "q": "Qual cineasta dirigiu o videoclipe da canção Happier Than Ever?",
-   "o": [
-    "A Billie Eilish",
-    "Spike Jonze",
-    "Greta Gerwig",
-    "David Fincher"
-   ],
-   "a": 0,
-   "e": "A própria Billie Eilish assumiu a direção de seu videoclipe em 2021."
-  },
-  {
-   "q": "Qual é a cor exata do cabelo que marcou a identidade visual de Billie Eilish durante o ano de 2019?",
-   "o": [
-    "Azul elétrico",
-    "Loiro platinado",
-    "Rosa claro",
-    "Preto com raiz verde"
-   ],
-   "a": 3,
-   "e": "O icônico cabelo preto com raiz verde neon se tornou a marca registrada de Billie em 2019."
-  },
-  {
-   "q": "Em que ano civil Billie Eilish realizou sua primeira turnê oficial de grande porte, a 1 by 1 Tour?",
-   "o": [
-    "2019",
-    "2017",
-    "2018",
-    "2020"
+    "Artista Revelação",
+    "Álbum do Ano",
+    "Canção do Ano",
+    "Gravação do Ano"
    ],
    "a": 2,
-   "e": "A turnê 1 by 1 Tour ocorreu no início de 2018 nos Estados Unidos e Europa."
+   "e": "A faixa levou o prêmio de Canção do Ano na premiação do Grammy."
   },
   {
-   "q": "Qual artista vocal masculino colaborou com Billie Eilish na canção LOVELY lançada em 2018?",
+   "q": "Qual o nome do documentário oficial lançado em 2021 que retrata a ascensão meteórica e a vida familiar de Billie Eilish?",
    "o": [
-    "Khalid",
-    "Shawn Mendes",
-    "Justin Bieber",
-    "Finneas"
+    "The Billie Eilish Story",
+    "Not My Responsibility",
+    "The World's a Little Blurry",
+    "Happier Than Ever Live"
+   ],
+   "a": 2,
+   "e": "O documentário Apple Original se chama The World's a Little Blurry."
+  },
+  {
+   "q": "Em qual famosa premiação internacional Billie Eilish e Finneas conquistaram seu primeiro Oscar de Melhor Canção Original?",
+   "o": [
+    "Grammy Awards",
+    "Prêmios Oscar",
+    "Globo de Ouro",
+    "BAFTA Awards"
+   ],
+   "a": 1,
+   "e": "Eles venceram o Oscar em 2022 com a música tema de 007 - Sem Tempo Para Morrer."
+  },
+  {
+   "q": "Qual é o nome do icônico cachorro de grande porte que Billie Eilish adotou e frequentemente compartilha em suas redes sociais?",
+   "o": [
+    "Milo",
+    "Pepper",
+    "Shark",
+    "Boxer"
+   ],
+   "a": 2,
+   "e": "Shark é o cachorro resgatado que faz parte da família de Billie Eilish."
+  },
+  {
+   "q": "Qual artista pop americana se juntou a Billie Eilish na faixa remixada Guess, lançada em 2024?",
+   "o": [
+    "Ariana Grande",
+    "Charli XCX",
+    "Olivia Rodrigo",
+    "Dua Lipa"
+   ],
+   "a": 1,
+   "e": "Charli XCX convidou Billie para o remix de Guess, do álbum Brat."
+  },
+  {
+   "q": "Qual é o nome da faixa do álbum Hit Me Hard and Soft que serve como o primeiro single oficial do projeto?",
+   "o": [
+    "Lunch",
+    "Birds of a Feather",
+    "Wildflower",
+    "Chihiro"
    ],
    "a": 0,
-   "e": "A música LOVELY é um dueto marcante entre Billie Eilish e o cantor Khalid."
+   "e": "Lunch foi lançada como o single principal antes da chegada do álbum Hit Me Hard and Soft."
   },
   {
-   "q": "Qual é o nome da segunda fragrância comercializada na linha de perfumes de Billie Eilish?",
+   "q": "Qual importante universidade ou instituição cultural sediou a exibição especial do concerto imersivo de Billie Eilish para o Disney+?",
    "o": [
-    "Eilish No. 1",
-    "Eilish No. 3",
-    "Eilish Red",
-    "Eilish No. 2"
+    "Hollywood Bowl",
+    "Sydney Opera House",
+    "Madison Square Garden",
+    "Royal Albert Hall"
+   ],
+   "a": 0,
+   "e": "O especial Happier Than Ever: A Love Letter to Los Angeles foi gravado no Hollywood Bowl."
+  },
+  {
+   "q": "Qual é a cor exata do cabelo que Billie Eilish adotou para marcar a transição estética do álbum Happier Than Ever em 2021?",
+   "o": [
+    "Preto e verde",
+    "Roxo vibrante",
+    "Azul neon",
+    "Loiro platinado"
    ],
    "a": 3,
-   "e": "Eilish No. 2 foi lançada em 2022 com notas mais amadeiradas e especiadas."
+   "e": "Billie surpreendeu o público ao aparecer com o cabelo loiro platinado no início de 2021."
   },
   {
-   "q": "Qual faixa encerra oficialmente a edição padrão do segundo álbum de estúdio, Happier Than Ever?",
+   "q": "Qual é o nome do festival de cinema onde Billie Eilish fez sua estreia oficial como atriz em uma minissérie de terror e suspense?",
    "o": [
-    "NDA",
-    "Your Power",
-    "Male Fantasy",
-    "Happier Than Ever"
+    "Festival de Toronto",
+    "Mostra de São Paulo",
+    "Festival de Veneza",
+    "Festival de Cannes"
    ],
    "a": 2,
-   "e": "A faixa Male Fantasy é a música que fecha a tracklist do álbum de 2021."
-  },
-  {
-   "q": "Qual famoso prêmio da indústria cinematográfica americana Billie Eilish e Finneas venceram no Globo de Ouro de 2024?",
-   "o": [
-    "Melhor Filme de Animação",
-    "Melhor Roteiro",
-    "Melhor Canção Original",
-    "Melhor Trilha Sonora"
-   ],
-   "a": 2,
-   "e": "Eles venceram na categoria de Melhor Canção Original com What Was I Made For?"
-  },
-  {
-   "q": "Qual é o nome do estúdio caseiro no quarto de infância onde Billie Eilish e Finneas gravaram as primeiras músicas?",
-   "o": [
-    "O quarto dos pais",
-    "O estúdio móvel",
-    "O porão da casa",
-    "The Bedroom Studio"
-   ],
-   "a": 3,
-   "e": "As gravações iniciais e o álbum de estreia foram produzidos no quarto de Finneas na casa da família."
+   "e": "Billie participou da série Swarm e esteve presente no Festival de Veneza."
   }
  ],
  "history": [
@@ -192,7 +192,17 @@
   "Qual é o nome da segunda fragrância comercializada na linha de perfumes de Billie Eilish?",
   "Qual faixa encerra oficialmente a edição padrão do segundo álbum de estúdio, Happier Than Ever?",
   "Qual famoso prêmio da indústria cinematográfica americana Billie Eilish e Finneas venceram no Globo de Ouro de 2024?",
-  "Qual é o nome do estúdio caseiro no quarto de infância onde Billie Eilish e Finneas gravaram as primeiras músicas?"
+  "Qual é o nome do estúdio caseiro no quarto de infância onde Billie Eilish e Finneas gravaram as primeiras músicas?",
+  "Qual o nome da faixa que abre a tracklist do segundo álbum de estúdio, Happier Than Ever?",
+  "Qual prêmio Grammy de grande destaque Billie Eilish venceu em 2024 pela música What Was I Made For?",
+  "Qual o nome do documentário oficial lançado em 2021 que retrata a ascensão meteórica e a vida familiar de Billie Eilish?",
+  "Em qual famosa premiação internacional Billie Eilish e Finneas conquistaram seu primeiro Oscar de Melhor Canção Original?",
+  "Qual é o nome do icônico cachorro de grande porte que Billie Eilish adotou e frequentemente compartilha em suas redes sociais?",
+  "Qual artista pop americana se juntou a Billie Eilish na faixa remixada Guess, lançada em 2024?",
+  "Qual é o nome da faixa do álbum Hit Me Hard and Soft que serve como o primeiro single oficial do projeto?",
+  "Qual importante universidade ou instituição cultural sediou a exibição especial do concerto imersivo de Billie Eilish para o Disney+?",
+  "Qual é a cor exata do cabelo que Billie Eilish adotou para marcar a transição estética do álbum Happier Than Ever em 2021?",
+  "Qual é o nome do festival de cinema onde Billie Eilish fez sua estreia oficial como atriz em uma minissérie de terror e suspense?"
  ],
  "bank": [
   {

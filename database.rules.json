@@ -35,6 +35,12 @@
             "shr": {
               ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isNumber() && newData.val() >= (data.exists() ? data.val() : 0) && newData.val() <= 4 && newData.val() * 5 <= newData.parent().child('sh').val())"
             },
+            "w": {
+              ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isNumber() && newData.val() >= 1 && newData.val() <= 7 && !data.exists())"
+            },
+            "mb": {
+              ".validate": "root.child('admins').child(auth.uid).exists() || (newData.val() === 1 && !data.exists())"
+            },
             "$other": {
               ".validate": "root.child('admins').child(auth.uid).exists()"
             }

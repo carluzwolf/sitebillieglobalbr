@@ -15,4 +15,8 @@
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
   else init();
+  /* Carrega o script extra (Google SWG, links legais e anúncios) em todas as páginas */
+  var e = document.createElement("script");
+  e.src = "/extras.js"; e.defer = true;
+  document.head.appendChild(e);
 })();

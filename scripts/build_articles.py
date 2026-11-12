@@ -46,6 +46,11 @@ MON_EN = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec
 MON_ES = ["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"]
 
 def t(k, li): return T[k][li]
+
+BACK_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>'
+WA_ICO = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.4 18.8z"/></svg>'
+LOGO_IMG = '<img class="lm" src="/icon-192.png" alt="" width="34" height="34">'
+def noarr(x): return re.sub(r"^←\s*", "", x)
 def esc(x): return html.escape(str(x if x is not None else ""), quote=True)
 
 def slugify(s):
@@ -180,7 +185,8 @@ def render(n, lang, slug, v, others, slugs):
     return """<!DOCTYPE html>
 <html lang="%(hl)s"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#d4101f">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)">
 <title>%(title)s — %(site)s</title>
 <meta name="description" content="%(desc)s">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
@@ -204,22 +210,23 @@ def render(n, lang, slug, v, others, slugs):
 <script type="application/ld+json">%(ld)s</script>
 <script type="application/ld+json">%(crumbs)s</script>
 <link rel="stylesheet" href="/article.css">
-<style>.lg{display:flex;gap:2px}.lg a{color:#fff;font:800 12px var(--sans);padding:8px 8px;border-radius:4px;opacity:.75}.lg a.on,.lg a:hover{opacity:1;background:rgba(255,255,255,.18)}.logo{justify-content:flex-start;padding-left:10px}</style>
+<style>.lg{display:flex;gap:4px;padding-right:4px}.lg a{color:var(--mut);font:800 12px var(--sans);padding:8px 12px;border-radius:99px;background:var(--soft);transition:all .2s}.lg a.on,.lg a:hover{background:var(--red);color:#fff}.logo{padding-left:6px}</style>
 </head><body>
-<div id="top"><div class="hb"><a class="logo" href="%(home)s"><span class="ln">Billie Global</span><b>BR</b></a><nav class="lg" aria-label="Language">%(langmenu)s</nav></div></div>
-<main id="v"><article class="art"><div class="crumb"><a href="%(home)s">%(back)s</a></div>
+<div id="top"><div class="hb"><a class="logo" href="%(home)s">%(logo)s<span class="ln">Billie Global</span><b>BR</b></a><nav class="lg" aria-label="Language">%(langmenu)s</nav></div></div>
+<main id="v"><article class="art"><div class="crumb"><a href="%(home)s">%(backico)s%(backn)s</a></div>
 <h1>%(title)s</h1>%(sub)s
-<div class="by">%(by)s <b>%(author)s</b> · <time datetime="%(iso)s">%(date)s</time> · %(mins)d %(minread)s</div>
+<div class="by">%(logo)s<span>%(by)s <b>%(author)s</b> · <time datetime="%(iso)s">%(date)s</time> · %(mins)d %(minread)s</span></div>
 %(fig)s%(body)s
 %(srcbox)s
-<div class="acts"><a class="btn" href="%(wa)s" target="_blank" rel="noopener">%(share)s</a><a class="btn o" href="%(home)s">%(back)s</a></div></article>%(rel)s</main>
-<footer><div class="fw"><div><div class="fb"><span class="ln2">Billie Global</span><b>BR</b></div><p style="margin:12px 0 0;max-width:420px">%(footer)s</p></div></div></footer>
+<div class="acts"><a class="btn" href="%(wa)s" target="_blank" rel="noopener">%(waico)s%(share)s</a><a class="btn o" href="%(home)s">%(backn)s</a></div></article>%(rel)s</main>
+<footer><div class="fw"><div><div class="fb">%(logo)s<span class="ln2">Billie Global</span><b>BR</b></div><p style="margin:14px 0 0;max-width:440px">%(footer)s</p></div></div></footer>
+<script>addEventListener("scroll",function(){var e=document.getElementById("top");if(e)e.classList.toggle("sc",scrollY>4)},{passive:true})</script>
 %(embjs)s<script src="/vlibras.js" defer></script></body></html>
 """ % dict(
         hl=HL[lang], title=esc(title), site=SITE_NAME, desc=esc(plain_desc), canon=canon, alts=alts, ogl=OGL[lang],
         img=esc(img), iso=iso, mod=modified, ld=json.dumps(ld, ensure_ascii=False).replace("</", "<\\/"),
         crumbs=json.dumps(crumbs, ensure_ascii=False).replace("</", "<\\/"), home=HOME[lang], langmenu=langmenu,
-        back=esc(t("back", li)), sub=('<p class="sub">%s</p>' % esc(clean_text(desc))) if desc else "",
+        back=esc(t("back", li)), backn=esc(noarr(t("back", li))), backico=BACK_ICO, waico=WA_ICO, logo=LOGO_IMG, sub=('<p class="sub">%s</p>' % esc(clean_text(desc))) if desc else "",
         by=esc(t("by", li)), author=esc(SITE_NAME if own else t("team", li)), date=esc(fdate(d, li)), mins=mins,
         minread=esc(t("minread", li)), fig=fig, body="".join(block(p, li) for p in (body or [desc or ""])), embjs=embed_scripts(body),
         srcbox=srcbox, wa=esc(wa), share=esc(t("share", li)), rel=rel, footer=esc(t("footer", li)))
@@ -287,4 +294,4 @@ if __name__ == "__main__":
     main()
 
 
-      
+

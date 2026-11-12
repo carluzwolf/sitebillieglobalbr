@@ -129,4 +129,12 @@ def main():
             print("erro", lid, repr(ex)[:200])
 
 if __name__ == "__main__":
-    main()
+    end = time.time() + int(os.environ.get("LOOP_SECONDS", "270"))
+    while True:
+        try:
+            main()
+        except Exception as e:
+            print("erro geral", repr(e)[:200])
+        if time.time() + 30 > end:
+            break
+        time.sleep(30)

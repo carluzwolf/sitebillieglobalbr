@@ -10,7 +10,7 @@ DB = os.environ.get("FIREBASE_DB_URL", "https://siteoficial-e0823-default-rtdb.f
 KEY = os.environ.get("GEMINI_API_KEY_CARTAS", "").strip()
 MODELS = [m.strip() for m in os.environ.get("GEMINI_MODELS_CARTAS", "gemini-3.5-flash-lite,gemini-3.5-flash,gemini-2.5-flash").split(",") if m.strip()]
 XP_EACH, XP_MAX_LETTERS, MAX_PER_RUN, FALLBACK_AFTER_MS = 10, 10, 25, 15 * 60 * 1000
-MIN_LEN = 100
+MIN_LEN = 50
 
 def token():
     from google.oauth2 import service_account
@@ -72,7 +72,7 @@ def local_ok(t):
     if letters / len(t) < .7:
         return False, "Texto sem sentido"
     words = re.findall(r"[^\W\d_]+", t.lower())
-    if len(set(words)) < 8 or len(words) < 12:
+    if len(set(words)) < 5 or len(words) < 7:
         return False, "Texto sem sentido"
     v = sum(c in "aeiouáéíóúâêôãõàyAEIOU" for c in t) / max(letters, 1)
     if not .22 <= v <= .65:

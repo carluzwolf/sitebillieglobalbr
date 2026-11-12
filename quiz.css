@@ -297,3 +297,13 @@ a.qz-mr:hover,button.qz-mr:hover{border-color:var(--red);transform:translateX(2p
 @media(min-width:560px){.qz-ach{grid-template-columns:1fr 1fr}.qz-acts{grid-template-columns:1fr 1fr}.qz-acts .qz-wa{grid-column:1/-1}}
 @media(max-width:380px){.qz-tiles b{font-size:21px}.qz-pd .qz-pn{font-size:12px}.qz-tabs a span{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.qz *,.qz-cf *{animation:none!important;transition:none!important}}
+
+/* ===== Árvore de Natal (botão verde no hub/perfil e faixa no ranking) ===== */
+.qz-arvc{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#17a04b 0%,#0b6a31 60%,#07461f 100%)!important;border-color:transparent!important;color:#fff}
+.qz-arvc h3{color:#fff;margin:0 0 4px}.qz-arvc p{color:rgba(255,255,255,.88);margin:0}
+.qz-arvi{flex:none;display:grid;place-items:center;width:46px;height:46px;border-radius:14px;background:rgba(255,255,255,.18);font-size:28px}
+.qz-arvc .qz-tmb{flex:1;min-width:0}
+.qz-arvc .btn{flex:none;background:#fff;color:#0b6a31;border-color:#fff;font-weight:800}
+@media(max-width:480px){.qz-arvc{flex-wrap:wrap}.qz-arvc .btn{width:100%;text-align:center}}
+.qz-arvbar{display:flex;align-items:center;gap:8px;margin:0 0 12px;padding:11px 14px;border-radius:14px;background:linear-gradient(135deg,#17a04b,#0b6a31);color:#fff!important;text-decoration:none;font:700 14px var(--sans)}
+.qz-arvbar span{margin-left:auto;font-size:20px;line-height:1}

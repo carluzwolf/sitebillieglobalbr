@@ -1,115 +1,115 @@
 {
- "date": "2026-11-11",
+ "date": "2026-11-12",
  "questions": [
   {
-   "q": "Qual o nome da faixa que abre a tracklist do segundo álbum de estúdio, Happier Than Ever?",
+   "q": "Qual é a faixa que encerra a tracklist do terceiro álbum de estúdio Hit Me Hard and Soft?",
    "o": [
-    "Billie Bossa Nova",
-    "Getting Older",
-    "I Didn't Change My Number",
-    "Oxytocin"
-   ],
-   "a": 1,
-   "e": "Getting Older é a música que inicia a audição do álbum Happier Than Ever."
-  },
-  {
-   "q": "Qual prêmio Grammy de grande destaque Billie Eilish venceu em 2024 pela música What Was I Made For?",
-   "o": [
-    "Artista Revelação",
-    "Álbum do Ano",
-    "Canção do Ano",
-    "Gravação do Ano"
-   ],
-   "a": 2,
-   "e": "A faixa levou o prêmio de Canção do Ano na premiação do Grammy."
-  },
-  {
-   "q": "Qual o nome do documentário oficial lançado em 2021 que retrata a ascensão meteórica e a vida familiar de Billie Eilish?",
-   "o": [
-    "The Billie Eilish Story",
-    "Not My Responsibility",
-    "The World's a Little Blurry",
-    "Happier Than Ever Live"
-   ],
-   "a": 2,
-   "e": "O documentário Apple Original se chama The World's a Little Blurry."
-  },
-  {
-   "q": "Em qual famosa premiação internacional Billie Eilish e Finneas conquistaram seu primeiro Oscar de Melhor Canção Original?",
-   "o": [
-    "Grammy Awards",
-    "Prêmios Oscar",
-    "Globo de Ouro",
-    "BAFTA Awards"
-   ],
-   "a": 1,
-   "e": "Eles venceram o Oscar em 2022 com a música tema de 007 - Sem Tempo Para Morrer."
-  },
-  {
-   "q": "Qual é o nome do icônico cachorro de grande porte que Billie Eilish adotou e frequentemente compartilha em suas redes sociais?",
-   "o": [
-    "Milo",
-    "Pepper",
-    "Shark",
-    "Boxer"
-   ],
-   "a": 2,
-   "e": "Shark é o cachorro resgatado que faz parte da família de Billie Eilish."
-  },
-  {
-   "q": "Qual artista pop americana se juntou a Billie Eilish na faixa remixada Guess, lançada em 2024?",
-   "o": [
-    "Ariana Grande",
-    "Charli XCX",
-    "Olivia Rodrigo",
-    "Dua Lipa"
-   ],
-   "a": 1,
-   "e": "Charli XCX convidou Billie para o remix de Guess, do álbum Brat."
-  },
-  {
-   "q": "Qual é o nome da faixa do álbum Hit Me Hard and Soft que serve como o primeiro single oficial do projeto?",
-   "o": [
-    "Lunch",
-    "Birds of a Feather",
+    "Skinny",
+    "Blue",
     "Wildflower",
-    "Chihiro"
+    "Lunch"
    ],
-   "a": 0,
-   "e": "Lunch foi lançada como o single principal antes da chegada do álbum Hit Me Hard and Soft."
+   "a": 1,
+   "e": "Blue é a música que fecha a edição padrão do álbum Hit Me Hard and Soft."
   },
   {
-   "q": "Qual importante universidade ou instituição cultural sediou a exibição especial do concerto imersivo de Billie Eilish para o Disney+?",
+   "q": "Qual prêmio da Academia (Oscar) Billie Eilish e Finneas venceram em 2024?",
    "o": [
-    "Hollywood Bowl",
-    "Sydney Opera House",
-    "Madison Square Garden",
-    "Royal Albert Hall"
+    "Melhor Trilha Sonora",
+    "Melhor Canção Original",
+    "Melhor Mixagem de Som",
+    "Melhor Curta-Metragem"
    ],
-   "a": 0,
-   "e": "O especial Happier Than Ever: A Love Letter to Los Angeles foi gravado no Hollywood Bowl."
+   "a": 1,
+   "e": "Eles venceram o Oscar de Melhor Canção Original com What Was I Made For?."
   },
   {
-   "q": "Qual é a cor exata do cabelo que Billie Eilish adotou para marcar a transição estética do álbum Happier Than Ever em 2021?",
+   "q": "Em qual edição do Grammy Awards Billie Eilish venceu todas as quatro principais categorias da premiação de uma só vez?",
    "o": [
-    "Preto e verde",
-    "Roxo vibrante",
-    "Azul neon",
-    "Loiro platinado"
+    "2018",
+    "2020",
+    "2024",
+    "2022"
+   ],
+   "a": 1,
+   "e": "Billie fez história no Grammy de 2020 ao vencer Álbum, Gravação, Música do Ano e Artista Revelação."
+  },
+  {
+   "q": "Qual é o título do documentário lançado em 2021 sobre a vida e os bastidores da turnê de Billie Eilish?",
+   "o": [
+    "A Tiny Man",
+    "Smile",
+    "Happier Than Ever Live",
+    "The World's a Little Blurry"
    ],
    "a": 3,
-   "e": "Billie surpreendeu o público ao aparecer com o cabelo loiro platinado no início de 2021."
+   "e": "O documentário Billie Eilish: The World's a Little Blurry estreou na Apple TV+ em 2021."
   },
   {
-   "q": "Qual é o nome do festival de cinema onde Billie Eilish fez sua estreia oficial como atriz em uma minissérie de terror e suspense?",
+   "q": "Qual artista indie-rock participou da faixa CHIHIRO no álbum Hit Me Hard and Soft em vocais de apoio?",
    "o": [
-    "Festival de Toronto",
-    "Mostra de São Paulo",
-    "Festival de Veneza",
-    "Festival de Cannes"
+    "Bon Iver",
+    "FINNEAS",
+    "Phoebe Bridgers",
+    "Dominic Fike"
+   ],
+   "a": 1,
+   "e": "Finneas contribui com vocais em várias faixas do projeto, incluindo CHIHIRO."
+  },
+  {
+   "q": "Qual estilista renomada colaborou com Billie Eilish para criar seu vestido amarelo no Grammy de 2020?",
+   "o": [
+    "Chanel",
+    "Stella McCartney",
+    "Gucci",
+    "Prada"
    ],
    "a": 2,
-   "e": "Billie participou da série Swarm e esteve presente no Festival de Veneza."
+   "e": "Billie vestiu um terno personalizado da Gucci adornado com detalhes em verde-limão."
+  },
+  {
+   "q": "Qual faixa do álbum Happier Than Ever recebeu uma indicação ao Grammy de Gravação do Ano além da faixa-título?",
+   "o": [
+    "Therefore I Am",
+    "NDA",
+    "Your Power",
+    "Lost Cause"
+   ],
+   "a": 0,
+   "e": "Therefore I Am foi indicada ao Grammy de Gravação do Ano em 2022."
+  },
+  {
+   "q": "Qual foi o primeiro single lançado por Billie Eilish a estrear no topo da parada Billboard Hot 100 dos EUA?",
+   "o": [
+    "when the party's over",
+    "ocean eyes",
+    "bad guy",
+    "bury a friend"
+   ],
+   "a": 2,
+   "e": "bad guy alcançou a primeira posição da Billboard Hot 100 em agosto de 2019."
+  },
+  {
+   "q": "Qual o nome do festival beneficente em Paris organizado pela Global Citizen onde Billie se apresentou em 2023?",
+   "o": [
+    "Power Our Planet",
+    "Global Citizen Festival Paris",
+    "Global Citizen Now",
+    "Global Citizen Live"
+   ],
+   "a": 1,
+   "e": "Billie Eilish foi uma das atrações principais do Global Citizen Festival no Campo de Marte em Paris."
+  },
+  {
+   "q": "Qual é o nome da faixa instrumental que serve como introdução para o álbum de estreia de Billie?",
+   "o": [
+    "intro",
+    "welcome",
+    "dont smile at me",
+    "!!!!!!!!!!!!!!"
+   ],
+   "a": 3,
+   "e": "A faixa de abertura de When We All Fall Asleep, Where Do We Go? chama-se !!!!!!!!!!!!!!."
   }
  ],
  "history": [
@@ -202,7 +202,17 @@
   "Qual é o nome da faixa do álbum Hit Me Hard and Soft que serve como o primeiro single oficial do projeto?",
   "Qual importante universidade ou instituição cultural sediou a exibição especial do concerto imersivo de Billie Eilish para o Disney+?",
   "Qual é a cor exata do cabelo que Billie Eilish adotou para marcar a transição estética do álbum Happier Than Ever em 2021?",
-  "Qual é o nome do festival de cinema onde Billie Eilish fez sua estreia oficial como atriz em uma minissérie de terror e suspense?"
+  "Qual é o nome do festival de cinema onde Billie Eilish fez sua estreia oficial como atriz em uma minissérie de terror e suspense?",
+  "Qual é a faixa que encerra a tracklist do terceiro álbum de estúdio Hit Me Hard and Soft?",
+  "Qual prêmio da Academia (Oscar) Billie Eilish e Finneas venceram em 2024?",
+  "Em qual edição do Grammy Awards Billie Eilish venceu todas as quatro principais categorias da premiação de uma só vez?",
+  "Qual é o título do documentário lançado em 2021 sobre a vida e os bastidores da turnê de Billie Eilish?",
+  "Qual artista indie-rock participou da faixa CHIHIRO no álbum Hit Me Hard and Soft em vocais de apoio?",
+  "Qual estilista renomada colaborou com Billie Eilish para criar seu vestido amarelo no Grammy de 2020?",
+  "Qual faixa do álbum Happier Than Ever recebeu uma indicação ao Grammy de Gravação do Ano além da faixa-título?",
+  "Qual foi o primeiro single lançado por Billie Eilish a estrear no topo da parada Billboard Hot 100 dos EUA?",
+  "Qual o nome do festival beneficente em Paris organizado pela Global Citizen onde Billie se apresentou em 2023?",
+  "Qual é o nome da faixa instrumental que serve como introdução para o álbum de estreia de Billie?"
  ],
  "bank": [
   {

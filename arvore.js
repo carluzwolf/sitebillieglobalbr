@@ -3,7 +3,7 @@
 var ARV=(function(){
 "use strict";
 var UNLOCK=1798081200000; /* 24/12/2026 00:00 (Brasília) — o mesmo valor está em database.rules.json */
-var MIN=100,MAX=1500,XPV=10;
+var MIN=50,MAX=1500,XPV=10;
 var C=null,D={tree:null,err:0,n:0,loading:0,mine:null,mUid:"",mref:null,tab:"tree",auth:0,ok:null,okQ:"",okBusy:0,okErr:0,okFirst:"",okMore:0,okMap:{},tick:null,sq:0};
 var K={sel:"",txt:""};
 
@@ -25,7 +25,7 @@ hint:["Toque em um enfeite para ver quem enviou.","Tap an ornament to see who se
 rf:["Atualizar","Refresh","Actualizar"],
 cT:["Escolha seu enfeite","Choose your ornament","Elige tu adorno"],
 cL:["Sua cartinha","Your letter","Tu carta"],
-cP:["Escreva uma mensagem de Natal de verdade… (mínimo de 100 caracteres)","Write a real Christmas message… (at least 100 characters)","Escribe un mensaje de Navidad de verdad… (mínimo 100 caracteres)"],
+cP:["Escreva uma mensagem de Natal de verdade… (mínimo de 50 caracteres)","Write a real Christmas message… (at least 50 characters)","Escribe un mensaje de Navidad de verdad… (mínimo 50 caracteres)"],
 from:["De:","From:","De:"],
 note:["Sua carta passa por uma análise automática (pode levar alguns minutos). Se for uma mensagem real e respeitosa, ela vai para a árvore e você ganha +{x} XP automaticamente, mesmo se sair do site. Mensagens sem sentido, com ofensas ou conteúdo impróprio são recusadas.","Your letter goes through an automatic review (it can take a few minutes). If it's a real, respectful message it goes on the tree and you get +{x} XP automatically, even if you leave the site. Nonsense, offensive or inappropriate messages are declined.","Tu carta pasa por una revisión automática (puede tardar unos minutos). Si es un mensaje real y respetuoso, va al árbol y ganas +{x} XP automáticamente, aunque salgas del sitio. Los mensajes sin sentido, ofensivos o inapropiados se rechazan."],
 send:["Enviar carta","Send letter","Enviar carta"],sending:["Enviando…","Sending…","Enviando…"],

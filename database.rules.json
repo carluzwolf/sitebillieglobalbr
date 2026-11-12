@@ -159,6 +159,57 @@
         ".write": "root.child('admins').child(auth.uid).exists()",
         ".validate": "newData.val() === true"
       }
+    },
+    "arvore": {
+      ".read": true,
+      "$id": {
+        ".write": "root.child('admins').child(auth.uid).exists()"
+      }
+    },
+    "arvoreMeta": {
+      ".read": true,
+      ".write": "root.child('admins').child(auth.uid).exists()"
+    },
+    "cartaLast": {
+      "$uid": {
+        ".write": "auth != null && auth.uid === $uid && newData.val() === now",
+        ".validate": "newData.isNumber()"
+      }
+    },
+    "cartas": {
+      "ok": {
+        ".read": "now >= 1798081200000",
+        ".indexOn": [
+          "nl"
+        ],
+        "$id": {
+          ".write": "root.child('admins').child(auth.uid).exists()"
+        }
+      },
+      "pend": {
+        "$uid": {
+          ".read": "root.child('admins').child(auth.uid).exists() || (auth != null && auth.uid === $uid)",
+          "$id": {
+            ".write": "root.child('admins').child(auth.uid).exists() || (auth != null && auth.uid === $uid && !data.exists() && newData.exists() && now < 1798081200000 && (!root.child('cartaLast').child($uid).exists() || now - root.child('cartaLast').child($uid).val() >= 25000))",
+            ".validate": "root.child('admins').child(auth.uid).exists() || newData.hasChildren(['n', 'e', 'm', 't'])",
+            "n": {
+              ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isString() && newData.val() === root.child('users').child($uid).child('name').val())"
+            },
+            "e": {
+              ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isString() && newData.val().length >= 1 && newData.val().length <= 20)"
+            },
+            "m": {
+              ".validate": "root.child('admins').child(auth.uid).exists() || (newData.isString() && newData.val().length >= 100 && newData.val().length <= 1500)"
+            },
+            "t": {
+              ".validate": "root.child('admins').child(auth.uid).exists() || newData.val() === now"
+            },
+            "$other": {
+              ".validate": "root.child('admins').child(auth.uid).exists()"
+            }
+          }
+        }
+      }
     }
   }
 }

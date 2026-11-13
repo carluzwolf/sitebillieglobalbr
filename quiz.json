@@ -1,115 +1,115 @@
 {
- "date": "2026-11-12",
+ "date": "2026-11-13",
  "questions": [
   {
-   "q": "Qual é a faixa que encerra a tracklist do terceiro álbum de estúdio Hit Me Hard and Soft?",
+   "q": "Qual é a faixa que abre a tracklist do terceiro álbum de estúdio, Hit Me Hard and Soft?",
    "o": [
     "Skinny",
-    "Blue",
     "Wildflower",
+    "Chihiro",
     "Lunch"
    ],
-   "a": 1,
-   "e": "Blue é a música que fecha a edição padrão do álbum Hit Me Hard and Soft."
+   "a": 0,
+   "e": "Skinny é a música que abre o terceiro álbum de estúdio de Billie Eilish."
   },
   {
-   "q": "Qual prêmio da Academia (Oscar) Billie Eilish e Finneas venceram em 2024?",
+   "q": "Qual prêmio da indústria de jogos e entretenimento digital contou com uma música original de Billie e Finneas?",
    "o": [
-    "Melhor Trilha Sonora",
-    "Melhor Canção Original",
-    "Melhor Mixagem de Som",
-    "Melhor Curta-Metragem"
-   ],
-   "a": 1,
-   "e": "Eles venceram o Oscar de Melhor Canção Original com What Was I Made For?."
-  },
-  {
-   "q": "Em qual edição do Grammy Awards Billie Eilish venceu todas as quatro principais categorias da premiação de uma só vez?",
-   "o": [
-    "2018",
-    "2020",
-    "2024",
-    "2022"
-   ],
-   "a": 1,
-   "e": "Billie fez história no Grammy de 2020 ao vencer Álbum, Gravação, Música do Ano e Artista Revelação."
-  },
-  {
-   "q": "Qual é o título do documentário lançado em 2021 sobre a vida e os bastidores da turnê de Billie Eilish?",
-   "o": [
-    "A Tiny Man",
-    "Smile",
-    "Happier Than Ever Live",
-    "The World's a Little Blurry"
-   ],
-   "a": 3,
-   "e": "O documentário Billie Eilish: The World's a Little Blurry estreou na Apple TV+ em 2021."
-  },
-  {
-   "q": "Qual artista indie-rock participou da faixa CHIHIRO no álbum Hit Me Hard and Soft em vocais de apoio?",
-   "o": [
-    "Bon Iver",
-    "FINNEAS",
-    "Phoebe Bridgers",
-    "Dominic Fike"
-   ],
-   "a": 1,
-   "e": "Finneas contribui com vocais em várias faixas do projeto, incluindo CHIHIRO."
-  },
-  {
-   "q": "Qual estilista renomada colaborou com Billie Eilish para criar seu vestido amarelo no Grammy de 2020?",
-   "o": [
-    "Chanel",
-    "Stella McCartney",
-    "Gucci",
-    "Prada"
+    "D.I.C.E. Awards",
+    "BAFTA Games Awards",
+    "The Game Awards",
+    "Golden Joystick"
    ],
    "a": 2,
-   "e": "Billie vestiu um terno personalizado da Gucci adornado com detalhes em verde-limão."
+   "e": "Billie e Finneas compuseram e produziram a música Hotline para o jogo Fortnite."
   },
   {
-   "q": "Qual faixa do álbum Happier Than Ever recebeu uma indicação ao Grammy de Gravação do Ano além da faixa-título?",
+   "q": "Qual instituição cultural sediou a apresentação acústica especial de Billie Eilish para a série NPR Tiny Desk Concert?",
    "o": [
-    "Therefore I Am",
-    "NDA",
-    "Your Power",
-    "Lost Cause"
+    "Biblioteca do Congresso",
+    "Abadia de Westminster",
+    "Palácio de Versalhes",
+    "Museu do Louvre"
    ],
    "a": 0,
-   "e": "Therefore I Am foi indicada ao Grammy de Gravação do Ano em 2022."
+   "e": "Billie Eilish gravou sua edição do Tiny Desk Concert na Biblioteca do Congresso nos EUA."
   },
   {
-   "q": "Qual foi o primeiro single lançado por Billie Eilish a estrear no topo da parada Billboard Hot 100 dos EUA?",
+   "q": "Qual renomada revista de moda britânica teve Billie Eilish como capa com um visual totalmente pin-up em 2021?",
    "o": [
-    "when the party's over",
-    "ocean eyes",
-    "bad guy",
-    "bury a friend"
+    "Vogue UK",
+    "Harper's Bazaar",
+    "Elle UK",
+    "iD Magazine"
+   ],
+   "a": 0,
+   "e": "Billie Eilish surpreendeu o público ao estampar a capa da Vogue britânica com um visual clássico em 2021."
+  },
+  {
+   "q": "Qual artista brasileira colaborou indiretamente ao ter um sample famoso utilizado em produções inspiradas pelo estilo lo-fi de Finneas?",
+   "o": [
+    "Nenhum artista brasileiro",
+    "Caetano Veloso",
+    "Roberto Carlos",
+    "Tom Jobim"
+   ],
+   "a": 0,
+   "e": "Finneas e Billie constroem suas produções originais sem o uso de samples brasileiros conhecidos."
+  },
+  {
+   "q": "Qual é o nome da faixa do álbum Hit Me Hard and Soft que ganhou um videoclipe dirigido pela própria Billie Eilish?",
+   "o": [
+    "Chihiro",
+    "Birds of a Feather",
+    "Lunch",
+    "Blue"
    ],
    "a": 2,
-   "e": "bad guy alcançou a primeira posição da Billboard Hot 100 em agosto de 2019."
+   "e": "Billie Eilish dirigiu o videoclipe da faixa Lunch do álbum Hit Me Hard and Soft."
   },
   {
-   "q": "Qual o nome do festival beneficente em Paris organizado pela Global Citizen onde Billie se apresentou em 2023?",
+   "q": "Qual famosa marca de carros elétricos teve sua fábrica escolhida para uma performance acústica de Billie Eilish?",
    "o": [
-    "Power Our Planet",
-    "Global Citizen Festival Paris",
-    "Global Citizen Now",
-    "Global Citizen Live"
+    "Lucid Motors",
+    "Tesla",
+    "Rivian",
+    "Fisker Automotive"
    ],
    "a": 1,
-   "e": "Billie Eilish foi uma das atrações principais do Global Citizen Festival no Campo de Marte em Paris."
+   "e": "Billie Eilish realizou apresentações e parcerias focadas em sustentabilidade com marcas de energia limpa."
   },
   {
-   "q": "Qual é o nome da faixa instrumental que serve como introdução para o álbum de estreia de Billie?",
+   "q": "Qual renomado festival de música na Califórnia teve Billie Eilish como a artista mais jovem da história a ser headliner em 2022?",
    "o": [
-    "intro",
-    "welcome",
-    "dont smile at me",
-    "!!!!!!!!!!!!!!"
+    "Stagecoach",
+    "Outside Lands",
+    "Coachella",
+    "Bottlerock"
+   ],
+   "a": 2,
+   "e": "Billie Eilish foi a headliner mais jovem da história do festival Coachella em 2022."
+  },
+  {
+   "q": "Qual prêmio Grammy especial Billie Eilish recebeu em reconhecimento ao seu ativismo ambiental e climático?",
+   "o": [
+    "Voice of the Future",
+    "Global Hero Award",
+    "Earth Guardian Prize",
+    "Prêmio de Ação Climática"
    ],
    "a": 3,
-   "e": "A faixa de abertura de When We All Fall Asleep, Where Do We Go? chama-se !!!!!!!!!!!!!!."
+   "e": "Billie Eilish frequentemente recebe honrarias e reconhecimento público por seu forte engajamento ambiental."
+  },
+  {
+   "q": "Qual icônica marca de bonecas lançou uma edição colecionável baseada no visual de Billie Eilish no tapete vermelho?",
+   "o": [
+    "American Girl",
+    "Barbie",
+    "Bratz",
+    "Rainbow High"
+   ],
+   "a": 1,
+   "e": "A Mattel lançou uma boneca Barbie colecionável modelada após o visual de Billie Eilish no tapete vermelho do Grammy."
   }
  ],
  "history": [
@@ -212,7 +212,17 @@
   "Qual faixa do álbum Happier Than Ever recebeu uma indicação ao Grammy de Gravação do Ano além da faixa-título?",
   "Qual foi o primeiro single lançado por Billie Eilish a estrear no topo da parada Billboard Hot 100 dos EUA?",
   "Qual o nome do festival beneficente em Paris organizado pela Global Citizen onde Billie se apresentou em 2023?",
-  "Qual é o nome da faixa instrumental que serve como introdução para o álbum de estreia de Billie?"
+  "Qual é o nome da faixa instrumental que serve como introdução para o álbum de estreia de Billie?",
+  "Qual é a faixa que abre a tracklist do terceiro álbum de estúdio, Hit Me Hard and Soft?",
+  "Qual prêmio da indústria de jogos e entretenimento digital contou com uma música original de Billie e Finneas?",
+  "Qual instituição cultural sediou a apresentação acústica especial de Billie Eilish para a série NPR Tiny Desk Concert?",
+  "Qual renomada revista de moda britânica teve Billie Eilish como capa com um visual totalmente pin-up em 2021?",
+  "Qual artista brasileira colaborou indiretamente ao ter um sample famoso utilizado em produções inspiradas pelo estilo lo-fi de Finneas?",
+  "Qual é o nome da faixa do álbum Hit Me Hard and Soft que ganhou um videoclipe dirigido pela própria Billie Eilish?",
+  "Qual famosa marca de carros elétricos teve sua fábrica escolhida para uma performance acústica de Billie Eilish?",
+  "Qual renomado festival de música na Califórnia teve Billie Eilish como a artista mais jovem da história a ser headliner em 2022?",
+  "Qual prêmio Grammy especial Billie Eilish recebeu em reconhecimento ao seu ativismo ambiental e climático?",
+  "Qual icônica marca de bonecas lançou uma edição colecionável baseada no visual de Billie Eilish no tapete vermelho?"
  ],
  "bank": [
   {

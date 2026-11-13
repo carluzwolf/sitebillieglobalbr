@@ -39,7 +39,7 @@
    "platform": "spotify",
    "region": "global",
    "home": "https://charts.spotify.com/charts/view/regional-global-daily/latest",
-   "fetched": "2026-11-13T02:25Z"
+   "fetched": "2026-11-13T11:53Z"
   },
   "spotify_br": {
    "date": "2026-11-11",
@@ -49,7 +49,7 @@
    "platform": "spotify",
    "region": "br",
    "home": "https://charts.spotify.com/charts/view/regional-br-daily/latest",
-   "fetched": "2026-11-13T02:25Z"
+   "fetched": "2026-11-13T11:53Z"
   },
   "apple_br": {
    "date": null,
@@ -57,26 +57,26 @@
    "unit": null,
    "entries": [
     {
-     "pos": 78,
-     "title": "BIRDS OF A FEATHER",
-     "artist": "Billie Eilish",
-     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
-     "url": "https://music.apple.com/br/album/birds-of-a-feather/1739659134?i=1739659142",
-     "dur": 210
-    },
-    {
-     "pos": 81,
+     "pos": 79,
      "title": "WILDFLOWER",
      "artist": "Billie Eilish",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
      "url": "https://music.apple.com/br/album/wildflower/1739659134?i=1739659144",
      "dur": 261
+    },
+    {
+     "pos": 90,
+     "title": "BIRDS OF A FEATHER",
+     "artist": "Billie Eilish",
+     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
+     "url": "https://music.apple.com/br/album/birds-of-a-feather/1739659134?i=1739659142",
+     "dur": 210
     }
    ],
    "platform": "apple",
    "region": "br",
    "home": "",
-   "fetched": "2026-11-13T02:25Z"
+   "fetched": "2026-11-13T11:53Z"
   },
   "apple_us": {
    "date": null,
@@ -86,17 +86,27 @@
    "platform": "apple",
    "region": "us",
    "home": "",
-   "fetched": "2026-11-13T02:25Z"
+   "fetched": "2026-11-13T11:53Z"
   },
   "deezer_world": {
    "date": "2026-11-13",
    "size": 100,
    "unit": null,
-   "entries": [],
+   "entries": [
+    {
+     "pos": 74,
+     "title": "BIRDS OF A FEATHER",
+     "artist": "Billie Eilish",
+     "dur": 210,
+     "cover": "https://cdn-images.dzcdn.net/images/cover/5d284b31cb9ddeb1a0c79aede5a94e1c/500x500-000000-80-0-0.jpg",
+     "url": "https://www.deezer.com/track/2801558052",
+     "album": "HIT ME HARD AND SOFT"
+    }
+   ],
    "platform": "deezer",
    "region": "world",
    "home": "https://www.deezer.com/playlist/3155776842",
-   "fetched": "2026-11-13T02:25Z"
+   "fetched": "2026-11-13T11:53Z"
   },
   "billboard_global200": {
    "date": "2026-10-31",
@@ -106,7 +116,7 @@
    "platform": "billboard",
    "region": "global200",
    "home": "https://www.billboard.com/charts/billboard-global-200/",
-   "fetched": "2026-11-13T02:25Z"
+   "fetched": "2026-11-13T11:53Z"
   },
   "billboard_globalexus": {
    "date": "2026-10-31",
@@ -116,7 +126,7 @@
    "platform": "billboard",
    "region": "globalexus",
    "home": "https://www.billboard.com/charts/billboard-global-excl-us/",
-   "fetched": "2026-11-13T02:25Z"
+   "fetched": "2026-11-13T11:53Z"
   }
  },
  "streams": [
@@ -442,6 +452,11 @@
   }
  ],
  "milestones": [
+  {
+   "title": "Happier Than Ever",
+   "mark": 1500000000,
+   "date": "2026-11-13"
+  },
   {
    "title": "Happier Than Ever",
    "mark": 1500000000,
@@ -812,7 +827,7 @@
    {
     "d": "2026-11-13",
     "n": 2,
-    "best": 78
+    "best": 79
    }
   ],
   "apple_us": [
@@ -935,8 +950,8 @@
    },
    {
     "d": "2026-11-13",
-    "n": 0,
-    "best": null
+    "n": 1,
+    "best": 74
    }
   ],
   "billboard_global200": [
@@ -1213,7 +1228,7 @@
   }
  },
  "streams_date": "2026-11-13",
- "updated": "2026-11-13T02:25Z",
+ "updated": "2026-11-13T11:53Z",
  "errors": [
   "apple_global: HTTP Error 404: Not Found"
  ]

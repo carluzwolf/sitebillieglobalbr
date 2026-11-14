@@ -39,7 +39,7 @@
    "platform": "spotify",
    "region": "global",
    "home": "https://charts.spotify.com/charts/view/regional-global-daily/latest",
-   "fetched": "2026-11-14T00:41Z"
+   "fetched": "2026-11-14T08:38Z"
   },
   "spotify_br": {
    "date": "2026-11-12",
@@ -49,7 +49,7 @@
    "platform": "spotify",
    "region": "br",
    "home": "https://charts.spotify.com/charts/view/regional-br-daily/latest",
-   "fetched": "2026-11-14T00:41Z"
+   "fetched": "2026-11-14T08:38Z"
   },
   "apple_br": {
    "date": null,
@@ -78,7 +78,7 @@
    "platform": "apple",
    "region": "us",
    "home": "",
-   "fetched": "2026-11-14T00:41Z"
+   "fetched": "2026-11-14T08:38Z"
   },
   "deezer_world": {
    "date": "2026-11-14",
@@ -86,7 +86,7 @@
    "unit": null,
    "entries": [
     {
-     "pos": 74,
+     "pos": 45,
      "title": "BIRDS OF A FEATHER",
      "artist": "Billie Eilish",
      "dur": 210,
@@ -98,7 +98,7 @@
    "platform": "deezer",
    "region": "world",
    "home": "https://www.deezer.com/playlist/3155776842",
-   "fetched": "2026-11-14T00:41Z"
+   "fetched": "2026-11-14T08:38Z"
   },
   "billboard_global200": {
    "date": "2026-10-31",
@@ -108,7 +108,7 @@
    "platform": "billboard",
    "region": "global200",
    "home": "https://www.billboard.com/charts/billboard-global-200/",
-   "fetched": "2026-11-14T00:41Z"
+   "fetched": "2026-11-14T08:38Z"
   },
   "billboard_globalexus": {
    "date": "2026-10-31",
@@ -118,7 +118,7 @@
    "platform": "billboard",
    "region": "globalexus",
    "home": "https://www.billboard.com/charts/billboard-global-excl-us/",
-   "fetched": "2026-11-14T00:41Z"
+   "fetched": "2026-11-14T08:38Z"
   }
  },
  "streams": [
@@ -452,6 +452,11 @@
   {
    "title": "Happier Than Ever",
    "mark": 1500000000,
+   "date": "2026-11-14"
+  },
+  {
+   "title": "Happier Than Ever",
+   "mark": 1500000000,
    "date": "2026-11-13"
   },
   {
@@ -628,11 +633,6 @@
    "title": "bad guy",
    "mark": 3000000000,
    "date": "2026-11-03"
-  },
-  {
-   "title": "Happier Than Ever",
-   "mark": 1500000000,
-   "date": "2026-11-02"
   },
   {
    "title": "Happier Than Ever",
@@ -978,7 +978,7 @@
    {
     "d": "2026-11-14",
     "n": 1,
-    "best": 74
+    "best": 45
    }
   ],
   "billboard_global200": [
@@ -1255,8 +1255,9 @@
   }
  },
  "streams_date": "2026-11-14",
- "updated": "2026-11-14T00:41Z",
+ "updated": "2026-11-14T08:38Z",
  "errors": [
-  "apple_global: HTTP Error 404: Not Found"
+  "apple_global: HTTP Error 404: Not Found",
+  "apple_br: The read operation timed out"
  ]
 }

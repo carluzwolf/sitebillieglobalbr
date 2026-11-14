@@ -1,36 +1,36 @@
 {
  "sources": {
   "spotify_global": {
-   "date": "2026-11-12",
+   "date": "2026-11-13",
    "size": 200,
    "unit": "streams",
    "entries": [
     {
-     "pos": 35,
+     "pos": 38,
      "move": -3,
      "title": "BIRDS OF A FEATHER",
      "artist": "Billie Eilish",
      "id": "6dOtVTDdiauQNBQEDOtlAB",
-     "days": 910,
+     "days": 911,
      "peak": 1,
-     "streams": 1981971,
-     "streams_delta": -10117,
-     "total": 4046658594,
+     "streams": 1940666,
+     "streams_delta": -41305,
+     "total": 4048599260,
      "url": "https://open.spotify.com/track/6dOtVTDdiauQNBQEDOtlAB",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
      "dur": 210
     },
     {
-     "pos": 58,
-     "move": -7,
+     "pos": 76,
+     "move": -18,
      "title": "WILDFLOWER",
      "artist": "Billie Eilish",
      "id": "3QaPy1KgI7nu9FJEQUgn6h",
-     "days": 910,
+     "days": 911,
      "peak": 8,
-     "streams": 1641325,
-     "streams_delta": -46590,
-     "total": 2294717637,
+     "streams": 1527142,
+     "streams_delta": -114183,
+     "total": 2296244779,
      "url": "https://open.spotify.com/track/3QaPy1KgI7nu9FJEQUgn6h",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
      "dur": 261
@@ -39,17 +39,17 @@
    "platform": "spotify",
    "region": "global",
    "home": "https://charts.spotify.com/charts/view/regional-global-daily/latest",
-   "fetched": "2026-11-14T16:23Z"
+   "fetched": "2026-11-14T22:00Z"
   },
   "spotify_br": {
-   "date": "2026-11-12",
+   "date": "2026-11-13",
    "size": 200,
    "unit": "streams",
    "entries": [],
    "platform": "spotify",
    "region": "br",
    "home": "https://charts.spotify.com/charts/view/regional-br-daily/latest",
-   "fetched": "2026-11-14T16:23Z"
+   "fetched": "2026-11-14T22:00Z"
   },
   "apple_br": {
    "date": null,
@@ -59,7 +59,7 @@
    "platform": "apple",
    "region": "br",
    "home": "",
-   "fetched": "2026-11-14T16:23Z"
+   "fetched": "2026-11-14T22:00Z"
   },
   "apple_us": {
    "date": null,
@@ -69,7 +69,7 @@
    "platform": "apple",
    "region": "us",
    "home": "",
-   "fetched": "2026-11-14T16:23Z"
+   "fetched": "2026-11-14T22:00Z"
   },
   "deezer_world": {
    "date": "2026-11-14",
@@ -89,7 +89,7 @@
    "platform": "deezer",
    "region": "world",
    "home": "https://www.deezer.com/playlist/3155776842",
-   "fetched": "2026-11-14T16:23Z"
+   "fetched": "2026-11-14T22:00Z"
   },
   "billboard_global200": {
    "date": "2026-10-31",
@@ -99,7 +99,7 @@
    "platform": "billboard",
    "region": "global200",
    "home": "https://www.billboard.com/charts/billboard-global-200/",
-   "fetched": "2026-11-14T16:23Z"
+   "fetched": "2026-11-14T22:00Z"
   },
   "billboard_globalexus": {
    "date": "2026-10-31",
@@ -109,7 +109,7 @@
    "platform": "billboard",
    "region": "globalexus",
    "home": "https://www.billboard.com/charts/billboard-global-excl-us/",
-   "fetched": "2026-11-14T16:23Z"
+   "fetched": "2026-11-14T22:00Z"
   }
  },
  "streams": [
@@ -453,6 +453,11 @@
   {
    "title": "Happier Than Ever",
    "mark": 1500000000,
+   "date": "2026-11-14"
+  },
+  {
+   "title": "Happier Than Ever",
+   "mark": 1500000000,
    "date": "2026-11-13"
   },
   {
@@ -629,11 +634,6 @@
    "title": "bad guy",
    "mark": 3000000000,
    "date": "2026-11-03"
-  },
-  {
-   "title": "Happier Than Ever",
-   "mark": 1500000000,
-   "date": "2026-11-02"
   }
  ],
  "history": {
@@ -702,6 +702,11 @@
     "d": "2026-11-12",
     "n": 2,
     "best": 35
+   },
+   {
+    "d": "2026-11-13",
+    "n": 2,
+    "best": 38
    }
   ],
   "spotify_br": [
@@ -767,6 +772,11 @@
    },
    {
     "d": "2026-11-12",
+    "n": 0,
+    "best": null
+   },
+   {
+    "d": "2026-11-13",
     "n": 0,
     "best": null
    }
@@ -1246,7 +1256,7 @@
   }
  },
  "streams_date": "2026-11-14",
- "updated": "2026-11-14T16:23Z",
+ "updated": "2026-11-14T22:00Z",
  "errors": [
   "apple_global: HTTP Error 404: Not Found"
  ]

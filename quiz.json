@@ -1,115 +1,115 @@
 {
- "date": "2026-11-14",
+ "date": "2026-11-15",
  "questions": [
   {
-   "q": "Qual faixa abre oficialmente o álbum de estreia When We All Fall Asleep, Where Do We Go?",
+   "q": "Qual é a primeira faixa da tracklist do álbum de estreia When We All Fall Asleep, Where Do We Go?",
    "o": [
-    "!!!!!!!",
-    "ilomilo",
-    "bad guy",
-    "bury a friend"
+    "you should see me in a crown",
+    "xanny",
+    "!!!!",
+    "bad guy"
    ],
-   "a": 0,
-   "e": "A faixa instrumental curta chamada !!!!!!! abre o primeiro álbum de estúdio da cantora."
+   "a": 2,
+   "e": "O álbum começa com a faixa instrumental curta intitulada !!!!."
   },
   {
-   "q": "Qual o nome da organização sem fins lucrativos focada em sustentabilidade que Billie Eilish fundou ou apoia ativamente em turnês?",
+   "q": "Qual é o nome da faixa bônus exclusiva que encerra a edição especial em vinil de Hit Me Hard and Soft?",
    "o": [
-    "Support + Feed",
-    "Green Planet Tour",
-    "EcoSound Project",
-    "Clean Future Music"
-   ],
-   "a": 0,
-   "e": "A iniciativa Support + Feed, fundada por sua mãe, é promovida frequentemente por Billie em suas turnês."
-  },
-  {
-   "q": "Em que ano Billie Eilish nasceu?",
-   "o": [
-    "2001",
-    "2003",
-    "2000",
-    "2002"
-   ],
-   "a": 0,
-   "e": "Billie Eilish nasceu em 18 de dezembro de 2001 na cidade de Los Angeles."
-  },
-  {
-   "q": "Qual artista lendário do rock participou tocando guitarra em uma das faixas ao vivo e especiais com Billie Eilish?",
-   "o": [
-    "Mick Jagger",
-    "Dave Grohl",
-    "Slash",
-    "Paul McCartney"
-   ],
-   "a": 1,
-   "e": "Dave Grohl já expressou grande admiração por Billie e se apresentou ao lado dela em ocasiões especiais."
-  },
-  {
-   "q": "Qual é o título da canção lançada por Billie Eilish para a trilha sonora da franquia James Bond?",
-   "o": [
-    "Skyfall",
-    "No Time to Die",
-    "Another Way to Die",
-    "Writing's on the Wall"
-   ],
-   "a": 1,
-   "e": "Billie e Finneas compuseram e interpretaram No Time to Die para o filme de 007 homônimo."
-  },
-  {
-   "q": "Qual marca de instrumentos musicais lançou uma linha exclusiva de ukes assinados por Billie Eilish?",
-   "o": [
-    "Taylor",
-    "Gibson",
-    "Yamaha",
-    "Fender"
+    "Skinny (Acoustic)",
+    "The Greatest (Demo)",
+    "Blue (Outro)",
+    "Não há faixa bônus secreta"
    ],
    "a": 3,
-   "e": "A parceria com a Fender resultou em um ukulele preto com o símbolo de seu boneco estilizado."
+   "e": "A edição padrão e física do álbum Hit Me Hard and Soft não possui faixas bônus ocultas."
   },
   {
-   "q": "Qual estilista ou grife de alta-costura vestiu Billie Eilish em sua estreia memorável no Met Gala em 2021?",
+   "q": "Qual famoso cineasta e diretor de videoclipes dirigiu o clipe da música Therefore I Am?",
    "o": [
-    "Prada",
-    "Gucci",
-    "Oscar de la Renta",
-    "Chanel"
-   ],
-   "a": 2,
-   "e": "Billie usou um grande vestido de baile de tule pêssego assinado por Oscar de la Renta."
-  },
-  {
-   "q": "Qual faixa do álbum Hit Me Hard and Soft apresenta uma marcante mudança de ritmo e tom na metade de sua duração?",
-   "o": [
-    "LUNCH",
-    "BLUE",
-    "CHIHIRO",
-    "WILDFLOWER"
-   ],
-   "a": 2,
-   "e": "CHIHIRO é amplamente conhecida por sua transição melódica e estrutural em duas partes distintas."
-  },
-  {
-   "q": "Qual renomado cineasta dirigiu o videoclipe da música What Was I Made For?",
-   "o": [
-    "Spike Jonze",
-    "Christopher Nolan",
     "David Fincher",
-    "Greta Gerwig"
+    "A própria Billie Eilish",
+    "Spike Jonze",
+    "Dave Meyers"
    ],
-   "a": 3,
-   "e": "Greta Gerwig, diretora do filme Barbie, também dirigiu o videoclipe oficial da canção."
+   "a": 1,
+   "e": "A própria Billie Eilish assumiu a direção do videoclipe de Therefore I Am."
   },
   {
-   "q": "Qual foi o primeiro álbum de Billie Eilish a alcançar a primeira posição na parada Billboard 200 nos Estados Unidos?",
+   "q": "Qual grife de luxo foi responsável por vestir Billie Eilish em sua marcante estreia no Met Gala em 2021?",
    "o": [
-    "Happier Than Ever",
-    "Hit Me Hard and Soft",
-    "When We All Fall Asleep, Where Do We Go?",
-    "dont smile at me"
+    "Oscar de la Renta",
+    "Chanel",
+    "Prada",
+    "Gucci"
+   ],
+   "a": 0,
+   "e": "Billie usou um volumoso vestido cor de pêssego da Oscar de la Renta sob a condição de que a marca abandonasse o uso de peles animais."
+  },
+  {
+   "q": "Qual o nome do festival de música na Colômbia onde Billie Eilish se apresentou pela primeira vez na América do Sul em 2023?",
+   "o": [
+    "Lollapalooza Brasil",
+    "Rock in Rio",
+    "Estéreo Picnic",
+    "Primavera Sound Argentina"
    ],
    "a": 2,
-   "e": "When We All Fall Asleep, Where Do We Go? estreou no topo das paradas globais e americanas em 2019."
+   "e": "Billie Eilish foi uma das principais atrações do Festival Estéreo Picnic em Bogotá no ano de 2023."
+  },
+  {
+   "q": "Qual marca de calçados esportivos lançou uma linha de tênis clássicos reeditados em parceria com materiais veganos junto a Billie Eilish?",
+   "o": [
+    "Adidas",
+    "Nike",
+    "Converse",
+    "Vans"
+   ],
+   "a": 1,
+   "e": "A parceria de longa data de Billie com a Nike resultou em releituras sustentáveis de modelos clássicos como o Air Jordan e o Air Force 1."
+  },
+  {
+   "q": "Qual premiação de grande prestígio internacional premiou a canção Bad Guy nas categorias de Gravação do Ano e Música do Ano?",
+   "o": [
+    "MTV Video Music Awards",
+    "Billboard Music Awards",
+    "American Music Awards",
+    "Grammy Awards"
+   ],
+   "a": 3,
+   "e": "Bad Guy dominou as principais categorias do Grammy Awards em 2020."
+  },
+  {
+   "q": "Qual é a faixa do álbum Happier Than Ever que se destaca por uma drástica mudança de ritmo e guitarras pesadas na segunda metade?",
+   "o": [
+    "NDA",
+    "Oxytocin",
+    "Happier Than Ever",
+    "Lost Cause"
+   ],
+   "a": 2,
+   "e": "A faixa-título Happier Than Ever transiciona de uma balada acústica intimista para um rock enérgico."
+  },
+  {
+   "q": "Qual renomada diretora de cinema comandou o aclamado videoclipe da canção What Was I Made For?",
+   "o": [
+    "Chloé Zhao",
+    "Greta Gerwig",
+    "Sofia Coppola",
+    "A própria Billie Eilish"
+   ],
+   "a": 3,
+   "e": "A própria Billie Eilish dirigiu o videoclipe sensível para a trilha sonora de Barbie."
+  },
+  {
+   "q": "Qual artista e produtor musical britânico colaborou com Billie e Finneas na faixa Louder Than Bombs?",
+   "o": [
+    "James Blake",
+    "Chris Martin",
+    "Mark Ronson",
+    "Labrinth"
+   ],
+   "a": 0,
+   "e": "James Blake é um colaborador frequente e talentoso que trabalhou em produções e projetos próximos ao círculo dos irmãos."
   }
  ],
  "history": [
@@ -232,7 +232,17 @@
   "Qual estilista ou grife de alta-costura vestiu Billie Eilish em sua estreia memorável no Met Gala em 2021?",
   "Qual faixa do álbum Hit Me Hard and Soft apresenta uma marcante mudança de ritmo e tom na metade de sua duração?",
   "Qual renomado cineasta dirigiu o videoclipe da música What Was I Made For?",
-  "Qual foi o primeiro álbum de Billie Eilish a alcançar a primeira posição na parada Billboard 200 nos Estados Unidos?"
+  "Qual foi o primeiro álbum de Billie Eilish a alcançar a primeira posição na parada Billboard 200 nos Estados Unidos?",
+  "Qual é a primeira faixa da tracklist do álbum de estreia When We All Fall Asleep, Where Do We Go?",
+  "Qual é o nome da faixa bônus exclusiva que encerra a edição especial em vinil de Hit Me Hard and Soft?",
+  "Qual famoso cineasta e diretor de videoclipes dirigiu o clipe da música Therefore I Am?",
+  "Qual grife de luxo foi responsável por vestir Billie Eilish em sua marcante estreia no Met Gala em 2021?",
+  "Qual o nome do festival de música na Colômbia onde Billie Eilish se apresentou pela primeira vez na América do Sul em 2023?",
+  "Qual marca de calçados esportivos lançou uma linha de tênis clássicos reeditados em parceria com materiais veganos junto a Billie Eilish?",
+  "Qual premiação de grande prestígio internacional premiou a canção Bad Guy nas categorias de Gravação do Ano e Música do Ano?",
+  "Qual é a faixa do álbum Happier Than Ever que se destaca por uma drástica mudança de ritmo e guitarras pesadas na segunda metade?",
+  "Qual renomada diretora de cinema comandou o aclamado videoclipe da canção What Was I Made For?",
+  "Qual artista e produtor musical britânico colaborou com Billie e Finneas na faixa Louder Than Bombs?"
  ],
  "bank": [
   {

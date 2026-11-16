@@ -51,14 +51,14 @@ var pt;
 function mount(box,x){clearInterval(pt);box.classList.remove("drv");var s=parse(x.src);
 if(!s){box.innerHTML='<div class="tvsoon" style="--c:'+esc(x.color||"#7c0912")+'"><b>Em breve na BillieTV</b><span>Este v\u00eddeo ainda n\u00e3o foi publicado.</span></div>';return}
 function dframe(){clearInterval(pt);box.classList.add("drv");box.innerHTML='<div class="drv-w"><iframe src="https://drive.google.com/file/d/'+encodeURIComponent(s.id)+'/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" title="'+esc(x.t||"V\u00eddeo")+'"></iframe></div>'}
-if(s.k==="drive"){s={k:"file",u:"https://drive.usercontent.google.com/download?id="+encodeURIComponent(s.id)+"&export=download&confirm=t",id:s.id,drive:1}}
+if(s.k==="drive"){var gk=DB&&DB.driveKey?String(DB.driveKey).trim():"";s={k:"file",u:gk?"https://www.googleapis.com/drive/v3/files/"+encodeURIComponent(s.id)+"?alt=media&key="+encodeURIComponent(gk):"https://drive.usercontent.google.com/download?id="+encodeURIComponent(s.id)+"&export=download&confirm=t",id:s.id,drive:1,key:!!gk}}
 if(s.k==="frame"){box.innerHTML='<iframe src="'+esc(s.u)+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="no-referrer"></iframe>';return}
 var sv=prog(x.id),start=sv&&sv.t>5&&sv.d&&sv.t<sv.d-15?sv.t:0;
 function save(c,d){var nw=Date.now();if(d&&c>1&&nw-(box._sv||0)>5000){box._sv=nw;var pr=get("bt_prog",{});pr[x.id]={t:c,d:d};put("bt_prog",pr)}}
 function pl(on){document.body.classList.toggle("tvplaying",!!on)}
 if(s.k==="file"){box.innerHTML='<video controls playsinline preload="metadata" controlsList="nodownload" '+(x.backdrop||x.poster?'poster="'+esc(x.backdrop||x.poster)+'" ':'')+'src="'+esc(s.u)+'"></video>';var v=box.querySelector("video");
 var ok=0,fb=function(){if(!ok){v.onerror=null;try{v.pause();v.removeAttribute("src");v.load()}catch(e){}dframe()}};
-if(s.drive){v.referrerPolicy="no-referrer";v.onerror=fb;setTimeout(fb,9000)}
+if(s.drive){if(!s.key)v.referrerPolicy="no-referrer";v.onerror=fb;setTimeout(fb,12000)}
 v.onloadedmetadata=function(){ok=1;if(start)v.currentTime=start};v.ontimeupdate=function(){save(v.currentTime,v.duration)};v.onplay=function(){pl(1)};v.onpause=v.onended=function(){pl(0)};box._pause=function(){v.pause()};return}
 box.innerHTML='<div class="yt"><div id="tvyt"></div></div>';
 ytApi(function(){var p=new YT.Player("tvyt",{width:"100%",height:"100%",videoId:s.id,host:"https://www.youtube-nocookie.com",playerVars:{controls:1,rel:0,modestbranding:1,playsinline:1,iv_load_policy:3,fs:1,start:Math.floor(start),origin:location.origin},events:{onReady:function(){box._pause=function(){p.pauseVideo()};pt=setInterval(function(){if(!document.body.contains(box)){clearInterval(pt);return}try{save(p.getCurrentTime(),p.getDuration())}catch(e){}},2000)},onStateChange:function(e){pl(e.data===1)}}})})}

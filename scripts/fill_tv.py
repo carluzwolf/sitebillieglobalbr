@@ -3,19 +3,16 @@
 procura o vídeo oficial no YouTube (Gemini + Google Search), confere o link,
 e copia título, descrição, duração, ano e as capas (miniatura do YouTube).
 Nunca sobrescreve o que você já preencheu."""
-import json, os, re, sys, urllib.error, urllib.request, urllib.parse
+import json, os, re, sys, time, urllib.error, urllib.request, urllib.parse
 from pathlib import Path
 
 FILE = Path("billietv.json")
-KEY = os.environ.get("GEMINI_API_KEY", "")
-try:
-    CFG = json.loads(Path("config.json").read_text(encoding="utf-8"))
-except Exception:
-    CFG = {}
-_fb = os.environ.get("GEMINI_FALLBACKS") or CFG.get("gemini_fallbacks") or "gemini-3.5-flash,gemini-2.5-flash"
-if isinstance(_fb, str):
-    _fb = _fb.split(",")
-MODELS = [m.strip() for m in [os.environ.get("GEMINI_MODEL") or CFG.get("gemini_model") or "gemini-3.5-flash-lite"] + list(_fb) if m and m.strip()]
+KEY = os.environ.get("GEMINI_API_KEY_TV") or os.environ.get("GEMINI_API_KEY", "")
+MODELS = [m.strip() for m in (os.environ.get("GEMINI_TV_MODEL") or "gemini-3.8-flash,gemini-3.5-flash,gemini-3.5-flash-lite").split(",") if m.strip()]
+
+class Quota(Exception):
+    pass
+
 GENERIC = ("título aqui", "substitua", "preencher")
 
 def http(url, data=None, method=None, timeout=60):
@@ -23,6 +20,7 @@ def http(url, data=None, method=None, timeout=60):
     return urllib.request.urlopen(req, timeout=timeout)
 
 def ask(prompt):
+    quota = 0
     body = json.dumps({"contents": [{"parts": [{"text": prompt}]}], "tools": [{"google_search": {}}]}).encode()
     for m in MODELS:
         try:
@@ -32,9 +30,13 @@ def ask(prompt):
             if j:
                 return json.loads(j.group(0))
         except urllib.error.HTTPError as e:
-            print("  falha", m, e, e.read()[:200])
+            print("  falha", m, e, e.read()[:120])
+            if e.code == 429:
+                quota += 1
         except Exception as e:
             print("  falha", m, e)
+    if quota >= len(MODELS):
+        raise Quota()
     return None
 
 def yt_id(u):
@@ -78,7 +80,12 @@ def main():
                  f"que NÃO esteja nesta lista: {titles}.")
         else:
             q = f"Encontre no YouTube o vídeo oficial (canal oficial da Billie Eilish ou do veículo oficial) de: '{x['t']}' ({x.get('type')}, {x.get('year') or 'ano desconhecido'}), da Billie Eilish."
-        r = ask(q + ' Responda SOMENTE com JSON: {"youtube_url":"","title":"","year":"","duration":"","description_pt":"2 a 3 frases em português do Brasil, sem inventar fatos"}. Se não achar com certeza, deixe youtube_url vazio.')
+        time.sleep(5)
+        try:
+            r = ask(q + ' Responda SOMENTE com JSON: {"youtube_url":"","title":"","year":"","duration":"","description_pt":"2 a 3 frases em português do Brasil, sem inventar fatos"}. Se não achar com certeza, deixe youtube_url vazio.')
+        except Quota:
+            print("Cota da chave de IA esgotada — salvando o que já foi feito e parando.")
+            break
         vid = yt_id((r or {}).get("youtube_url"))
         info = oembed(vid) if vid else None
         if not info:

@@ -1,0 +1,24 @@
+name: Preencher BillieTV com IA
+on:
+  workflow_dispatch: {}
+permissions:
+  contents: write
+concurrency:
+  group: fill-tv
+jobs:
+  fill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python scripts/fill_tv.py
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      - name: Commit
+        run: |
+          git config user.name "billietv-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add billietv.json
+          git diff --cached --quiet || (git commit -m "BillieTV: preenchido com IA" && git pull --rebase && git push)

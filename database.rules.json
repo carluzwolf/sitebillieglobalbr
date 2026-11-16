@@ -210,6 +210,12 @@
           }
         }
       }
+    },
+    "tvpair": {
+      "$code": {
+        ".read": "$code.matches(/^[0-9]{6}$/)",
+        ".write": "$code.matches(/^[0-9]{6}$/)"
+      }
     }
   }
 }

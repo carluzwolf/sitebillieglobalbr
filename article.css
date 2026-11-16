@@ -161,3 +161,6 @@ footer .fb{display:flex;align-items:center;gap:10px;font:900 20px var(--sans);le
 @media(max-width:480px){.logo{font-size:16px;gap:8px}.logo .lm{width:30px;height:30px;border-radius:10px}.logo b{padding:3px 7px;font-size:10.5px}#bl{padding:0 10px;min-width:0}#bl svg{display:none}.hb{padding:0 6px}.ib{width:40px}}
 @media(max-width:380px){.qk a{font-size:11.5px}.cta .btn{font-size:13px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv.hid{opacity:1;transform:none}}
+#bl,#lm{display:none!important}
+.tvtop{display:flex;align-items:center;gap:6px;height:34px;padding:0 13px;margin:0 2px;border-radius:99px;background:var(--red);color:#fff;font:900 12px var(--sans);letter-spacing:.03em;white-space:nowrap}.tvtop svg{width:14px;height:14px;fill:#fff;stroke:none}
+.tvhome:empty{display:none}

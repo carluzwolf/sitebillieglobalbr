@@ -1,5 +1,6 @@
 {
  "_ajuda": "Para cada item: poster = imagem vertical (capa), backdrop = imagem horizontal 16:9, src = link do YouTube, Google Drive ou arquivo .mp4. hero:true faz o item aparecer no destaque. Para adicionar, copie um bloco de item.",
+ "driveKey": "AIzaSyD4vTS2dlsaXBKxkgYP8t2cdv1QH2MwxZs",
  "cats": [
   {
    "id": "filmes",

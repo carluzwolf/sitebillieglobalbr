@@ -48,9 +48,10 @@ return{k:"frame",u:src}}
 var ytReady=null;function ytApi(cb){if(window.YT&&YT.Player)return cb();if(!ytReady){ytReady=[];var pr=window.onYouTubeIframeAPIReady;window.onYouTubeIframeAPIReady=function(){if(pr)pr();var q=ytReady;ytReady=null;q.forEach(function(f){f()})};var s=document.createElement("script");s.src="https://www.youtube.com/iframe_api";document.head.appendChild(s)}ytReady.push(cb)}
 function fmt(t){t=Math.max(0,Math.floor(t||0));var h=Math.floor(t/3600),m=Math.floor(t%3600/60),s=t%60;return(h?h+":"+(m<10?"0":""):"")+m+":"+(s<10?"0":"")+s}
 var pt;
-function mount(box,x){clearInterval(pt);var s=parse(x.src);
+function mount(box,x){clearInterval(pt);box.classList.remove("drv");var s=parse(x.src);
 if(!s){box.innerHTML='<div class="tvsoon" style="--c:'+esc(x.color||"#7c0912")+'"><b>Em breve na BillieTV</b><span>Este v\u00eddeo ainda n\u00e3o foi publicado.</span></div>';return}
-if(s.k==="drive"||s.k==="frame"){box.innerHTML='<iframe src="'+(s.k==="drive"?"https://drive.google.com/file/d/"+s.id+"/preview":esc(s.u))+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="no-referrer"></iframe>';return}
+if(s.k==="drive"){box.classList.add("drv");box.innerHTML='<div class="drv-w"><iframe src="https://drive.google.com/file/d/'+encodeURIComponent(s.id)+'/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin" title="'+esc(x.t||"V\u00eddeo")+'"></iframe></div>';return}
+if(s.k==="frame"){box.innerHTML='<iframe src="'+esc(s.u)+'" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="no-referrer"></iframe>';return}
 var sv=prog(x.id),start=sv&&sv.t>5&&sv.d&&sv.t<sv.d-15?sv.t:0;
 function save(c,d){var nw=Date.now();if(d&&c>1&&nw-(box._sv||0)>5000){box._sv=nw;var pr=get("bt_prog",{});pr[x.id]={t:c,d:d};put("bt_prog",pr)}}
 function pl(on){document.body.classList.toggle("tvplaying",!!on)}
@@ -78,4 +79,5 @@ rail:function(){var el=$("tvhome");if(!el)return;load(function(){el=$("tvhome");
 el.innerHTML='<div class="tvrt"><a href="#/tv" aria-label="BillieTV"><img class="tvlogo" src="/billietv-logo.svg" alt="BillieTV"></a><a href="#/tv">Ver tudo '+I.chev+'</a></div><div class="tvrs">'+l.map(function(x){return card(x,true)}).join("")+'</div>'})}
 };
 window.TV=T})();
-  
+
+                                                                                                                                                 

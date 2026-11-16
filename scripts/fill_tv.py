@@ -3,12 +3,19 @@
 procura o vídeo oficial no YouTube (Gemini + Google Search), confere o link,
 e copia título, descrição, duração, ano e as capas (miniatura do YouTube).
 Nunca sobrescreve o que você já preencheu."""
-import json, os, re, sys, urllib.request, urllib.parse
+import json, os, re, sys, urllib.error, urllib.request, urllib.parse
 from pathlib import Path
 
 FILE = Path("billietv.json")
 KEY = os.environ.get("GEMINI_API_KEY", "")
-MODELS = [os.environ.get("GEMINI_MODEL", "gemini-2.5-flash"), "gemini-2.0-flash"]
+try:
+    CFG = json.loads(Path("config.json").read_text(encoding="utf-8"))
+except Exception:
+    CFG = {}
+_fb = os.environ.get("GEMINI_FALLBACKS") or CFG.get("gemini_fallbacks") or "gemini-3.5-flash,gemini-2.5-flash"
+if isinstance(_fb, str):
+    _fb = _fb.split(",")
+MODELS = [m.strip() for m in [os.environ.get("GEMINI_MODEL") or CFG.get("gemini_model") or "gemini-3.5-flash-lite"] + list(_fb) if m and m.strip()]
 GENERIC = ("título aqui", "substitua", "preencher")
 
 def http(url, data=None, method=None, timeout=60):
@@ -24,6 +31,8 @@ def ask(prompt):
             j = re.search(r"\{.*\}", txt, re.S)
             if j:
                 return json.loads(j.group(0))
+        except urllib.error.HTTPError as e:
+            print("  falha", m, e, e.read()[:200])
         except Exception as e:
             print("  falha", m, e)
     return None
@@ -96,3 +105,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    

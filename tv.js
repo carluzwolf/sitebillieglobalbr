@@ -26,7 +26,7 @@ function sync(){var i=Math.round(s.scrollLeft/s.clientWidth);for(var k=0;k<d.len
 s.addEventListener("scroll",sync,{passive:true});
 tmr=setInterval(function(){if(!$("tvhs")){clearInterval(tmr);return}if(n<2)return;var i=(Math.round(s.scrollLeft/s.clientWidth)+1)%n;s.scrollTo({left:i*s.clientWidth,behavior:"smooth"})},6000)}
 function chips(act){return '<div class="tvchips"><a href="#/tv"'+(act?'':' class="on"')+'>Tudo</a>'+DB.cats.map(function(c){return '<a href="#/tv/c/'+c.id+'"'+(act===c.id?' class="on"':'')+'>'+esc(c.label)+'</a>'}).join("")+'</div>'}
-function paint(h){$("v").innerHTML=h;scrollTo(0,0)}
+function paint(h){document.body.classList.remove("tvplaying");$("v").innerHTML=h;scrollTo(0,0)}
 /* p\u00e1ginas */
 function home(){mode(true,"h");var h='<div class="tv">'+hero()+chips("");
 var rec=Object.keys(get("bt_prog",{})).map(byId).filter(function(x){var p=prog(x.id);return x&&p&&p.d&&p.t/p.d>.02&&p.t/p.d<.97});
@@ -54,8 +54,8 @@ if(s.k==="drive"||s.k==="frame"){box.innerHTML='<iframe src="'+(s.k==="drive"?"h
 var UI='<div class="cap"></div><div class="big">'+I.play+'</div><div class="ctl"><button class="pp" aria-label="Play/Pause"><svg class="f" viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z"/></svg></button><button class="bk" aria-label="Voltar 10s"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></button><input type="range" min="0" max="1000" value="0" class="sk" aria-label="Progresso"><time>0:00</time><button class="mu" aria-label="Som"><svg viewBox="0 0 24 24"><path d="M4 10v4h4l5 4V6L8 10z"/><path d="M16 9a4 4 0 0 1 0 6"/></svg></button><button class="fs" aria-label="Tela cheia"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button></div>';
 var A,saved=prog(x.id),start=saved&&saved.t>5&&saved.d&&saved.t<saved.d-15?saved.t:0;
 function bind(){var q=function(c){return box.querySelector(c)},sk=q(".sk"),tm=q("time"),hide;
-function ui(){var d=A.dur(),c=A.cur();if(d){sk.value=Math.round(c/d*1000);sk.style.setProperty("--p",(c/d*100)+"%");tm.textContent=fmt(c)+" / "+fmt(d)}box.classList.toggle("pl",A.playing());
-var pr=get("bt_prog",{});if(d&&c>1){pr[x.id]={t:c,d:d};put("bt_prog",pr)}}
+function ui(){var d=A.dur(),c=A.cur();if(d){sk.value=Math.round(c/d*1000);sk.style.setProperty("--p",(c/d*100)+"%");tm.textContent=fmt(c)+" / "+fmt(d)}box.classList.toggle("pl",A.playing());document.body.classList.toggle("tvplaying",A.playing());
+var nw=Date.now();if(d&&c>1&&nw-(box._sv||0)>5000){box._sv=nw;var pr=get("bt_prog",{});pr[x.id]={t:c,d:d};put("bt_prog",pr)}}
 function tog(){A.playing()?A.pause():A.play();wake()}
 function wake(){box.classList.remove("hid");clearTimeout(hide);hide=setTimeout(function(){box.classList.add("hid")},2800)}
 q(".cap").onclick=function(){tog()};q(".pp").onclick=tog;q(".bk").onclick=function(){A.seek(Math.max(0,A.cur()-10));ui()};
@@ -68,7 +68,7 @@ if(s.k==="file"){box.innerHTML='<video playsinline preload="metadata" '+(x.backd
 A={v:v,play:function(){v.play()},pause:function(){v.pause()},playing:function(){return!v.paused&&!v.ended},cur:function(){return v.currentTime},dur:function(){return v.duration||0},seek:function(t){v.currentTime=t},mute:function(m){v.muted=m},muted:function(){return v.muted}};
 v.onloadedmetadata=function(){if(start)v.currentTime=start};bind()}
 else{box.innerHTML='<div class="yt"><div id="tvyt"></div></div>'+UI;box.querySelector(".big").style.display="";
-ytApi(function(){var p=new YT.Player("tvyt",{videoId:s.id,playerVars:{controls:0,rel:0,modestbranding:1,playsinline:1,iv_load_policy:3,disablekb:1,fs:0,start:Math.floor(start),origin:location.origin},host:"https://www.youtube-nocookie.com",events:{onReady:function(){A={play:function(){p.playVideo()},pause:function(){p.pauseVideo()},playing:function(){return p.getPlayerState&&p.getPlayerState()===1},cur:function(){return p.getCurrentTime?p.getCurrentTime():0},dur:function(){return p.getDuration?p.getDuration():0},seek:function(t){p.seekTo(t,true)},mute:function(m){m?p.mute():p.unMute()},muted:function(){return p.isMuted()}};bind()}}})})}}
+ytApi(function(){var p=new YT.Player("tvyt",{width:"100%",height:"100%",videoId:s.id,playerVars:{controls:0,rel:0,modestbranding:1,playsinline:1,iv_load_policy:3,disablekb:1,fs:0,start:Math.floor(start),origin:location.origin},host:"https://www.youtube-nocookie.com",events:{onReady:function(){A={play:function(){p.playVideo()},pause:function(){p.pauseVideo()},playing:function(){return p.getPlayerState&&p.getPlayerState()===1},cur:function(){return p.getCurrentTime?p.getCurrentTime():0},dur:function(){return p.getDuration?p.getDuration():0},seek:function(t){p.seekTo(t,true)},mute:function(m){m?p.mute():p.unMute()},muted:function(){return p.isMuted()}};bind()}}})})}}
 function watch(id){var x=byId(id);if(!x){location.hash="#/tv";return}mode(true,"h");
 var more=DB.items.filter(function(y){return y.cat===x.cat&&y.id!==x.id});
 paint('<div class="tvw"><a class="tvback" href="#/tv">'+I.back+'BillieTV</a><div class="tvpl" id="tvpl"></div><div class="tvinfo"><span class="tvtag">'+esc(x.type||"BillieTV")+'</span><h1>'+esc(x.t)+'</h1><div class="tvmeta">'+(x.year?'<span>'+esc(x.year)+'</span>':'')+(x.dur?'<span>'+esc(x.dur)+'</span>':'')+'<span class="b">BillieTV</span></div><p>'+esc(x.d||"")+'</p><div class="tvact"><button class="tvb g" data-fav="'+esc(x.id)+'">'+(inList(x.id)?I.check+'Na lista':I.plus+'Minha Lista')+'</button><button class="tvb g" id="tvcast"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Assistir na TV</button><button class="tvb g" id="tvsh"><svg viewBox="0 0 24 24"><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4"/></svg>Compartilhar</button></div></div></div><div class="tv">'+rowH("Mais como este",more,"#/tv/c/"+x.cat)+'</div>');
@@ -89,4 +89,4 @@ rail:function(){var el=$("tvhome");if(!el)return;load(function(){el=$("tvhome");
 el.innerHTML='<div class="tvrt"><a href="#/tv" aria-label="BillieTV"><img class="tvlogo" src="/billietv-logo.svg" alt="BillieTV"></a><a href="#/tv">Ver tudo '+I.chev+'</a></div><div class="tvrs">'+l.map(function(x){return card(x,true)}).join("")+'</div>'})}
 };
 window.TV=T})();
-                                                                
+  

@@ -23,12 +23,6 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      - name: Traduzir notícias para inglês e espanhol
-        run: python scripts/translate_news.py
-        continue-on-error: true   # se falhar, o site continua em português
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       - name: Gerar páginas das notícias (links próprios + Google News sitemap)
         run: python scripts/build_articles.py
       - name: Commit
@@ -40,4 +34,5 @@ jobs:
           [ -f events_seen.json ] && git add events_seen.json || true
           [ -f photos.json ] && git add photos.json || true
           git diff --cached --quiet || (git commit -m "Atualiza notícias" && git push)
+
           

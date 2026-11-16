@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>BillieTV na TV</title>
+<style>
+*{box-sizing:border-box}html,body{height:100%;margin:0;background:#050506;color:#fff;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;overflow:hidden}
+#ent{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;padding:20px;background:radial-gradient(circle at 50% 20%,#3a0710,#050506 70%)}
+#ent h1{margin:0;font-size:clamp(28px,5vw,54px);font-weight:900;letter-spacing:-.03em}#ent h1 b{background:#d4101f;padding:0 14px;border-radius:16px;margin-left:6px}
+#ent p{margin:0;color:#c9c9d0;font-size:clamp(15px,2vw,22px)}
+#cd{width:min(420px,90vw);font-size:clamp(34px,6vw,60px);letter-spacing:.35em;text-align:center;padding:14px;border-radius:18px;border:3px solid #333;background:#0e0e11;color:#fff;outline:none}#cd:focus{border-color:#ff4d5a}
+#kp{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:min(330px,86vw)}
+#kp button{padding:16px 0;font-size:26px;font-weight:800;border-radius:14px;border:2px solid #2a2a30;background:#16161a;color:#fff;cursor:pointer}#kp button:focus,#kp button:hover{border-color:#ff4d5a;background:#2a1014;outline:none}
+#go{width:min(330px,86vw);padding:16px;font-size:22px;font-weight:900;border:0;border-radius:99px;background:#d4101f;color:#fff;cursor:pointer}#go:focus{outline:3px solid #fff}
+#er{color:#ff6b77;min-height:24px;font-size:18px}
+#stage{position:fixed;inset:0;background:#000;display:none}#stage iframe,#stage video,#stage #yt{position:absolute;inset:0;width:100%;height:100%;border:0}
+#wait{position:fixed;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;gap:12px;text-align:center;background:radial-gradient(circle at 50% 30%,#3a0710,#050506 75%);font-size:clamp(20px,3vw,34px);font-weight:800}
+#wait small{font-weight:500;color:#c9c9d0;font-size:.6em}
+#ttl{position:fixed;left:24px;top:18px;z-index:5;font-weight:800;font-size:22px;text-shadow:0 2px 12px #000;opacity:0;transition:opacity .6s;pointer-events:none}
+</style></head><body>
+<div id="ent"><h1>Billie<b>TV</b></h1><p>Abra o vídeo no celular, toque em <b>Assistir na TV</b> e digite aqui o código de 6 números.</p>
+<input id="cd" inputmode="numeric" maxlength="6" placeholder="······" autocomplete="off">
+<div id="kp"></div><button id="go">Conectar</button><div id="er"></div></div>
+<div id="wait"><div>✅ TV conectada</div><small>Escolha o vídeo no celular…</small></div>
+<div id="stage"></div><div id="ttl"></div>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+<script>
+var CFG={apiKey:"AIzaSyBRnitmkaXTvn46Nvb7Xsd2Cf-4h4hh-24",authDomain:"siteoficial-e0823.firebaseapp.com",databaseURL:"https://siteoficial-e0823-default-rtdb.firebaseio.com",projectId:"siteoficial-e0823"};
+var $=function(i){return document.getElementById(i)},ref,last=0,P=null,vol=100,tick;
+firebase.initializeApp(CFG,"tv");var db=firebase.app("tv").database();
+var kp=$("kp");"123456789".split("").concat(["⌫","0","C"]).forEach(function(k){var b=document.createElement("button");b.textContent=k;b.onclick=function(){var c=$("cd");if(k==="⌫")c.value=c.value.slice(0,-1);else if(k==="C")c.value="";else if(c.value.length<6)c.value+=k};kp.appendChild(b)});
+$("cd").oninput=function(){this.value=this.value.replace(/\D/g,"")};
+$("cd").onkeydown=function(e){if(e.key==="Enter")$("go").click()};
+$("go").onclick=function(){var c=$("cd").value;$("er").textContent="";if(c.length!==6){$("er").textContent="Digite os 6 números.";return}
+ref=db.ref("tvpair/"+c);ref.once("value").then(function(s){if(!s.exists()){$("er").textContent="Código inválido ou expirado. Gere outro no celular.";return}
+$("ent").style.display="none";$("wait").style.display="flex";last=0;
+ref.child("c").on("value",function(s){var c=s.val();if(c===null){return reset("Celular desconectado.")}if(!c||!c.n||c.n<=last)return;last=c.n;cmd(c)});
+clearInterval(tick);tick=setInterval(report,1000);report()}).catch(function(e){$("er").textContent="Erro de conexão."})};
+function reset(m){clearInterval(tick);if(ref)ref.child("c").off();unmount();$("stage").style.display="none";$("wait").style.display="none";$("ent").style.display="flex";$("er").textContent=m||"";$("cd").value=""}
+function report(){if(!ref)return;var o={ts:Date.now(),p:0,c:0,d:0,v:vol};if(P){o.p=P.playing()?1:0;o.c=P.cur();o.d=P.dur()}ref.child("st").set(o).catch(function(){})}
+function cmd(c){var a=c.a,v=+c.v||0;if(a==="load")return load(c.item);if(!P)return;if(a==="play")P.play();else if(a==="pause")P.pause();else if(a==="seek")P.seek(v);else if(a==="vol"){vol=v;P.vol(v)}else if(a==="exit"){reset("");return}report()}
+function unmount(){P=null;$("stage").innerHTML=""}
+function parse(s){s=String(s||"");var m;if(m=s.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/|live\/))([\w-]{11})/))return{k:"yt",id:m[1]};if(m=s.match(/drive\.google\.com\/(?:file\/d\/|open\?id=|uc\?(?:.*&)?id=)([\w-]+)/))return{k:"drive",id:m[1]};if(/\.(mp4|webm|ogv|mov|m4v)(\?|#|$)/i.test(s))return{k:"file",u:s};return{k:"frame",u:s}}
+function title(t){var e=$("ttl");e.textContent=t;e.style.opacity=1;setTimeout(function(){e.style.opacity=0},4000)}
+var ytq=null;function ytApi(cb){if(window.YT&&YT.Player)return cb();if(!ytq){ytq=[];window.onYouTubeIframeAPIReady=function(){var q=ytq;ytq=null;q.forEach(function(f){f()})};var s=document.createElement("script");s.src="https://www.youtube.com/iframe_api";document.head.appendChild(s)}ytq.push(cb)}
+function load(it){unmount();var s=parse(it&&it.src),st=$("stage");$("wait").style.display="none";st.style.display="block";title(it.t||"");
+if(s.k==="drive"||s.k==="frame"){st.innerHTML='<iframe src="'+(s.k==="drive"?"https://drive.google.com/file/d/"+s.id+"/preview":s.u)+'" allow="autoplay; fullscreen" allowfullscreen></iframe>';return}
+if(s.k==="file"){st.innerHTML='<video autoplay playsinline src="'+s.u.replace(/"/g,"")+'"></video>';var v=st.firstChild;v.volume=vol/100;P={play:function(){v.play()},pause:function(){v.pause()},playing:function(){return!v.paused&&!v.ended},cur:function(){return v.currentTime},dur:function(){return v.duration||0},seek:function(t){v.currentTime=t},vol:function(x){v.volume=x/100}};v.play().catch(function(){});return}
+st.innerHTML='<div id="yt"></div>';ytApi(function(){var p=new YT.Player("yt",{videoId:s.id,host:"https://www.youtube-nocookie.com",playerVars:{autoplay:1,controls:0,rel:0,modestbranding:1,playsinline:1,iv_load_policy:3,disablekb:1,fs:0,origin:location.origin},events:{onReady:function(){P={play:function(){p.playVideo()},pause:function(){p.pauseVideo()},playing:function(){return p.getPlayerState()===1},cur:function(){return p.getCurrentTime()},dur:function(){return p.getDuration()},seek:function(t){p.seekTo(t,true)},vol:function(x){p.setVolume(x)}};p.setVolume(vol);p.unMute();p.playVideo()}}})})}
+</script></body></html>

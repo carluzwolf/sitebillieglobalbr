@@ -16,6 +16,7 @@ jobs:
       - run: python scripts/fill_tv.py
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_TV: ${{ secrets.GEMINI_API_KEY_TV }}
       - name: Commit
         run: |
           git config user.name "billietv-bot"

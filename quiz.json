@@ -1,115 +1,115 @@
 {
- "date": "2026-11-15",
+ "date": "2026-11-16",
  "questions": [
   {
-   "q": "Qual é a primeira faixa da tracklist do álbum de estreia When We All Fall Asleep, Where Do We Go?",
+   "q": "Qual é a primeira faixa da tracklist do EP de estreia dont smile at me?",
    "o": [
-    "you should see me in a crown",
-    "xanny",
-    "!!!!",
-    "bad guy"
-   ],
-   "a": 2,
-   "e": "O álbum começa com a faixa instrumental curta intitulada !!!!."
-  },
-  {
-   "q": "Qual é o nome da faixa bônus exclusiva que encerra a edição especial em vinil de Hit Me Hard and Soft?",
-   "o": [
-    "Skinny (Acoustic)",
-    "The Greatest (Demo)",
-    "Blue (Outro)",
-    "Não há faixa bônus secreta"
+    "ocean eyes",
+    "idontwannabeyouanymore",
+    "my boy",
+    "COPYCAT"
    ],
    "a": 3,
-   "e": "A edição padrão e física do álbum Hit Me Hard and Soft não possui faixas bônus ocultas."
+   "e": "COPYCAT abre oficialmente o primeiro EP da carreira de Billie Eilish."
   },
   {
-   "q": "Qual famoso cineasta e diretor de videoclipes dirigiu o clipe da música Therefore I Am?",
+   "q": "Qual o nome do irmão mais velho e parceiro de composições de Billie Eilish?",
    "o": [
-    "David Fincher",
-    "A própria Billie Eilish",
-    "Spike Jonze",
-    "Dave Meyers"
+    "Finneas O'Connell",
+    "Andrew O'Connell",
+    "Patrick O'Connell",
+    "Justin O'Connell"
    ],
-   "a": 1,
-   "e": "A própria Billie Eilish assumiu a direção do videoclipe de Therefore I Am."
+   "a": 0,
+   "e": "Finneas é o coautor e produtor de praticamente todas as músicas de Billie."
   },
   {
-   "q": "Qual grife de luxo foi responsável por vestir Billie Eilish em sua marcante estreia no Met Gala em 2021?",
+   "q": "Qual é o título do terceiro álbum de estúdio lançado por Billie Eilish em 2024?",
    "o": [
-    "Oscar de la Renta",
+    "When We All Fall Asleep",
+    "dont smile at me",
+    "Hit Me Hard and Soft",
+    "Happier Than Ever"
+   ],
+   "a": 2,
+   "e": "Hit Me Hard and Soft é o terceiro álbum de estúdio da discografia da artista."
+  },
+  {
+   "q": "Qual foi o primeiro single lançado por Billie Eilish a acumular bilhões de streams nas plataformas digitais?",
+   "o": [
+    "when the party's over",
+    "bad guy",
+    "bury a friend",
+    "ocean eyes"
+   ],
+   "a": 3,
+   "e": "ocean eyes foi a faixa que lançou Billie Eilish ao estrelato mundial após ser publicada no SoundCloud."
+  },
+  {
+   "q": "Qual é o nome da faixa do álbum Hit Me Hard and Soft que foi acompanhada por um clipe submarino dirigido por ela mesma?",
+   "o": [
+    "LUNCH",
+    "WILDFLOWER",
+    "CHIHIRO",
+    "BLUE"
+   ],
+   "a": 0,
+   "e": "LUNCH ganhou um videoclipe dirigido por Billie Eilish onde ela interage com a câmera em um cenário minimalista."
+  },
+  {
+   "q": "Qual grife de luxo italiana convidou Billie Eilish para estrelar uma campanha global de bolsas em 2021?",
+   "o": [
     "Chanel",
+    "Louis Vuitton",
     "Prada",
     "Gucci"
    ],
-   "a": 0,
-   "e": "Billie usou um volumoso vestido cor de pêssego da Oscar de la Renta sob a condição de que a marca abandonasse o uso de peles animais."
+   "a": 3,
+   "e": "Billie Eilish estrelou a campanha da bolsa vegana Gucci Horsebit 1955 em 2023."
   },
   {
-   "q": "Qual o nome do festival de música na Colômbia onde Billie Eilish se apresentou pela primeira vez na América do Sul em 2023?",
+   "q": "Qual o nome da organização sem fins lucrativos de ação climática cofundada pela mãe de Billie e apoiada pela cantora?",
    "o": [
-    "Lollapalooza Brasil",
-    "Rock in Rio",
-    "Estéreo Picnic",
-    "Primavera Sound Argentina"
+    "Green Planet Now",
+    "Eco Music Alliance",
+    "Support + Feed",
+    "Clean Earth Project"
    ],
    "a": 2,
-   "e": "Billie Eilish foi uma das principais atrações do Festival Estéreo Picnic em Bogotá no ano de 2023."
+   "e": "A Support + Feed trabalha para combater a insegurança alimentar e a crise climática."
   },
   {
-   "q": "Qual marca de calçados esportivos lançou uma linha de tênis clássicos reeditados em parceria com materiais veganos junto a Billie Eilish?",
+   "q": "Em qual edição do Grammy Awards Billie Eilish levou para casa os prêmios de Álbum do Ano e Gravação do Ano com seu début?",
    "o": [
-    "Adidas",
-    "Nike",
-    "Converse",
-    "Vans"
+    "60ª Edição",
+    "63ª Edição",
+    "61ª Edição",
+    "62ª Edição"
+   ],
+   "a": 3,
+   "e": "No Grammy de 2020 (62ª edição), Billie fez histórico ao vencer as quatro principais categorias."
+  },
+  {
+   "q": "Qual famosa revista de cultura pop americana colocou Billie Eilish em sua capa com uma sessão de fotos inspirada nos anos 50?",
+   "o": [
+    "Rolling Stone",
+    "Vanity Fair",
+    "Time",
+    "Vogue"
+   ],
+   "a": 3,
+   "e": "A edição de junho de 2021 da Vogue britânica apresentou a marcante transformação visual de Billie."
+  },
+  {
+   "q": "Qual é o nome da faixa do álbum Happier Than Ever que explora a sonoridade da Bossa Nova?",
+   "o": [
+    "Getting Older",
+    "Billie Bossa Nova",
+    "Not My Responsibility",
+    "Oxytocin"
    ],
    "a": 1,
-   "e": "A parceria de longa data de Billie com a Nike resultou em releituras sustentáveis de modelos clássicos como o Air Jordan e o Air Force 1."
-  },
-  {
-   "q": "Qual premiação de grande prestígio internacional premiou a canção Bad Guy nas categorias de Gravação do Ano e Música do Ano?",
-   "o": [
-    "MTV Video Music Awards",
-    "Billboard Music Awards",
-    "American Music Awards",
-    "Grammy Awards"
-   ],
-   "a": 3,
-   "e": "Bad Guy dominou as principais categorias do Grammy Awards em 2020."
-  },
-  {
-   "q": "Qual é a faixa do álbum Happier Than Ever que se destaca por uma drástica mudança de ritmo e guitarras pesadas na segunda metade?",
-   "o": [
-    "NDA",
-    "Oxytocin",
-    "Happier Than Ever",
-    "Lost Cause"
-   ],
-   "a": 2,
-   "e": "A faixa-título Happier Than Ever transiciona de uma balada acústica intimista para um rock enérgico."
-  },
-  {
-   "q": "Qual renomada diretora de cinema comandou o aclamado videoclipe da canção What Was I Made For?",
-   "o": [
-    "Chloé Zhao",
-    "Greta Gerwig",
-    "Sofia Coppola",
-    "A própria Billie Eilish"
-   ],
-   "a": 3,
-   "e": "A própria Billie Eilish dirigiu o videoclipe sensível para a trilha sonora de Barbie."
-  },
-  {
-   "q": "Qual artista e produtor musical britânico colaborou com Billie e Finneas na faixa Louder Than Bombs?",
-   "o": [
-    "James Blake",
-    "Chris Martin",
-    "Mark Ronson",
-    "Labrinth"
-   ],
-   "a": 0,
-   "e": "James Blake é um colaborador frequente e talentoso que trabalhou em produções e projetos próximos ao círculo dos irmãos."
+   "e": "Billie Bossa Nova traz influências rítmicas brasileiras e uma atmosfera levemente melancólica."
   }
  ],
  "history": [
@@ -242,7 +242,17 @@
   "Qual premiação de grande prestígio internacional premiou a canção Bad Guy nas categorias de Gravação do Ano e Música do Ano?",
   "Qual é a faixa do álbum Happier Than Ever que se destaca por uma drástica mudança de ritmo e guitarras pesadas na segunda metade?",
   "Qual renomada diretora de cinema comandou o aclamado videoclipe da canção What Was I Made For?",
-  "Qual artista e produtor musical britânico colaborou com Billie e Finneas na faixa Louder Than Bombs?"
+  "Qual artista e produtor musical britânico colaborou com Billie e Finneas na faixa Louder Than Bombs?",
+  "Qual é a primeira faixa da tracklist do EP de estreia dont smile at me?",
+  "Qual o nome do irmão mais velho e parceiro de composições de Billie Eilish?",
+  "Qual é o título do terceiro álbum de estúdio lançado por Billie Eilish em 2024?",
+  "Qual foi o primeiro single lançado por Billie Eilish a acumular bilhões de streams nas plataformas digitais?",
+  "Qual é o nome da faixa do álbum Hit Me Hard and Soft que foi acompanhada por um clipe submarino dirigido por ela mesma?",
+  "Qual grife de luxo italiana convidou Billie Eilish para estrelar uma campanha global de bolsas em 2021?",
+  "Qual o nome da organização sem fins lucrativos de ação climática cofundada pela mãe de Billie e apoiada pela cantora?",
+  "Em qual edição do Grammy Awards Billie Eilish levou para casa os prêmios de Álbum do Ano e Gravação do Ano com seu début?",
+  "Qual famosa revista de cultura pop americana colocou Billie Eilish em sua capa com uma sessão de fotos inspirada nos anos 50?",
+  "Qual é o nome da faixa do álbum Happier Than Ever que explora a sonoridade da Bossa Nova?"
  ],
  "bank": [
   {

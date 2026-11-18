@@ -1,128 +1,118 @@
 {
- "date": "2026-11-17",
+ "date": "2026-11-18",
  "questions": [
   {
-   "q": "Qual é a cidade natal onde Billie Eilish nasceu e cresceu?",
+   "q": "Qual é a cor natural do cabelo de Billie Eilish que ela exibiu antes de adotar o icônico visual verde em 2019?",
    "o": [
-    "Chicago",
-    "Los Angeles",
-    "Nova York",
-    "Seattle"
-   ],
-   "a": 1,
-   "e": "Billie Eilish cresceu em Los Angeles, na Califórnia, onde foi educada em casa junto com seu irmão Finneas."
-  },
-  {
-   "q": "Qual marca esportiva mundial lançou coleções de calçados veganos assinadas por Billie Eilish?",
-   "o": [
-    "Puma",
-    "Adidas",
-    "Converse",
-    "Nike"
-   ],
-   "a": 3,
-   "e": "Billie Eilish colaborou com a Nike em releituras de modelos clássicos utilizando materiais totalmente veganos e reciclados."
-  },
-  {
-   "q": "Qual é o nome do EP de estreia que projetou Billie Eilish para o cenário musical em 2017?",
-   "o": [
-    "Party Favor",
-    "Ocean Eyes EP",
-    "dont smile at me",
-    "Felt So Good"
+    "Preto azulado",
+    "Ruivo natural",
+    "Castanho claro",
+    "Loiro claro"
    ],
    "a": 2,
-   "e": "O EP dont smile at me foi lançado em 2017 e continha sucessos iniciais como Ocean Eyes e idontwannabeyouanymore."
+   "e": "Antes da fase verde, Billie mantinha seus cabelos em tons claros de castanho."
   },
   {
-   "q": "Qual faixa do álbum de estreia When We All Fall Asleep possui um videoclipe com aranhas saindo de sua boca?",
+   "q": "Qual instrumento musical Billie Eilish aprendeu a tocar ainda na infância e utiliza frequentemente em composições?",
    "o": [
-    "bury a friend",
-    "you should see me in a crown",
-    "bad guy",
-    "ilomilo"
-   ],
-   "a": 1,
-   "e": "O clipe oficial de you should see me in a crown contou com direção visual ousada incluindo aranhas reais."
-  },
-  {
-   "q": "Qual faixa de Hit Me Hard and Soft apresenta uma transição drástica de andamento e virou favorita dos fãs?",
-   "o": [
-    "CHIHIRO",
-    "WILDFLOWER",
-    "BLUE",
-    "LUNCH"
+    "Ukulele",
+    "Saxofone",
+    "Flauta doce",
+    "Violoncelo"
    ],
    "a": 0,
-   "e": "CHIHIRO transita entre batidas eletrônicas densas e uma atmosfera melancólica com vocais etéreas."
+   "e": "Billie aprendeu a tocar ukulele aos seis anos e o utilizou em várias de suas primeiras músicas."
   },
   {
-   "q": "Em qual grande festival de música britânico Billie Eilish se apresentou como headliner principal em 2022?",
+   "q": "Qual o nome do gato de estimação que Billie Eilish adotou e frequentemente aparece em suas redes sociais e vlogs?",
    "o": [
-    "Isle of Wight",
-    "Leeds Festival",
-    "Glastonbury",
-    "Reading Festival"
+    "Shark",
+    "Pepper",
+    "Clover",
+    "Misha"
    ],
-   "a": 2,
-   "e": "Billie Eilish se tornou a artista solo mais jovem a ser a principal atração do Palco Pyramid no Festival de Glastonbury."
+   "a": 0,
+   "e": "Shark é um dos gatos de estimação resgatados por Billie e bastante querido pelos fãs."
   },
   {
-   "q": "Qual famoso programa de rádio e web da NPR contou com uma inesquecível performance acústica de Billie e Finneas?",
+   "q": "Qual famoso programa de televisão americano teve Billie Eilish como atração musical e apresentadora no mesmo episódio?",
    "o": [
-    "Live Lounge",
-    "Tiny Desk Concert",
-    "BBC Radio Session",
-    "KEXP Studio"
+    "Saturday Night Live",
+    "Late Night with Seth",
+    "The Tonight Show",
+    "The Ellen Show"
+   ],
+   "a": 0,
+   "e": "Billie apresentou e cantou no Saturday Night Live, mostrando seu talento para a comédia."
+  },
+  {
+   "q": "Qual é o nome da mãe de Billie Eilish, que também é atriz e atativista ambiental conhecida?",
+   "o": [
+    "Susan Eilish",
+    "Maggie Baird",
+    "Linda Finneas",
+    "Sharon O'Connell"
    ],
    "a": 1,
-   "e": "A dupla realizou uma apresentação minimalista e intimista na série NPR Tiny Desk Concert cercados por estantes de livros."
+   "e": "Maggie Baird é mãe de Billie e Finneas e fundadora de organizações voltadas à sustentabilidade."
   },
   {
-   "q": "Qual é o nome do instrumental que abre o EP dont smile at me antes da primeira faixa cantada?",
+   "q": "Qual é o nome do pai de Billie Eilish, músico e ator que aparece no documentário da filha?",
    "o": [
-    "get here",
-    "&burn",
-    "Copycat",
-    "piña colada"
+    "Patrick O'Connell",
+    "Richard Finneas",
+    "Michael Eilish",
+    "David Baird"
+   ],
+   "a": 0,
+   "e": "Patrick O'Connell é ator e pai dos artistas, aparecendo nos bastidores de suas turnês."
+  },
+  {
+   "q": "Qual plataforma de streaming lançou a série de concertos íntimos em formato de live session protagonizada por Billie?",
+   "o": [
+    "Amazon Prime",
+    "Disney+",
+    "Apple Music",
+    "Netflix"
    ],
    "a": 2,
-   "e": "A faixa instrumental introduz a atmosfera melancólica do EP de estreia da artista."
+   "e": "A Apple Music produziu sessões especiais e entrevistas exclusivas com a cantora."
   },
   {
-   "q": "Qual é o nome da faixa bônus ou interlúdio instrumental que conecta os universos sonoros no primeiro álbum?",
+   "q": "Qual cidade americana abriga os estúdios caseiros onde Billie Eilish e Finneas gravaram seus primeiros sucessos?",
    "o": [
-    "ilomilo",
-    "listen before i go",
-    "!(1)",
-    "goodbye"
+    "Seattle",
+    "Los Angeles",
+    "Nova York",
+    "San Francisco"
    ],
-   "a": 3,
-   "e": "A faixa goodbye encerra o álbum When We All Fall Asleep, Where Do We Go? costurando trechos de várias músicas anteriores."
+   "a": 1,
+   "e": "Os irmãos cresceram e gravaram grande parte de sua discografia em Highland Park, Los Angeles."
   },
   {
-   "q": "Qual premiação musical americana consagrou Billie Eilish com troféus importantes em sua primeira grande indicação?",
+   "q": "Em qual ano Billie Eilish realizou sua primeira turnê mundial oficial passando por arenas internacionais?",
    "o": [
-    "MTV Video Music Awards",
-    "Billboard Music Awards",
-    "American Music Awards",
-    "Grammy Awards"
+    "2021",
+    "2017",
+    "2023",
+    "2019"
    ],
    "a": 3,
-   "e": "Billie Eilish fez história no Grammy Awards ao vencer nas principais categorias da premiação logo em seu ano de estreia."
+   "e": "A turnê When We All Fall Asleep Tour esgotou arenas ao redor do mundo em 2019."
+  },
+  {
+   "q": "Qual é a faixa do álbum Happier Than Ever que possui um videoclipe dirigido inteiramente pela própria cantora?",
+   "o": [
+    "Oxytocin",
+    "Your Power",
+    "NDA",
+    "Happier Than Ever"
+   ],
+   "a": 2,
+   "e": "Billie assumiu a direção do videoclipe de NDA, que conta com carros em movimento ao seu redor."
   }
  ],
  "history": [
-  "Qual foi o primeiro álbum de estúdio lançado por Billie Eilish?",
-  "Qual é o nome do irmão e principal parceiro musical de Billie Eilish?",
-  "Qual música da trilha sonora de Barbie rendeu a Billie Eilish um Oscar?",
-  "Qual é a cor natural do cabelo com a qual Billie Eilish nasceu?",
-  "Em que ano Billie Eilish se tornou a artista mais jovem a vencer as quatro principais categorias do Grammy na mesma noite?",
-  "Qual o nome do EP de estreia lançado por Billie Eilish em 2017?",
-  "Qual é o nome do documentário oficial sobre a vida e a carreira de Billie Eilish lançado em 2021?",
-  "Qual foi o primeiro single de Billie Eilish a alcançar o topo da Billboard Hot 100?",
-  "Em qual cidade americana Billie Eilish nasceu e foi criada?",
-  "Qual marca de calçados esportivos colaborou frequentemente com Billie Eilish em relançamentos de modelos clássicos?",
   "Qual música abre a tracklist do segundo álbum de estúdio de Billie Eilish, Happier Than Ever?",
   "Qual o nome do instrumental assinado por Finneas que serve como introdução para o álbum Hit Me Hard and Soft?",
   "Em qual premiação cinematográfica Billie Eilish e Finneas conquistaram seu segundo Oscar por What Was I Made For?",
@@ -262,7 +252,17 @@
   "Qual famoso programa de rádio e web da NPR contou com uma inesquecível performance acústica de Billie e Finneas?",
   "Qual é o nome do instrumental que abre o EP dont smile at me antes da primeira faixa cantada?",
   "Qual é o nome da faixa bônus ou interlúdio instrumental que conecta os universos sonoros no primeiro álbum?",
-  "Qual premiação musical americana consagrou Billie Eilish com troféus importantes em sua primeira grande indicação?"
+  "Qual premiação musical americana consagrou Billie Eilish com troféus importantes em sua primeira grande indicação?",
+  "Qual é a cor natural do cabelo de Billie Eilish que ela exibiu antes de adotar o icônico visual verde em 2019?",
+  "Qual instrumento musical Billie Eilish aprendeu a tocar ainda na infância e utiliza frequentemente em composições?",
+  "Qual o nome do gato de estimação que Billie Eilish adotou e frequentemente aparece em suas redes sociais e vlogs?",
+  "Qual famoso programa de televisão americano teve Billie Eilish como atração musical e apresentadora no mesmo episódio?",
+  "Qual é o nome da mãe de Billie Eilish, que também é atriz e atativista ambiental conhecida?",
+  "Qual é o nome do pai de Billie Eilish, músico e ator que aparece no documentário da filha?",
+  "Qual plataforma de streaming lançou a série de concertos íntimos em formato de live session protagonizada por Billie?",
+  "Qual cidade americana abriga os estúdios caseiros onde Billie Eilish e Finneas gravaram seus primeiros sucessos?",
+  "Em qual ano Billie Eilish realizou sua primeira turnê mundial oficial passando por arenas internacionais?",
+  "Qual é a faixa do álbum Happier Than Ever que possui um videoclipe dirigido inteiramente pela própria cantora?"
  ],
  "bank": [
   {

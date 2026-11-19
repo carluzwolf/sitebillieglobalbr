@@ -292,17 +292,17 @@
   },
   {
    "id": "entrevista-1",
-   "t": "Entrevista — título aqui",
-   "type": "Entrevista",
-   "cat": "entrevistas",
-   "year": "",
+   "t": "Show — Lollapalooza Brasil",
+   "type": "Show",
+   "cat": "shows",
+   "year": "2023",
    "dur": "",
-   "d": "Descreva a entrevista.",
+   "d": "Billie Eilish no Lollapalooza Brasil",
    "poster": "",
    "backdrop": "",
-   "src": "",
+   "src": "https://drive.google.com/file/d/1C9a1hIwJ9XNNOKqXwGwxTIzEddq8M1qc/view?usp=drivesdk",
    "color": "#7c0912",
-   "hero": false
+   "hero": true
   },
   {
    "id": "entrevista-2",

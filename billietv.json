@@ -53,6 +53,20 @@
    "hero": true
   },
   {
+   "id": "entrevista-1",
+   "t": "Show — Lollapalooza Brasil",
+   "type": "Show",
+   "cat": "shows",
+   "year": "2023",
+   "dur": "",
+   "d": "Billie Eilish no Lollapalooza Brasil",
+   "poster": "",
+   "backdrop": "",
+   "src": "https://drive.google.com/file/d/1C9a1hIwJ9XNNOKqXwGwxTIzEddq8M1qc/view?usp=drivesdk",
+   "color": "#7c0912",
+   "hero": true
+  },
+  {
    "id": "love-letter-la",
    "t": "Happier Than Ever: A Love Letter to Los Angeles",
    "type": "Filme-show",
@@ -289,20 +303,6 @@
    "src": "",
    "color": "#5c1a1a",
    "hero": false
-  },
-  {
-   "id": "entrevista-1",
-   "t": "Show — Lollapalooza Brasil",
-   "type": "Show",
-   "cat": "shows",
-   "year": "2023",
-   "dur": "",
-   "d": "Billie Eilish no Lollapalooza Brasil",
-   "poster": "",
-   "backdrop": "",
-   "src": "https://drive.google.com/file/d/1C9a1hIwJ9XNNOKqXwGwxTIzEddq8M1qc/view?usp=drivesdk",
-   "color": "#7c0912",
-   "hero": true
   },
   {
    "id": "entrevista-2",

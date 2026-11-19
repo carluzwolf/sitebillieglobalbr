@@ -1,128 +1,118 @@
 {
- "date": "2026-11-18",
+ "date": "2026-11-19",
  "questions": [
   {
-   "q": "Qual é a cor natural do cabelo de Billie Eilish que ela exibiu antes de adotar o icônico visual verde em 2019?",
+   "q": "Qual o nome do documentário oficial lançado em 2021 que retrata a vida e a ascensão meteórica de Billie Eilish?",
    "o": [
-    "Preto azulado",
-    "Ruivo natural",
-    "Castanho claro",
-    "Loiro claro"
-   ],
-   "a": 2,
-   "e": "Antes da fase verde, Billie mantinha seus cabelos em tons claros de castanho."
-  },
-  {
-   "q": "Qual instrumento musical Billie Eilish aprendeu a tocar ainda na infância e utiliza frequentemente em composições?",
-   "o": [
-    "Ukulele",
-    "Saxofone",
-    "Flauta doce",
-    "Violoncelo"
+    "The World's a Little Blurry",
+    "Hit Me Hard and Soft Doc",
+    "Happier Than Ever Live",
+    "The Billie Eilish Story"
    ],
    "a": 0,
-   "e": "Billie aprendeu a tocar ukulele aos seis anos e o utilizou em várias de suas primeiras músicas."
+   "e": "O documentário Billie Eilish: The World's a Little Blurry estreou na Apple TV+ em 2021."
   },
   {
-   "q": "Qual o nome do gato de estimação que Billie Eilish adotou e frequentemente aparece em suas redes sociais e vlogs?",
+   "q": "Qual o nome do famoso talk show noturno onde Billie Eilish fez sua primeira aparição na televisão americana?",
    "o": [
-    "Shark",
-    "Pepper",
-    "Clover",
-    "Misha"
-   ],
-   "a": 0,
-   "e": "Shark é um dos gatos de estimação resgatados por Billie e bastante querido pelos fãs."
-  },
-  {
-   "q": "Qual famoso programa de televisão americano teve Billie Eilish como atração musical e apresentadora no mesmo episódio?",
-   "o": [
-    "Saturday Night Live",
-    "Late Night with Seth",
+    "Jimmy Kimmel Live!",
     "The Tonight Show",
-    "The Ellen Show"
-   ],
-   "a": 0,
-   "e": "Billie apresentou e cantou no Saturday Night Live, mostrando seu talento para a comédia."
-  },
-  {
-   "q": "Qual é o nome da mãe de Billie Eilish, que também é atriz e atativista ambiental conhecida?",
-   "o": [
-    "Susan Eilish",
-    "Maggie Baird",
-    "Linda Finneas",
-    "Sharon O'Connell"
-   ],
-   "a": 1,
-   "e": "Maggie Baird é mãe de Billie e Finneas e fundadora de organizações voltadas à sustentabilidade."
-  },
-  {
-   "q": "Qual é o nome do pai de Billie Eilish, músico e ator que aparece no documentário da filha?",
-   "o": [
-    "Patrick O'Connell",
-    "Richard Finneas",
-    "Michael Eilish",
-    "David Baird"
-   ],
-   "a": 0,
-   "e": "Patrick O'Connell é ator e pai dos artistas, aparecendo nos bastidores de suas turnês."
-  },
-  {
-   "q": "Qual plataforma de streaming lançou a série de concertos íntimos em formato de live session protagonizada por Billie?",
-   "o": [
-    "Amazon Prime",
-    "Disney+",
-    "Apple Music",
-    "Netflix"
+    "The Ellen DeGeneres Show",
+    "The Late Late Show"
    ],
    "a": 2,
-   "e": "A Apple Music produziu sessões especiais e entrevistas exclusivas com a cantora."
+   "e": "Billie Eilish se apresentou pela primeira vez na TV americana no programa de Ellen DeGeneres em 2017."
   },
   {
-   "q": "Qual cidade americana abriga os estúdios caseiros onde Billie Eilish e Finneas gravaram seus primeiros sucessos?",
+   "q": "Qual é o título da canção lançada em parceria com Khalid que integrou o segundo EP da cantora?",
    "o": [
-    "Seattle",
-    "Los Angeles",
-    "Nova York",
-    "San Francisco"
+    "Bellyache",
+    "Lovely",
+    "Ocean Eyes",
+    "Hostage"
    ],
    "a": 1,
-   "e": "Os irmãos cresceram e gravaram grande parte de sua discografia em Highland Park, Los Angeles."
+   "e": "A faixa Lovely, lançada com Khalid em 2018, tornou-se um grande sucesso global."
   },
   {
-   "q": "Em qual ano Billie Eilish realizou sua primeira turnê mundial oficial passando por arenas internacionais?",
+   "q": "Qual foi o primeiro videoclipe de Billie Eilish a ultrapassar a marca de 1 bilhão de visualizações no YouTube?",
    "o": [
-    "2021",
-    "2017",
-    "2023",
-    "2019"
+    "bury a friend",
+    "When the Party's Over",
+    "Bad Guy",
+    "Ocean Eyes"
+   ],
+   "a": 2,
+   "e": "O clipe de Bad Guy alcançou a marca histórica de um bilhão de views na plataforma."
+  },
+  {
+   "q": "Qual renomada marca de óculos de sol colaborou com Billie Eilish para criar uma coleção exclusiva de armações grandes e ousadas?",
+   "o": [
+    "MCM",
+    "Ray-Ban",
+    "Gucci",
+    "Oakley"
+   ],
+   "a": 0,
+   "e": "A parceria com a grife MCM resultou em uma linha exclusiva de óculos de sol e acessórios."
+  },
+  {
+   "q": "Em qual filme de animação recente a canção de Billie Eilish e Finneas, What Was I Made For?, recebeu o prêmio de Melhor Canção Original?",
+   "o": [
+    "Barbie",
+    "Trolls",
+    "Frozen",
+    "Wish"
+   ],
+   "a": 0,
+   "e": "A música foi o tema central do filme live-action Barbie, dirigido por Greta Gerwig."
+  },
+  {
+   "q": "Qual é o título da faixa do álbum Happier Than Ever inspirada por uma experiência em um ensaio de dança?",
+   "o": [
+    "NDA",
+    "Lost Cause",
+    "Your Power",
+    "Oxytocin"
    ],
    "a": 3,
-   "e": "A turnê When We All Fall Asleep Tour esgotou arenas ao redor do mundo em 2019."
+   "e": "Oxytocin tem uma batida eletrônica intensa e foi fortemente inspirada por referências de palco e dança."
   },
   {
-   "q": "Qual é a faixa do álbum Happier Than Ever que possui um videoclipe dirigido inteiramente pela própria cantora?",
+   "q": "Qual prêmio de prestígio cinematográfico Billie Eilish e Finneas conquistaram pela primeira vez na categoria de Melhor Canção Original?",
    "o": [
-    "Oxytocin",
-    "Your Power",
-    "NDA",
-    "Happier Than Ever"
+    "Emmy",
+    "Golden Globe",
+    "BAFTA",
+    "Oscar"
    ],
-   "a": 2,
-   "e": "Billie assumiu a direção do videoclipe de NDA, que conta com carros em movimento ao seu redor."
+   "a": 3,
+   "e": "A dupla venceu o Oscar de Melhor Canção Original em 2022 com No Time To Die."
+  },
+  {
+   "q": "Qual famoso diretor de arte e estilista esteve fortemente ligado às escolhas de figurino oversized de Billie Eilish no início da carreira?",
+   "o": [
+    "Ela mesma e a mãe",
+    "Karl Lagerfeld",
+    "Virgil Abloh",
+    "Alessandro Michele"
+   ],
+   "a": 0,
+   "e": "Billie e sua mãe, Maggie Baird, criavam grande parte dos conceitos visuais e roupas largas iniciais."
+  },
+  {
+   "q": "Qual é o nome da faixa encarregada de fechar a tracklist do segundo álbum de estúdio, Happier Than Ever?",
+   "o": [
+    "Male Fantasy",
+    "Everybody Dies",
+    "Happier Than Ever",
+    "Halley's Comet"
+   ],
+   "a": 0,
+   "e": "Male Fantasy é a música que encerra oficialmente a edição padrão do álbum Happier Than Ever."
   }
  ],
  "history": [
-  "Qual música abre a tracklist do segundo álbum de estúdio de Billie Eilish, Happier Than Ever?",
-  "Qual o nome do instrumental assinado por Finneas que serve como introdução para o álbum Hit Me Hard and Soft?",
-  "Em qual premiação cinematográfica Billie Eilish e Finneas conquistaram seu segundo Oscar por What Was I Made For?",
-  "Qual o nome do famoso talk show americano onde Billie Eilish fez sua primeira aparição musical televisiva em 2017?",
-  "Qual o nome da turnê mundial realizada por Billie Eilish para promover o álbum Hit Me Hard and Soft?",
-  "Qual cor de cabelo chamou a atenção da mídia quando Billie Eilish abandonou o visual preto com raiz verde em 2021?",
-  "Qual artista pop estabeleceu uma parceria vocal e de remix com Billie Eilish na faixa Bad Guy de 2019?",
-  "Qual o nome do documentário dirigido por R.J. Cutler que acompanha o processo de criação do álbum de estreia de Billie?",
-  "Qual é o título da canção lançada por Billie Eilish e Rosalía em 2020 para a trilha sonora da série Euphoria?",
-  "Qual faixa do álbum Hit Me Hard and Soft foi escolhida como o primeiro single oficial do projeto em 2024?",
   "Qual é a profissão dos pais de Billie Eilish, Maggie Baird e Patrick O'Connell?",
   "Em qual festival de música mundial Billie Eilish fez sua estreia como atração principal em 2019?",
   "Qual o nome da faixa que encerra a tracklist do álbum Happier Than Ever?",
@@ -262,7 +252,17 @@
   "Qual plataforma de streaming lançou a série de concertos íntimos em formato de live session protagonizada por Billie?",
   "Qual cidade americana abriga os estúdios caseiros onde Billie Eilish e Finneas gravaram seus primeiros sucessos?",
   "Em qual ano Billie Eilish realizou sua primeira turnê mundial oficial passando por arenas internacionais?",
-  "Qual é a faixa do álbum Happier Than Ever que possui um videoclipe dirigido inteiramente pela própria cantora?"
+  "Qual é a faixa do álbum Happier Than Ever que possui um videoclipe dirigido inteiramente pela própria cantora?",
+  "Qual o nome do documentário oficial lançado em 2021 que retrata a vida e a ascensão meteórica de Billie Eilish?",
+  "Qual o nome do famoso talk show noturno onde Billie Eilish fez sua primeira aparição na televisão americana?",
+  "Qual é o título da canção lançada em parceria com Khalid que integrou o segundo EP da cantora?",
+  "Qual foi o primeiro videoclipe de Billie Eilish a ultrapassar a marca de 1 bilhão de visualizações no YouTube?",
+  "Qual renomada marca de óculos de sol colaborou com Billie Eilish para criar uma coleção exclusiva de armações grandes e ousadas?",
+  "Em qual filme de animação recente a canção de Billie Eilish e Finneas, What Was I Made For?, recebeu o prêmio de Melhor Canção Original?",
+  "Qual é o título da faixa do álbum Happier Than Ever inspirada por uma experiência em um ensaio de dança?",
+  "Qual prêmio de prestígio cinematográfico Billie Eilish e Finneas conquistaram pela primeira vez na categoria de Melhor Canção Original?",
+  "Qual famoso diretor de arte e estilista esteve fortemente ligado às escolhas de figurino oversized de Billie Eilish no início da carreira?",
+  "Qual é o nome da faixa encarregada de fechar a tracklist do segundo álbum de estúdio, Happier Than Ever?"
  ],
  "bank": [
   {

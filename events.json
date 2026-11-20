@@ -279,6 +279,22 @@
   "d_es": "La gira del tercer álbum arrancó en Quebec, Canadá."
  },
  {
+  "date": "2025-01-30",
+  "t": "Show no FIREAID Benefit Concert",
+  "d": "Billie Eilish e FINNEAS se apresentaram no palco do FIREAID Benefit Concert for California Fire Relief, realizado no Intuit Dome.",
+  "cat": "shows",
+  "conf": true,
+  "s": "Billboard",
+  "u": "https://www.billboard.com/pro/billie-eilish-moves-caa-global-booking-share-us-wme/",
+  "t_en": "Performance at FIREAID Benefit Concert",
+  "d_en": "Billie Eilish and FINNEAS performed onstage during the FIREAID Benefit Concert for California Fire Relief at the Intuit Dome.",
+  "t_es": "Actuación en el Concierto Benéfico FIREAID",
+  "d_es": "Billie Eilish y FINNEAS se presentaron en el escenario durante el Concierto Benéfico FIREAID para la Ayuda contra los Incendios de California en el Intuit Dome.",
+  "place": "Intuit Dome",
+  "id": "2025-01-30-shownofireaidbenefitconc",
+  "img": "http://www.bing.com/th?id=ONUT.kle2EnLiiu2ClRuwnZo-SQ&pid=News"
+ },
+ {
   "date": "2025-08-16",
   "t": "Show em Tóquio (Hit Me Hard and Soft Tour)",
   "d": "Billie Eilish se apresentou no Saitama Super Arena em Tóquio, Japão, como parte de sua turnê mundial. O show integrou a extensão da turnê anunciada pela artista.",
@@ -783,5 +799,21 @@
   "place": "Worthy Farm, Pilton, Somerset, Inglaterra",
   "id": "2027-06-27-billieeilishnofestivalgl",
   "img": "https://data.ibtimes.sg/en/full/97970/image-representation.png?w=1200&h=630?q=60"
+ },
+ {
+  "date": "2027-06-30",
+  "t": "Show no Roskilde Festival 2027",
+  "d": "Billie Eilish foi confirmada oficialmente como headliner do Roskilde Festival na Dinamarca. A cantora se apresentará no palco principal do evento.",
+  "cat": "shows",
+  "conf": true,
+  "s": "The Music Universe",
+  "u": "https://themusicuniverse.com/billie-eilish-announced-for-roskilde-festival-2027/",
+  "t_en": "Performance at Roskilde Festival 2027",
+  "d_en": "Billie Eilish was officially confirmed as a headliner for the Roskilde Festival in Denmark. The singer will perform on the main stage of the event.",
+  "t_es": "Concierto en el Roskilde Festival 2027",
+  "d_es": "Billie Eilish fue confirmada oficialmente como cabeza de cartel del Roskilde Festival en Dinamarca. La cantante se presentará en el escenario principal del evento.",
+  "place": "Roskilde/Dinamarca",
+  "id": "2027-06-30-shownoroskildefestival20",
+  "img": "https://themusicuniverse.com/wp-content/uploads/2026/11/roskilde.jpg"
  }
 ]

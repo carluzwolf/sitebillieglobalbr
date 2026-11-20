@@ -785,6 +785,22 @@
   "img": "http://www.bing.com/th?id=ONUT.Vvk-0za6hPuhQtj-XP11uw&pid=News"
  },
  {
+  "date": "2026-11-26",
+  "t": "Início da venda geral de ingressos para o BST Hyde Park",
+  "d": "Os ingressos gerais para o show de Billie Eilish no BST Hyde Park começam a ser vendidos às 10h.",
+  "cat": "shows",
+  "conf": true,
+  "s": "Time Out",
+  "u": "https://www.timeout.com/london/news/billie-eilish-bst-hyde-park-2027-tickets-prices-guide-112026",
+  "t_en": "General ticket sale opens for BST Hyde Park",
+  "d_en": "General tickets for Billie Eilish's show at BST Hyde Park go on sale at 10am.",
+  "t_es": "Inicio de la venta general de entradas para BST Hyde Park",
+  "d_es": "Las entradas generales para el concierto de Billie Eilish en BST Hyde Park salen a la venta a las 10 a. m.",
+  "place": "Londres/BST Hyde Park",
+  "id": "2026-11-26-iníciodavendageraldeingr",
+  "img": "https://media.timeout.com/images/106469725/image.jpg"
+ },
+ {
   "date": "2027-06-27",
   "t": "Billie Eilish no Festival Glastonbury 2027",
   "d": "Billie Eilish foi confirmada como a atração principal do Palco Pyramid do Festival Glastonbury no domingo, 27 de junho de 2027.",
@@ -815,5 +831,21 @@
   "place": "Roskilde/Dinamarca",
   "id": "2027-06-30-shownoroskildefestival20",
   "img": "https://themusicuniverse.com/wp-content/uploads/2026/11/roskilde.jpg"
+ },
+ {
+  "date": "2027-07-03",
+  "t": "Billie Eilish no BST Hyde Park",
+  "d": "Billie Eilish se apresenta como headliner no Great Oak Stage durante o festival BST Hyde Park em Londres.",
+  "cat": "shows",
+  "conf": true,
+  "s": "Time Out",
+  "u": "https://www.timeout.com/london/news/billie-eilish-bst-hyde-park-2027-tickets-prices-guide-112026",
+  "t_en": "Billie Eilish at BST Hyde Park",
+  "d_en": "Billie Eilish performs as a headliner on the Great Oak Stage during the BST Hyde Park festival in London.",
+  "t_es": "Billie Eilish en BST Hyde Park",
+  "d_es": "Billie Eilish se presenta como cabeza de cartel en el Great Oak Stage durante el festival BST Hyde Park en Londres.",
+  "place": "Londres/BST Hyde Park",
+  "id": "2027-07-03-billieeilishnobsthydepar",
+  "img": "https://media.timeout.com/images/106469725/image.jpg"
  }
 ]

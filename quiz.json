@@ -1,128 +1,118 @@
 {
- "date": "2026-11-19",
+ "date": "2026-11-20",
  "questions": [
   {
-   "q": "Qual o nome do documentário oficial lançado em 2021 que retrata a vida e a ascensão meteórica de Billie Eilish?",
+   "q": "Qual é a faixa do álbum Happier Than Ever que se destaca por trazer uma estética musical inspirada na Bossa Nova?",
    "o": [
-    "The World's a Little Blurry",
-    "Hit Me Hard and Soft Doc",
-    "Happier Than Ever Live",
-    "The Billie Eilish Story"
-   ],
-   "a": 0,
-   "e": "O documentário Billie Eilish: The World's a Little Blurry estreou na Apple TV+ em 2021."
-  },
-  {
-   "q": "Qual o nome do famoso talk show noturno onde Billie Eilish fez sua primeira aparição na televisão americana?",
-   "o": [
-    "Jimmy Kimmel Live!",
-    "The Tonight Show",
-    "The Ellen DeGeneres Show",
-    "The Late Late Show"
-   ],
-   "a": 2,
-   "e": "Billie Eilish se apresentou pela primeira vez na TV americana no programa de Ellen DeGeneres em 2017."
-  },
-  {
-   "q": "Qual é o título da canção lançada em parceria com Khalid que integrou o segundo EP da cantora?",
-   "o": [
-    "Bellyache",
-    "Lovely",
-    "Ocean Eyes",
-    "Hostage"
+    "Oxytocin",
+    "Billie Bossa Nova",
+    "Lost Cause",
+    "Goldwing"
    ],
    "a": 1,
-   "e": "A faixa Lovely, lançada com Khalid em 2018, tornou-se um grande sucesso global."
+   "e": "Billie Bossa Nova é a segunda faixa do álbum Happier Than Ever."
   },
   {
-   "q": "Qual foi o primeiro videoclipe de Billie Eilish a ultrapassar a marca de 1 bilhão de visualizações no YouTube?",
+   "q": "Qual festival americano marcou a estreia histórica de Billie Eilish como a headliner mais jovem de sua edição?",
    "o": [
-    "bury a friend",
-    "When the Party's Over",
-    "Bad Guy",
-    "Ocean Eyes"
+    "Lollapalooza",
+    "Austin City Limits",
+    "Coachella",
+    "Bonnaroo"
    ],
    "a": 2,
-   "e": "O clipe de Bad Guy alcançou a marca histórica de um bilhão de views na plataforma."
+   "e": "Billie Eilish foi a headliner do Coachella em 2022."
   },
   {
-   "q": "Qual renomada marca de óculos de sol colaborou com Billie Eilish para criar uma coleção exclusiva de armações grandes e ousadas?",
+   "q": "Qual grife de luxo francesa colaborou com Billie Eilish no figurino de seu videoclipe de estreia oficial na moda?",
    "o": [
-    "MCM",
-    "Ray-Ban",
+    "Oscar de la Renta",
     "Gucci",
-    "Oakley"
+    "Chanel",
+    "Burberry"
    ],
    "a": 0,
-   "e": "A parceria com a grife MCM resultou em uma linha exclusiva de óculos de sol e acessórios."
+   "e": "Oscar de la Renta vestiu a cantora no Met Gala após acordo sobre pele animal."
   },
   {
-   "q": "Em qual filme de animação recente a canção de Billie Eilish e Finneas, What Was I Made For?, recebeu o prêmio de Melhor Canção Original?",
+   "q": "Qual é o título da canção lançada em 2022 que formou o EP duplo intitulado Guitar Songs?",
    "o": [
-    "Barbie",
-    "Trolls",
-    "Frozen",
-    "Wish"
+    "NDA and Lost Cause",
+    "My Future and Your Power",
+    "TV and The 30th",
+    "Happier Than Ever"
    ],
-   "a": 0,
-   "e": "A música foi o tema central do filme live-action Barbie, dirigido por Greta Gerwig."
+   "a": 2,
+   "e": "Guitar Songs contém as faixas TV e The 30th."
   },
   {
-   "q": "Qual é o título da faixa do álbum Happier Than Ever inspirada por uma experiência em um ensaio de dança?",
+   "q": "Qual famosa revista de moda mundial publicou a marcante capa de Billie Eilish com corset em estilo vintage em 2021?",
    "o": [
-    "NDA",
-    "Lost Cause",
-    "Your Power",
-    "Oxytocin"
+    "Vogue UK",
+    "Harper's Bazaar",
+    "Elle",
+    "Vogue US"
    ],
    "a": 3,
-   "e": "Oxytocin tem uma batida eletrônica intensa e foi fortemente inspirada por referências de palco e dança."
+   "e": "A Vogue americana estampou Billie Eilish com estilo corset vintage em 2021."
   },
   {
-   "q": "Qual prêmio de prestígio cinematográfico Billie Eilish e Finneas conquistaram pela primeira vez na categoria de Melhor Canção Original?",
+   "q": "Qual renomado DJ e produtor musical americano colaborou com Billie Eilish na faixa Happier Than Ever em uma versão remix?",
    "o": [
-    "Emmy",
-    "Golden Globe",
-    "BAFTA",
-    "Oscar"
+    "Marshmello",
+    "Jungle",
+    "Calvin Harris",
+    "Disclosure"
    ],
    "a": 3,
-   "e": "A dupla venceu o Oscar de Melhor Canção Original em 2022 com No Time To Die."
+   "e": "O duo britânico Disclosure produziu um remix aclamado para a faixa-título."
   },
   {
-   "q": "Qual famoso diretor de arte e estilista esteve fortemente ligado às escolhas de figurino oversized de Billie Eilish no início da carreira?",
+   "q": "Qual faixa do álbum Hit Me Hard and Soft apresenta uma transição melódica com forte presença de vocais em coro na segunda metade?",
    "o": [
-    "Ela mesma e a mãe",
-    "Karl Lagerfeld",
-    "Virgil Abloh",
-    "Alessandro Michele"
+    "Lunch",
+    "Birds of a Feather",
+    "Chihiro",
+    "Skinny"
    ],
-   "a": 0,
-   "e": "Billie e sua mãe, Maggie Baird, criavam grande parte dos conceitos visuais e roupas largas iniciais."
+   "a": 3,
+   "e": "Skinny abre o álbum Hit Me Hard and Soft com uma delicada transição de cordas e coro."
   },
   {
-   "q": "Qual é o nome da faixa encarregada de fechar a tracklist do segundo álbum de estúdio, Happier Than Ever?",
+   "q": "Qual programa de entrevistas da televisão norte-americana recebeu Billie Eilish para sua primeira performance na TV?",
    "o": [
-    "Male Fantasy",
-    "Everybody Dies",
-    "Happier Than Ever",
-    "Halley's Comet"
+    "The Tonight Show",
+    "Late Night with Seth Meyers",
+    "The Ellen DeGeneres Show",
+    "Jimmy Kimmel Live"
+   ],
+   "a": 2,
+   "e": "Billie se apresentou pela primeira vez na TV no programa de Ellen DeGeneres."
+  },
+  {
+   "q": "Qual o nome da organização sem fins lucrativos que promove ações de sustentabilidade em turnês e conta com o apoio de Billie?",
+   "o": [
+    "Greenpeace",
+    "Earthjustice",
+    "World Wildlife Fund",
+    "REVERB"
+   ],
+   "a": 3,
+   "e": "REVERB é a ONG parceira das turnês sustentáveis da artista."
+  },
+  {
+   "q": "Qual é o nome da faixa bônus que encerra algumas edições físicas especiais do álbum When We All Fall Asleep?",
+   "o": [
+    "Goodbye",
+    "When I Was Older",
+    "Come Out and Play",
+    "Bitches Broken Hearts"
    ],
    "a": 0,
-   "e": "Male Fantasy é a música que encerra oficialmente a edição padrão do álbum Happier Than Ever."
+   "e": "Goodbye serve como uma faixa de encerramento baseada em trechos do álbum."
   }
  ],
  "history": [
-  "Qual é a profissão dos pais de Billie Eilish, Maggie Baird e Patrick O'Connell?",
-  "Em qual festival de música mundial Billie Eilish fez sua estreia como atração principal em 2019?",
-  "Qual o nome da faixa que encerra a tracklist do álbum Happier Than Ever?",
-  "Qual o nome do designer de moda e marca de luxo com quem Billie colaborou no Met Gala de 2021?",
-  "Qual o nome do curta-metragem dirigido e estrelado por Billie Eilish exibido em seus shows em 2020?",
-  "Em que ano Billie Eilish lançou o single exclusivo de Natal chamado Bitches Broken Hearts?",
-  "Qual artista britânico convidou Billie Eilish para cantar a música tema de James Bond?",
-  "Qual é o nome da faixa colaborativa entre Billie Eilish e Khalid lançada em 2018?",
-  "Qual o nome da organização de direitos dos animais que nomeou Billie Eilish como Mulher do Ano em 2021?",
-  "Qual faixa do álbum Hit Me Hard and Soft apresenta uma mudança drástica de ritmo e tom na metade de sua duração?",
   "Qual é a principal instituição de ensino que Billie Eilish frequentou durante a infância?",
   "Qual marca esportiva lançou coleções de tênis veganos em parceria com Billie Eilish?",
   "Qual instrumento musical foi o primeiro que Billie Eilish aprendeu a tocar na infância?",
@@ -262,7 +252,17 @@
   "Qual é o título da faixa do álbum Happier Than Ever inspirada por uma experiência em um ensaio de dança?",
   "Qual prêmio de prestígio cinematográfico Billie Eilish e Finneas conquistaram pela primeira vez na categoria de Melhor Canção Original?",
   "Qual famoso diretor de arte e estilista esteve fortemente ligado às escolhas de figurino oversized de Billie Eilish no início da carreira?",
-  "Qual é o nome da faixa encarregada de fechar a tracklist do segundo álbum de estúdio, Happier Than Ever?"
+  "Qual é o nome da faixa encarregada de fechar a tracklist do segundo álbum de estúdio, Happier Than Ever?",
+  "Qual é a faixa do álbum Happier Than Ever que se destaca por trazer uma estética musical inspirada na Bossa Nova?",
+  "Qual festival americano marcou a estreia histórica de Billie Eilish como a headliner mais jovem de sua edição?",
+  "Qual grife de luxo francesa colaborou com Billie Eilish no figurino de seu videoclipe de estreia oficial na moda?",
+  "Qual é o título da canção lançada em 2022 que formou o EP duplo intitulado Guitar Songs?",
+  "Qual famosa revista de moda mundial publicou a marcante capa de Billie Eilish com corset em estilo vintage em 2021?",
+  "Qual renomado DJ e produtor musical americano colaborou com Billie Eilish na faixa Happier Than Ever em uma versão remix?",
+  "Qual faixa do álbum Hit Me Hard and Soft apresenta uma transição melódica com forte presença de vocais em coro na segunda metade?",
+  "Qual programa de entrevistas da televisão norte-americana recebeu Billie Eilish para sua primeira performance na TV?",
+  "Qual o nome da organização sem fins lucrativos que promove ações de sustentabilidade em turnês e conta com o apoio de Billie?",
+  "Qual é o nome da faixa bônus que encerra algumas edições físicas especiais do álbum When We All Fall Asleep?"
  ],
  "bank": [
   {

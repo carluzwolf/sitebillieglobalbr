@@ -256,9 +256,9 @@
    "year": "2023",
    "dur": "",
    "d": "Videoclipe oficial.",
-   "poster": "",
-   "backdrop": "",
-   "src": "",
+   "poster": "https://i.ytimg.com/vi/cW8VLC9nnTo/maxresdefault.jpg",
+   "backdrop": "https://i.ytimg.com/vi/cW8VLC9nnTo/maxresdefault.jpg",
+   "src": "https://www.youtube.com/watch?v=cW8VLC9nnTo",
    "color": "#5c2a3a",
    "hero": false
   },

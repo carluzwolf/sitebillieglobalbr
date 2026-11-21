@@ -200,9 +200,9 @@
    "year": "2020",
    "dur": "",
    "d": "Videoclipe oficial.",
-   "poster": "",
-   "backdrop": "",
-   "src": "",
+   "poster": "https://i.ytimg.com/vi/RUQl6YcMalg/maxresdefault.jpg",
+   "backdrop": "https://i.ytimg.com/vi/RUQl6YcMalg/maxresdefault.jpg",
+   "src": "https://www.youtube.com/watch?v=RUQl6YcMalg",
    "color": "#5c1a2a",
    "hero": false
   },

@@ -214,9 +214,9 @@
    "year": "2021",
    "dur": "",
    "d": "Videoclipe oficial.",
-   "poster": "",
-   "backdrop": "",
-   "src": "",
+   "poster": "https://i.ytimg.com/vi/5GJWxDKyk3A/maxresdefault.jpg",
+   "backdrop": "https://i.ytimg.com/vi/5GJWxDKyk3A/maxresdefault.jpg",
+   "src": "https://www.youtube.com/watch?v=5GJWxDKyk3A",
    "color": "#5c3a1a",
    "hero": false
   },

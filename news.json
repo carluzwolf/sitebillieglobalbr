@@ -955,8 +955,8 @@
  },
  {
   "k": "glastonburyharrystylesbillieeilishsamfendertoheadline",
-  "t": "Glastonbury: Harry Styles, Billie Eilish & Sam Fender to headline",
-  "d": "Harry Styles, Billie Eilish and Sam Fender are to headline Glastonbury 2027, making them the festival’s youngest headliners of the 21st century. The three solo singers will lead the biggest UK ...",
+  "t": "Billie Eilish e Harry Styles são apontados como atrações principais do Glastonbury 2027",
+  "d": "A cantora e compositora norte-americana deve liderar o icônico festival britânico ao lado de outros grandes nomes da música pop e rock.",
   "s": "Deadline on MSN",
   "u": "https://www.msn.com/en-us/news/other/glastonbury-harry-styles-billie-eilish-sam-fender-to-headline/ar-AA2hG8N5",
   "img": "http://www.bing.com/th?id=ONUT.M7SXelmmVlJmgvp2EBsRzA&pid=News",
@@ -968,9 +968,20 @@
   "pics": [],
   "imgv": 4,
   "ogt": 0,
-  "tries3": 1,
+  "tries3": 2,
   "orig_d": "Harry Styles, Billie Eilish and Sam Fender are to headline Glastonbury 2027, making them the festival’s youngest headliners of the 21st century. The three solo singers will lead the biggest UK ...",
-  "slug": "glastonbury-harry-styles-billie-eilish-sam-fender-to-headline"
+  "slug": "glastonbury-harry-styles-billie-eilish-sam-fender-to-headline",
+  "alts": [],
+  "mv": 1,
+  "body": [
+   "O famoso Festival de Glastonbury já movimenta os bastidores da indústria musical internacional com especulações fortíssimas sobre o line-up da edição de 2027. Informações recentes apontam que a superestrela Billie Eilish está cotada para retornar ao evento na condição de headliner principal, prometendo mais uma performance histórica nos palcos da Fazenda Worthy, na Inglaterra.",
+   "Caso a escalação se confirme oficialmente, a cantora dividirá o posto de principal atração com o astro britânico Harry Styles e com o cantor Sam Fender. A reunião desses três artistas no topo do cartaz marcará um momento histórico para o festival, posicionando-os como os artistas solo mais jovens a assumirem a liderança do evento no século XXI.",
+   "O festival de Glastonbury é amplamente reconhecido por sua curadoria exigente e por selecionar artistas que moldam o cenário musical contemporâneo. A possível presença de Billie Eilish reforça a parceria de longa data entre a artista e o público britânico, que sempre esgota rapidamente os ingressos para vê-la ao vivo no Reino Unido.",
+   "Historicamente, a relação de Billie com o festival tem momentos marcantes. Em 2022, ela fez história ao se tornar a pessoa mais jovem a encabeçar o Palco Pyramid na edição principal, entregando um show aclamado pela crítica que entrou para a memória dos fãs e da história do evento britânico.",
+   "Até o momento, a organização oficial do festival ainda não divulgou o line-up completo nem emitiu uma confirmação definitiva sobre os nomes ventilados pela imprensa internacional. É importante ressaltar que anúncios oficiais detalhados sobre as atrações costumam ser feitos meses antes da realização do evento, mantendo a expectativa do público.",
+   "Enquanto os organizadores guardam segredo sobre a programação final, os fãs ao redor do mundo já celebram a possibilidade de ver a intérprete de hit global novamente no topo de um dos maiores festivais do planeta. Resta agora aguardar os próximos comunicados oficiais para saber se a cantora confirmará sua presença em Glastonbury 2027."
+  ],
+  "v": 2
  },
  {
   "k": "harrystylesbillieeilishchertoheadlineglastonbury2027",
@@ -9128,6 +9139,25 @@
    }
   },
   "slug": "billie-eilish-e-finneas-fazem-participacao-historica-em-curta-especial-de-os"
+ },
+ {
+  "k": "billieeilishefinneasconquistamoglobodeouropornotimetodie",
+  "t": "Billie Eilish e Finneas conquistam o Globo de Ouro por “No Time To Die”",
+  "d": "A cantora Billie Eilish e seu irmão, Finneas, conquistaram seu primeiro Globo de Ouro na noite deste domingo (9) pelo tema oficial de James Bond, No Time To Die. A música foi lançada originalmente em ...",
+  "s": "O Dia",
+  "u": "https://gente.ig.com.br/colunas/musicjournal/2022-01-11/billie-eilish-e-finneas-conquistam-o-globo-de-ouro-por-no-time-to-die.html",
+  "img": "https://i0.statig.com.br/bancodeimagens/8n/h5/7z/8nh57znxtbbi0ias5bjq3328h.jpg",
+  "ts": "2022-01-11T04:40:00+00:00",
+  "date": "11 jan 2022",
+  "g": "Notícia",
+  "orig": "Billie Eilish e Finneas conquistam o Globo de Ouro por “No Time To Die”",
+  "imgs": [],
+  "pics": [],
+  "imgv": 4,
+  "ogt": 1,
+  "tries3": 1,
+  "orig_d": "A cantora Billie Eilish e seu irmão, Finneas, conquistaram seu primeiro Globo de Ouro na noite deste domingo (9) pelo tema oficial de James Bond, No Time To Die. A música foi lançada originalmente em ...",
+  "slug": "billie-eilish-e-finneas-conquistam-o-globo-de-ouro-por-no-time-to-die"
  },
  {
   "k": "billieeilishconheçaosdetalhesdeseuaguardadoeexcelente2ºálbumhappierthanever",

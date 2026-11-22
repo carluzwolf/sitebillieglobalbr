@@ -1,128 +1,118 @@
 {
- "date": "2026-11-21",
+ "date": "2026-11-22",
  "questions": [
   {
-   "q": "Qual é a primeira faixa do álbum de estúdio Happier Than Ever?",
+   "q": "Qual é a segunda faixa do tracklist oficial do álbum de estreia When We All Fall Asleep, Where Do We Go?",
    "o": [
-    "Oxytocin",
+    "xanny",
+    "you should see me in a crown",
+    "all the good girls go to hell",
+    "bad guy"
+   ],
+   "a": 0,
+   "e": "xanny é a segunda música do álbum de estreia de Billie Eilish."
+  },
+  {
+   "q": "Qual famoso cineasta dirigiu o videoclipe de Happier Than Ever, no qual Billie canta sob a chuva?",
+   "o": [
+    "Greta Gerwig",
+    "Billie Eilish",
+    "Spike Jonze",
+    "David Fincher"
+   ],
+   "a": 1,
+   "e": "A própria Billie Eilish dirigiu o videoclipe da faixa-título Happier Than Ever."
+  },
+  {
+   "q": "Qual é o título da canção de Billie Eilish que integra a trilha sonora da série de TV 13 Reasons Why?",
+   "o": [
+    "Bellyache",
+    "party favor",
+    "lovely",
+    "ocean eyes"
+   ],
+   "a": 2,
+   "e": "A música lovely, em parceria com Khalid, faz parte da trilha sonora da segunda temporada da série."
+  },
+  {
+   "q": "Qual foi o primeiro grande festival internacional de música a receber Billie Eilish como atração principal em 2019?",
+   "o": [
+    "Coachella",
+    "Lollapalooza",
+    "Glastonbury",
+    "Rock in Rio"
+   ],
+   "a": 0,
+   "e": "Billie Eilish fez sua estreia como atração principal no festival Coachella em 2019."
+  },
+  {
+   "q": "Qual prêmio prestigiado do cinema americano foi conquistado por What Was I Made For? em 2024?",
+   "o": [
+    "Globo de Ouro de Melhor Trilha",
+    "Emmy de Melhor Composição",
+    "Oscar de Melhor Canção Original",
+    "BAFTA de Melhor Filme"
+   ],
+   "a": 2,
+   "e": "A canção venceu o Oscar de Melhor Canção Original na cerimônia de 2024."
+  },
+  {
+   "q": "Em qual ano ocorreu o lançamento do EP dont smile at me nas plataformas digitais?",
+   "o": [
+    "2016",
+    "2015",
+    "2018",
+    "2017"
+   ],
+   "a": 3,
+   "e": "O EP de estreia dont smile at me foi lançado oficialmente em agosto de 2017."
+  },
+  {
+   "q": "Qual o nome da faixa que abre o álbum de estúdio Happier Than Ever?",
+   "o": [
     "Billie Bossa Nova",
     "I Didn't Change My Number",
-    "Getting Older"
-   ],
-   "a": 3,
-   "e": "Getting Older abre a tracklist do segundo álbum de estúdio de Billie Eilish."
-  },
-  {
-   "q": "Qual famosa artista pop colaborou com Billie Eilish no remix do sucesso bad guy?",
-   "o": [
-    "Justin Bieber",
-    "Taylor Swift",
-    "Ariana Grande",
-    "Dua Lipa"
-   ],
-   "a": 0,
-   "e": "Justin Bieber participou do remix oficial de bad guy lançado em 2019."
-  },
-  {
-   "q": "Qual o nome da canção lançada por Billie Eilish para a trilha sonora do filme James Bond Sem Tempo para Morrer?",
-   "o": [
-    "Skyfall",
-    "No Time to Die",
-    "GoldenEye",
-    "Writing's on the Wall"
-   ],
-   "a": 1,
-   "e": "No Time to Die venceu o Oscar de Melhor Canção Original."
-  },
-  {
-   "q": "Qual é o título do documentário oficial de 2021 dirigido por R.J. Cutler sobre a vida de Billie?",
-   "o": [
-    "The Making of Me",
-    "The World's a Little Blurry",
-    "Smile",
-    "Happier Than Ever Live"
-   ],
-   "a": 1,
-   "e": "Billie Eilish: The World's a Little Blurry retrata a ascensão da artista."
-  },
-  {
-   "q": "Qual faixa de Hit Me Hard and Soft foi escolhida como o primeiro single oficial do álbum?",
-   "o": [
-    "Chihiro",
-    "Birds of a Feather",
-    "Lunch",
-    "Wildflower"
+    "Getting Older",
+    "my future"
    ],
    "a": 2,
-   "e": "Lunch foi lançada como single principal acompanhada de um clipe dirigido por ela."
+   "e": "Getting Older é a faixa de abertura que dá início à narrativa do segundo álbum."
   },
   {
-   "q": "Qual prêmio cinematográfico Billie Eilish e Finneas venceram pela segunda vez com What Was I Made For?",
+   "q": "Qual cidade sediou os shows da residência de podcasts e performances acústicas que Billie e Finneas realizaram no início da carreira?",
    "o": [
-    "Oscar",
-    "Globo de Ouro",
-    "Critics' Choice",
-    "BAFTA"
-   ],
-   "a": 0,
-   "e": "A dupla conquistou o segundo Oscar de Melhor Canção Original em 2024."
-  },
-  {
-   "q": "Em qual ano Billie Eilish nasceu?",
-   "o": [
-    "2001",
-    "2003",
-    "2000",
-    "2002"
-   ],
-   "a": 0,
-   "e": "Billie Eilish O'Connell nasceu em 18 de dezembro de 2001 em Los Angeles."
-  },
-  {
-   "q": "Qual instrumento Billie tocava em apresentações acústicas no início da carreira antes do sucesso massivo?",
-   "o": [
-    "Bateria",
-    "Guitarra elétrica",
-    "Violoncelo",
-    "Ukulele"
+    "Seattle",
+    "Nova York",
+    "Londres",
+    "Los Angeles"
    ],
    "a": 3,
-   "e": "O ukulele foi um dos primeiros instrumentos que Billie aprendeu e utilizou."
+   "e": "Os irmãos realizaram diversos projetos iniciais e gravações caseiras em Los Angeles."
   },
   {
-   "q": "Qual é o nome da turnê mundial realizada por Billie Eilish em apoio ao álbum Hit Me Hard and Soft?",
+   "q": "Qual instrumento de sopro Billie Eilish estudou e tocou durante a infância em corais infantis?",
    "o": [
-    "Dont Smile at Me Tour",
-    "Happier Than Ever Tour",
-    "Hit Me Hard and Soft Tour",
-    "Where Do We Go? Tour"
+    "Saxofone",
+    "Flauta transversal",
+    "Clarinete",
+    "Trompete"
    ],
    "a": 2,
-   "e": "Hit Me Hard and Soft: The Tour é a turnê mundial iniciada em 2024."
+   "e": "Billie tocou clarinete antes de se dedicar inteiramente ao canto e ao ukulele."
   },
   {
-   "q": "Qual grife esportiva lançou coleções de tênis Air Jordan assinadas por Billie Eilish utilizando materiais sustentáveis?",
+   "q": "Qual é o nome da faixa bônus exclusiva adicionada nas versões físicas especiais do álbum Hit Me Hard and Soft?",
    "o": [
-    "Nike",
-    "Adidas",
-    "Puma",
-    "Reebok"
+    "Não há faixa bônus",
+    "The Greatest",
+    "Blue",
+    "Skinny"
    ],
    "a": 0,
-   "e": "Billie colaborou com a Nike para reinterpretar modelos clássicos em versões veganas."
+   "e": "O álbum Hit Me Hard and Soft foi lançado sem faixas bônus em suas edições físicas principais."
   }
  ],
  "history": [
-  "Qual é o título da faixa que abre o álbum de estreia When We All Fall Asleep, Where Do We Go?",
-  "Qual estilista e marca vestiu Billie Eilish no Met Gala de 2021 com um vestido inspirado em Marilyn Monroe?",
-  "Qual foi o primeiro videoclipe dirigido pela própria Billie Eilish na carreira?",
-  "Qual famoso produtor e músico britânico colaborou com Billie na faixa Guess de 2024?",
-  "Em qual ano Billie Eilish realizou sua primeira turnê oficial de grande porte, a 1 by 1 Tour?",
-  "Qual artista do rap americano colaborou com Billie Eilish na música LOVELY lançada em 2018?",
-  "Qual é o nome da fragrância número dois lançada por Billie Eilish em sua linha de perfumes em 2022?",
-  "Qual é a faixa encarregada de fechar o segundo álbum de estúdio, Happier Than Ever?",
-  "Qual prêmio prestigiado da indústria musical americana Billie Eilish recebeu na categoria de Compositor do Ano em 2019?",
-  "Qual icônica banda de rock alternativo dos anos 90 Billie Eilish frequentemente homenageia em suas roupas e entrevistas?",
   "Qual instrumento Billie Eilish aprendeu a tocar primeiro na infância?",
   "Qual o nome do festival onde Billie fez sua estreia como headliner em 2022?",
   "Qual marca esportiva lançou coleções de tênis veganos com Billie?",
@@ -262,7 +252,17 @@
   "Em qual ano Billie Eilish nasceu?",
   "Qual instrumento Billie tocava em apresentações acústicas no início da carreira antes do sucesso massivo?",
   "Qual é o nome da turnê mundial realizada por Billie Eilish em apoio ao álbum Hit Me Hard and Soft?",
-  "Qual grife esportiva lançou coleções de tênis Air Jordan assinadas por Billie Eilish utilizando materiais sustentáveis?"
+  "Qual grife esportiva lançou coleções de tênis Air Jordan assinadas por Billie Eilish utilizando materiais sustentáveis?",
+  "Qual é a segunda faixa do tracklist oficial do álbum de estreia When We All Fall Asleep, Where Do We Go?",
+  "Qual famoso cineasta dirigiu o videoclipe de Happier Than Ever, no qual Billie canta sob a chuva?",
+  "Qual é o título da canção de Billie Eilish que integra a trilha sonora da série de TV 13 Reasons Why?",
+  "Qual foi o primeiro grande festival internacional de música a receber Billie Eilish como atração principal em 2019?",
+  "Qual prêmio prestigiado do cinema americano foi conquistado por What Was I Made For? em 2024?",
+  "Em qual ano ocorreu o lançamento do EP dont smile at me nas plataformas digitais?",
+  "Qual o nome da faixa que abre o álbum de estúdio Happier Than Ever?",
+  "Qual cidade sediou os shows da residência de podcasts e performances acústicas que Billie e Finneas realizaram no início da carreira?",
+  "Qual instrumento de sopro Billie Eilish estudou e tocou durante a infância em corais infantis?",
+  "Qual é o nome da faixa bônus exclusiva adicionada nas versões físicas especiais do álbum Hit Me Hard and Soft?"
  ],
  "bank": [
   {

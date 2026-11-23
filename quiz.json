@@ -1,128 +1,118 @@
 {
- "date": "2026-11-22",
+ "date": "2026-11-23",
  "questions": [
   {
-   "q": "Qual é a segunda faixa do tracklist oficial do álbum de estreia When We All Fall Asleep, Where Do We Go?",
+   "q": "Qual é a primeira faixa do álbum de estreia When We All Fall Asleep, Where Do We Go?",
    "o": [
     "xanny",
     "you should see me in a crown",
-    "all the good girls go to hell",
+    "!!!!",
     "bad guy"
    ],
-   "a": 0,
-   "e": "xanny é a segunda música do álbum de estreia de Billie Eilish."
+   "a": 2,
+   "e": "O álbum começa com a faixa curta '!!!!', onde Billie e Finneas comem seus aparelhos ortodônticos."
   },
   {
-   "q": "Qual famoso cineasta dirigiu o videoclipe de Happier Than Ever, no qual Billie canta sob a chuva?",
+   "q": "Qual prêmio Grammy principal Billie Eilish venceu em 2020, consolidando seu recorde histórico na premiação?",
    "o": [
-    "Greta Gerwig",
-    "Billie Eilish",
-    "Spike Jonze",
-    "David Fincher"
+    "Melhor Artista Revelação",
+    "Gravação do Ano",
+    "Álbum do Ano",
+    "Todas as alternativas"
+   ],
+   "a": 3,
+   "e": "Billie fez história ao vencer as quatro categorias principais do Grammy no mesmo ano."
+  },
+  {
+   "q": "Qual faixa de Hit Me Hard and Soft utiliza uma batida eletrônica acelerada e pesada em sua segunda metade?",
+   "o": [
+    "THE GREATEST",
+    "CHIHIRO",
+    "BIRDS OF A FEATHER",
+    "L'AMOUR DE MA VIE"
+   ],
+   "a": 3,
+   "e": "'L'AMOUR DE MA VIE' muda drasticamente de tom para uma estética de clube eletrônico."
+  },
+  {
+   "q": "Qual artista pop veterano colaborou com Billie Eilish cantando um verso e o refrão no remix oficial de 'bad guy'?",
+   "o": [
+    "Britney Spears",
+    "Lady Gaga",
+    "Avril Lavigne",
+    "Justin Bieber"
+   ],
+   "a": 3,
+   "e": "Justin Bieber participou do remix de 'bad guy' lançado em meados de 2019."
+  },
+  {
+   "q": "Qual é o título da canção de Billie Eilish lançada em 2018 que fez parte da trilha sonora da segunda temporada de 13 Reasons Why?",
+   "o": [
+    "ocean eyes",
+    "bury a friend",
+    "hostage",
+    "lovely"
+   ],
+   "a": 3,
+   "e": "'lovely', uma colaboração com Khalid, foi destaque na trilha sonora da série."
+  },
+  {
+   "q": "Qual álbum de Billie Eilish estreou no topo da Billboard 200 e consolidou sua transição para sonoridades mais maduras e experimentais?",
+   "o": [
+    "When We All Fall Asleep",
+    "Happier Than Ever",
+    "Hit Me Hard and Soft",
+    "dont smile at me"
    ],
    "a": 1,
-   "e": "A própria Billie Eilish dirigiu o videoclipe da faixa-título Happier Than Ever."
+   "e": "'Happier Than Ever' foi lançado em 2021 e liderou as paradas mundiais."
   },
   {
-   "q": "Qual é o título da canção de Billie Eilish que integra a trilha sonora da série de TV 13 Reasons Why?",
+   "q": "Qual foi o primeiro single oficial divulgado do álbum Hit Me Hard and Soft?",
    "o": [
-    "Bellyache",
-    "party favor",
-    "lovely",
-    "ocean eyes"
-   ],
-   "a": 2,
-   "e": "A música lovely, em parceria com Khalid, faz parte da trilha sonora da segunda temporada da série."
-  },
-  {
-   "q": "Qual foi o primeiro grande festival internacional de música a receber Billie Eilish como atração principal em 2019?",
-   "o": [
-    "Coachella",
-    "Lollapalooza",
-    "Glastonbury",
-    "Rock in Rio"
-   ],
-   "a": 0,
-   "e": "Billie Eilish fez sua estreia como atração principal no festival Coachella em 2019."
-  },
-  {
-   "q": "Qual prêmio prestigiado do cinema americano foi conquistado por What Was I Made For? em 2024?",
-   "o": [
-    "Globo de Ouro de Melhor Trilha",
-    "Emmy de Melhor Composição",
-    "Oscar de Melhor Canção Original",
-    "BAFTA de Melhor Filme"
-   ],
-   "a": 2,
-   "e": "A canção venceu o Oscar de Melhor Canção Original na cerimônia de 2024."
-  },
-  {
-   "q": "Em qual ano ocorreu o lançamento do EP dont smile at me nas plataformas digitais?",
-   "o": [
-    "2016",
-    "2015",
-    "2018",
-    "2017"
+    "BLUE",
+    "WILDFLOWER",
+    "CHIHIRO",
+    "LUNCH"
    ],
    "a": 3,
-   "e": "O EP de estreia dont smile at me foi lançado oficialmente em agosto de 2017."
+   "e": "'LUNCH' foi lançado junto com o álbum como o primeiro single principal."
   },
   {
-   "q": "Qual o nome da faixa que abre o álbum de estúdio Happier Than Ever?",
+   "q": "Qual o nome do instrumental curto que serve como introdução no início do álbum Happier Than Ever?",
    "o": [
-    "Billie Bossa Nova",
-    "I Didn't Change My Number",
+    "Not My Responsibility",
     "Getting Older",
-    "my future"
+    "Interlude",
+    "Billie Bossa Nova"
    ],
    "a": 2,
-   "e": "Getting Older é a faixa de abertura que dá início à narrativa do segundo álbum."
+   "e": "O álbum conta com a faixa 'Interlude' que antecede 'Not My Responsibility'."
   },
   {
-   "q": "Qual cidade sediou os shows da residência de podcasts e performances acústicas que Billie e Finneas realizaram no início da carreira?",
+   "q": "Qual prêmio Oscar Billie Eilish e Finneas conquistaram pela primeira vez na carreira por canção original?",
    "o": [
-    "Seattle",
-    "Nova York",
-    "Londres",
-    "Los Angeles"
-   ],
-   "a": 3,
-   "e": "Os irmãos realizaram diversos projetos iniciais e gravações caseiras em Los Angeles."
-  },
-  {
-   "q": "Qual instrumento de sopro Billie Eilish estudou e tocou durante a infância em corais infantis?",
-   "o": [
-    "Saxofone",
-    "Flauta transversal",
-    "Clarinete",
-    "Trompete"
-   ],
-   "a": 2,
-   "e": "Billie tocou clarinete antes de se dedicar inteiramente ao canto e ao ukulele."
-  },
-  {
-   "q": "Qual é o nome da faixa bônus exclusiva adicionada nas versões físicas especiais do álbum Hit Me Hard and Soft?",
-   "o": [
-    "Não há faixa bônus",
-    "The Greatest",
-    "Blue",
-    "Skinny"
+    "Melhor Canção Original",
+    "Melhor Trilha Sonora",
+    "Melhor Curta-Metragem",
+    "Melhor Mixagem de Som"
    ],
    "a": 0,
-   "e": "O álbum Hit Me Hard and Soft foi lançado sem faixas bônus em suas edições físicas principais."
+   "e": "Eles venceram o Oscar de Melhor Canção Original por 'No Time to Die'."
+  },
+  {
+   "q": "Qual é a cor de cabelo mais marcante e duradoura que Billie Eilish utilizou durante a era de seu álbum de estreia?",
+   "o": [
+    "Vermelho vivo",
+    "Loiro platinado",
+    "Azul elétrico",
+    "Verde neon na raiz"
+   ],
+   "a": 3,
+   "e": "O cabelo preto com a raiz verde neon tornou-se a marca registrada visual da era de estreia."
   }
  ],
  "history": [
-  "Qual instrumento Billie Eilish aprendeu a tocar primeiro na infância?",
-  "Qual o nome do festival onde Billie fez sua estreia como headliner em 2022?",
-  "Qual marca esportiva lançou coleções de tênis veganos com Billie?",
-  "Qual é o nome da fragrância de estreia de Billie Eilish?",
-  "Quem dirigiu o videoclipe oficial da faixa Happier Than Ever?",
-  "Qual foi a cor marcante do cabelo de Billie Eilish durante o ano de 2019?",
-  "Em que ano Billie realizou sua primeira turnê oficial, a 1 by 1 Tour?",
-  "Qual artista colaborou com Billie na faixa LOVELY de 2018?",
-  "Qual o nome da fragrância lançada por Billie Eilish em 2022?",
-  "Qual faixa fecha o segundo álbum de estúdio, Happier Than Ever?",
   "Qual é o título da faixa bônus ou escondida que encerra a edição física especial do álbum Hit Me Hard and Soft?",
   "Qual famosa série de animação americana contou com a participação vocal de Billie Eilish em um episódio especial em 2021?",
   "Qual o nome do festival beneficente global organizado pela Global Citizen no qual Billie Eilish se apresentou em Nova York em 2023?",
@@ -262,7 +252,17 @@
   "Qual o nome da faixa que abre o álbum de estúdio Happier Than Ever?",
   "Qual cidade sediou os shows da residência de podcasts e performances acústicas que Billie e Finneas realizaram no início da carreira?",
   "Qual instrumento de sopro Billie Eilish estudou e tocou durante a infância em corais infantis?",
-  "Qual é o nome da faixa bônus exclusiva adicionada nas versões físicas especiais do álbum Hit Me Hard and Soft?"
+  "Qual é o nome da faixa bônus exclusiva adicionada nas versões físicas especiais do álbum Hit Me Hard and Soft?",
+  "Qual é a primeira faixa do álbum de estreia When We All Fall Asleep, Where Do We Go?",
+  "Qual prêmio Grammy principal Billie Eilish venceu em 2020, consolidando seu recorde histórico na premiação?",
+  "Qual faixa de Hit Me Hard and Soft utiliza uma batida eletrônica acelerada e pesada em sua segunda metade?",
+  "Qual artista pop veterano colaborou com Billie Eilish cantando um verso e o refrão no remix oficial de 'bad guy'?",
+  "Qual é o título da canção de Billie Eilish lançada em 2018 que fez parte da trilha sonora da segunda temporada de 13 Reasons Why?",
+  "Qual álbum de Billie Eilish estreou no topo da Billboard 200 e consolidou sua transição para sonoridades mais maduras e experimentais?",
+  "Qual foi o primeiro single oficial divulgado do álbum Hit Me Hard and Soft?",
+  "Qual o nome do instrumental curto que serve como introdução no início do álbum Happier Than Ever?",
+  "Qual prêmio Oscar Billie Eilish e Finneas conquistaram pela primeira vez na carreira por canção original?",
+  "Qual é a cor de cabelo mais marcante e duradoura que Billie Eilish utilizou durante a era de seu álbum de estreia?"
  ],
  "bank": [
   {

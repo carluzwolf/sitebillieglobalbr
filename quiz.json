@@ -1,128 +1,118 @@
 {
- "date": "2026-11-23",
+ "date": "2026-11-24",
  "questions": [
   {
-   "q": "Qual é a primeira faixa do álbum de estreia When We All Fall Asleep, Where Do We Go?",
+   "q": "Qual é a nacionalidade do irmão e parceiro musical de Billie Eilish, Finneas?",
    "o": [
-    "xanny",
-    "you should see me in a crown",
-    "!!!!",
-    "bad guy"
-   ],
-   "a": 2,
-   "e": "O álbum começa com a faixa curta '!!!!', onde Billie e Finneas comem seus aparelhos ortodônticos."
-  },
-  {
-   "q": "Qual prêmio Grammy principal Billie Eilish venceu em 2020, consolidando seu recorde histórico na premiação?",
-   "o": [
-    "Melhor Artista Revelação",
-    "Gravação do Ano",
-    "Álbum do Ano",
-    "Todas as alternativas"
+    "Canadense",
+    "Britânica",
+    "Australiana",
+    "Americana"
    ],
    "a": 3,
-   "e": "Billie fez história ao vencer as quatro categorias principais do Grammy no mesmo ano."
+   "e": "Finneas nasceu em Los Angeles, Califórnia, sendo compatriota e parceiro criativo de Billie."
   },
   {
-   "q": "Qual faixa de Hit Me Hard and Soft utiliza uma batida eletrônica acelerada e pesada em sua segunda metade?",
+   "q": "Qual marca de calçados esportivos lançou modelos de tênis veganos e reciclados em parceria com Billie Eilish?",
    "o": [
-    "THE GREATEST",
-    "CHIHIRO",
-    "BIRDS OF A FEATHER",
-    "L'AMOUR DE MA VIE"
+    "Vans",
+    "Puma",
+    "Adidas",
+    "Nike"
    ],
    "a": 3,
-   "e": "'L'AMOUR DE MA VIE' muda drasticamente de tom para uma estética de clube eletrônico."
+   "e": "Billie colaborou com a Nike no desenvolvimento de tênis feitos com materiais sustentáveis e ecológicos."
   },
   {
-   "q": "Qual artista pop veterano colaborou com Billie Eilish cantando um verso e o refrão no remix oficial de 'bad guy'?",
+   "q": "Qual famosa premiação musical britânica consagrou Billie Eilish como MelhorArtista Solo Internacional?",
    "o": [
-    "Britney Spears",
-    "Lady Gaga",
-    "Avril Lavigne",
-    "Justin Bieber"
+    "Q Awards",
+    "Mercury Prize",
+    "MOBO Awards",
+    "BRIT Awards"
    ],
    "a": 3,
-   "e": "Justin Bieber participou do remix de 'bad guy' lançado em meados de 2019."
+   "e": "Billie venceu o prêmio de Artista Solo Internacional Feminina no BRIT Awards."
   },
   {
-   "q": "Qual é o título da canção de Billie Eilish lançada em 2018 que fez parte da trilha sonora da segunda temporada de 13 Reasons Why?",
+   "q": "Em qual rede social Billie Eilish ganhou enorme visibilidade inicial ao postar gravações caseiras na adolescência?",
    "o": [
-    "ocean eyes",
-    "bury a friend",
-    "hostage",
-    "lovely"
-   ],
-   "a": 3,
-   "e": "'lovely', uma colaboração com Khalid, foi destaque na trilha sonora da série."
-  },
-  {
-   "q": "Qual álbum de Billie Eilish estreou no topo da Billboard 200 e consolidou sua transição para sonoridades mais maduras e experimentais?",
-   "o": [
-    "When We All Fall Asleep",
-    "Happier Than Ever",
-    "Hit Me Hard and Soft",
-    "dont smile at me"
-   ],
-   "a": 1,
-   "e": "'Happier Than Ever' foi lançado em 2021 e liderou as paradas mundiais."
-  },
-  {
-   "q": "Qual foi o primeiro single oficial divulgado do álbum Hit Me Hard and Soft?",
-   "o": [
-    "BLUE",
-    "WILDFLOWER",
-    "CHIHIRO",
-    "LUNCH"
-   ],
-   "a": 3,
-   "e": "'LUNCH' foi lançado junto com o álbum como o primeiro single principal."
-  },
-  {
-   "q": "Qual o nome do instrumental curto que serve como introdução no início do álbum Happier Than Ever?",
-   "o": [
-    "Not My Responsibility",
-    "Getting Older",
-    "Interlude",
-    "Billie Bossa Nova"
-   ],
-   "a": 2,
-   "e": "O álbum conta com a faixa 'Interlude' que antecede 'Not My Responsibility'."
-  },
-  {
-   "q": "Qual prêmio Oscar Billie Eilish e Finneas conquistaram pela primeira vez na carreira por canção original?",
-   "o": [
-    "Melhor Canção Original",
-    "Melhor Trilha Sonora",
-    "Melhor Curta-Metragem",
-    "Melhor Mixagem de Som"
+    "SoundCloud",
+    "MySpace",
+    "Vine",
+    "TikTok"
    ],
    "a": 0,
-   "e": "Eles venceram o Oscar de Melhor Canção Original por 'No Time to Die'."
+   "e": "Billie e Finneas começaram a publicar suas primeiras músicas e criações na plataforma SoundCloud."
   },
   {
-   "q": "Qual é a cor de cabelo mais marcante e duradoura que Billie Eilish utilizou durante a era de seu álbum de estreia?",
+   "q": "Qual icônica personagem de desenho animado infantil inspirou estampas de roupas usadas por Billie no início da carreira?",
    "o": [
-    "Vermelho vivo",
-    "Loiro platinado",
-    "Azul elétrico",
-    "Verde neon na raiz"
+    "Bob Esponja",
+    "Mickey Mouse",
+    "Os Simpsons",
+    "As Meninas Superpoderosas"
    ],
    "a": 3,
-   "e": "O cabelo preto com a raiz verde neon tornou-se a marca registrada visual da era de estreia."
+   "e": "Billie frequentemente vestia conjuntos largos estampados com personagens de As Meninas Superpoderosas."
+  },
+  {
+   "q": "Qual o nome do famoso festival de música realizado no Havaí onde Billie Eilish já se apresentou?",
+   "o": [
+    "Kokua Festival",
+    "Lollapalooza",
+    "Austin City Limits",
+    "Outside Lands"
+   ],
+   "a": 0,
+   "e": "Billie participou do Kokua Festival em apoio à preservação ambiental local."
+  },
+  {
+   "q": "Qual artista lendário do rock gravou uma versão especial em áudio ao vivo elogiando a performance de Billie?",
+   "o": [
+    "Mick Jagger",
+    "Paul McCartney",
+    "Elton John",
+    "Dave Grohl"
+   ],
+   "a": 3,
+   "e": "Dave Grohl comparou a energia dos shows de Billie Eilish aos primeiros anos das grandes bandas de rock."
+  },
+  {
+   "q": "Qual renomado fotógrafo de moda registrou imagens marcantes de Billie Eilish para revistas de grande circulação?",
+   "o": [
+    "Steven Meisel",
+    "Annie Leibovitz",
+    "Tim Walker",
+    "Mario Testino"
+   ],
+   "a": 1,
+   "e": "Annie Leibovitz foi a responsável por ensaios fotográficos históricos de Billie Eilish."
+  },
+  {
+   "q": "Qual cidade europeia sediou a primeira apresentação de arena esgotada da turnê mundial de Hit Me Hard and Soft?",
+   "o": [
+    "Amsterdã",
+    "Berlim",
+    "Paris",
+    "Londres"
+   ],
+   "a": 3,
+   "e": "Londres recebeu os primeiros grandes shows esgotados da etapa europeia da turnê."
+  },
+  {
+   "q": "Qual tema ambiental é frequentemente defendido por Billie Eilish em suas turnês e parcerias com ONGs?",
+   "o": [
+    "Proteção de baleias",
+    "Energia solar",
+    "Desmatamento urbano",
+    "Crise climática"
+   ],
+   "a": 3,
+   "e": "Billie promove ativamente a conscientização sobre a crise climática global em seus eventos."
   }
  ],
  "history": [
-  "Qual é o título da faixa bônus ou escondida que encerra a edição física especial do álbum Hit Me Hard and Soft?",
-  "Qual famosa série de animação americana contou com a participação vocal de Billie Eilish em um episódio especial em 2021?",
-  "Qual o nome do festival beneficente global organizado pela Global Citizen no qual Billie Eilish se apresentou em Nova York em 2023?",
-  "Qual artista de música eletrônica e pop britânica colaborou com Billie Eilish na remixagem da música Happier Than Ever?",
-  "Qual é o nome do estúdio caseiro localizado na casa dos pais de Billie Eilish onde ela e Finneas gravaram o álbum de estreia?",
-  "Qual famoso diretor de cinema colaborou com Billie Eilish criando vinhetas visuais para sua turnê mundial?",
-  "Qual prêmio da indústria de entretenimento americana Billie Eilish e Finneas venceram no Globo de Ouro de 2024?",
-  "Qual é o nome do icônico ukulele que Billie Eilish utilizou para compor várias de suas primeiras músicas na adolescência?",
-  "Qual revista de negócios global destacou Billie Eilish em sua lista de jovens inovadores com menos de 30 anos?",
-  "Qual animal de estimação resgatado Billie Eilish frequentemente mostrava em suas redes sociais durante o início da carreira?",
   "Qual marca esportiva lançou coleções de calçados sustentáveis em parceria com Billie Eilish?",
   "Qual o nome do festival em que Billie Eilish se tornou a artista mais jovem a ser atração principal em 2022?",
   "Qual cineasta dirigiu o videoclipe da canção Happier Than Ever?",
@@ -262,7 +252,17 @@
   "Qual foi o primeiro single oficial divulgado do álbum Hit Me Hard and Soft?",
   "Qual o nome do instrumental curto que serve como introdução no início do álbum Happier Than Ever?",
   "Qual prêmio Oscar Billie Eilish e Finneas conquistaram pela primeira vez na carreira por canção original?",
-  "Qual é a cor de cabelo mais marcante e duradoura que Billie Eilish utilizou durante a era de seu álbum de estreia?"
+  "Qual é a cor de cabelo mais marcante e duradoura que Billie Eilish utilizou durante a era de seu álbum de estreia?",
+  "Qual é a nacionalidade do irmão e parceiro musical de Billie Eilish, Finneas?",
+  "Qual marca de calçados esportivos lançou modelos de tênis veganos e reciclados em parceria com Billie Eilish?",
+  "Qual famosa premiação musical britânica consagrou Billie Eilish como MelhorArtista Solo Internacional?",
+  "Em qual rede social Billie Eilish ganhou enorme visibilidade inicial ao postar gravações caseiras na adolescência?",
+  "Qual icônica personagem de desenho animado infantil inspirou estampas de roupas usadas por Billie no início da carreira?",
+  "Qual o nome do famoso festival de música realizado no Havaí onde Billie Eilish já se apresentou?",
+  "Qual artista lendário do rock gravou uma versão especial em áudio ao vivo elogiando a performance de Billie?",
+  "Qual renomado fotógrafo de moda registrou imagens marcantes de Billie Eilish para revistas de grande circulação?",
+  "Qual cidade europeia sediou a primeira apresentação de arena esgotada da turnê mundial de Hit Me Hard and Soft?",
+  "Qual tema ambiental é frequentemente defendido por Billie Eilish em suas turnês e parcerias com ONGs?"
  ],
  "bank": [
   {

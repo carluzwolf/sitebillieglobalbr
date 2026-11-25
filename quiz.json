@@ -1,128 +1,118 @@
 {
- "date": "2026-11-24",
+ "date": "2026-11-25",
  "questions": [
   {
-   "q": "Qual é a nacionalidade do irmão e parceiro musical de Billie Eilish, Finneas?",
+   "q": "Qual é o título da terceira faixa presente na tracklist oficial do álbum de estreia When We All Fall Asleep, Where Do We Go?",
    "o": [
-    "Canadense",
-    "Britânica",
-    "Australiana",
-    "Americana"
+    "you should see me in a crown",
+    "bad guy",
+    "xanny",
+    "all the good girls go to hell"
    ],
-   "a": 3,
-   "e": "Finneas nasceu em Los Angeles, Califórnia, sendo compatriota e parceiro criativo de Billie."
+   "a": 2,
+   "e": "xanny é a terceira faixa do álbum de estreia."
   },
   {
-   "q": "Qual marca de calçados esportivos lançou modelos de tênis veganos e reciclados em parceria com Billie Eilish?",
+   "q": "Qual premiada série de drama da HBO contou com a música ilomilo em sua trilha sonora promocional?",
    "o": [
-    "Vans",
-    "Puma",
-    "Adidas",
-    "Nike"
+    "Big Little Lies",
+    "Succession",
+    "The White Lotus",
+    "Euphoria"
    ],
    "a": 3,
-   "e": "Billie colaborou com a Nike no desenvolvimento de tênis feitos com materiais sustentáveis e ecológicos."
+   "e": "A faixa ilomilo foi utilizada em campanhas e materiais promocionais de Euphoria."
   },
   {
-   "q": "Qual famosa premiação musical britânica consagrou Billie Eilish como MelhorArtista Solo Internacional?",
+   "q": "Qual grife de luxo italiana convidou Billie Eilish para estrelar uma campanha de bolsas clássicas feitas com materiais ecológicos?",
    "o": [
-    "Q Awards",
-    "Mercury Prize",
-    "MOBO Awards",
-    "BRIT Awards"
+    "Prada",
+    "Versace",
+    "Bottega Veneta",
+    "Gucci"
    ],
    "a": 3,
-   "e": "Billie venceu o prêmio de Artista Solo Internacional Feminina no BRIT Awards."
+   "e": "Billie protagonizou campanhas de bolsas sustentáveis da Gucci."
   },
   {
-   "q": "Em qual rede social Billie Eilish ganhou enorme visibilidade inicial ao postar gravações caseiras na adolescência?",
+   "q": "Qual artista indie-pop colaborou com Billie Eilish na canção Lovely, lançada originalmente para a trilha sonora de uma série?",
    "o": [
-    "SoundCloud",
-    "MySpace",
-    "Vine",
-    "TikTok"
+    "Khalid",
+    "Lorde",
+    "Aurora",
+    "Khalid e Finneas"
    ],
    "a": 0,
-   "e": "Billie e Finneas começaram a publicar suas primeiras músicas e criações na plataforma SoundCloud."
+   "e": "Lovely foi gravada em parceria com o cantor Khalid."
   },
   {
-   "q": "Qual icônica personagem de desenho animado infantil inspirou estampas de roupas usadas por Billie no início da carreira?",
+   "q": "Qual é o nome do icônico automóvel antigo que pertence a Billie Eilish e frequentemente aparece em seus vídeos e postagens?",
    "o": [
-    "Bob Esponja",
-    "Mickey Mouse",
-    "Os Simpsons",
-    "As Meninas Superpoderosas"
-   ],
-   "a": 3,
-   "e": "Billie frequentemente vestia conjuntos largos estampados com personagens de As Meninas Superpoderosas."
-  },
-  {
-   "q": "Qual o nome do famoso festival de música realizado no Havaí onde Billie Eilish já se apresentou?",
-   "o": [
-    "Kokua Festival",
-    "Lollapalooza",
-    "Austin City Limits",
-    "Outside Lands"
+    "Dodge Challenger 1970",
+    "Chevrolet Corvette 1965",
+    "Plymouth Barracuda 1971",
+    "Ford Mustang 1967"
    ],
    "a": 0,
-   "e": "Billie participou do Kokua Festival em apoio à preservação ambiental local."
+   "e": "Billie possui e dirige um Dodge Challenger 1970 personalizado."
   },
   {
-   "q": "Qual artista lendário do rock gravou uma versão especial em áudio ao vivo elogiando a performance de Billie?",
+   "q": "Em qual famosa premiação musical internacional Billie Eilish realizou a performance de estreia ao vivo da canção No Time To Die?",
    "o": [
-    "Mick Jagger",
-    "Paul McCartney",
-    "Elton John",
-    "Dave Grohl"
-   ],
-   "a": 3,
-   "e": "Dave Grohl comparou a energia dos shows de Billie Eilish aos primeiros anos das grandes bandas de rock."
-  },
-  {
-   "q": "Qual renomado fotógrafo de moda registrou imagens marcantes de Billie Eilish para revistas de grande circulação?",
-   "o": [
-    "Steven Meisel",
-    "Annie Leibovitz",
-    "Tim Walker",
-    "Mario Testino"
+    "Billboard Music Awards",
+    "Brit Awards",
+    "MTV VMAs",
+    "Grammy Awards"
    ],
    "a": 1,
-   "e": "Annie Leibovitz foi a responsável por ensaios fotográficos históricos de Billie Eilish."
+   "e": "Billie cantou No Time To Die ao vivo pela primeira vez no Brit Awards."
   },
   {
-   "q": "Qual cidade europeia sediou a primeira apresentação de arena esgotada da turnê mundial de Hit Me Hard and Soft?",
+   "q": "Qual marca global de instrumentos musicais desenvolveu e lançou um modelo de ukulele signature assinado por Billie Eilish?",
    "o": [
-    "Amsterdã",
-    "Berlim",
-    "Paris",
-    "Londres"
+    "Taylor Guitars",
+    "Fender Ukulele",
+    "Fender",
+    "Gibson"
    ],
-   "a": 3,
-   "e": "Londres recebeu os primeiros grandes shows esgotados da etapa europeia da turnê."
+   "a": 0,
+   "e": "A Taylor Guitars lançou um ukulele ecológico assinado por Billie Eilish."
   },
   {
-   "q": "Qual tema ambiental é frequentemente defendido por Billie Eilish em suas turnês e parcerias com ONGs?",
+   "q": "Qual é o título da faixa do álbum Happier Than Ever que sucede a introdução falada Getting Older?",
    "o": [
-    "Proteção de baleias",
-    "Energia solar",
-    "Desmatamento urbano",
-    "Crise climática"
+    "I Didn't Change My Number",
+    "Billie Bossa Nova",
+    "Oxytocin",
+    "my future"
+   ],
+   "a": 0,
+   "e": "I Didn't Change My Number é a segunda faixa do álbum Happier Than Ever."
+  },
+  {
+   "q": "Qual revista de grande circulação mundial elegeu Billie Eilish como uma das pessoas mais influentes do mundo em sua lista anual especial?",
+   "o": [
+    "Vogue",
+    "Forbes",
+    "Rolling Stone",
+    "Time"
    ],
    "a": 3,
-   "e": "Billie promove ativamente a conscientização sobre a crise climática global em seus eventos."
+   "e": "Billie integrou a prestigiada lista da revista Time 100."
+  },
+  {
+   "q": "Qual famosa casa de ópera e espetáculos em Londres recebeu um show acústico especial de Billie Eilish transmitido globalmente?",
+   "o": [
+    "Sydney Opera House",
+    "Royal Albert Hall",
+    "Teatro Colón",
+    "Palais Garnier"
+   ],
+   "a": 1,
+   "e": "O Royal Albert Hall foi o palco da performance especial de Billie."
   }
  ],
  "history": [
-  "Qual marca esportiva lançou coleções de calçados sustentáveis em parceria com Billie Eilish?",
-  "Qual o nome do festival em que Billie Eilish se tornou a artista mais jovem a ser atração principal em 2022?",
-  "Qual cineasta dirigiu o videoclipe da canção Happier Than Ever?",
-  "Qual é a cor exata do cabelo que marcou a identidade visual de Billie Eilish durante o ano de 2019?",
-  "Em que ano civil Billie Eilish realizou sua primeira turnê oficial de grande porte, a 1 by 1 Tour?",
-  "Qual artista vocal masculino colaborou com Billie Eilish na canção LOVELY lançada em 2018?",
-  "Qual é o nome da segunda fragrância comercializada na linha de perfumes de Billie Eilish?",
-  "Qual faixa encerra oficialmente a edição padrão do segundo álbum de estúdio, Happier Than Ever?",
-  "Qual famoso prêmio da indústria cinematográfica americana Billie Eilish e Finneas venceram no Globo de Ouro de 2024?",
-  "Qual é o nome do estúdio caseiro no quarto de infância onde Billie Eilish e Finneas gravaram as primeiras músicas?",
   "Qual o nome da faixa que abre a tracklist do segundo álbum de estúdio, Happier Than Ever?",
   "Qual prêmio Grammy de grande destaque Billie Eilish venceu em 2024 pela música What Was I Made For?",
   "Qual o nome do documentário oficial lançado em 2021 que retrata a ascensão meteórica e a vida familiar de Billie Eilish?",
@@ -262,7 +252,17 @@
   "Qual artista lendário do rock gravou uma versão especial em áudio ao vivo elogiando a performance de Billie?",
   "Qual renomado fotógrafo de moda registrou imagens marcantes de Billie Eilish para revistas de grande circulação?",
   "Qual cidade europeia sediou a primeira apresentação de arena esgotada da turnê mundial de Hit Me Hard and Soft?",
-  "Qual tema ambiental é frequentemente defendido por Billie Eilish em suas turnês e parcerias com ONGs?"
+  "Qual tema ambiental é frequentemente defendido por Billie Eilish em suas turnês e parcerias com ONGs?",
+  "Qual é o título da terceira faixa presente na tracklist oficial do álbum de estreia When We All Fall Asleep, Where Do We Go?",
+  "Qual premiada série de drama da HBO contou com a música ilomilo em sua trilha sonora promocional?",
+  "Qual grife de luxo italiana convidou Billie Eilish para estrelar uma campanha de bolsas clássicas feitas com materiais ecológicos?",
+  "Qual artista indie-pop colaborou com Billie Eilish na canção Lovely, lançada originalmente para a trilha sonora de uma série?",
+  "Qual é o nome do icônico automóvel antigo que pertence a Billie Eilish e frequentemente aparece em seus vídeos e postagens?",
+  "Em qual famosa premiação musical internacional Billie Eilish realizou a performance de estreia ao vivo da canção No Time To Die?",
+  "Qual marca global de instrumentos musicais desenvolveu e lançou um modelo de ukulele signature assinado por Billie Eilish?",
+  "Qual é o título da faixa do álbum Happier Than Ever que sucede a introdução falada Getting Older?",
+  "Qual revista de grande circulação mundial elegeu Billie Eilish como uma das pessoas mais influentes do mundo em sua lista anual especial?",
+  "Qual famosa casa de ópera e espetáculos em Londres recebeu um show acústico especial de Billie Eilish transmitido globalmente?"
  ],
  "bank": [
   {

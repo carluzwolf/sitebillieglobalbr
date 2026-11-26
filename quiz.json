@@ -1,128 +1,118 @@
 {
- "date": "2026-11-25",
+ "date": "2026-11-26",
  "questions": [
   {
-   "q": "Qual é o título da terceira faixa presente na tracklist oficial do álbum de estreia When We All Fall Asleep, Where Do We Go?",
+   "q": "Qual o nome da faixa que serve como interlúdio acústico na metade do álbum Happier Than Ever?",
    "o": [
-    "you should see me in a crown",
-    "bad guy",
-    "xanny",
-    "all the good girls go to hell"
+    "Halley's Comet",
+    "Not My Responsibility",
+    "Everybody Dies",
+    "The 30th"
+   ],
+   "a": 1,
+   "e": "Not My Responsibility é o interlúdio que traz um monólogo marcante sobre autoimagem."
+  },
+  {
+   "q": "Qual o nome da música lançada por Billie Eilish em parceria com Rosalía em 2020?",
+   "o": [
+    "Lo Vas A Olvidar",
+    "Ocean Eyes",
+    "No Time To Die",
+    "Lovely"
+   ],
+   "a": 0,
+   "e": "Lo Vas A Olvidar foi lançada como trilha sonora da série Euphoria."
+  },
+  {
+   "q": "Qual festival europeu recebeu Billie Eilish como headliner em sua edição de 2023, marcando um feito histórico?",
+   "o": [
+    "Primavera Sound",
+    "Glastonbury",
+    "Rock in Rio",
+    "Coachella"
+   ],
+   "a": 1,
+   "e": "Billie Eilish se tornou a headliner solo mais jovem da história do Festival de Glastonbury."
+  },
+  {
+   "q": "Qual prêmio Grammy especial Billie Eilish venceu na categoria de Canção do Ano por What Was I Made For?",
+   "o": [
+    "Venceu em revelação",
+    "Não venceu essa",
+    "Venceu apenas em 2025",
+    "Sim, o prêmio principal"
+   ],
+   "a": 3,
+   "e": "What Was I Made For? venceu o Grammy de Canção do Ano em 2024."
+  },
+  {
+   "q": "Qual é o título da faixa que encerra a tracklist padrão do álbum Hit Me Hard and Soft?",
+   "o": [
+    "Skinny",
+    "Lunch",
+    "Blue",
+    "Wildflower"
    ],
    "a": 2,
-   "e": "xanny é a terceira faixa do álbum de estreia."
+   "e": "Blue é a última faixa do terceiro álbum de estúdio de Billie Eilish."
   },
   {
-   "q": "Qual premiada série de drama da HBO contou com a música ilomilo em sua trilha sonora promocional?",
+   "q": "Qual instrumento Finneas toca primariamente nos shows ao vivo acompanhando Billie?",
    "o": [
-    "Big Little Lies",
-    "Succession",
-    "The White Lotus",
-    "Euphoria"
+    "Violoncelo e flauta",
+    "Bateria e baixo",
+    "Teclado e guitarra",
+    "Saxofone e trompete"
    ],
-   "a": 3,
-   "e": "A faixa ilomilo foi utilizada em campanhas e materiais promocionais de Euphoria."
+   "a": 2,
+   "e": "Finneas atua como multi-instrumentista, destacando-se no teclado e na guitarra."
   },
   {
-   "q": "Qual grife de luxo italiana convidou Billie Eilish para estrelar uma campanha de bolsas clássicas feitas com materiais ecológicos?",
+   "q": "Qual famoso talk show americano contou com a primeira aparição de Billie Eilish para interpretar Ocean Eyes ao vivo?",
    "o": [
-    "Prada",
-    "Versace",
-    "Bottega Veneta",
-    "Gucci"
+    "Jimmy Kimmel Live",
+    "Late Night Show",
+    "The Ellen Show",
+    "The Tonight Show"
    ],
-   "a": 3,
-   "e": "Billie protagonizou campanhas de bolsas sustentáveis da Gucci."
+   "a": 2,
+   "e": "Billie apresentou-se no programa de Ellen DeGeneres no início de sua projeção."
   },
   {
-   "q": "Qual artista indie-pop colaborou com Billie Eilish na canção Lovely, lançada originalmente para a trilha sonora de uma série?",
+   "q": "Qual cidade sediou o concerto beneficente organizado por Billie Eilish voltado à ação climática em 2022?",
    "o": [
-    "Khalid",
-    "Lorde",
-    "Aurora",
-    "Khalid e Finneas"
-   ],
-   "a": 0,
-   "e": "Lovely foi gravada em parceria com o cantor Khalid."
-  },
-  {
-   "q": "Qual é o nome do icônico automóvel antigo que pertence a Billie Eilish e frequentemente aparece em seus vídeos e postagens?",
-   "o": [
-    "Dodge Challenger 1970",
-    "Chevrolet Corvette 1965",
-    "Plymouth Barracuda 1971",
-    "Ford Mustang 1967"
+    "Londres",
+    "Nova York",
+    "Paris",
+    "Los Angeles"
    ],
    "a": 0,
-   "e": "Billie possui e dirige um Dodge Challenger 1970 personalizado."
+   "e": "O festival Overheated ocorreu em Londres com debates e foco ecológico."
   },
   {
-   "q": "Em qual famosa premiação musical internacional Billie Eilish realizou a performance de estreia ao vivo da canção No Time To Die?",
+   "q": "Qual é a cor predominante no design visual e na capa do EP de estreia dont smile at me?",
    "o": [
-    "Billboard Music Awards",
-    "Brit Awards",
-    "MTV VMAs",
-    "Grammy Awards"
-   ],
-   "a": 1,
-   "e": "Billie cantou No Time To Die ao vivo pela primeira vez no Brit Awards."
-  },
-  {
-   "q": "Qual marca global de instrumentos musicais desenvolveu e lançou um modelo de ukulele signature assinado por Billie Eilish?",
-   "o": [
-    "Taylor Guitars",
-    "Fender Ukulele",
-    "Fender",
-    "Gibson"
+    "Amarelo",
+    "Vermelho vivo",
+    "Verde neon",
+    "Azul escuro"
    ],
    "a": 0,
-   "e": "A Taylor Guitars lançou um ukulele ecológico assinado por Billie Eilish."
+   "e": "O fundo amarelo com a fonte preta é a marca registrada da capa de dont smile at me."
   },
   {
-   "q": "Qual é o título da faixa do álbum Happier Than Ever que sucede a introdução falada Getting Older?",
+   "q": "Qual famosa premiação de cinema britânica premiou Billie Eilish e Finneas por What Was I Made For?",
    "o": [
-    "I Didn't Change My Number",
-    "Billie Bossa Nova",
-    "Oxytocin",
-    "my future"
+    "London Film Critics",
+    "British Independent",
+    "BAFTA",
+    "Empire Awards"
    ],
-   "a": 0,
-   "e": "I Didn't Change My Number é a segunda faixa do álbum Happier Than Ever."
-  },
-  {
-   "q": "Qual revista de grande circulação mundial elegeu Billie Eilish como uma das pessoas mais influentes do mundo em sua lista anual especial?",
-   "o": [
-    "Vogue",
-    "Forbes",
-    "Rolling Stone",
-    "Time"
-   ],
-   "a": 3,
-   "e": "Billie integrou a prestigiada lista da revista Time 100."
-  },
-  {
-   "q": "Qual famosa casa de ópera e espetáculos em Londres recebeu um show acústico especial de Billie Eilish transmitido globalmente?",
-   "o": [
-    "Sydney Opera House",
-    "Royal Albert Hall",
-    "Teatro Colón",
-    "Palais Garnier"
-   ],
-   "a": 1,
-   "e": "O Royal Albert Hall foi o palco da performance especial de Billie."
+   "a": 2,
+   "e": "A dupla conquistou o BAFTA de Melhor Música Original."
   }
  ],
  "history": [
-  "Qual o nome da faixa que abre a tracklist do segundo álbum de estúdio, Happier Than Ever?",
-  "Qual prêmio Grammy de grande destaque Billie Eilish venceu em 2024 pela música What Was I Made For?",
-  "Qual o nome do documentário oficial lançado em 2021 que retrata a ascensão meteórica e a vida familiar de Billie Eilish?",
-  "Em qual famosa premiação internacional Billie Eilish e Finneas conquistaram seu primeiro Oscar de Melhor Canção Original?",
-  "Qual é o nome do icônico cachorro de grande porte que Billie Eilish adotou e frequentemente compartilha em suas redes sociais?",
-  "Qual artista pop americana se juntou a Billie Eilish na faixa remixada Guess, lançada em 2024?",
-  "Qual é o nome da faixa do álbum Hit Me Hard and Soft que serve como o primeiro single oficial do projeto?",
-  "Qual importante universidade ou instituição cultural sediou a exibição especial do concerto imersivo de Billie Eilish para o Disney+?",
-  "Qual é a cor exata do cabelo que Billie Eilish adotou para marcar a transição estética do álbum Happier Than Ever em 2021?",
-  "Qual é o nome do festival de cinema onde Billie Eilish fez sua estreia oficial como atriz em uma minissérie de terror e suspense?",
   "Qual é a faixa que encerra a tracklist do terceiro álbum de estúdio Hit Me Hard and Soft?",
   "Qual prêmio da Academia (Oscar) Billie Eilish e Finneas venceram em 2024?",
   "Em qual edição do Grammy Awards Billie Eilish venceu todas as quatro principais categorias da premiação de uma só vez?",
@@ -262,7 +252,17 @@
   "Qual marca global de instrumentos musicais desenvolveu e lançou um modelo de ukulele signature assinado por Billie Eilish?",
   "Qual é o título da faixa do álbum Happier Than Ever que sucede a introdução falada Getting Older?",
   "Qual revista de grande circulação mundial elegeu Billie Eilish como uma das pessoas mais influentes do mundo em sua lista anual especial?",
-  "Qual famosa casa de ópera e espetáculos em Londres recebeu um show acústico especial de Billie Eilish transmitido globalmente?"
+  "Qual famosa casa de ópera e espetáculos em Londres recebeu um show acústico especial de Billie Eilish transmitido globalmente?",
+  "Qual o nome da faixa que serve como interlúdio acústico na metade do álbum Happier Than Ever?",
+  "Qual o nome da música lançada por Billie Eilish em parceria com Rosalía em 2020?",
+  "Qual festival europeu recebeu Billie Eilish como headliner em sua edição de 2023, marcando um feito histórico?",
+  "Qual prêmio Grammy especial Billie Eilish venceu na categoria de Canção do Ano por What Was I Made For?",
+  "Qual é o título da faixa que encerra a tracklist padrão do álbum Hit Me Hard and Soft?",
+  "Qual instrumento Finneas toca primariamente nos shows ao vivo acompanhando Billie?",
+  "Qual famoso talk show americano contou com a primeira aparição de Billie Eilish para interpretar Ocean Eyes ao vivo?",
+  "Qual cidade sediou o concerto beneficente organizado por Billie Eilish voltado à ação climática em 2022?",
+  "Qual é a cor predominante no design visual e na capa do EP de estreia dont smile at me?",
+  "Qual famosa premiação de cinema britânica premiou Billie Eilish e Finneas por What Was I Made For?"
  ],
  "bank": [
   {

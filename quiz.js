@@ -157,7 +157,17 @@ var LV=[
 {x:2200,ic:"⚖️",n:["Advogado da Billie","Billie's Lawyer","Abogado de Billie"]},
 {x:3500,ic:"📖",n:["Enciclopédia Eilish","Eilish Encyclopedia","Enciclopedia Eilish"]},
 {x:5500,ic:"👑",n:["Lenda do Fandom","Fandom Legend","Leyenda del Fandom"]},
-{x:8000,ic:"💎",n:["Eilish Eterno","Eternal Eilish","Eilish Eterno"]}];
+{x:8000,ic:"💎",n:["Eilish Eterno","Eternal Eilish","Eilish Eterno"]},
+{x:9000,ic:"🌌",n:["Universo Eilish","Eilish Universe","Universo Eilish"]},
+{x:10000,ic:"🛡️",n:["Guardião do Fandom","Fandom Guardian","Guardián del Fandom"]},
+{x:11000,ic:"🌊",n:["Alma de Oceano","Ocean Soul","Alma de Océano"]},
+{x:12000,ic:"🛏️",n:["Monstro Sob a Cama","Under-Bed Monster","Monstruo Bajo Cama"]},
+{x:13000,ic:"🌙",n:["Sentinela da Madrugada","Midnight Sentinel","Centinela de Madrugada"]},
+{x:14000,ic:"🦋",n:["Mais Feliz Que Nunca","Happier Than Ever","Más Feliz Que Nunca"]},
+{x:15000,ic:"🏛️",n:["Hall da Fama","Hall of Fame","Salón de la Fama"]},
+{x:16000,ic:"🌍",n:["Ícone Global","Global Icon","Ícono Global"]},
+{x:17000,ic:"🔮",n:["Entidade Eilish","Eilish Entity","Entidad Eilish"]},
+{x:18000,ic:"🔱",n:["Eilish Supremo","Supreme Eilish","Eilish Supremo"]}];
 function lvOf(xp){xp=xp||0;var i=0;for(var k=0;k<LV.length;k++)if(xp>=LV[k].x)i=k;var c=LV[i],nx=LV[i+1];
 return {i:i,ic:c.ic,n:c.n[LI],next:nx?nx.x:null,nn:nx?nx.n[LI]:"",pct:nx?Math.max(2,Math.round((xp-c.x)/(nx.x-c.x)*100)):100}}
 
@@ -181,7 +191,8 @@ var A=[
 {id:"q50",ic:"🏅",n:["50 quizzes","50 quizzes","50 quizzes"],d:["Complete 50 quizzes diários.","Complete 50 daily quizzes.","Completa 50 quizzes diarios."],t:function(m){return cnt(m)>=50}},
 {id:"wk",ic:"🏆",n:["Desafio semanal","Weekly challenge","Desafío semanal"],d:["Conclua um desafio semanal.","Complete a weekly challenge.","Completa un desafío semanal."],t:function(m){return !!m.wk&&Object.keys(m.wk).length>=1}},
 {id:"lv5",ic:"🎓",n:["Mestre da Billie","Billie Master","Maestro de Billie"],d:["Chegue ao nível “Mestre da Billie”.","Reach the “Billie Master” level.","Llega al nivel “Maestro de Billie”."],t:function(m){return lvOf(m.xp).i>=4}},
-{id:"lv9",ic:"💎",n:["Eilish Eterno","Eternal Eilish","Eilish Eterno"],d:["Chegue ao nível máximo.","Reach the maximum level.","Llega al nivel máximo."],t:function(m){return lvOf(m.xp).i>=8}},
+{id:"lv9",ic:"💎",n:["Eilish Eterno","Eternal Eilish","Eilish Eterno"],d:["Chegue ao nível “Eilish Eterno”.","Reach the “Eternal Eilish” level.","Llega al nivel “Eilish Eterno”."],t:function(m){return lvOf(m.xp).i>=8}},
+{id:"lvmax",ic:"🔱",n:["Eilish Supremo","Supreme Eilish","Eilish Supremo"],d:["Chegue ao nível máximo.","Reach the maximum level.","Llega al nivel máximo."],t:function(m){return lvOf(m.xp).i>=LV.length-1}},
 {id:"t1",ic:"🔤",n:["Primeiro Termo","First Termo","Primer Termo"],d:["Acerte a palavra do Termo da Billie.","Solve the Billie Termo word.","Acierta la palabra del Termo de Billie."],t:function(m){return tw(m)>=1}},
 {id:"t10",ic:"🧩",n:["Mestre do Termo","Termo Master","Maestro del Termo"],d:["Acerte 10 palavras do Termo.","Solve 10 Termo words.","Acierta 10 palabras del Termo."],t:function(m){return tw(m)>=10}},
 {id:"p5",ic:"🌟",n:["5 gabaritos","5 perfect scores","5 puntajes perfectos"],d:["Gabarite 5 quizzes.","Get a perfect score on 5 quizzes.","Logra 5 quizzes perfectos."],t:function(m){return perf(m)>=5}},
@@ -589,7 +600,7 @@ return h+rkMe()+'<div class="qz-srch">'+ic("search")+'<input type="search" id="q
 /* ====== PERFIL ====== */
 function tw(m){var d=(m&&m.days)||{};return Object.keys(d).filter(function(k){return d[k]&&typeof d[k].w==="number"&&d[k].w>=1&&d[k].w<=6}).length}
 function chests(m){var d=(m&&m.days)||{};return Object.keys(d).filter(function(k){return d[k]&&d[k].mb===1}).length}
-var AP={first:function(m){return[cnt(m),1]},perfect:function(m){return[perf(m),1]},s3:function(m){return[m.streak||0,3]},s7:function(m){return[m.streak||0,7]},s30:function(m){return[m.streak||0,30]},q10:function(m){return[cnt(m),10]},q50:function(m){return[cnt(m),50]},wk:function(m){return[m.wk?Object.keys(m.wk).length:0,1]},lv5:function(m){return[lvOf(m.xp).i,4]},lv9:function(m){return[lvOf(m.xp).i,8]},t1:function(m){return[tw(m),1]},t10:function(m){return[tw(m),10]},p5:function(m){return[perf(m),5]},x1k:function(m){return[m.xp||0,1000]},bx:function(m){return[chests(m),7]}};
+var AP={first:function(m){return[cnt(m),1]},perfect:function(m){return[perf(m),1]},s3:function(m){return[m.streak||0,3]},s7:function(m){return[m.streak||0,7]},s30:function(m){return[m.streak||0,30]},q10:function(m){return[cnt(m),10]},q50:function(m){return[cnt(m),50]},wk:function(m){return[m.wk?Object.keys(m.wk).length:0,1]},lv5:function(m){return[lvOf(m.xp).i,4]},lv9:function(m){return[lvOf(m.xp).i,8]},lvmax:function(m){return[lvOf(m.xp).i,LV.length-1]},t1:function(m){return[tw(m),1]},t10:function(m){return[tw(m),10]},p5:function(m){return[perf(m),5]},x1k:function(m){return[m.xp||0,1000]},bx:function(m){return[chests(m),7]}};
 function heatmap(){var td=today(),m=S.me,dow=(new Date(td+"T00:00:00Z").getUTCDay()+6)%7,mon=addDays(td,-dow),st=addDays(mon,-77),h='<div class="qz-hm">';
 for(var c=0;c<12;c++){h+='<div>';for(var r=0;r<7;r++){var k=addDays(st,c*7+r),d=dayOf(m,k),lvl=0;
 if(typeof d.s==="number")lvl=d.s>=N?3:2;else if(d.ci||d.w||d.sh)lvl=1;
@@ -668,4 +679,3 @@ return {show:show,boot:boot,go:go,google:google,sw:sw,forgot:forgot,logout:logou
 chest:chest,tk:tmKey,tf:tmFinish,rkF:rkFilter,rkReload:rkReload,shareCard:shareCard,ed:function(o){S.edOpen=!!o},
 _t:{weekKey:weekKey,lvOf:lvOf,addDays:addDays,pickQuiz:pickQuiz}}
 })();
-   

@@ -1,36 +1,36 @@
 {
  "sources": {
   "spotify_global": {
-   "date": "2026-11-24",
+   "date": "2026-11-25",
    "size": 200,
    "unit": "streams",
    "entries": [
     {
-     "pos": 50,
-     "move": 4,
+     "pos": 43,
+     "move": 7,
      "title": "BIRDS OF A FEATHER",
      "artist": "Billie Eilish",
      "id": "6dOtVTDdiauQNBQEDOtlAB",
-     "days": 922,
+     "days": 923,
      "peak": 1,
-     "streams": 1685065,
-     "streams_delta": 65024,
-     "total": 4067581266,
+     "streams": 1914268,
+     "streams_delta": 229203,
+     "total": 4069495534,
      "url": "https://open.spotify.com/track/6dOtVTDdiauQNBQEDOtlAB",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
      "dur": 210
     },
     {
-     "pos": 75,
-     "move": -2,
+     "pos": 58,
+     "move": 17,
      "title": "WILDFLOWER",
      "artist": "Billie Eilish",
      "id": "3QaPy1KgI7nu9FJEQUgn6h",
-     "days": 922,
+     "days": 923,
      "peak": 8,
-     "streams": 1468841,
-     "streams_delta": 28405,
-     "total": 2312231254,
+     "streams": 1673146,
+     "streams_delta": 204305,
+     "total": 2313904400,
      "url": "https://open.spotify.com/track/3QaPy1KgI7nu9FJEQUgn6h",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
      "dur": 261
@@ -39,17 +39,17 @@
    "platform": "spotify",
    "region": "global",
    "home": "https://charts.spotify.com/charts/view/regional-global-daily/latest",
-   "fetched": "2026-11-26T13:43Z"
+   "fetched": "2026-11-26T22:49Z"
   },
   "spotify_br": {
-   "date": "2026-11-24",
+   "date": "2026-11-25",
    "size": 200,
    "unit": "streams",
    "entries": [],
    "platform": "spotify",
    "region": "br",
    "home": "https://charts.spotify.com/charts/view/regional-br-daily/latest",
-   "fetched": "2026-11-26T13:43Z"
+   "fetched": "2026-11-26T22:49Z"
   },
   "apple_br": {
    "date": null,
@@ -57,7 +57,7 @@
    "unit": null,
    "entries": [
     {
-     "pos": 78,
+     "pos": 75,
      "title": "WILDFLOWER",
      "artist": "Billie Eilish",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
@@ -65,7 +65,7 @@
      "dur": 261
     },
     {
-     "pos": 97,
+     "pos": 81,
      "title": "BIRDS OF A FEATHER",
      "artist": "Billie Eilish",
      "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
@@ -76,7 +76,7 @@
    "platform": "apple",
    "region": "br",
    "home": "",
-   "fetched": "2026-11-26T13:43Z"
+   "fetched": "2026-11-26T22:49Z"
   },
   "apple_us": {
    "date": null,
@@ -86,7 +86,7 @@
    "platform": "apple",
    "region": "us",
    "home": "",
-   "fetched": "2026-11-26T13:43Z"
+   "fetched": "2026-11-26T22:49Z"
   },
   "deezer_world": {
    "date": "2026-11-26",
@@ -106,7 +106,7 @@
    "platform": "deezer",
    "region": "world",
    "home": "https://www.deezer.com/playlist/3155776842",
-   "fetched": "2026-11-26T13:43Z"
+   "fetched": "2026-11-26T22:49Z"
   },
   "billboard_global200": {
    "date": "2026-08-22",
@@ -116,7 +116,7 @@
    "platform": "billboard",
    "region": "global200",
    "home": "https://www.billboard.com/charts/billboard-global-200/",
-   "fetched": "2026-11-26T13:43Z"
+   "fetched": "2026-11-26T22:49Z"
   },
   "billboard_globalexus": {
    "date": "2026-08-29",
@@ -126,327 +126,327 @@
    "platform": "billboard",
    "region": "globalexus",
    "home": "https://www.billboard.com/charts/billboard-global-excl-us/",
-   "fetched": "2026-11-26T13:43Z"
+   "fetched": "2026-11-26T22:49Z"
   }
  },
  "streams": [
   {
    "id": "",
    "title": "BIRDS OF A FEATHER",
-   "total": 4126701866,
-   "daily": 1759777,
+   "total": 4128700285,
+   "daily": 1998419,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
    "dur": 210
   },
   {
    "id": "",
    "title": "lovely (with Khalid)",
-   "total": 3948576089,
-   "daily": 965471,
+   "total": 3949613957,
+   "daily": 1037868,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/27/94/d4/2794d4fc-c3e2-2373-3e6c-dd82fd5aefe6/18UMGIM18200.rgb.jpg/600x600bb.jpg",
    "dur": 200
   },
   {
    "id": "",
    "title": "bad guy",
-   "total": 3009893231,
-   "daily": 398066,
+   "total": 3010324985,
+   "daily": 431754,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1a/37/d1/1a37d1b1-8508-54f2-f541-bf4e437dda76/19UMGIM05028.rgb.jpg/600x600bb.jpg",
    "dur": 194
   },
   {
    "id": "",
    "title": "when the party's over",
-   "total": 2600105890,
-   "daily": 598390,
+   "total": 2600671180,
+   "daily": 565290,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1a/37/d1/1a37d1b1-8508-54f2-f541-bf4e437dda76/19UMGIM05028.rgb.jpg/600x600bb.jpg",
    "dur": 196
   },
   {
    "id": "",
    "title": "WILDFLOWER",
-   "total": 2379216963,
-   "daily": 1545944,
+   "total": 2380972624,
+   "daily": 1755661,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
    "dur": 261
   },
   {
    "id": "",
    "title": "ocean eyes",
-   "total": 2369927660,
-   "daily": 843205,
+   "total": 2370910153,
+   "daily": 982493,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/02/1d/30/021d3036-5503-3ed3-df00-882f2833a6ae/17UM1IM17026.rgb.jpg/600x600bb.jpg",
    "dur": 200
   },
   {
    "id": "",
    "title": "everything i wanted",
-   "total": 2204165769,
-   "daily": 474304,
+   "total": 2204645378,
+   "daily": 479609,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/c5/6c/b1/c56cb16a-52c3-33b5-5189-6c65028001fb/19UM1IM00404.rgb.jpg/600x600bb.jpg",
    "dur": 245
   },
   {
    "id": "",
    "title": "Happier Than Ever",
-   "total": 1964741565,
-   "daily": 601168,
+   "total": 1965367864,
+   "daily": 626299,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/02/b7/6d/02b76dd3-4006-bc65-9f33-33b70a95222a/21UMGIM36684.rgb.jpg/600x600bb.jpg",
    "dur": 298
   },
   {
    "id": "",
    "title": "What Was I Made For? [From The Motion Picture \"Barbie\"]",
-   "total": 1718042564,
-   "daily": 579258,
+   "total": 1718664040,
+   "daily": 621476,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/7d/64/76/7d64761e-a9b3-6754-8ae1-b457338beead/23UMGIM77779.rgb.jpg/600x600bb.jpg",
    "dur": 222
   },
   {
    "id": "",
    "title": "i love you",
-   "total": 1442368348,
-   "daily": 447571,
+   "total": 1442868220,
+   "daily": 499872,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1a/37/d1/1a37d1b1-8508-54f2-f541-bf4e437dda76/19UMGIM05028.rgb.jpg/600x600bb.jpg",
    "dur": 291
   },
   {
    "id": "",
    "title": "idontwannabeyouanymore",
-   "total": 1430511496,
-   "daily": 311537,
+   "total": 1430841065,
+   "daily": 329569,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/02/1d/30/021d3036-5503-3ed3-df00-882f2833a6ae/17UM1IM17026.rgb.jpg/600x600bb.jpg",
    "dur": 203
   },
   {
    "id": "",
    "title": "CHIHIRO",
-   "total": 1343014378,
-   "daily": 759292,
+   "total": 1343760266,
+   "daily": 745888,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
    "dur": 303
   },
   {
    "id": "",
    "title": "Bored",
-   "total": 1339836608,
-   "daily": 249911,
+   "total": 1340096698,
+   "daily": 260090,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/85/be/22/85be22e4-b915-5318-847b-cc438fa8e535/17UMGIM86543.rgb.jpg/600x600bb.jpg",
    "dur": 180
   },
   {
    "id": "",
    "title": "bellyache",
-   "total": 1306868965,
-   "daily": 320725,
+   "total": 1307212358,
+   "daily": 343393,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/02/1d/30/021d3036-5503-3ed3-df00-882f2833a6ae/17UM1IM17026.rgb.jpg/600x600bb.jpg",
    "dur": 179
   },
   {
    "id": "",
    "title": "bury a friend",
-   "total": 1186249583,
-   "daily": 127258,
+   "total": 1186380045,
+   "daily": 130462,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1a/37/d1/1a37d1b1-8508-54f2-f541-bf4e437dda76/19UMGIM05028.rgb.jpg/600x600bb.jpg",
    "dur": 193
   },
   {
    "id": "",
    "title": "TV",
-   "total": 1177592955,
-   "daily": 453225,
+   "total": 1178062943,
+   "daily": 469988,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/98/97/b2/9897b250-e07c-06d9-6d60-c72f74084dff/22UMGIM77990.rgb.jpg/600x600bb.jpg",
    "dur": 281
   },
   {
    "id": "",
    "title": "you should see me in a crown",
-   "total": 1068739347,
-   "daily": 153674,
+   "total": 1068891793,
+   "daily": 152446,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1a/37/d1/1a37d1b1-8508-54f2-f541-bf4e437dda76/19UMGIM05028.rgb.jpg/600x600bb.jpg",
    "dur": 180
   },
   {
    "id": "",
    "title": "LUNCH",
-   "total": 1058398160,
-   "daily": 418353,
+   "total": 1058826351,
+   "daily": 428191,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
    "dur": 179
   },
   {
    "id": "",
    "title": "Therefore I Am",
-   "total": 1031824328,
-   "daily": 175890,
+   "total": 1031994242,
+   "daily": 169914,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2d/f3/c9/2df3c9fd-e0eb-257c-c035-b04f05a66580/21UMGIM36691.rgb.jpg/600x600bb.jpg",
    "dur": 173
   },
   {
    "id": "",
    "title": "watch",
-   "total": 1017563157,
-   "daily": 248412,
+   "total": 1017819601,
+   "daily": 256444,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/02/1d/30/021d3036-5503-3ed3-df00-882f2833a6ae/17UM1IM17026.rgb.jpg/600x600bb.jpg",
    "dur": 177
   },
   {
    "id": "",
    "title": "wish you were gay",
-   "total": 944466271,
-   "daily": 155116,
+   "total": 944622200,
+   "daily": 155929,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1a/37/d1/1a37d1b1-8508-54f2-f541-bf4e437dda76/19UMGIM05028.rgb.jpg/600x600bb.jpg",
    "dur": 221
   },
   {
    "id": "",
    "title": "* Guess featuring billie eilish",
-   "total": 936038004,
-   "daily": 321567,
+   "total": 936354107,
+   "daily": 316103,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/2c/a7/a2/2ca7a20f-13aa-81ac-9423-a09147acab76/075679636072.jpg/600x600bb.jpg",
    "dur": 143
   },
   {
    "id": "",
    "title": "No Time To Die",
-   "total": 821637276,
-   "daily": 187082,
+   "total": 821828213,
+   "daily": 190937,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/05/68/41/0568414d-c25e-2ffe-2577-960fcc09308f/20UMGIM09330.rgb.jpg/600x600bb.jpg",
    "dur": 242
   },
   {
    "id": "",
    "title": "all the good girls go to hell",
-   "total": 781869280,
-   "daily": 110416,
+   "total": 781982197,
+   "daily": 112917,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1a/37/d1/1a37d1b1-8508-54f2-f541-bf4e437dda76/19UMGIM05028.rgb.jpg/600x600bb.jpg",
    "dur": 168
   },
   {
    "id": "",
    "title": "listen before i go",
-   "total": 754176030,
-   "daily": 175693,
+   "total": 754343103,
+   "daily": 167073,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1a/37/d1/1a37d1b1-8508-54f2-f541-bf4e437dda76/19UMGIM05028.rgb.jpg/600x600bb.jpg",
    "dur": 242
   },
   {
    "id": "",
    "title": "my strange addiction",
-   "total": 682105103,
-   "daily": 140624,
+   "total": 682246801,
+   "daily": 141698,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1a/37/d1/1a37d1b1-8508-54f2-f541-bf4e437dda76/19UMGIM05028.rgb.jpg/600x600bb.jpg",
    "dur": 179
   },
   {
    "id": "",
    "title": "bitches broken hearts",
-   "total": 662508808,
-   "daily": 153370,
+   "total": 662638562,
+   "daily": 129754,
    "cover": "",
    "dur": null
   },
   {
    "id": "",
    "title": "hostage",
-   "total": 658494962,
-   "daily": 151210,
+   "total": 658644023,
+   "daily": 149061,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/02/1d/30/021d3036-5503-3ed3-df00-882f2833a6ae/17UM1IM17026.rgb.jpg/600x600bb.jpg",
    "dur": 229
   },
   {
    "id": "",
    "title": "my boy",
-   "total": 645769081,
-   "daily": 114242,
+   "total": 645891716,
+   "daily": 122635,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/02/1d/30/021d3036-5503-3ed3-df00-882f2833a6ae/17UM1IM17026.rgb.jpg/600x600bb.jpg",
    "dur": 170
   },
   {
    "id": "",
    "title": "COPYCAT",
-   "total": 637662141,
-   "daily": 108062,
+   "total": 637778917,
+   "daily": 116776,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/02/1d/30/021d3036-5503-3ed3-df00-882f2833a6ae/17UM1IM17026.rgb.jpg/600x600bb.jpg",
    "dur": 193
   },
   {
    "id": "",
    "title": "Six Feet Under",
-   "total": 622378066,
-   "daily": 110051,
+   "total": 622477745,
+   "daily": 99679,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/5b/c3/5f/5bc35f2a-4a4e-5225-0e08-720e7fb41ca5/16UMGIM77509.rgb.jpg/600x600bb.jpg",
    "dur": 189
   },
   {
    "id": "",
    "title": "my future",
-   "total": 619210568,
-   "daily": 120693,
+   "total": 619334811,
+   "daily": 124243,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2d/f3/c9/2df3c9fd-e0eb-257c-c035-b04f05a66580/21UMGIM36691.rgb.jpg/600x600bb.jpg",
    "dur": 210
   },
   {
    "id": "",
    "title": "hotline (edit)",
-   "total": 614987500,
-   "daily": 90310,
+   "total": 615082231,
+   "daily": 94731,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/13/c6/3f/13c63f4e-7cc9-767d-5007-79546f8fe29f/23UMGIM53372.rgb.jpg/600x600bb.jpg",
    "dur": 60
   },
   {
    "id": "",
    "title": "BLUE",
-   "total": 611450714,
-   "daily": 311580,
+   "total": 611786718,
+   "daily": 336004,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
    "dur": 343
   },
   {
    "id": "",
    "title": "L’AMOUR DE MA VIE",
-   "total": 594986211,
-   "daily": 347740,
+   "total": 595274927,
+   "daily": 288716,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
    "dur": 333
   },
   {
    "id": "",
    "title": "ilomilo",
-   "total": 594780904,
-   "daily": 136923,
+   "total": 594919102,
+   "daily": 138198,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/1a/37/d1/1a37d1b1-8508-54f2-f541-bf4e437dda76/19UMGIM05028.rgb.jpg/600x600bb.jpg",
    "dur": 156
   },
   {
    "id": "",
    "title": "THE GREATEST",
-   "total": 592894705,
-   "daily": 316765,
+   "total": 593197904,
+   "daily": 303199,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/92/9f/69/929f69f1-9977-3a44-d674-11f70c852d1b/24UMGIM36186.rgb.jpg/600x600bb.jpg",
    "dur": 293
   },
   {
    "id": "",
    "title": "Happier Than Ever - Edit",
-   "total": 590570500,
-   "daily": 76849,
+   "total": 590646704,
+   "daily": 76204,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/02/b7/6d/02b76dd3-4006-bc65-9f33-33b70a95222a/21UMGIM36684.rgb.jpg/600x600bb.jpg",
    "dur": 298
   },
   {
    "id": "",
    "title": "Your Power",
-   "total": 582430215,
-   "daily": 131697,
+   "total": 582565209,
+   "daily": 134994,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2d/f3/c9/2df3c9fd-e0eb-257c-c035-b04f05a66580/21UMGIM36691.rgb.jpg/600x600bb.jpg",
    "dur": 245
   },
   {
    "id": "",
    "title": "Billie Bossa Nova",
-   "total": 563450899,
-   "daily": 204879,
+   "total": 563647336,
+   "daily": 196437,
    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/2d/f3/c9/2df3c9fd-e0eb-257c-c035-b04f05a66580/21UMGIM36691.rgb.jpg/600x600bb.jpg",
    "dur": 196
   }
@@ -465,6 +465,11 @@
   {
    "title": "Happier Than Ever",
    "mark": 1500000000,
+   "date": "2026-11-26"
+  },
+  {
+   "title": "Happier Than Ever",
+   "mark": 1500000000,
    "date": "2026-11-25"
   },
   {
@@ -641,11 +646,6 @@
    "title": "Happier Than Ever",
    "mark": 1500000000,
    "date": "2026-11-14"
-  },
-  {
-   "title": "Happier Than Ever",
-   "mark": 1500000000,
-   "date": "2026-11-13"
   },
   {
    "title": "Happier Than Ever",
@@ -779,6 +779,11 @@
     "d": "2026-11-24",
     "n": 2,
     "best": 50
+   },
+   {
+    "d": "2026-11-25",
+    "n": 2,
+    "best": 43
    }
   ],
   "spotify_br": [
@@ -904,6 +909,11 @@
    },
    {
     "d": "2026-11-24",
+    "n": 0,
+    "best": null
+   },
+   {
+    "d": "2026-11-25",
     "n": 0,
     "best": null
    }
@@ -1032,7 +1042,7 @@
    {
     "d": "2026-11-26",
     "n": 2,
-    "best": 78
+    "best": 75
    }
   ],
   "apple_us": [
@@ -1573,7 +1583,7 @@
   }
  },
  "streams_date": "2026-11-26",
- "updated": "2026-11-26T13:43Z",
+ "updated": "2026-11-26T22:49Z",
  "errors": [
   "apple_global: HTTP Error 404: Not Found"
  ]

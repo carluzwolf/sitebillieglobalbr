@@ -1,128 +1,118 @@
 {
- "date": "2026-11-26",
+ "date": "2026-11-27",
  "questions": [
   {
-   "q": "Qual o nome da faixa que serve como interlúdio acústico na metade do álbum Happier Than Ever?",
+   "q": "Qual é a décima faixa do álbum When We All Fall Asleep, Where Do We Go?",
    "o": [
-    "Halley's Comet",
-    "Not My Responsibility",
-    "Everybody Dies",
-    "The 30th"
+    "all the good girls go to hell",
+    "bury a friend",
+    "ilomilo",
+    "bad guy"
    ],
-   "a": 1,
-   "e": "Not My Responsibility é o interlúdio que traz um monólogo marcante sobre autoimagem."
+   "a": 2,
+   "e": "A faixa ilomilo é a décima música da tracklist oficial do álbum de estreia de Billie."
   },
   {
-   "q": "Qual o nome da música lançada por Billie Eilish em parceria com Rosalía em 2020?",
+   "q": "Qual famosa cantora pop participou do remix oficial da música lovely lançado em 2018?",
    "o": [
-    "Lo Vas A Olvidar",
-    "Ocean Eyes",
-    "No Time To Die",
-    "Lovely"
-   ],
-   "a": 0,
-   "e": "Lo Vas A Olvidar foi lançada como trilha sonora da série Euphoria."
-  },
-  {
-   "q": "Qual festival europeu recebeu Billie Eilish como headliner em sua edição de 2023, marcando um feito histórico?",
-   "o": [
-    "Primavera Sound",
-    "Glastonbury",
-    "Rock in Rio",
-    "Coachella"
-   ],
-   "a": 1,
-   "e": "Billie Eilish se tornou a headliner solo mais jovem da história do Festival de Glastonbury."
-  },
-  {
-   "q": "Qual prêmio Grammy especial Billie Eilish venceu na categoria de Canção do Ano por What Was I Made For?",
-   "o": [
-    "Venceu em revelação",
-    "Não venceu essa",
-    "Venceu apenas em 2025",
-    "Sim, o prêmio principal"
+    "Dua Lipa",
+    "Ariana Grande",
+    "Taylor Swift",
+    "Khalid"
    ],
    "a": 3,
-   "e": "What Was I Made For? venceu o Grammy de Canção do Ano em 2024."
+   "e": "Khalid divide os vocais com Billie Eilish na canção lovely, que integrou a trilha sonora de 13 Reasons Why."
   },
   {
-   "q": "Qual é o título da faixa que encerra a tracklist padrão do álbum Hit Me Hard and Soft?",
+   "q": "Em qual ano ocorreu o lançamento oficial do álbum de estreia When We All Fall Asleep, Where Do We Go?",
    "o": [
-    "Skinny",
-    "Lunch",
-    "Blue",
-    "Wildflower"
+    "2020",
+    "2018",
+    "2019",
+    "2017"
    ],
    "a": 2,
-   "e": "Blue é a última faixa do terceiro álbum de estúdio de Billie Eilish."
+   "e": "O aclamado primeiro álbum de estúdio de Billie Eilish foi lançado em março de 2019."
   },
   {
-   "q": "Qual instrumento Finneas toca primariamente nos shows ao vivo acompanhando Billie?",
+   "q": "Qual o nome do EP de estreia lançado por Billie Eilish no início de sua carreira em 2017?",
    "o": [
-    "Violoncelo e flauta",
-    "Bateria e baixo",
-    "Teclado e guitarra",
-    "Saxofone e trompete"
+    "The Beginning",
+    "dont smile at me",
+    "Burn Notice",
+    "Ocean Eyes EP"
    ],
-   "a": 2,
-   "e": "Finneas atua como multi-instrumentista, destacando-se no teclado e na guitarra."
+   "a": 1,
+   "e": "O EP dont smile at me projetou Billie internacionalmente antes de seu primeiro álbum completo."
   },
   {
-   "q": "Qual famoso talk show americano contou com a primeira aparição de Billie Eilish para interpretar Ocean Eyes ao vivo?",
+   "q": "Qual é o título da música de Billie Eilish que ganhou o prêmio de Gravação do Ano no Grammy de 2021?",
    "o": [
-    "Jimmy Kimmel Live",
-    "Late Night Show",
-    "The Ellen Show",
-    "The Tonight Show"
+    "Therefore I Am",
+    "Happier Than Ever",
+    "bad guy",
+    "everything i wanted"
    ],
-   "a": 2,
-   "e": "Billie apresentou-se no programa de Ellen DeGeneres no início de sua projeção."
+   "a": 3,
+   "e": "everything i wanted venceu o Grammy de Gravação do Ano na cerimônia de 2021."
   },
   {
-   "q": "Qual cidade sediou o concerto beneficente organizado por Billie Eilish voltado à ação climática em 2022?",
+   "q": "Qual famosa artista latina colaborou com Billie Eilish na música Lo Vas A Olvidar em 2021?",
    "o": [
-    "Londres",
-    "Nova York",
-    "Paris",
-    "Los Angeles"
+    "Anitta",
+    "Shakira",
+    "Karol G",
+    "Rosalía"
+   ],
+   "a": 3,
+   "e": "Rosalía e Billie Eilish uniram vozes na faixa Lo Vas A Olvidar para a série Euphoria."
+  },
+  {
+   "q": "Qual prêmio tradicional da indústria fonográfica americana foi conquistado por Billie Eilish na categoria Álbum do Ano em 2020?",
+   "o": [
+    "American Music Award",
+    "Billboard Music Award",
+    "MTV Video Music Award",
+    "Grammy Award"
+   ],
+   "a": 3,
+   "e": "Billie fez história no Grammy de 2020 ao vencer Álbum do Ano com seu disco de estreia."
+  },
+  {
+   "q": "Qual marca de calçados desenvolveu uma coleção especial de tênis clássicos Stan Smith veganos assinados por Billie Eilish?",
+   "o": [
+    "Converse",
+    "Puma",
+    "Nike",
+    "Adidas"
+   ],
+   "a": 3,
+   "e": "A Adidas colaborou com Billie Eilish no lançamento de tênis sustentáveis e livres de crueldade animal."
+  },
+  {
+   "q": "Qual é a primeira faixa presente no álbum Hit Me Hard and Soft?",
+   "o": [
+    "SKINNY",
+    "BIRDS OF A FEATHER",
+    "CHIHIRO",
+    "L'AMOUR DE MA VIE"
    ],
    "a": 0,
-   "e": "O festival Overheated ocorreu em Londres com debates e foco ecológico."
+   "e": "SKINNY é a música que abre o terceiro álbum de estúdio de Billie Eilish."
   },
   {
-   "q": "Qual é a cor predominante no design visual e na capa do EP de estreia dont smile at me?",
+   "q": "Qual é o título da faixa que encerra o álbum de estreia When We All Fall Asleep, Where Do We Go?",
    "o": [
-    "Amarelo",
-    "Vermelho vivo",
-    "Verde neon",
-    "Azul escuro"
+    "ilomilo",
+    "bad guy",
+    "i love you",
+    "goodbye"
    ],
-   "a": 0,
-   "e": "O fundo amarelo com a fonte preta é a marca registrada da capa de dont smile at me."
-  },
-  {
-   "q": "Qual famosa premiação de cinema britânica premiou Billie Eilish e Finneas por What Was I Made For?",
-   "o": [
-    "London Film Critics",
-    "British Independent",
-    "BAFTA",
-    "Empire Awards"
-   ],
-   "a": 2,
-   "e": "A dupla conquistou o BAFTA de Melhor Música Original."
+   "a": 3,
+   "e": "goodbye é a faixa final do álbum de estreia, combinando trechos de várias músicas do disco."
   }
  ],
  "history": [
-  "Qual é a faixa que encerra a tracklist do terceiro álbum de estúdio Hit Me Hard and Soft?",
-  "Qual prêmio da Academia (Oscar) Billie Eilish e Finneas venceram em 2024?",
-  "Em qual edição do Grammy Awards Billie Eilish venceu todas as quatro principais categorias da premiação de uma só vez?",
-  "Qual é o título do documentário lançado em 2021 sobre a vida e os bastidores da turnê de Billie Eilish?",
-  "Qual artista indie-rock participou da faixa CHIHIRO no álbum Hit Me Hard and Soft em vocais de apoio?",
-  "Qual estilista renomada colaborou com Billie Eilish para criar seu vestido amarelo no Grammy de 2020?",
-  "Qual faixa do álbum Happier Than Ever recebeu uma indicação ao Grammy de Gravação do Ano além da faixa-título?",
-  "Qual foi o primeiro single lançado por Billie Eilish a estrear no topo da parada Billboard Hot 100 dos EUA?",
-  "Qual o nome do festival beneficente em Paris organizado pela Global Citizen onde Billie se apresentou em 2023?",
-  "Qual é o nome da faixa instrumental que serve como introdução para o álbum de estreia de Billie?",
   "Qual é a faixa que abre a tracklist do terceiro álbum de estúdio, Hit Me Hard and Soft?",
   "Qual prêmio da indústria de jogos e entretenimento digital contou com uma música original de Billie e Finneas?",
   "Qual instituição cultural sediou a apresentação acústica especial de Billie Eilish para a série NPR Tiny Desk Concert?",
@@ -262,7 +252,17 @@
   "Qual famoso talk show americano contou com a primeira aparição de Billie Eilish para interpretar Ocean Eyes ao vivo?",
   "Qual cidade sediou o concerto beneficente organizado por Billie Eilish voltado à ação climática em 2022?",
   "Qual é a cor predominante no design visual e na capa do EP de estreia dont smile at me?",
-  "Qual famosa premiação de cinema britânica premiou Billie Eilish e Finneas por What Was I Made For?"
+  "Qual famosa premiação de cinema britânica premiou Billie Eilish e Finneas por What Was I Made For?",
+  "Qual é a décima faixa do álbum When We All Fall Asleep, Where Do We Go?",
+  "Qual famosa cantora pop participou do remix oficial da música lovely lançado em 2018?",
+  "Em qual ano ocorreu o lançamento oficial do álbum de estreia When We All Fall Asleep, Where Do We Go?",
+  "Qual o nome do EP de estreia lançado por Billie Eilish no início de sua carreira em 2017?",
+  "Qual é o título da música de Billie Eilish que ganhou o prêmio de Gravação do Ano no Grammy de 2021?",
+  "Qual famosa artista latina colaborou com Billie Eilish na música Lo Vas A Olvidar em 2021?",
+  "Qual prêmio tradicional da indústria fonográfica americana foi conquistado por Billie Eilish na categoria Álbum do Ano em 2020?",
+  "Qual marca de calçados desenvolveu uma coleção especial de tênis clássicos Stan Smith veganos assinados por Billie Eilish?",
+  "Qual é a primeira faixa presente no álbum Hit Me Hard and Soft?",
+  "Qual é o título da faixa que encerra o álbum de estreia When We All Fall Asleep, Where Do We Go?"
  ],
  "bank": [
   {

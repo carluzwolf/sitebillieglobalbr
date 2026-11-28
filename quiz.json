@@ -1,128 +1,118 @@
 {
- "date": "2026-11-27",
+ "date": "2026-11-28",
  "questions": [
   {
-   "q": "Qual é a décima faixa do álbum When We All Fall Asleep, Where Do We Go?",
+   "q": "Qual é a nacionalidade dos pais de Billie Eilish, Maggie Baird e Patrick O'Connell?",
    "o": [
+    "Canadense",
+    "Americana",
+    "Australiana",
+    "Britânica"
+   ],
+   "a": 1,
+   "e": "Os pais de Billie Eilish são nascidos e criados nos Estados Unidos."
+  },
+  {
+   "q": "Qual prêmio Grammy foi conquistado por Billie Eilish em 2025 pela faixa CHIHIRO?",
+   "o": [
+    "Melhor Performance Pop Solo",
+    "Melhor Clipe Musical",
+    "Álbum do Ano",
+    "Canção do Ano"
+   ],
+   "a": 0,
+   "e": "CHIHIRO venceu a categoria de Melhor Performance Pop Solo no Grammy."
+  },
+  {
+   "q": "Qual o nome do documentário lançado em 2021 que retrata a vida e a ascensão musical de Billie Eilish?",
+   "o": [
+    "Happier Than Ever Live",
+    "Hit Me Hard and Soft Doc",
+    "The World's a Little Blurry",
+    "Smile at Me Documentário"
+   ],
+   "a": 2,
+   "e": "O documentário The World's a Little Blurry estreou na Apple TV+ em 2021."
+  },
+  {
+   "q": "Qual faixa do álbum Happier Than Ever apresenta um solo de guitarra pesado e enérgico em sua parte final?",
+   "o": [
+    "Lost Cause",
+    "NDA",
+    "Oxytocin",
+    "Happier Than Ever"
+   ],
+   "a": 3,
+   "e": "A faixa-título Happier Than Ever transita de um som acústico para um final de rock pesado."
+  },
+  {
+   "q": "Qual é a oitava faixa da tracklist oficial do álbum de estreia When We All Fall Asleep, Where Do We Go?",
+   "o": [
+    "ilomilo",
     "all the good girls go to hell",
     "bury a friend",
-    "ilomilo",
     "bad guy"
    ],
    "a": 2,
-   "e": "A faixa ilomilo é a décima música da tracklist oficial do álbum de estreia de Billie."
+   "e": "bury a friend ocupa a oitava posição no álbum de estreia de Billie."
   },
   {
-   "q": "Qual famosa cantora pop participou do remix oficial da música lovely lançado em 2018?",
+   "q": "Qual famoso estilista e diretor criativo trabalhou diretamente com Billie Eilish na criação de seu visual para o Met Gala de 2021?",
    "o": [
-    "Dua Lipa",
-    "Ariana Grande",
-    "Taylor Swift",
-    "Khalid"
+    "Louis Vuitton",
+    "Prada",
+    "Gucci",
+    "Chanel"
    ],
-   "a": 3,
-   "e": "Khalid divide os vocais com Billie Eilish na canção lovely, que integrou a trilha sonora de 13 Reasons Why."
+   "a": 2,
+   "e": "Billie Eilish vestiu um icônico modelo da grife Gucci inspirado em Marilyn Monroe."
   },
   {
-   "q": "Em qual ano ocorreu o lançamento oficial do álbum de estreia When We All Fall Asleep, Where Do We Go?",
+   "q": "Qual canção de Billie Eilish foi composta especificamente para a trilha sonora do filme Barbie lançado em 2023?",
+   "o": [
+    "Bellyache",
+    "Ocean Eyes",
+    "What Was I Made For?",
+    "No Time To Die"
+   ],
+   "a": 2,
+   "e": "What Was I Made For? é a balada melancólica escrita para o filme Barbie."
+  },
+  {
+   "q": "Em qual ano Billie Eilish realizou sua primeira turnê mundial oficial como atração principal, batizada de 1by1 Tour?",
    "o": [
     "2020",
     "2018",
-    "2019",
-    "2017"
-   ],
-   "a": 2,
-   "e": "O aclamado primeiro álbum de estúdio de Billie Eilish foi lançado em março de 2019."
-  },
-  {
-   "q": "Qual o nome do EP de estreia lançado por Billie Eilish no início de sua carreira em 2017?",
-   "o": [
-    "The Beginning",
-    "dont smile at me",
-    "Burn Notice",
-    "Ocean Eyes EP"
+    "2017",
+    "2019"
    ],
    "a": 1,
-   "e": "O EP dont smile at me projetou Billie internacionalmente antes de seu primeiro álbum completo."
+   "e": "A turnê 1by1 Tour ocorreu no início de 2018 após o sucesso do EP de estreia."
   },
   {
-   "q": "Qual é o título da música de Billie Eilish que ganhou o prêmio de Gravação do Ano no Grammy de 2021?",
+   "q": "Qual é o título da faixa do álbum Hit Me Hard and Soft que sucede imediatamente a música SKINNY na tracklist?",
    "o": [
-    "Therefore I Am",
-    "Happier Than Ever",
-    "bad guy",
-    "everything i wanted"
-   ],
-   "a": 3,
-   "e": "everything i wanted venceu o Grammy de Gravação do Ano na cerimônia de 2021."
-  },
-  {
-   "q": "Qual famosa artista latina colaborou com Billie Eilish na música Lo Vas A Olvidar em 2021?",
-   "o": [
-    "Anitta",
-    "Shakira",
-    "Karol G",
-    "Rosalía"
-   ],
-   "a": 3,
-   "e": "Rosalía e Billie Eilish uniram vozes na faixa Lo Vas A Olvidar para a série Euphoria."
-  },
-  {
-   "q": "Qual prêmio tradicional da indústria fonográfica americana foi conquistado por Billie Eilish na categoria Álbum do Ano em 2020?",
-   "o": [
-    "American Music Award",
-    "Billboard Music Award",
-    "MTV Video Music Award",
-    "Grammy Award"
-   ],
-   "a": 3,
-   "e": "Billie fez história no Grammy de 2020 ao vencer Álbum do Ano com seu disco de estreia."
-  },
-  {
-   "q": "Qual marca de calçados desenvolveu uma coleção especial de tênis clássicos Stan Smith veganos assinados por Billie Eilish?",
-   "o": [
-    "Converse",
-    "Puma",
-    "Nike",
-    "Adidas"
-   ],
-   "a": 3,
-   "e": "A Adidas colaborou com Billie Eilish no lançamento de tênis sustentáveis e livres de crueldade animal."
-  },
-  {
-   "q": "Qual é a primeira faixa presente no álbum Hit Me Hard and Soft?",
-   "o": [
-    "SKINNY",
-    "BIRDS OF A FEATHER",
     "CHIHIRO",
-    "L'AMOUR DE MA VIE"
-   ],
-   "a": 0,
-   "e": "SKINNY é a música que abre o terceiro álbum de estúdio de Billie Eilish."
-  },
-  {
-   "q": "Qual é o título da faixa que encerra o álbum de estreia When We All Fall Asleep, Where Do We Go?",
-   "o": [
-    "ilomilo",
-    "bad guy",
-    "i love you",
-    "goodbye"
+    "BIRDS OF A FEATHER",
+    "WILDFLOWER",
+    "LUNCH"
    ],
    "a": 3,
-   "e": "goodbye é a faixa final do álbum de estreia, combinando trechos de várias músicas do disco."
+   "e": "LUNCH é a segunda faixa oficial do álbum Hit Me Hard and Soft."
+  },
+  {
+   "q": "Qual é a nona faixa do álbum Happier Than Ever?",
+   "o": [
+    "Everybody Dies",
+    "Your Power",
+    "Overheated",
+    "Not My Responsibility"
+   ],
+   "a": 3,
+   "e": "Not My Responsibility é o interlúdio falado que antecede Overheated no álbum."
   }
  ],
  "history": [
-  "Qual é a faixa que abre a tracklist do terceiro álbum de estúdio, Hit Me Hard and Soft?",
-  "Qual prêmio da indústria de jogos e entretenimento digital contou com uma música original de Billie e Finneas?",
-  "Qual instituição cultural sediou a apresentação acústica especial de Billie Eilish para a série NPR Tiny Desk Concert?",
-  "Qual renomada revista de moda britânica teve Billie Eilish como capa com um visual totalmente pin-up em 2021?",
-  "Qual artista brasileira colaborou indiretamente ao ter um sample famoso utilizado em produções inspiradas pelo estilo lo-fi de Finneas?",
-  "Qual é o nome da faixa do álbum Hit Me Hard and Soft que ganhou um videoclipe dirigido pela própria Billie Eilish?",
-  "Qual famosa marca de carros elétricos teve sua fábrica escolhida para uma performance acústica de Billie Eilish?",
-  "Qual renomado festival de música na Califórnia teve Billie Eilish como a artista mais jovem da história a ser headliner em 2022?",
-  "Qual prêmio Grammy especial Billie Eilish recebeu em reconhecimento ao seu ativismo ambiental e climático?",
-  "Qual icônica marca de bonecas lançou uma edição colecionável baseada no visual de Billie Eilish no tapete vermelho?",
   "Qual faixa abre oficialmente o álbum de estreia When We All Fall Asleep, Where Do We Go?",
   "Qual o nome da organização sem fins lucrativos focada em sustentabilidade que Billie Eilish fundou ou apoia ativamente em turnês?",
   "Em que ano Billie Eilish nasceu?",
@@ -262,7 +252,17 @@
   "Qual prêmio tradicional da indústria fonográfica americana foi conquistado por Billie Eilish na categoria Álbum do Ano em 2020?",
   "Qual marca de calçados desenvolveu uma coleção especial de tênis clássicos Stan Smith veganos assinados por Billie Eilish?",
   "Qual é a primeira faixa presente no álbum Hit Me Hard and Soft?",
-  "Qual é o título da faixa que encerra o álbum de estreia When We All Fall Asleep, Where Do We Go?"
+  "Qual é o título da faixa que encerra o álbum de estreia When We All Fall Asleep, Where Do We Go?",
+  "Qual é a nacionalidade dos pais de Billie Eilish, Maggie Baird e Patrick O'Connell?",
+  "Qual prêmio Grammy foi conquistado por Billie Eilish em 2025 pela faixa CHIHIRO?",
+  "Qual o nome do documentário lançado em 2021 que retrata a vida e a ascensão musical de Billie Eilish?",
+  "Qual faixa do álbum Happier Than Ever apresenta um solo de guitarra pesado e enérgico em sua parte final?",
+  "Qual é a oitava faixa da tracklist oficial do álbum de estreia When We All Fall Asleep, Where Do We Go?",
+  "Qual famoso estilista e diretor criativo trabalhou diretamente com Billie Eilish na criação de seu visual para o Met Gala de 2021?",
+  "Qual canção de Billie Eilish foi composta especificamente para a trilha sonora do filme Barbie lançado em 2023?",
+  "Em qual ano Billie Eilish realizou sua primeira turnê mundial oficial como atração principal, batizada de 1by1 Tour?",
+  "Qual é o título da faixa do álbum Hit Me Hard and Soft que sucede imediatamente a música SKINNY na tracklist?",
+  "Qual é a nona faixa do álbum Happier Than Ever?"
  ],
  "bank": [
   {
